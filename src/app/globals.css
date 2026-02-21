@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fbf7ef;
+  --fg: #171312;
+  --muted: rgba(23, 19, 18, 0.62);
+  --card: rgba(255, 255, 255, 0.65);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0b0b;
+    --fg: #f6f1e8;
+    --muted: rgba(246, 241, 232, 0.62);
+    --card: rgba(255, 255, 255, 0.06);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(255, 208, 130, 0.22), transparent 55%),
+    radial-gradient(900px 500px at 90% 20%, rgba(154, 210, 255, 0.18), transparent 50%),
+    var(--bg);
+}
+
+.font-display {
+  /* gallery placard: clean grotesk with a little character */
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", "Gill Sans", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ---------- Markdown rendering (react-markdown) ---------- */
+
+.md-meta {
+  margin-bottom: 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+  background:
+    radial-gradient(800px 260px at 15% 10%, color-mix(in oklab, #ffd082 22%, transparent), transparent 55%),
+    radial-gradient(650px 240px at 85% 25%, color-mix(in oklab, #9ad2ff 16%, transparent), transparent 50%),
+    color-mix(in oklab, var(--card) 75%, white 25%);
+  padding: 0.9rem 1rem;
+}
+
+.md-meta-top {
+  display: grid;
+  gap: 0.1rem;
+  margin-bottom: 0.65rem;
+}
+
+.md-meta-title {
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.md-meta-sub {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.md-meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.md-meta-chip {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  border: 1px solid color-mix(in oklab, var(--fg) 10%, transparent);
+  background: color-mix(in oklab, white 60%, transparent);
+}
+
+.md-meta-k {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.md-meta-v {
+  font-size: 0.85rem;
+  color: color-mix(in oklab, var(--fg) 90%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+
+.md {
+  color: color-mix(in oklab, var(--fg) 92%, transparent);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.md :where(h1, h2, h3) {
+  font-family: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+}
+
+.md h1 {
+  font-size: 1.55rem;
+}
+
+.md h2 {
+  font-size: 1.25rem;
+}
+
+.md h3 {
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.md :where(p, ul, ol, blockquote, pre, table) {
+  margin: 0.85em 0;
+}
+
+.md :where(ul, ol) {
+  padding-left: 1.25rem;
+}
+
+.md li {
+  margin: 0.3em 0;
+}
+
+.md a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.md a:hover {
+  opacity: 0.9;
+}
+
+.md blockquote {
+  border-left: 3px solid color-mix(in oklab, var(--fg) 16%, transparent);
+  padding-left: 0.9rem;
+  color: color-mix(in oklab, var(--fg) 70%, transparent);
+}
+
+.md hr {
+  border: 0;
+  height: 1px;
+  background: color-mix(in oklab, var(--fg) 12%, transparent);
+  margin: 1.25em 0;
+}
+
+.md code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92em;
+  padding: 0.12em 0.38em;
+  border-radius: 0.45em;
+  background: color-mix(in oklab, var(--fg) 8%, transparent);
+  border: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+}
+
+.md pre {
+  overflow: auto;
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  background: color-mix(in oklab, var(--fg) 8%, transparent);
+  border: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+}
+
+.md pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 0.9em;
+}
+
+.md table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  border: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);
+}
+
+.md th,
+.md td {
+  text-align: left;
+  padding: 0.55rem 0.65rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--fg) 10%, transparent);
+  vertical-align: top;
+}
+
+.md th {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: color-mix(in oklab, var(--fg) 6%, transparent);
+}
+
+/* highlight.js: keep it subtle — we just want legibility */
+.md pre :where(.hljs-keyword, .hljs-title, .hljs-selector-tag) {
+  color: color-mix(in oklab, var(--fg) 88%, #4b2bff 12%);
+}
+
+.md pre :where(.hljs-string, .hljs-number, .hljs-literal) {
+  color: color-mix(in oklab, var(--fg) 84%, #0ea5e9 16%);
+}
+
+.md pre :where(.hljs-comment) {
+  color: color-mix(in oklab, var(--fg) 55%, transparent);
+}

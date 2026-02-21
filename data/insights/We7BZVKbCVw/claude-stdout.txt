@@ -1,0 +1,7 @@
+━━━ 📚 LEARN ━━━ 7/7
+
+**Q1 — Self:** Could have been slightly faster by skipping the plan/think compression since this was a clear skill invocation.
+**Q2 — Algorithm:** For Fast skill invocations, the algorithm could auto-compress phases 2-4 into a single checkpoint.
+**Q3 — AI:** A smarter AI would have pre-detected the ExtractWisdom match from the transcript drop alone and compressed the OBSERVE preamble further.
+
+🗣️ Jarvis: Extracted wisdom from the Boris Cherny interview, Ossie. Ten sections covering the death of coding, latent demand, safety, and post-AGI miso plans.
