@@ -4,6 +4,7 @@ import { absTranscriptPath, getVideo } from "@/lib/catalog";
 import { Markdown } from "@/components/Markdown";
 import { readInsightMarkdown } from "@/lib/insights";
 import { curateYouTubeAnalyzer } from "@/lib/curation";
+import { AnalysisPanel } from "@/components/AnalysisPanel";
 
 function dec(s: string) {
   return decodeURIComponent(s);
@@ -27,6 +28,7 @@ export default async function VideoPage({
   }
 
   const insight = readInsightMarkdown(video.videoId).markdown;
+  const initialStatus = insight ? "complete" as const : "idle" as const;
   const curated = insight ? curateYouTubeAnalyzer(insight) : null;
   const youtubeUrl = `https://www.youtube.com/watch?v=${encodeURIComponent(video.videoId)}`;
 
@@ -57,17 +59,11 @@ export default async function VideoPage({
               >
                 Open YouTube
               </a>
-              <form
-                action={`/api/analyze?videoId=${encodeURIComponent(video.videoId)}`}
-                method="post"
-              >
-                <button
-                  type="submit"
-                  className="rounded-full bg-black px-4 py-2 text-sm text-white hover:bg-black/90"
-                >
-                  Run analysis
-                </button>
-              </form>
+              <AnalysisPanel
+                videoId={video.videoId}
+                initialStatus={initialStatus}
+                initialInsight={insight}
+              />
             </div>
           </div>
 
@@ -144,7 +140,7 @@ export default async function VideoPage({
                   </div>
                 ) : (
                   <div className="text-sm text-[var(--muted)]">
-                    No analysis yet. Run it and refresh this page.
+                    No analysis yet. Click &quot;Run analysis&quot; to generate insights.
                   </div>
                 )}
               </div>

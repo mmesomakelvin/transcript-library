@@ -1,30 +1,28 @@
+import { NextResponse } from "next/server";
 import fs from "node:fs";
 import path from "node:path";
-import crypto from "node:crypto";
-import { NextResponse } from "next/server";
+import { spawn } from "node:child_process";
 import { absTranscriptPath, getVideo } from "@/lib/catalog";
+import {
+  atomicWriteJson,
+  isProcessAlive,
+  readStatus,
+  statusPath,
+  analysisPath,
+  insightDir,
+  isValidVideoId,
+  canSpawn,
+  incrementRunning,
+  decrementRunning,
+} from "@/lib/analysis";
 
 export const runtime = "nodejs";
-
-function atomicWriteJson(filePath: string, obj: unknown) {
-  const dir = path.dirname(filePath);
-  fs.mkdirSync(dir, { recursive: true });
-  const tmp = `${filePath}.tmp_${crypto.randomBytes(6).toString("hex")}`;
-  fs.writeFileSync(tmp, JSON.stringify(obj, null, 2));
-  fs.renameSync(tmp, filePath);
-}
-
-function makeJobId() {
-  return `analyze_${new Date().toISOString().replace(/[:.]/g, "-")}_${crypto
-    .randomBytes(4)
-    .toString("hex")}`;
-}
 
 export async function POST(req: Request) {
   const url = new URL(req.url);
   const videoId = url.searchParams.get("videoId") || "";
 
-  if (!/^[a-zA-Z0-9_-]{6,}$/.test(videoId)) {
+  if (!isValidVideoId(videoId)) {
     return NextResponse.json({ ok: false, error: "invalid videoId" }, { status: 400 });
   }
 
@@ -33,56 +31,122 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "not found" }, { status: 404 });
   }
 
-  const appDir = process.cwd();
-  const dataDir = path.join(appDir, "data");
-  const queueDir = path.join(dataDir, "queue");
+  // Check if already running
+  const current = readStatus(videoId);
+  if (current?.status === "running" && isProcessAlive(current.pid)) {
+    return NextResponse.json({ ok: false, error: "already running" }, { status: 409 });
+  }
 
-  const outDir = path.join(dataDir, "insights", videoId);
-  const outPath = path.join(outDir, "analysis.md");
+  // Check global concurrency
+  if (!canSpawn()) {
+    return NextResponse.json({ ok: false, error: "too many analyses running" }, { status: 429 });
+  }
 
-  const parts = video.parts.map((p) => ({
-    chunk: p.chunk,
-    wordCount: p.wordCount,
-    filePath: p.filePath,
-    absPath: absTranscriptPath(p.filePath),
-  }));
+  // Build transcript content
+  const transcriptParts = video.parts
+    .map((p) => {
+      const abs = absTranscriptPath(p.filePath);
+      try {
+        return fs.readFileSync(abs, "utf8");
+      } catch {
+        return `[Part ${p.chunk}: file not found]`;
+      }
+    });
+  const transcript = transcriptParts.join("\n\n---\n\n");
 
-  const jobId = makeJobId();
-  const jobPath = path.join(queueDir, `${jobId}.json`);
+  const prompt = [
+    `Analyze this YouTube video transcript using the /YouTubeAnalyzer skill pattern.`,
+    ``,
+    `Video: ${video.title}`,
+    `Channel: ${video.channel}`,
+    `Topic: ${video.topic}`,
+    `Published: ${video.publishedDate}`,
+    ``,
+    `Transcript:`,
+    ``,
+    transcript,
+  ].join("\n");
 
-  const job = {
-    jobId,
-    type: "video_analysis_v1",
-    status: "queued",
-    createdAt: new Date().toISOString(),
-    video: {
-      videoId: video.videoId,
-      title: video.title,
-      channel: video.channel,
-      topic: video.topic,
-      publishedDate: video.publishedDate,
-    },
-    transcripts: {
-      root:
-        process.env.PLAYLIST_TRANSCRIPTS_REPO ||
-        "/Users/aojdevstudio/projects/clawd/playlist-transcripts",
-      parts,
-    },
-    output: {
-      outDir,
-      outPath,
-    },
-    options: {
-      runner: "claude-p",
-      skill: "YouTubeAnalyzer",
-      depth: "full",
-    },
-    attempts: 0,
-    maxAttempts: 3,
-  };
+  // Spawn claude -p
+  const child = spawn("claude", ["-p", prompt], {
+    stdio: ["ignore", "pipe", "pipe"],
+    detached: false,
+  });
 
-  atomicWriteJson(jobPath, job);
+  if (child.pid === undefined) {
+    atomicWriteJson(statusPath(videoId), {
+      status: "failed",
+      pid: 0,
+      startedAt: new Date().toISOString(),
+      error: "spawn failed: claude not found",
+    });
+    return NextResponse.json({ ok: false, error: "spawn failed" }, { status: 500 });
+  }
 
-  // Redirect back to the video page (simple UX for <form method="post">)
-  return NextResponse.redirect(new URL(`/video/${encodeURIComponent(videoId)}`, url), 303);
+  // Track concurrency
+  incrementRunning();
+
+  // Write initial status
+  const startedAt = new Date().toISOString();
+  atomicWriteJson(statusPath(videoId), {
+    status: "running",
+    pid: child.pid,
+    startedAt,
+  });
+
+  // Buffer stdout
+  const chunks: Buffer[] = [];
+  child.stdout?.on("data", (chunk: Buffer) => {
+    chunks.push(chunk);
+  });
+
+  // 5-minute timeout with SIGTERM -> SIGKILL escalation
+  const timeout = setTimeout(() => {
+    child.kill("SIGTERM");
+    const escalation = setTimeout(() => {
+      if (child.exitCode === null) child.kill("SIGKILL");
+    }, 10_000);
+    child.once("exit", () => clearTimeout(escalation));
+  }, 300_000);
+
+  // Handle completion (close guarantees stdio flushed)
+  child.on("close", (code) => {
+    clearTimeout(timeout);
+    decrementRunning();
+
+    if (code === 0 && chunks.length > 0) {
+      const output = Buffer.concat(chunks).toString("utf8");
+      const outDir = insightDir(videoId);
+      fs.mkdirSync(outDir, { recursive: true });
+      fs.writeFileSync(analysisPath(videoId), output);
+      atomicWriteJson(statusPath(videoId), {
+        status: "complete",
+        pid: child.pid!,
+        startedAt,
+        completedAt: new Date().toISOString(),
+      });
+    } else {
+      atomicWriteJson(statusPath(videoId), {
+        status: "failed",
+        pid: child.pid!,
+        startedAt,
+        completedAt: new Date().toISOString(),
+        error: code === null ? "process killed (timeout)" : `exit code ${code}`,
+      });
+    }
+  });
+
+  // Handle spawn errors
+  child.on("error", (err) => {
+    clearTimeout(timeout);
+    decrementRunning();
+    atomicWriteJson(statusPath(videoId), {
+      status: "failed",
+      pid: child.pid ?? 0,
+      startedAt,
+      error: `spawn error: ${err.message}`,
+    });
+  });
+
+  return NextResponse.json({ ok: true, status: "running" });
 }
