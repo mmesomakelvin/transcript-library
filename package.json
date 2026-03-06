@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
     "nightly:insights": "bun run scripts/nightly-insights.ts",
     "prepare": "husky"
   },
@@ -20,6 +22,7 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^20.19.33",
     "@types/react": "^19.2.14",
