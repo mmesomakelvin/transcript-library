@@ -1,27 +1,19 @@
 import Link from "next/link";
 import { Badge } from "@/components/Badge";
-import { absTranscriptPath, getVideo } from "@/lib/catalog";
+import { absTranscriptPath, getVideo } from "@/modules/catalog";
 import { Markdown } from "@/components/Markdown";
-import { readInsightMarkdown } from "@/lib/insights";
-import { curateYouTubeAnalyzer } from "@/lib/curation";
-import { readStatus, isProcessAlive } from "@/lib/analysis";
+import { readInsightMarkdown } from "@/modules/insights";
+import { curateYouTubeAnalyzer } from "@/modules/curation";
+import { readStatus, isProcessAlive } from "@/modules/analysis";
 import { AnalysisPanel } from "@/components/AnalysisPanel";
 
-export default async function VideoPage({
-  params,
-}: {
-  params: Promise<{ videoId: string }>;
-}) {
+export default async function VideoPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
   const id = decodeURIComponent(videoId);
   const video = getVideo(id);
 
   if (!video) {
-    return (
-      <div className="rounded-2xl border border-black/10 bg-white/40 p-6">
-        Not found.
-      </div>
-    );
+    return <div className="rounded-2xl border border-black/10 bg-white/40 p-6">Not found.</div>;
   }
 
   const insight = readInsightMarkdown(video.videoId).markdown;
@@ -46,9 +38,7 @@ export default async function VideoPage({
           <div className="flex items-start justify-between gap-6">
             <div className="min-w-0">
               <div className="text-xs text-[var(--muted)]">Video</div>
-              <h1 className="mt-1 font-display text-2xl tracking-tight">
-                {video.title}
-              </h1>
+              <h1 className="font-display mt-1 text-2xl tracking-tight">{video.title}</h1>
               <div className="mt-2 flex flex-wrap gap-2">
                 <Link href={`/channel/${encodeURIComponent(video.channel)}`}>
                   <Badge tone="neutral">{video.channel}</Badge>
@@ -79,7 +69,7 @@ export default async function VideoPage({
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-black/10 bg-[color:var(--card)] p-5">
                 <div className="mb-3 flex items-center justify-between gap-3">
-                  <div className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+                  <div className="text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
                     Curated insight
                   </div>
                   {curated ? (
@@ -93,7 +83,7 @@ export default async function VideoPage({
                   <div className="space-y-5">
                     {curated.summary ? (
                       <div>
-                        <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">
+                        <div className="mb-2 text-[11px] font-medium tracking-[0.16em] text-[var(--muted)] uppercase">
                           Summary
                         </div>
                         <p className="text-[15px] leading-7 text-[color:var(--fg)/0.9]">
@@ -104,7 +94,7 @@ export default async function VideoPage({
 
                     {curated.takeaways?.length ? (
                       <div>
-                        <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">
+                        <div className="mb-2 text-[11px] font-medium tracking-[0.16em] text-[var(--muted)] uppercase">
                           Key takeaways
                         </div>
                         <ul className="space-y-2 text-sm leading-6 text-[color:var(--fg)/0.86]">
@@ -120,7 +110,7 @@ export default async function VideoPage({
 
                     {curated.actionItems?.length ? (
                       <div>
-                        <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--muted)]">
+                        <div className="mb-2 text-[11px] font-medium tracking-[0.16em] text-[var(--muted)] uppercase">
                           Action items
                         </div>
                         <ol className="space-y-2 text-sm leading-6 text-[color:var(--fg)/0.86]">
@@ -137,7 +127,7 @@ export default async function VideoPage({
                     ) : null}
 
                     <details className="rounded-xl border border-black/10 bg-white/50 p-4">
-                      <summary className="cursor-pointer select-none text-sm text-[var(--muted)] hover:text-[var(--fg)]">
+                      <summary className="cursor-pointer text-sm text-[var(--muted)] select-none hover:text-[var(--fg)]">
                         View full report
                       </summary>
                       <div className="mt-3">
@@ -156,22 +146,17 @@ export default async function VideoPage({
 
             <div>
               <div className="rounded-2xl border border-black/10 bg-[color:var(--card)] p-5">
-                <div className="mb-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+                <div className="mb-3 text-xs tracking-[0.18em] text-[var(--muted)] uppercase">
                   Transcript parts
                 </div>
                 <ol className="space-y-2 text-sm">
                   {video.parts.map((p) => {
                     const abs = absTranscriptPath(p.filePath);
                     return (
-                      <li
-                        key={p.chunk}
-                        className="flex items-center justify-between gap-3"
-                      >
+                      <li key={p.chunk} className="flex items-center justify-between gap-3">
                         <div className="min-w-0">
                           <div className="truncate">Part {p.chunk}</div>
-                          <div className="text-xs text-[var(--muted)]">
-                            {p.wordCount} words
-                          </div>
+                          <div className="text-xs text-[var(--muted)]">{p.wordCount} words</div>
                         </div>
                         <a
                           className="shrink-0 rounded-full border border-black/10 bg-white px-3 py-1 text-xs text-[var(--muted)] hover:text-[var(--fg)]"

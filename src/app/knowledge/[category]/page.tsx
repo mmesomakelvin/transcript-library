@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/components/Badge";
-import { listKnowledgeMarkdown, titleFromRelPath } from "@/lib/knowledge";
+import { listKnowledgeMarkdown, titleFromRelPath } from "@/modules/knowledge";
 
 function enc(s: string) {
   return encodeURIComponent(s);

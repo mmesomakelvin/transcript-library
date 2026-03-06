@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/Badge";
-import { listVideosByChannel } from "@/lib/catalog";
-import { hasInsight } from "@/lib/insights";
+import { listVideosByChannel } from "@/modules/catalog";
+import { hasInsight } from "@/modules/insights";
 
 function dec(s: string) {
   try {

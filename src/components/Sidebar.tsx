@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Badge } from "@/components/Badge";
-import { listChannels, groupVideos } from "@/lib/catalog";
-import { curatedKnowledgeCategories, listKnowledgeCategories } from "@/lib/knowledge";
-import { listRecentInsights } from "@/lib/recent";
+import { listChannels, groupVideos } from "@/modules/catalog";
+import { curatedKnowledgeCategories, listKnowledgeCategories } from "@/modules/knowledge";
+import { listRecentInsights } from "@/modules/recent";
 
 function enc(s: string) {
   return encodeURIComponent(s);

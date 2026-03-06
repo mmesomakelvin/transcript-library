@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/Badge";
-import { listChannels } from "@/lib/catalog";
-import { listRecentKnowledge } from "@/lib/recent";
+import { listChannels } from "@/modules/catalog";
+import { listRecentKnowledge } from "@/modules/recent";
 
 function slug(s: string) {
   return encodeURIComponent(s);
@@ -17,7 +17,8 @@ export default async function Page() {
         <div className="flex flex-col gap-2">
           <h1 className="font-display text-2xl tracking-tight">Library</h1>
           <p className="max-w-2xl text-sm text-[var(--muted)]">
-            Browse channels and keep a video page open while you watch. Your knowledge notes live alongside the generated insights.
+            Browse channels and keep a video page open while you watch. Your knowledge notes live
+            alongside the generated insights.
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <Link href="/knowledge">
@@ -31,7 +32,7 @@ export default async function Page() {
       {recentKnowledge.length ? (
         <section className="rounded-2xl border border-black/10 bg-[color:var(--card)] p-5 shadow-[0_1px_0_rgba(0,0,0,0.06)]">
           <div className="mb-3 flex items-center justify-between gap-3">
-            <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+            <div className="text-[11px] font-medium tracking-[0.18em] text-[var(--muted)] uppercase">
               Recent knowledge
             </div>
             <Link href="/knowledge">
@@ -65,9 +66,7 @@ export default async function Page() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <div className="font-display text-lg leading-tight tracking-tight">
-                  {c.channel}
-                </div>
+                <div className="font-display text-lg leading-tight tracking-tight">{c.channel}</div>
                 <div className="mt-1 text-xs text-[var(--muted)]">
                   {c.videoCount} videos • {c.topics.length} topics
                 </div>
@@ -81,9 +80,7 @@ export default async function Page() {
                   {t}
                 </Badge>
               ))}
-              {c.topics.length > 5 ? (
-                <Badge tone="quiet">+{c.topics.length - 5}</Badge>
-              ) : null}
+              {c.topics.length > 5 ? <Badge tone="quiet">+{c.topics.length - 5}</Badge> : null}
             </div>
           </a>
         ))}

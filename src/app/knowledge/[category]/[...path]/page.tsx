@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Markdown } from "@/components/Markdown";
-import { readKnowledgeMarkdown, titleFromRelPath } from "@/lib/knowledge";
+import { readKnowledgeMarkdown, titleFromRelPath } from "@/modules/knowledge";
 
 function dec(s: string) {
   return decodeURIComponent(s);

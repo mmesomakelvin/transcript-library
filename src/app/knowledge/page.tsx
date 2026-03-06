@@ -4,7 +4,7 @@ import {
   curatedKnowledgeCategories,
   knowledgeExists,
   listKnowledgeCategories,
-} from "@/lib/knowledge";
+} from "@/modules/knowledge";
 
 function enc(s: string) {
   return encodeURIComponent(s);
@@ -47,19 +47,17 @@ export default function KnowledgeHomePage() {
             className="group rounded-2xl border border-black/10 bg-white/50 p-5 shadow-[0_1px_0_rgba(0,0,0,0.05)] hover:bg-white"
           >
             <div className="flex items-center justify-between gap-3">
-              <div className="font-medium capitalize tracking-tight">{c.replace(/-/g, " ")}</div>
+              <div className="font-medium tracking-tight capitalize">{c.replace(/-/g, " ")}</div>
               <Badge tone="neutral">Open</Badge>
             </div>
-            <div className="mt-2 text-sm text-[var(--muted)]">
-              Browse notes and summaries.
-            </div>
+            <div className="mt-2 text-sm text-[var(--muted)]">Browse notes and summaries.</div>
           </Link>
         ))}
       </section>
 
       {extras.length ? (
         <section className="rounded-3xl border border-black/10 bg-[color:var(--card)] p-6">
-          <div className="text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
+          <div className="text-[11px] font-medium tracking-[0.18em] text-[var(--muted)] uppercase">
             Other folders
           </div>
           <div className="mt-3 flex flex-wrap gap-2">
