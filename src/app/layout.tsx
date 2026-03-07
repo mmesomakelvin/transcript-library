@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Fraunces } from "next/font/google";
-import { Suspense } from "react";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar";
-import SidebarSkeleton from "@/components/SidebarSkeleton";
-import { Badge } from "@/components/Badge";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -22,6 +18,9 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "Transcript Library",
   description: "Watch YouTube videos inside the app while reviewing analysis and transcripts.",
+  other: {
+    "theme-color": "#f0ede6",
+  },
 };
 
 export default function RootLayout({
@@ -33,36 +32,36 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable} ${fraunces.variable}`}>
         <div className="min-h-dvh bg-[var(--app-bg)] text-[var(--ink)]">
-          <div className="mx-auto flex min-h-dvh max-w-[1680px] gap-6 px-4 py-4 lg:px-6 xl:gap-8 xl:px-8 xl:py-6">
-            <Suspense fallback={<SidebarSkeleton />}>
-              <Sidebar />
-            </Suspense>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-[var(--accent)] focus:px-4 focus:py-2 focus:text-sm focus:text-[var(--accent-foreground)]"
+          >
+            Skip to main content
+          </a>
 
-            <div className="min-w-0 flex-1">
-              <header className="sticky top-4 z-30 mb-6 rounded-[28px] border border-white/60 bg-[rgba(248,245,238,0.82)] px-5 py-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl lg:px-6">
-                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                  <div className="flex items-center gap-4">
-                    <Link href="/" className="font-display text-3xl tracking-[-0.04em] text-[var(--ink)]">
-                      Transcript Library
-                    </Link>
-                    <Badge tone="quiet" className="hidden md:inline-flex">
-                      Desktop-first
-                    </Badge>
-                  </div>
-                  <nav className="flex flex-wrap items-center gap-2 text-sm text-[var(--muted)]">
-                    <Link className="rounded-full px-3 py-2 transition hover:bg-black/5 hover:text-[var(--ink)]" href="/">
-                      Library
-                    </Link>
-                    <Link className="rounded-full px-3 py-2 transition hover:bg-black/5 hover:text-[var(--ink)]" href="/knowledge">
-                      Knowledge
-                    </Link>
-                  </nav>
-                </div>
-              </header>
-
-              <main>{children}</main>
+          <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[var(--app-bg)]/95 backdrop-blur-[20px] saturate-[1.4]">
+            <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-8">
+              <Link href="/" className="font-display text-xl tracking-[-0.03em] text-[var(--ink)]">
+                Transcript Library
+              </Link>
+              <nav className="flex items-center gap-1 text-sm font-medium text-[var(--muted)]">
+                <Link className="rounded-xl px-4 py-2 transition hover:bg-black/5 hover:text-[var(--ink)]" href="/">
+                  Library
+                </Link>
+                <Link className="rounded-xl px-4 py-2 transition hover:bg-black/5 hover:text-[var(--ink)]" href="/knowledge">
+                  Knowledge
+                </Link>
+              </nav>
             </div>
-          </div>
+          </header>
+
+          <main id="main" className="mx-auto max-w-[1320px] px-8 py-6">
+            {children}
+          </main>
+
+          <footer className="border-t border-[var(--line)] py-8 text-center text-xs text-[var(--muted)]">
+            Transcript Library &mdash; Desktop-first research tool for friends
+          </footer>
         </div>
       </body>
     </html>

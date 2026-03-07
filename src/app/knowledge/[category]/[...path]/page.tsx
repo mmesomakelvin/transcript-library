@@ -1,7 +1,5 @@
-import Link from "next/link";
 import { Markdown } from "@/components/Markdown";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import {
   listKnowledgeCategories,
   listKnowledgeMarkdown,
@@ -35,26 +33,21 @@ export default async function KnowledgeDocPage({
 
   return (
     <div className="space-y-8 pb-12">
-      <section className="relative overflow-hidden rounded-[32px] border border-[var(--line)] [background:var(--surface-hero)] px-8 py-9 shadow-[var(--shadow-card)]">
-        <div className="relative flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
-          <div className="min-w-0 max-w-4xl">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">Knowledge document</div>
-            <h1 className="mt-4 font-display text-5xl tracking-[-0.05em] text-[var(--ink)]">
-              {titleFromRelPath(relPath)}
-            </h1>
-            <div className="mt-4 text-sm text-[var(--muted)]">{relPath}</div>
-          </div>
-          <Link href={`/knowledge/${encodeURIComponent(category)}`}>
-            <Button variant="outline">Back to category</Button>
-          </Link>
-        </div>
-      </section>
+      <div className="mb-8 pt-2">
+        <Breadcrumb items={[
+          { label: "Knowledge", href: "/knowledge" },
+          { label: category.replace(/-/g, " "), href: `/knowledge/${encodeURIComponent(category)}` },
+          { label: titleFromRelPath(relPath) },
+        ]} />
+        <h1 className="font-display text-3xl tracking-[-0.04em] text-[var(--ink)]">
+          {titleFromRelPath(relPath)}
+        </h1>
+        <p className="mt-1 text-sm text-[var(--muted)]">{relPath}</p>
+      </div>
 
-      <Card>
-        <CardContent className="p-8 lg:p-10">
-          {markdown ? <Markdown>{markdown}</Markdown> : <div className="text-sm text-[var(--muted)]">Document not found.</div>}
-        </CardContent>
-      </Card>
+      <div>
+        {markdown ? <Markdown>{markdown}</Markdown> : <div className="text-sm text-[var(--muted)]">Document not found.</div>}
+      </div>
     </div>
   );
 }

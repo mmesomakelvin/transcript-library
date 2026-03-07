@@ -6,7 +6,7 @@ type ButtonSize = "default" | "sm" | "lg" | "icon";
 
 const variantClasses: Record<ButtonVariant, string> = {
   default:
-    "bg-[var(--accent)] text-[var(--accent-foreground)] shadow-[0_18px_40px_rgba(26,59,112,0.18)] hover:bg-[var(--accent-strong)]",
+    "bg-[var(--accent)] text-[var(--accent-foreground)] shadow-[0_8px_24px_rgba(26,24,20,0.12)] hover:bg-[var(--accent-strong)]",
   secondary:
     "bg-[var(--panel)] text-[var(--ink)] hover:bg-[var(--panel-strong)]",
   ghost: "bg-transparent text-[var(--muted-strong)] hover:bg-black/5 hover:text-[var(--ink)]",

@@ -48,6 +48,15 @@ type StreamPayload = {
   run?: InsightResponse["run"];
 };
 
+function SparkleIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M12 3v1m0 16v1m-7.07-2.93.7-.7m12.73-12.73.7-.7M3 12h1m16 0h1m-2.93 7.07-.7-.7M5.64 5.64l-.7-.7" />
+      <circle cx="12" cy="12" r="4" />
+    </svg>
+  );
+}
+
 export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
   const [data, setData] = useState<InsightResponse | null>(null);
   const [loading, setLoading] = useState(true);
@@ -172,66 +181,58 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
   const curated = data?.curated;
   const hasInsight = Boolean(data?.insight);
   const artifactMeta = data?.artifacts;
-  const artifactName = artifactMeta?.displayFileName ?? artifactMeta?.canonicalFileName ?? "analysis.md";
   const liveStdout = stream?.logs.stdout?.trim();
   const liveStderr = stream?.logs.stderr?.trim();
   const run = stream?.run ?? data?.run ?? null;
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+    <div className="space-y-10">
+      {/* Header with action button */}
+      <div className="flex items-start justify-between gap-4">
         <div>
-          <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">Analysis board</div>
-          <h2 className="mt-3 font-display text-4xl tracking-[-0.04em] text-[var(--ink)]">
-            {hasInsight ? "Curated analysis" : loading ? "Loading analysis" : "No analysis yet"}
+          <h2 className="font-display text-xl tracking-[-0.03em] text-[var(--ink)]">
+            {hasInsight ? "Analysis" : loading ? "Loading analysis" : "No analysis yet"}
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-[var(--muted)]">
-            Keep the player running while you scan the summary, key takeaways, and action items.
+          <p className="mt-1 text-sm text-[var(--muted)]">
+            {hasInsight ? "Summary, takeaways, and action items from this video." : "Generate analysis to see insights."}
           </p>
         </div>
-        <div className="w-full max-w-[240px] shrink-0 space-y-3">
+        <div className="flex shrink-0 items-center gap-3">
+          {run ? (
+            <span className="text-xs text-[var(--muted)]">
+              {run.provider}{run.model ? ` \u00b7 ${run.model}` : ""}
+            </span>
+          ) : null}
+          <span className="rounded-full bg-[var(--panel)] px-3 py-1 text-xs text-[var(--muted)]">{status}</span>
           <Button
             onClick={startAnalysis}
             disabled={status === "running"}
-            className="w-full justify-center rounded-2xl"
+            size="sm"
+            className="gap-1.5"
           >
-            {status === "running"
-              ? "Generating analysis"
-              : hasInsight
-                ? "Refresh analysis"
-                : "Generate analysis"}
+            <SparkleIcon />
+            {status === "running" ? "Generating..." : hasInsight ? "Refresh Analysis" : "Generate Analysis"}
           </Button>
-          <div className="rounded-2xl border border-[var(--line)] bg-white/75 px-4 py-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-            Status: <span className="text-[var(--ink)]">{status}</span>
-          </div>
-          <div className="rounded-2xl border border-[var(--line)] bg-white/75 px-4 py-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-            Artifact: <span className="text-[var(--ink)] normal-case tracking-normal">{artifactName}</span>
-          </div>
-          {run ? (
-            <div className="rounded-2xl border border-[var(--line)] bg-white/75 px-4 py-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
-              Provider:{" "}
-              <span className="text-[var(--ink)] normal-case tracking-normal">
-                {run.provider}
-                {run.model ? ` · ${run.model}` : ""}
-              </span>
-            </div>
-          ) : null}
-          {data?.error ? (
-            <div className="rounded-2xl border border-[#d8b1aa] bg-[#fbe9e7] px-4 py-3 text-sm text-[#7b342f]">
-              {data.error}
-            </div>
-          ) : null}
         </div>
       </div>
 
+      {/* Error display */}
+      {data?.error ? (
+        <div className="rounded-2xl border border-[#d8b1aa] bg-[#fbe9e7] px-4 py-3 text-sm text-[#7b342f]">
+          {data.error}
+        </div>
+      ) : null}
+
+      {/* Loading state */}
       {loading ? (
-        <div className="rounded-[28px] border border-[var(--line)] bg-white/68 p-8 text-sm leading-7 text-[var(--muted)]">
+        <div className="rounded-2xl border border-[var(--line)] bg-white/68 p-8 text-sm leading-7 text-[var(--muted)]">
           Loading latest analysis state.
         </div>
       ) : hasInsight ? (
-        <div className="space-y-8">
+        <div className="space-y-10">
+          {/* Live worker logs */}
           {stream && (liveStdout || liveStderr || status === "running") ? (
-            <details className="rounded-[28px] border border-[var(--line)] bg-white/82 p-6" open={status === "running"}>
+            <details className="rounded-2xl border border-[var(--line)] bg-white/82 p-6" open={status === "running"}>
               <summary className="cursor-pointer list-none text-sm font-medium text-[var(--ink)]">
                 Live worker logs
               </summary>
@@ -256,56 +257,71 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
             </details>
           ) : null}
 
+          {/* Summary section */}
           {curated?.summary ? (
-            <div className="rounded-[28px] border border-[var(--line)] bg-white/82 p-6">
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">Summary</div>
-              <p className="mt-4 text-[15px] leading-8 text-[var(--muted-strong)]">{curated.summary}</p>
-            </div>
+            <section>
+              <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
+                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Summary</h2>
+                <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">AI Generated</span>
+              </div>
+              <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-8 py-7">
+                <p className="text-[1.0625rem] leading-7 text-[var(--muted-strong)]">{curated.summary}</p>
+              </div>
+            </section>
           ) : null}
 
+          {/* Key Takeaways section */}
           {curated?.takeaways?.length ? (
-            <div>
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">Key takeaways</div>
-              <div className="mt-4 grid gap-3 xl:grid-cols-2">
-                {curated.takeaways.map((takeaway, index) => (
-                  <div key={takeaway} className="rounded-[24px] border border-[var(--line)] bg-white/82 p-5">
-                    <div className="text-sm font-semibold text-[var(--accent-strong)]">0{index + 1}</div>
-                    <p className="mt-3 text-sm leading-7 text-[var(--muted-strong)]">{takeaway}</p>
+            <section>
+              <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
+                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Key Takeaways</h2>
+                <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">{curated.takeaways.length} insights</span>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {curated.takeaways.map((t, i) => (
+                  <div key={t} className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-6">
+                    <div className="font-display text-sm font-semibold text-[var(--accent)]">0{i + 1}</div>
+                    <p className="mt-2 text-[0.9375rem] leading-[1.65] text-[var(--muted-strong)]">{t}</p>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           ) : null}
 
+          {/* Action Items section */}
           {curated?.actionItems?.length ? (
-            <div>
-              <div className="text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">Action items</div>
-              <div className="mt-4 space-y-3">
-                {curated.actionItems.map((item, index) => (
-                  <div key={item} className="flex gap-4 rounded-[24px] border border-[var(--line)] bg-[var(--panel)] p-5">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[var(--accent)] text-[var(--accent-foreground)]">
-                      {index + 1}
-                    </div>
-                    <p className="text-sm leading-7 text-[var(--muted-strong)]">{item}</p>
+            <section>
+              <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
+                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Action Items</h2>
+                <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">{curated.actionItems.length} protocols</span>
+              </div>
+              <div className="space-y-2">
+                {curated.actionItems.map((item, i) => (
+                  <div key={item} className="flex gap-4 items-start rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-5">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--accent)]/8 text-[0.8125rem] font-bold text-[var(--accent)]">{i + 1}</div>
+                    <p className="pt-1 text-[0.9375rem] leading-[1.6] text-[var(--muted-strong)]">{item}</p>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           ) : null}
 
-          <details className="rounded-[28px] border border-[var(--line)] bg-white/82 p-6">
-            <summary className="cursor-pointer list-none text-sm font-medium text-[var(--ink)]">
-              Open full markdown report
-            </summary>
-            <div className="mt-6">
+          {/* Full Analysis Report section */}
+          <section>
+            <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
+              <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Full Analysis Report</h2>
+              <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">Markdown</span>
+            </div>
+            <div className="rounded-3xl border border-[var(--line)] bg-white px-14 py-12">
               <Markdown>{data?.insight}</Markdown>
             </div>
-          </details>
+          </section>
         </div>
       ) : (
         <div className="space-y-4">
+          {/* Live worker logs (no insight yet) */}
           {stream && (liveStdout || liveStderr || status === "running") ? (
-            <details className="rounded-[28px] border border-[var(--line)] bg-white/82 p-6" open={status === "running"}>
+            <details className="rounded-2xl border border-[var(--line)] bg-white/82 p-6" open={status === "running"}>
               <summary className="cursor-pointer list-none text-sm font-medium text-[var(--ink)]">
                 Live worker logs
               </summary>
@@ -329,7 +345,7 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
               </div>
             </details>
           ) : null}
-          <div className="rounded-[28px] border border-dashed border-[var(--line)] bg-white/68 p-8 text-sm leading-7 text-[var(--muted)]">
+          <div className="rounded-2xl border border-dashed border-[var(--line)] bg-white/68 p-8 text-sm leading-7 text-[var(--muted)]">
             Start analysis to generate an in-app summary while the video plays above.
           </div>
         </div>
