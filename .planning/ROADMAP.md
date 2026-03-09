@@ -11,7 +11,7 @@ This roadmap hardens the existing private transcript library without changing it
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Artifact Foundations** - Make artifact storage deployment-safe and establish the structured analysis contract
+- [x] **Phase 1: Artifact Foundations** - Make artifact storage deployment-safe and establish the structured analysis contract
 - [ ] **Phase 2: SQLite Catalog** - Replace CSV-backed catalog reads with indexed SQLite queries for faster browsing
 - [ ] **Phase 3: Durable Runtime** - Replace fragile analysis lifecycle behavior with durable job and sync state
 - [ ] **Phase 4: Hosted Hardening** - Tighten private deployment boundaries, scale-readiness, and final hosted validation
@@ -35,7 +35,7 @@ Plans:
 
 - [x] 01-01: Implement configurable insights base directory with regression coverage
 - [x] 01-02: Add the structured `analysis.json` schema, parser, and runtime writes
-- [ ] 01-03: Wire UI/runtime compatibility paths and validate safe artifact/path helpers
+- [x] 01-03: Wire UI/runtime compatibility paths and validate safe artifact/path helpers
 
 ### Phase 2: SQLite Catalog
 
@@ -97,9 +97,9 @@ Plans:
 **Execution Order:**
 Phases execute in numeric order: 1 → 2 → 3 → 4
 
-| Phase                   | Plans Complete | Status      | Completed |
-| ----------------------- | -------------- | ----------- | --------- |
-| 1. Artifact Foundations | 2/3            | In Progress | -         |
-| 2. SQLite Catalog       | 0/3            | Not started | -         |
-| 3. Durable Runtime      | 0/3            | Not started | -         |
-| 4. Hosted Hardening     | 0/2            | Not started | -         |
+| Phase                   | Plans Complete | Status      | Completed  |
+| ----------------------- | -------------- | ----------- | ---------- |
+| 1. Artifact Foundations | 3/3            | Complete    | 2026-03-09 |
+| 2. SQLite Catalog       | 0/3            | Not started | -          |
+| 3. Durable Runtime      | 0/3            | Not started | -          |
+| 4. Hosted Hardening     | 0/2            | Not started | -          |

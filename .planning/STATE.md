@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 01-artifact-foundations-02-PLAN.md
-last_updated: "2026-03-09T20:20:19.617Z"
-last_activity: 2026-03-09 — Completed Plan 02 (structured analysis contract)
+stopped_at: Completed 01-artifact-foundations-03-PLAN.md
+last_updated: "2026-03-09T20:42:53.059Z"
+last_activity: 2026-03-09 — Completed Plan 03 (legacy artifact migration)
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
-  percent: 67
+  completed_plans: 3
+  percent: 100
 ---
 
 # Project State
@@ -21,36 +21,37 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-09)
 
 **Core value:** The library must stay fast and trustworthy for private knowledge browsing and analysis, even as the catalog grows and runtime analysis moves onto a hosted Proxmox container.
-**Current focus:** Phase 1 - Artifact Foundations
+**Current focus:** Phase 2 - SQLite Catalog
 
 ## Current Position
 
-Phase: 1 of 4 (Artifact Foundations)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-03-09 — Completed Plan 02 (structured analysis contract)
+Phase: 2 of 4 (SQLite Catalog)
+Plan: 0 of 3 in current phase
+Status: Ready for next phase
+Last activity: 2026-03-09 — Completed Plan 03 (legacy artifact migration)
 
-Progress: [███████░░░] 67%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 0
-- Average duration: 6 min
-- Total execution time: 12 min
+- Total plans completed: 3
+- Average duration: 10 min
+- Total execution time: 32 min
 
 **By Phase:**
 
 | Phase                   | Plans | Total  | Avg/Plan |
 | ----------------------- | ----- | ------ | -------- |
-| 01-artifact-foundations | 2     | 12 min | 6 min    |
+| 01-artifact-foundations | 3     | 32 min | 10 min   |
 
 **Recent Trend:**
 
-- Last 5 plans: 4 min, 8 min
-- Trend: Improving
+- Last 5 plans: 4 min, 8 min, 20 min
+- Trend: Mixed
   | Phase 01-artifact-foundations P02 | 8 min | 3 tasks | 12 files |
+  | Phase 01-artifact-foundations P03 | 20 min | 3 tasks | 20 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,9 @@ Recent decisions affecting current work:
 - [Phase 01-artifact-foundations]: Treat structured JSON as the write-time authority and reject invalid payloads before UI consumption.
 - [Phase 01-artifact-foundations]: Derive analysis.md from validated reportMarkdown while keeping analysis.json authoritative for structured sections.
 - [Phase 01-artifact-foundations]: Keep legacy markdown fallback during migration, but fail loudly when analysis.json exists and is invalid.
+- [Phase 01-artifact-foundations]: Gate markdown-only fallback on .migration-status.json so legacy compatibility stays explicitly temporary.
+- [Phase 01-artifact-foundations]: Share artifact path resolution through src/lib/insight-paths.ts so plain-node maintenance scripts and runtime use the same base-dir/videoId authority.
+- [Phase 01-artifact-foundations]: Treat zero remaining flat markdown artifacts as the operational completion signal for Phase 1 migration.
 
 ### Pending Todos
 
@@ -78,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-09T20:20:19.615Z
-Stopped at: Completed 01-artifact-foundations-02-PLAN.md
+Last session: 2026-03-09T20:42:53.058Z
+Stopped at: Completed 01-artifact-foundations-03-PLAN.md
 Resume file: None
