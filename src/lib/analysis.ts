@@ -16,6 +16,7 @@ import {
   enrichAnalysisMeta,
   type HeadlessAnalysisMeta,
 } from "@/lib/headless-youtube-analysis";
+import { parseStructuredAnalysis, type StructuredAnalysis } from "@/lib/analysis-contract";
 
 /**
  * Status file written to `status.json` for each analysis run.
@@ -73,6 +74,7 @@ export type AnalysisProvider = "claude-cli" | "codex-cli";
  * @property {number|null} [exitCode] - Process exit code
  * @property {string} [error] - Error message if status is "failed"
  * @property {Object} artifacts - Paths to output artifacts
+ * @property {string} artifacts.structuredFileName - analysis.json
  * @property {string} artifacts.canonicalFileName - analysis.md
  * @property {string} artifacts.displayFileName - slugified title markdown
  * @property {string} artifacts.metadataFileName - video-metadata.json
@@ -94,6 +96,7 @@ export type RunFile = {
   exitCode?: number | null;
   error?: string;
   artifacts: {
+    structuredFileName: string;
     canonicalFileName: string;
     displayFileName: string;
     metadataFileName: string;
@@ -286,6 +289,15 @@ export function statusPath(videoId: string): string {
  */
 export function analysisPath(videoId: string): string {
   return path.join(insightDir(videoId), "analysis.md");
+}
+
+/**
+ * Returns the path to the canonical structured analysis JSON file.
+ * @param {string} videoId - YouTube video ID
+ * @returns {string} Path to analysis.json
+ */
+export function structuredAnalysisPath(videoId: string): string {
+  return path.join(insightDir(videoId), "analysis.json");
 }
 
 /**
@@ -482,7 +494,7 @@ function resolveProviderSpec(videoId: string): ProviderSpec {
   const configured = (process.env.ANALYSIS_PROVIDER ?? "claude-cli").trim().toLowerCase();
 
   if (configured === "codex-cli") {
-    const outputPath = path.join(insightDir(videoId), "provider-output.md");
+    const outputPath = path.join(insightDir(videoId), "provider-output.json");
     const model = process.env.CODEX_ANALYSIS_MODEL || process.env.ANALYSIS_MODEL || undefined;
     const args = [
       "exec",
@@ -537,6 +549,34 @@ function writeRunMetadata(
   } satisfies RunFile);
 }
 
+function buildRunArtifacts(videoId: string, title: string): RunFile["artifacts"] {
+  return {
+    structuredFileName: path.basename(structuredAnalysisPath(videoId)),
+    canonicalFileName: path.basename(analysisPath(videoId)),
+    displayFileName: path.basename(displayAnalysisPath(videoId, title)),
+    metadataFileName: path.basename(metadataCachePath(videoId)),
+    stdoutFileName: path.basename(stdoutLogPath(videoId)),
+    stderrFileName: path.basename(stderrLogPath(videoId)),
+  };
+}
+
+function atomicWriteText(filePath: string, contents: string): void {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  const tmpPath = `${filePath}.tmp_${Date.now()}_${crypto.randomBytes(4).toString("hex")}`;
+  fs.writeFileSync(tmpPath, contents);
+  fs.renameSync(tmpPath, filePath);
+}
+
+function persistStructuredAnalysis(
+  videoId: string,
+  title: string,
+  structured: StructuredAnalysis,
+): void {
+  atomicWriteJson(structuredAnalysisPath(videoId), structured);
+  atomicWriteText(analysisPath(videoId), structured.reportMarkdown);
+  atomicWriteText(displayAnalysisPath(videoId, title), structured.reportMarkdown);
+}
+
 /**
  * Creates insight directory and initial artifact files.
  * @param {string} videoId - YouTube video ID
@@ -549,7 +589,7 @@ function initializeArtifacts(videoId: string, resolvedMeta: HeadlessAnalysisMeta
   fs.writeFileSync(stdoutLogPath(videoId), "");
   fs.writeFileSync(stderrLogPath(videoId), "");
   try {
-    fs.rmSync(path.join(outDir, "provider-output.md"), { force: true });
+    fs.rmSync(path.join(outDir, "provider-output.json"), { force: true });
   } catch {}
   atomicWriteJson(metadataCachePath(videoId), resolvedMeta);
 }
@@ -643,13 +683,7 @@ export function spawnAnalysis(
       completedAt: new Date().toISOString(),
       exitCode: null,
       error: `spawn error: ${(err as Error).message}`,
-      artifacts: {
-        canonicalFileName: path.basename(analysisPath(videoId)),
-        displayFileName: path.basename(displayAnalysisPath(videoId, resolvedMeta.title)),
-        metadataFileName: path.basename(metadataCachePath(videoId)),
-        stdoutFileName: path.basename(stdoutLogPath(videoId)),
-        stderrFileName: path.basename(stderrLogPath(videoId)),
-      },
+      artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
     });
     return false;
   }
@@ -684,13 +718,7 @@ export function spawnAnalysis(
     startedAt,
     promptResolvedAt,
     pid,
-    artifacts: {
-      canonicalFileName: path.basename(analysisPath(videoId)),
-      displayFileName: path.basename(displayAnalysisPath(videoId, resolvedMeta.title)),
-      metadataFileName: path.basename(metadataCachePath(videoId)),
-      stdoutFileName: path.basename(stdoutLogPath(videoId)),
-      stderrFileName: path.basename(stderrLogPath(videoId)),
-    },
+    artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
   });
 
   const chunks: Buffer[] = [];
@@ -743,22 +771,73 @@ export function spawnAnalysis(
         completedAt,
         exitCode: code,
         error: `output read error: ${(err as Error).message}`,
-        artifacts: {
-          canonicalFileName: path.basename(analysisPath(videoId)),
-          displayFileName: path.basename(displayAnalysisPath(videoId, resolvedMeta.title)),
-          metadataFileName: path.basename(metadataCachePath(videoId)),
-          stdoutFileName: path.basename(stdoutLogPath(videoId)),
-          stderrFileName: path.basename(stderrLogPath(videoId)),
-        },
+        artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
       });
       return;
     }
 
     if (code === 0 && output.trim()) {
-      const tmpPath = `${analysisPath(videoId)}.tmp_${Date.now()}`;
-      fs.writeFileSync(tmpPath, output);
-      fs.renameSync(tmpPath, analysisPath(videoId));
-      fs.writeFileSync(displayAnalysisPath(videoId, resolvedMeta.title), output);
+      let structured: StructuredAnalysis;
+      try {
+        structured = parseStructuredAnalysis(output);
+      } catch (err) {
+        const error = `structured analysis validation failed: ${(err as Error).message}`;
+        console.error(`${logPrefix} ${error}`);
+        fs.appendFileSync(stderrLogPath(videoId), `\n${error}\n`);
+        atomicWriteJson(statusPath(videoId), {
+          status: "failed",
+          pid,
+          startedAt,
+          completedAt,
+          error,
+        });
+        writeRunMetadata(videoId, {
+          provider: provider.provider,
+          model: provider.model,
+          command: provider.command,
+          args: provider.args,
+          status: "failed",
+          startedAt,
+          promptResolvedAt,
+          pid,
+          completedAt,
+          exitCode: code,
+          error,
+          artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
+        });
+        return;
+      }
+
+      try {
+        persistStructuredAnalysis(videoId, resolvedMeta.title, structured);
+      } catch (err) {
+        const error = `structured analysis write failed: ${(err as Error).message}`;
+        console.error(`${logPrefix} ${error}`);
+        fs.appendFileSync(stderrLogPath(videoId), `\n${error}\n`);
+        atomicWriteJson(statusPath(videoId), {
+          status: "failed",
+          pid,
+          startedAt,
+          completedAt,
+          error,
+        });
+        writeRunMetadata(videoId, {
+          provider: provider.provider,
+          model: provider.model,
+          command: provider.command,
+          args: provider.args,
+          status: "failed",
+          startedAt,
+          promptResolvedAt,
+          pid,
+          completedAt,
+          exitCode: code,
+          error,
+          artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
+        });
+        return;
+      }
+
       atomicWriteJson(statusPath(videoId), {
         status: "complete",
         pid,
@@ -776,13 +855,7 @@ export function spawnAnalysis(
         pid,
         completedAt,
         exitCode: code,
-        artifacts: {
-          canonicalFileName: path.basename(analysisPath(videoId)),
-          displayFileName: path.basename(displayAnalysisPath(videoId, resolvedMeta.title)),
-          metadataFileName: path.basename(metadataCachePath(videoId)),
-          stdoutFileName: path.basename(stdoutLogPath(videoId)),
-          stderrFileName: path.basename(stderrLogPath(videoId)),
-        },
+        artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
       });
     } else {
       const stderrSummary = stderr
@@ -814,13 +887,7 @@ export function spawnAnalysis(
         completedAt,
         exitCode: code,
         error,
-        artifacts: {
-          canonicalFileName: path.basename(analysisPath(videoId)),
-          displayFileName: path.basename(displayAnalysisPath(videoId, resolvedMeta.title)),
-          metadataFileName: path.basename(metadataCachePath(videoId)),
-          stdoutFileName: path.basename(stdoutLogPath(videoId)),
-          stderrFileName: path.basename(stderrLogPath(videoId)),
-        },
+        artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
       });
     }
   });
@@ -848,13 +915,7 @@ export function spawnAnalysis(
       completedAt,
       exitCode: child.exitCode,
       error: `spawn error: ${err.message}`,
-      artifacts: {
-        canonicalFileName: path.basename(analysisPath(videoId)),
-        displayFileName: path.basename(displayAnalysisPath(videoId, resolvedMeta.title)),
-        metadataFileName: path.basename(metadataCachePath(videoId)),
-        stdoutFileName: path.basename(stdoutLogPath(videoId)),
-        stderrFileName: path.basename(stderrLogPath(videoId)),
-      },
+      artifacts: buildRunArtifacts(videoId, resolvedMeta.title),
     });
   });
 
