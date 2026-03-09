@@ -7,8 +7,8 @@
 
 ### Deployment And Storage
 
-- [ ] **DEPLOY-01**: Operator can configure the base insights storage directory via environment configuration so runtime artifacts can live outside the deployed app tree
-- [ ] **DEPLOY-02**: Existing local development behavior continues to work when the configurable insights storage directory is unset
+- [x] **DEPLOY-01**: Operator can configure the base insights storage directory via environment configuration so runtime artifacts can live outside the deployed app tree
+- [x] **DEPLOY-02**: Existing local development behavior continues to work when the configurable insights storage directory is unset
 - [ ] **DEPLOY-03**: Hosted deployment prerequisites are validated clearly enough that missing critical environment or filesystem requirements fail before user-triggered analysis flows
 
 ### Structured Analysis
@@ -36,7 +36,7 @@
 
 - [ ] **SAFE-01**: Internal API routes that expose transcripts, artifacts, or local path-derived data are protected appropriately for the private hosted deployment model
 - [ ] **SAFE-02**: Webhook-triggered batch analysis has stronger abuse resistance through improved validation, replay protection, or equivalent safeguards appropriate to the deployment
-- [ ] **SAFE-03**: Lower-level path and artifact helpers enforce safe `videoId` and path-construction rules so internal refactors do not bypass validation accidentally
+- [x] **SAFE-03**: Lower-level path and artifact helpers enforce safe `videoId` and path-construction rules so internal refactors do not bypass validation accidentally
 - [ ] **SAFE-04**: Catalog, artifact, and structured analysis inputs are validated consistently enough that malformed data fails loudly instead of degrading silently
 
 ### Performance And Scale Hygiene
@@ -48,7 +48,7 @@
 
 ### Verification
 
-- [ ] **TEST-01**: Automated tests cover the configurable insights base directory behavior and insight path resolution
+- [x] **TEST-01**: Automated tests cover the configurable insights base directory behavior and insight path resolution
 - [ ] **TEST-02**: Automated tests cover the structured analysis parser/contract and compatibility fallbacks
 - [ ] **TEST-03**: Automated tests cover SQLite-backed catalog reads and migration parity for representative catalog cases
 - [ ] **TEST-04**: Automated tests cover critical runtime lifecycle paths such as status transitions, sync behavior, and artifact reconciliation
@@ -75,35 +75,35 @@
 
 ## Traceability
 
-| Requirement | Phase   | Status  |
-| ----------- | ------- | ------- |
-| DEPLOY-01   | Phase 1 | Pending |
-| DEPLOY-02   | Phase 1 | Pending |
-| DEPLOY-03   | Phase 4 | Pending |
-| ANLY-01     | Phase 1 | Pending |
-| ANLY-02     | Phase 1 | Pending |
-| ANLY-03     | Phase 1 | Pending |
-| ANLY-04     | Phase 1 | Pending |
-| CAT-01      | Phase 2 | Pending |
-| CAT-02      | Phase 2 | Pending |
-| CAT-03      | Phase 2 | Pending |
-| CAT-04      | Phase 2 | Pending |
-| RUN-01      | Phase 3 | Pending |
-| RUN-02      | Phase 3 | Pending |
-| RUN-03      | Phase 3 | Pending |
-| RUN-04      | Phase 3 | Pending |
-| SAFE-01     | Phase 4 | Pending |
-| SAFE-02     | Phase 3 | Pending |
-| SAFE-03     | Phase 1 | Pending |
-| SAFE-04     | Phase 2 | Pending |
-| PERF-01     | Phase 2 | Pending |
-| PERF-02     | Phase 4 | Pending |
-| PERF-03     | Phase 3 | Pending |
-| PERF-04     | Phase 2 | Pending |
-| TEST-01     | Phase 1 | Pending |
-| TEST-02     | Phase 1 | Pending |
-| TEST-03     | Phase 2 | Pending |
-| TEST-04     | Phase 3 | Pending |
+| Requirement | Phase   | Status   |
+| ----------- | ------- | -------- |
+| DEPLOY-01   | Phase 1 | Complete |
+| DEPLOY-02   | Phase 1 | Complete |
+| DEPLOY-03   | Phase 4 | Pending  |
+| ANLY-01     | Phase 1 | Pending  |
+| ANLY-02     | Phase 1 | Pending  |
+| ANLY-03     | Phase 1 | Pending  |
+| ANLY-04     | Phase 1 | Pending  |
+| CAT-01      | Phase 2 | Pending  |
+| CAT-02      | Phase 2 | Pending  |
+| CAT-03      | Phase 2 | Pending  |
+| CAT-04      | Phase 2 | Pending  |
+| RUN-01      | Phase 3 | Pending  |
+| RUN-02      | Phase 3 | Pending  |
+| RUN-03      | Phase 3 | Pending  |
+| RUN-04      | Phase 3 | Pending  |
+| SAFE-01     | Phase 4 | Pending  |
+| SAFE-02     | Phase 3 | Pending  |
+| SAFE-03     | Phase 1 | Complete |
+| SAFE-04     | Phase 2 | Pending  |
+| PERF-01     | Phase 2 | Pending  |
+| PERF-02     | Phase 4 | Pending  |
+| PERF-03     | Phase 3 | Pending  |
+| PERF-04     | Phase 2 | Pending  |
+| TEST-01     | Phase 1 | Complete |
+| TEST-02     | Phase 1 | Pending  |
+| TEST-03     | Phase 2 | Pending  |
+| TEST-04     | Phase 3 | Pending  |
 
 **Coverage:**
 
