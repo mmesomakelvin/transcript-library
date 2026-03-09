@@ -9,8 +9,10 @@ export async function GET(req: Request) {
   const p = url.searchParams.get("path");
   if (!p) return NextResponse.json({ ok: false, error: "missing path" }, { status: 400 });
 
-  // Safety: resolve to canonical paths to prevent path traversal attacks.
-  const root = process.env.PLAYLIST_TRANSCRIPTS_REPO || "/Users/aojdevstudio/projects/clawd/playlist-transcripts";
+  const root = process.env.PLAYLIST_TRANSCRIPTS_REPO;
+  if (!root) {
+    return NextResponse.json({ ok: false, error: "PLAYLIST_TRANSCRIPTS_REPO not configured" }, { status: 503 });
+  }
   const resolved = path.resolve(root, p);
   if (!resolved.startsWith(path.resolve(root) + path.sep)) {
     return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
