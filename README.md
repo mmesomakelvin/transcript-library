@@ -8,7 +8,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/AojdevStudio/transcript-library/pulls)
 
-*A private reading room for a small group of friends who take YouTube seriously.*
+_A private reading room for a small group of friends who take YouTube seriously._
 
 [**Library**](#quick-start) · [**Knowledge Base**](#how-it-works) · [**Analysis Runtime**](#how-it-works)
 
@@ -29,7 +29,7 @@ The video had real signal. A framework you could apply. A story worth discussing
 
 **Sound familiar?**
 
-> *"I'll send you the timestamp." — said before forgetting the timestamp, the video, and what it was about.*
+> _"I'll send you the timestamp." — said before forgetting the timestamp, the video, and what it was about._
 
 ---
 
@@ -40,6 +40,7 @@ Everyone in the group is curious. Nobody has unlimited time. You need a way to e
 <div align="center">
 
 ### **Watch the video inside the app.**
+
 ### **Let the analysis run in the background.**
 
 </div>
@@ -58,11 +59,11 @@ The transcript is already there. The AI tooling already exists. The only missing
 
 Transcript Library is a private internal tool for a small group of friends built around a shared YouTube playlist.
 
-| Layer | What It Does |
-|:------|:-------------|
-| **Catalog** | Reads transcript metadata from a local `playlist-transcripts` repo |
-| **Player** | Embeds the YouTube video in-app — no tab switching |
-| **Analysis** | Runs AI synthesis headlessly via `claude` CLI or `codex` CLI |
+| Layer         | What It Does                                                           |
+| :------------ | :--------------------------------------------------------------------- |
+| **Catalog**   | Reads transcript metadata from a local `playlist-transcripts` repo     |
+| **Player**    | Embeds the YouTube video in-app — no tab switching                     |
+| **Analysis**  | Runs AI synthesis headlessly via `claude` CLI or `codex` CLI           |
 | **Knowledge** | Stores markdown notes alongside video insights for long-term reference |
 
 This is not a SaaS product. It is a proof of concept for a trusted group that already has access to Claude and ChatGPT tooling.
@@ -118,14 +119,14 @@ VideoAnalysisWorkspace (live status, polling)
 
 ## What You Get
 
-| Feature | How It Works | Why It Matters |
-|:--------|:-------------|:---------------|
-| **Embedded player** | YouTube iframe, no redirect | Watch and read without splitting attention |
-| **Headless analysis** | claude-cli or codex-cli via provider abstraction | Run from any machine, swap providers without touching UI |
-| **Insight artifacts** | Canonical `analysis.md` + run metadata per video | Stable lookup by `videoId`, human-readable alongside machine paths |
-| **Live status** | SSE stream during analysis run | Know when it's done without refreshing |
-| **Knowledge base** | Markdown folders alongside video insights | Essays and notes in the same editorial workspace |
-| **Breadcrumb navigation** | Library → Channel → Video | Always know where you are, always one click back |
+| Feature                   | How It Works                                     | Why It Matters                                                     |
+| :------------------------ | :----------------------------------------------- | :----------------------------------------------------------------- |
+| **Embedded player**       | YouTube iframe, no redirect                      | Watch and read without splitting attention                         |
+| **Headless analysis**     | claude-cli or codex-cli via provider abstraction | Run from any machine, swap providers without touching UI           |
+| **Insight artifacts**     | Canonical `analysis.md` + run metadata per video | Stable lookup by `videoId`, human-readable alongside machine paths |
+| **Live status**           | SSE stream during analysis run                   | Know when it's done without refreshing                             |
+| **Knowledge base**        | Markdown folders alongside video insights        | Essays and notes in the same editorial workspace                   |
+| **Breadcrumb navigation** | Library → Channel → Video                        | Always know where you are, always one click back                   |
 
 ---
 
@@ -152,8 +153,9 @@ cp .env.example .env.local
 # Required
 PLAYLIST_TRANSCRIPTS_REPO=/absolute/path/to/playlist-transcripts
 
-# Optional — defaults to claude-cli
+# Optional
 ANALYSIS_PROVIDER=claude-cli
+INSIGHTS_BASE_DIR=/srv/transcript-library/insights   # hosted deploys
 ```
 
 ### Run
@@ -171,18 +173,28 @@ just start
 
 ### Artifact Layout
 
-Each analysis lives under a stable `videoId` path:
+Each analysis lives under a stable `videoId` path. Local development defaults to
+`data/insights`, while the canonical hosted path is `/srv/transcript-library/insights` via
+`INSIGHTS_BASE_DIR`.
 
 ```
 data/insights/<videoId>/
-  analysis.md              ← canonical output
+  analysis.json            ← authoritative structured artifact
+  analysis.md              ← human-readable report derived from JSON
   <slugified-title>.md     ← human-readable copy
   video-metadata.json      ← channel, topic, published date
   run.json                 ← provider, model, timing
   worker-stdout.txt        ← live log during run
   worker-stderr.txt        ← errors
   status.json              ← idle | running | complete | failed
+
+data/insights/.migration-status.json
+  remainingLegacyCount     ← machine-checkable migration window status
 ```
+
+Legacy markdown-only artifacts are supported only during the one-time migration window. Operators
+can check migration completion with `node scripts/migrate-legacy-insights-to-json.ts --check` and
+complete the upgrade by rerunning the script without `--check`.
 
 ### Provider Abstraction
 

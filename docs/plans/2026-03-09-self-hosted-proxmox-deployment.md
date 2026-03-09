@@ -1,12 +1,29 @@
 # Self-Hosted Deployment on Proxmox
 
 **Date:** 2026-03-09
-**Status:** Approved
-**Scope:** Deploy Transcript Library on Proxmox with Cloudflare Tunnel, Access OTP, and webhook-based CI/CD
+**Status:** Revised
+**Scope:** Deploy Transcript Library on Proxmox with Cloudflare Tunnel, Cloudflare Access OTP, and safe webhook-based CI/CD
+
+## Verdict
+
+This is a good deployment direction for this app.
+
+The core adjustment is simple but important:
+
+- do **not** run production from a git worktree that also stores mutable analysis artifacts
+- do **not** let deploys depend on `git pull` inside that mutable runtime directory
+
+With that correction, this becomes a strong low-cost plan.
 
 ## Context
 
-The Transcript Library is a Next.js app that spawns `claude` CLI as a child process for analysis and reads/writes to the local filesystem (35 fs calls across 13 files). This makes it incompatible with serverless platforms like Vercel. Self-hosting on Proxmox requires zero code changes and gives friends access via a custom domain.
+Transcript Library is a Next.js app that:
+
+- reads transcript files from `PLAYLIST_TRANSCRIPTS_REPO`
+- spawns local CLI providers for analysis
+- writes `analysis.json`, `analysis.md`, `run.json`, `status.json`, and worker logs to disk
+
+That makes self-hosting a better fit than serverless hosting. Proxmox + Cloudflare Tunnel + Cloudflare Access fits the app well and keeps cost low.
 
 ## Architecture
 
@@ -17,220 +34,355 @@ flowchart TD
         Domain["library.aojdevstudio.me"]
         CF_Access["Cloudflare Access\n(email OTP allowlist)"]
         CF_Tunnel["Cloudflare Tunnel\n(cloudflared)"]
+        GH["GitHub webhook"]
     end
 
-    subgraph aojdevserver["aojdevserver (10.69.1.105)"]
-        subgraph LXC["CT 1XX — Ubuntu 24.04 LXC"]
-            NextJS["Next.js\nport 3000"]
-            Webhook["Webhook listener\nport 9000"]
+    subgraph aojdevserver["aojdevserver"]
+        subgraph LXC["Ubuntu 24.04 LXC"]
+            App["Next.js app\nport 3000"]
+            Hook["deploy listener\nport 9000"]
             PM2["pm2"]
+            Release["/opt/transcript-library/current"]
+            Shared["/srv/transcript-library/\ninsights + env + logs + repos"]
         end
     end
 
     Friends -->|HTTPS| Domain
     Domain --> CF_Access
-    CF_Access -->|authenticated| CF_Tunnel
-    CF_Tunnel --> NextJS
+    CF_Access --> CF_Tunnel
+    CF_Tunnel --> App
 
-    subgraph CI/CD
-        Push["Push to main"]
-        GH_Webhook["GitHub webhook"]
-    end
-
-    Push --> GH_Webhook
-    GH_Webhook -->|POST /deploy-hook| Webhook
-    Webhook -->|"git pull → npm install → build"| PM2
-    PM2 -->|restart| NextJS
+    GH -->|POST /deploy-hook| Hook
+    Hook -->|build new release| Release
+    Hook -->|restart| PM2
+    App --> Shared
 ```
 
 ## Decision Log
 
-| Decision | Choice | Rationale |
-|----------|--------|-----------|
-| Hosting | Proxmox self-hosted | App requires local filesystem + CLI child processes |
-| Auth | Cloudflare Access OTP | Zero code changes, free, email allowlist built-in |
-| Container | New dedicated LXC | Isolation, easy snapshot/backup, clean environment |
-| CI/CD | GitHub webhook auto-deploy | Push to main triggers deploy in ~30s |
-| Process manager | pm2 | Auto-restart, log management, startup on boot |
-| Tunnel | Cloudflare Tunnel | No port forwarding, no firewall holes, TLS by default |
+| Decision        | Choice                                      | Rationale                                                     |
+| --------------- | ------------------------------------------- | ------------------------------------------------------------- |
+| Hosting         | Proxmox self-hosted                         | Filesystem writes + CLI child processes are first-class needs |
+| Auth            | Cloudflare Access OTP                       | No app auth work required, easy friend allowlist              |
+| Container       | Dedicated LXC                               | Clean isolation, snapshots, easy rollback                     |
+| Deploy style    | Immutable release dir + shared runtime data | Avoid repo dirtiness and `git pull` conflicts                 |
+| Process manager | pm2                                         | Simple restarts, logs, startup on boot                        |
+| Tunnel          | Cloudflare Tunnel                           | No port forwarding, TLS by default                            |
+| Webhook ingress | Separate hostname                           | Cleaner than path bypass under Access                         |
+
+## Key Design Rule
+
+Separate these three things:
+
+1. **App release code**
+   Path example: `/opt/transcript-library/releases/<timestamp-or-sha>/`
+
+2. **Current symlink**
+   Path example: `/opt/transcript-library/current`
+
+3. **Mutable runtime data**
+   Path example: `/srv/transcript-library/`
+
+Runtime data should include:
+
+- `insights/`
+- `logs/`
+- `.env.local`
+- `playlist-transcripts/`
+- Claude auth state if needed for the runtime user
+
+This avoids deploy failures caused by the app writing to tracked files under `data/insights`.
+
+## Pre-Infra Gate
+
+Do not start infrastructure setup until the insight-storage refactor is complete.
+
+This app currently hardcodes insight storage under the app working tree. The deployment design in this document assumes configurable runtime storage, so that refactor is a real prerequisite, not a note to remember later.
+
+Implementation plan:
+
+- [Structured Insight Storage Path Implementation Plan](/Users/ossieirondi/Projects/transcript-library/docs/plans/2026-03-09-configurable-insights-base-dir.md)
+
+Migration gate:
+
+- run `node scripts/migrate-legacy-insights-to-json.ts --check`
+- do not treat the migration window as complete until `/srv/transcript-library/insights/.migration-status.json`
+  reports `remainingLegacyCount: 0`
+
+Infra work should begin only after that plan is implemented and verified on a branch.
 
 ## Components
 
-### 1. LXC Container (CT 1XX on aojdevserver)
+### 1. LXC Container
 
-| Setting | Value |
-|---------|-------|
-| OS | Ubuntu 24.04 (unprivileged) |
-| CPU | 2 cores |
-| RAM | 2 GB |
-| Disk | 16 GB (local-lvm) |
-| Network | DHCP on vmbr0 (10.69.1.0/24) |
-| Features | nesting |
-| Autostart | yes |
+| Setting   | Value                       |
+| --------- | --------------------------- |
+| OS        | Ubuntu 24.04 LXC            |
+| CPU       | 2 cores                     |
+| RAM       | 2 GB to start               |
+| Disk      | 24 GB preferred             |
+| Network   | DHCP or reserved DHCP lease |
+| Autostart | yes                         |
 
-**Software to install:**
-- Node.js 22 (via nodesource or fnm)
+Install:
+
+- Node.js 22
 - git
-- yt-dlp (for metadata enrichment)
+- yt-dlp
 - cloudflared
-- pm2 (global npm package)
-- Claude CLI (`@anthropic-ai/claude-code`)
+- pm2
+- Claude CLI
 
-### 2. Cloudflare Tunnel
+### 2. Directory Layout
+
+```text
+/opt/transcript-library/
+  releases/
+    2026-03-09T220000Z/
+    2026-03-10T010000Z/
+  current -> /opt/transcript-library/releases/2026-03-10T010000Z
+
+/srv/transcript-library/
+  insights/
+  logs/
+  playlist-transcripts/
+  .env.local
+```
+
+### 3. App Runtime
+
+Run the app from `/opt/transcript-library/current`.
+
+Point mutable state to `/srv/transcript-library`:
+
+- `PLAYLIST_TRANSCRIPTS_REPO=/srv/transcript-library/playlist-transcripts`
+- `INSIGHTS_BASE_DIR=/srv/transcript-library/insights`
+
+### 4. Cloudflare Tunnel
+
+Use two hostnames:
+
+- `library.aojdevstudio.me` -> app on port 3000
+- `library-deploy.aojdevstudio.me` -> webhook listener on port 9000
+
+That is cleaner than sharing one hostname and then bypassing Access for one path.
+
+Example config:
 
 ```yaml
-# ~/.cloudflared/config.yml
 tunnel: <tunnel-id>
 credentials-file: /home/deploy/.cloudflared/<tunnel-id>.json
 
 ingress:
   - hostname: library.aojdevstudio.me
-    path: /deploy-hook
-    service: http://localhost:9000
-  - hostname: library.aojdevstudio.me
     service: http://localhost:3000
+  - hostname: library-deploy.aojdevstudio.me
+    service: http://localhost:9000
   - service: http_status:404
 ```
 
-Setup steps:
-1. `cloudflared tunnel login` — authenticates with CF account
-2. `cloudflared tunnel create transcript-library` — creates tunnel + credentials JSON
-3. `cloudflared tunnel route dns transcript-library library.aojdevstudio.me` — creates CNAME
-4. Write config.yml with ingress rules
-5. `cloudflared service install` — installs as systemd service
+### 5. Cloudflare Access
 
-### 3. Cloudflare Access
+Protect only the user-facing app hostname:
 
-- Zero Trust dashboard → Applications → Add self-hosted application
-- Application domain: `library.aojdevstudio.me`
-- Identity provider: One-time PIN (built-in, zero config)
-- Policy: Allow → Emails → `[ossie@..., friend1@..., friend2@...]`
-- Session duration: 24h (configurable)
+- application: `library.aojdevstudio.me`
+- identity provider: One-time PIN
+- policy: allowlisted emails only
 
-Flow: friend visits URL → enters email → gets 6-digit code by email → enters code → authenticated
+Do **not** put OTP in front of the GitHub webhook endpoint.
 
-### 4. CI/CD — GitHub Webhook Auto-Deploy
+For `library-deploy.aojdevstudio.me`, rely on:
 
-**Webhook listener** on the LXC (port 9000):
-- Receives POST from GitHub on push to `main`
-- Verifies HMAC signature using shared secret
-- Executes deploy script:
-  1. `cd /opt/transcript-library && git pull origin main`
-  2. `npm install`
-  3. `npx next build --webpack`
-  4. `pm2 restart transcript-library`
-- Logs to `/var/log/transcript-library-deploy.log`
+- GitHub webhook secret signature verification
+- optional IP allowlisting if you want extra filtering
 
-**GitHub repo settings:**
-- Webhooks → Add webhook
-- Payload URL: `https://library.aojdevstudio.me/deploy-hook`
-- Content type: `application/json`
-- Secret: shared HMAC secret
-- Events: push events only
-- Branch filter: `main` only (checked in the listener)
+### 6. CI/CD
 
-### 5. Transcript Data Sync
+Deploy flow:
 
-- Clone `playlist-transcripts` repo into `/opt/playlist-transcripts`
-- Set env var: `PLAYLIST_TRANSCRIPTS_REPO=/opt/playlist-transcripts`
-- Cron job: `0 * * * * cd /opt/playlist-transcripts && git pull` (hourly)
+1. GitHub sends webhook to `https://library-deploy.aojdevstudio.me/deploy-hook`
+2. Listener verifies HMAC signature
+3. Listener clones repo or fetches a clean copy into a new release dir
+4. Listener installs dependencies with `npm ci`
+5. Listener builds with `npx next build --webpack`
+6. Listener atomically repoints `/opt/transcript-library/current`
+7. Listener restarts pm2 process
+8. Listener keeps prior release for rollback
 
-### 6. Process Management
+Do not use `git pull` inside the live runtime directory.
+
+### 7. Transcript Sync
+
+Clone transcript data into:
+
+- `/srv/transcript-library/playlist-transcripts`
+
+Sync with cron:
 
 ```bash
-# Start the app
-cd /opt/transcript-library
-pm2 start npm --name transcript-library -- run start
+0 * * * * cd /srv/transcript-library/playlist-transcripts && git pull --ff-only
+```
 
-# Persist across reboots
+### 8. Process Management
+
+Use pm2 against the current release:
+
+```bash
+cd /opt/transcript-library/current
+pm2 start npm --name transcript-library -- run start
 pm2 save
 pm2 startup
 ```
 
-### 7. Environment Variables
+If you later switch to standalone output, update the run command to the standalone server directly. Until then, keep the deployment model simple and consistent.
+
+### 9. Environment Variables
 
 ```bash
-# /opt/transcript-library/.env.local
-PLAYLIST_TRANSCRIPTS_REPO=/opt/playlist-transcripts
+# /srv/transcript-library/.env.local
+PLAYLIST_TRANSCRIPTS_REPO=/srv/transcript-library/playlist-transcripts
+INSIGHTS_BASE_DIR=/srv/transcript-library/insights
 ANALYSIS_PROVIDER=claude-cli
-# Optional: ANTHROPIC_API_KEY as fallback if CLI session expires
-# Optional: CLAUDE_ANALYSIS_MODEL=...
 ```
+
+Optional:
+
+- `CLAUDE_ANALYSIS_MODEL=...`
+- `ANTHROPIC_API_KEY=...`
+
+Important note:
+
+- `ANTHROPIC_API_KEY` is not a free safety net
+- it is a separate billed API path, not the same thing as staying logged into the Claude CLI
 
 ## Implementation Steps
 
-### Phase 1 — LXC Setup
-1. Create Ubuntu 24.04 LXC on aojdevserver (2 CPU, 2GB RAM, 16GB disk)
-2. Install Node 22, git, yt-dlp, pm2
-3. Create deploy user, clone transcript-library and playlist-transcripts repos
-4. Set environment variables, run `npm install && npm run build`
-5. Start app with pm2, verify it serves on port 3000 internally
+### Phase 1 - App prep
 
-### Phase 2 — Cloudflare Tunnel
-6. Install cloudflared in the LXC
-7. `cloudflared tunnel login`
-8. `cloudflared tunnel create transcript-library`
-9. `cloudflared tunnel route dns transcript-library library.aojdevstudio.me`
-10. Write config.yml with ingress rules (deploy-hook + app)
-11. `cloudflared service install` for systemd auto-start
-12. Verify: access `library.aojdevstudio.me` from outside the LAN
+1. Complete the prerequisite plan for configurable insight storage:
+   `docs/plans/2026-03-09-configurable-insights-base-dir.md`
+2. Verify app works with:
+   `INSIGHTS_BASE_DIR=/srv/transcript-library/insights`
+3. Confirm runtime writes no longer land inside the release tree
+4. Confirm new runs write `analysis.json` plus derived `analysis.md`
+5. Run `node scripts/migrate-legacy-insights-to-json.ts --check`
+6. If needed, run `node scripts/migrate-legacy-insights-to-json.ts`
+7. Confirm `.migration-status.json` reports `remainingLegacyCount: 0`
 
-### Phase 3 — Cloudflare Access
-13. CF Zero Trust dashboard → Add Application (self-hosted)
-14. Set domain to `library.aojdevstudio.me`
-15. Enable One-time PIN identity provider
-16. Create policy: Allow → Emails → friends' email list
-17. Verify: visit URL → see OTP prompt → receive email code → access app
+### Phase 2 - LXC setup
 
-### Phase 4 — Claude CLI Auth
-18. Install Claude CLI in LXC
-19. `claude login` to authenticate
-20. Test: trigger analysis from the UI, verify it spawns and completes
+8. Create Ubuntu 24.04 LXC
+9. Install Node 22, git, yt-dlp, pm2, cloudflared, Claude CLI
+10. Create runtime directories under `/opt/transcript-library` and `/srv/transcript-library`
+11. Clone `playlist-transcripts` into `/srv/transcript-library/playlist-transcripts`
+12. Add `/srv/transcript-library/.env.local`
 
-### Phase 5 — CI/CD
-21. Write webhook listener script (Node, ~40 lines, HMAC verification)
-22. Run listener on port 9000 via pm2
-23. Add ingress rule for `/deploy-hook` in cloudflared config
-24. Add webhook in GitHub repo settings (URL, secret, push events)
-25. Verify: push to main → webhook fires → LXC pulls + builds + restarts
+### Phase 3 - First release
 
-### Phase 6 — Hardening
-26. Set up transcript repo sync cron (hourly git pull)
-27. Set up pm2 log rotation
-28. Test LXC reboot → verify autostart (cloudflared + pm2 + app all come back)
-29. Snapshot the LXC as a known-good baseline
+13. Create first release directory from a clean clone
+14. Run `npm ci`
+15. Run `npx next build --webpack`
+16. Point `current` symlink at the new release
+17. Start pm2 app from `/opt/transcript-library/current`
+18. Verify app on `http://localhost:3000`
 
-## Pre-Deploy Fixes (required before Phase 1)
+### Phase 4 - Tunnel and Access
 
-These codebase issues must be resolved before deployment:
+16. Create Cloudflare Tunnel
+17. Route DNS for:
+    `library.aojdevstudio.me`
+18. Route DNS for:
+    `library-deploy.aojdevstudio.me`
+19. Install and enable cloudflared service
+20. Add Cloudflare Access OTP for `library.aojdevstudio.me`
+21. Verify friend login flow
 
-### ~~Fix 1: Remove hardcoded Mac fallback path~~ DONE
-`src/app/api/raw/route.ts` — removed Mac fallback, now returns 503 if `PLAYLIST_TRANSCRIPTS_REPO` is unset.
+### Phase 5 - Claude runtime auth
 
-### Fix 2: Add `output: 'standalone'` to next.config.ts
-Without this, pm2 needs the full `node_modules` at runtime. With `standalone`, Next.js produces a self-contained `.next/standalone` directory — faster deploys, smaller footprint.
+25. Authenticate Claude CLI as the same Linux user that runs pm2
+26. Trigger analysis from the UI
+27. Verify `analysis.json`, `analysis.md`, `run.json`, `status.json`, and logs are created under `/srv/transcript-library/insights`
+28. Verify `/srv/transcript-library/insights/.migration-status.json` exists after running the migration check
 
-### Fix 3: Use `--webpack` flag in build
-The justfile uses `bunx next build --webpack` to avoid Next.js 16 Turbopack issues. The deploy script should match: `npx next build --webpack` instead of `npm run build`.
+### Phase 6 - Webhook deploy
 
-### Fix 4: Exclude deploy-hook from Cloudflare Access
-The `/deploy-hook` path shares the same hostname as the app. Cloudflare Access will gate it behind OTP — but GitHub's webhook sender can't authenticate. Options:
-- **Bypass rule**: In the Access Application, add a bypass policy for path `/deploy-hook` (Access supports path-based policies)
-- **Service token**: Create a CF Service Token and configure GitHub webhook to send it as a header (more secure but more complex)
+25. Write deploy listener
+26. Verify HMAC signature
+27. Build to a new release dir using `npm ci`
+28. Repoint `current`
+29. Restart pm2
+30. Keep previous release for rollback
+
+### Phase 7 - Hardening
+
+31. Add pm2 log rotation
+32. Add transcript sync cron
+33. Test LXC reboot
+34. Test rollback to previous release
+35. Snapshot the LXC
+
+## Pre-Deploy Code Changes
+
+### Required
+
+1. Make insight storage path configurable
+   This is now scoped in:
+   `docs/plans/2026-03-09-configurable-insights-base-dir.md`
+
+2. Make the JSON-first artifact model operational
+   This includes the one-time legacy migration and `.migration-status.json` completion signal.
+
+3. Keep deploy code and runtime data separate
+   This is the key deployment safety fix.
+
+4. Use `npm ci` instead of `npm install` in unattended deploys
+
+5. Keep `--webpack` in the build command
+
+### Optional
+
+1. Add `output: "standalone"` to `next.config.ts`
+   Only do this if you also switch the runtime command to the standalone server output.
+
+2. Add a worker/service split once local CLI execution moves off the web runtime
 
 ## Risks and Mitigations
 
-| Risk | Mitigation |
-|------|------------|
-| Claude CLI session expires | Set `ANTHROPIC_API_KEY` env var as fallback |
-| LXC goes down | Proxmox autostart + monitoring |
-| Webhook abuse | HMAC signature verification, branch filter |
-| Build OOM | 2GB RAM is sufficient for Next.js; bump if needed |
-| Transcript repo drift | Hourly cron sync; can increase frequency |
-| Cloudflared crashes | systemd auto-restart via service unit |
-| Deploy-hook blocked by Access OTP | Bypass policy for `/deploy-hook` path |
-| Turbopack build failures on Linux | Use `--webpack` flag in build command |
+| Risk                           | Mitigation                                                 |
+| ------------------------------ | ---------------------------------------------------------- |
+| Production repo becomes dirty  | Never run production from a mutable git worktree           |
+| Deploy fails during pull/build | Build fresh release directory, then swap symlink           |
+| Claude CLI login expires       | Re-auth the runtime user; API key is optional but billable |
+| Build OOM                      | Start with 2 GB, bump if Linux build proves tight          |
+| Transcript repo drift          | Hourly `git pull --ff-only` cron                           |
+| Webhook abuse                  | HMAC verification, dedicated deploy hostname               |
+| Access blocks webhook          | Keep deploy hostname outside OTP Access app                |
+| Rollback is painful            | Keep previous release directory and repoint symlink        |
 
 ## Cost
 
-Zero additional cost. Cloudflare free tier (tunnel + access + DNS). Proxmox hardware already owned.
+Baseline hosting cost:
+
+- Proxmox hardware already owned
+- Cloudflare Tunnel + DNS + Access can stay near-zero on the free tier
+
+Possible non-zero cost:
+
+- Anthropic API usage, if you choose `ANTHROPIC_API_KEY` fallback
+
+## Recommended Domain Names
+
+Primary app:
+
+- `library.aojdevstudio.me`
+- `readingroom.aojdevstudio.me`
+
+Deploy hook:
+
+- `library-deploy.aojdevstudio.me`
+- `readingroom-deploy.aojdevstudio.me`
+
+My recommendation:
+
+- app: `library.aojdevstudio.me`
+- deploy: `library-deploy.aojdevstudio.me`
