@@ -8,11 +8,26 @@ import {
   readStatus,
   statusPath,
 } from "@/modules/analysis";
-import { curateYouTubeAnalyzer } from "@/modules/curation";
-import { getInsightArtifacts, readInsightMarkdown, readRunMetadata } from "@/modules/insights";
+import {
+  getInsightArtifacts,
+  readCuratedInsight,
+  readInsightMarkdown,
+  readRunMetadata,
+} from "@/modules/insights";
 
 export const runtime = "nodejs";
 
+/**
+ * GET /api/insight
+ * Returns the full insight state for a video: derived status, markdown content,
+ * curated structured data, artifact file list, and run metadata.
+ * Reconciles a stale "running" status by writing a "failed" tombstone when the
+ * worker process is no longer alive.
+ *
+ * @param req - Incoming request. Expects `?videoId=` query param.
+ * @returns JSON with `{ status, error?, insight, curated, artifacts, run }`, or a
+ *   400 if the videoId is invalid. Always served with `Cache-Control: no-store`.
+ */
 export async function GET(req: Request) {
   const url = new URL(req.url);
   const videoId = url.searchParams.get("videoId") || "";
@@ -22,12 +37,15 @@ export async function GET(req: Request) {
   }
 
   const insight = readInsightMarkdown(videoId).markdown;
+  const curated = readCuratedInsight(videoId);
   const status = readStatus(videoId);
 
   let state: "idle" | "running" | "complete" | "failed" = insight ? "complete" : "idle";
-  let error: string | undefined;
+  let error: string | undefined = curated.error ?? undefined;
 
-  if (!insight && status?.status === "running") {
+  if (curated.error) {
+    state = "failed";
+  } else if (status?.status === "running") {
     if (!isProcessAlive(status.pid)) {
       const updated = {
         ...status,
@@ -41,7 +59,7 @@ export async function GET(req: Request) {
     } else {
       state = "running";
     }
-  } else if (!insight && status?.status === "failed") {
+  } else if (status?.status === "failed") {
     state = "failed";
     error = status.error;
   } else if (!insight) {
@@ -58,7 +76,7 @@ export async function GET(req: Request) {
       status: state,
       error,
       insight,
-      curated: insight ? curateYouTubeAnalyzer(insight) : null,
+      curated: curated.curated,
       artifacts: getInsightArtifacts(videoId),
       run: readRunMetadata(videoId),
     },

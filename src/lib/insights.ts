@@ -20,9 +20,11 @@ import {
   readRunMetadata,
   runMetadataPath,
   stderrLogPath,
+  structuredAnalysisPath,
   stdoutLogPath,
 } from "@/lib/analysis";
 import { curateYouTubeAnalyzer } from "@/lib/curation";
+import { parseStructuredAnalysis } from "@/lib/analysis-contract";
 
 const VIDEO_ID_RE = /^[a-zA-Z0-9_-]{6,11}$/;
 
@@ -254,6 +256,52 @@ export function readInsightLogTail(
 }
 
 export { readRunMetadata };
+
+export function readCuratedInsight(videoId: string): {
+  curated: ReturnType<typeof curateYouTubeAnalyzer> | null;
+  error: string | null;
+  source:
+    | "structured-json"
+    | "analysis-markdown"
+    | "legacy-markdown"
+    | "invalid-structured"
+    | "none";
+} {
+  try {
+    const structuredRaw = fs.readFileSync(structuredAnalysisPath(videoId), "utf8");
+    const structured = parseStructuredAnalysis(structuredRaw);
+
+    return {
+      curated: {
+        summary: structured.summary,
+        takeaways: structured.takeaways.length ? structured.takeaways : undefined,
+        notablePoints: structured.notablePoints.length ? structured.notablePoints : undefined,
+        actionItems: structured.actionItems.length ? structured.actionItems : undefined,
+      },
+      error: null,
+      source: "structured-json",
+    };
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== "ENOENT") {
+      return {
+        curated: null,
+        error: `Structured analysis is invalid: ${(err as Error).message}`,
+        source: "invalid-structured",
+      };
+    }
+  }
+
+  const insight = readInsightMarkdown(videoId);
+  if (!insight.markdown) {
+    return { curated: null, error: null, source: "none" };
+  }
+
+  return {
+    curated: curateYouTubeAnalyzer(insight.markdown),
+    error: null,
+    source: insight.kind === "legacy" ? "legacy-markdown" : "analysis-markdown",
+  };
+}
 
 /**
  * Strips YAML frontmatter (between `---` delimiters) from a markdown string.

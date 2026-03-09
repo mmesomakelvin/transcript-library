@@ -50,7 +50,13 @@ type StreamPayload = {
 
 function SparkleIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
       <path d="M12 3v1m0 16v1m-7.07-2.93.7-.7m12.73-12.73.7-.7M3 12h1m16 0h1m-2.93 7.07-.7-.7M5.64 5.64l-.7-.7" />
       <circle cx="12" cy="12" r="4" />
     </svg>
@@ -61,8 +67,10 @@ function FullReportSection({ insight }: { insight: string | null }) {
   const [open, setOpen] = useState(false);
   return (
     <section>
-      <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
-        <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Full Analysis Report</h2>
+      <div className="mb-5 flex items-baseline justify-between border-b border-[var(--line)] pb-3">
+        <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">
+          Full Analysis Report
+        </h2>
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -207,6 +215,12 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
   const liveStdout = stream?.logs.stdout?.trim();
   const liveStderr = stream?.logs.stderr?.trim();
   const run = stream?.run ?? data?.run ?? null;
+  const statusClassName =
+    status === "failed"
+      ? "bg-[#fbe9e7] text-[#7b342f]"
+      : status === "running"
+        ? "bg-[var(--panel)] text-[var(--accent)]"
+        : "bg-[var(--panel)] text-[var(--muted)]";
 
   return (
     <div className="space-y-10">
@@ -217,16 +231,19 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
             {hasInsight ? "Analysis" : loading ? "Loading analysis" : "No analysis yet"}
           </h2>
           <p className="mt-1 text-sm text-[var(--muted)]">
-            {hasInsight ? "Summary, takeaways, and action items from this video." : "Generate analysis to see insights."}
+            {hasInsight
+              ? "Summary, takeaways, and action items from this video."
+              : "Generate analysis to see insights."}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-3">
           {run ? (
             <span className="text-xs text-[var(--muted)]">
-              {run.provider}{run.model ? ` \u00b7 ${run.model}` : ""}
+              {run.provider}
+              {run.model ? ` \u00b7 ${run.model}` : ""}
             </span>
           ) : null}
-          <span className="rounded-full bg-[var(--panel)] px-3 py-1 text-xs text-[var(--muted)]">{status}</span>
+          <span className={`rounded-full px-3 py-1 text-xs ${statusClassName}`}>{status}</span>
           <Button
             onClick={startAnalysis}
             disabled={status === "running"}
@@ -234,7 +251,11 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
             className="gap-1.5"
           >
             <SparkleIcon />
-            {status === "running" ? "Generating..." : hasInsight ? "Refresh Analysis" : "Generate Analysis"}
+            {status === "running"
+              ? "Generating..."
+              : hasInsight
+                ? "Refresh Analysis"
+                : "Generate Analysis"}
           </Button>
         </div>
       </div>
@@ -255,24 +276,27 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
         <div className="space-y-10">
           {/* Live worker logs */}
           {stream && (liveStdout || liveStderr || status === "running") ? (
-            <details className="rounded-2xl border border-[var(--line)] bg-white/82 p-6" open={status === "running"}>
+            <details
+              className="rounded-2xl border border-[var(--line)] bg-white/82 p-6"
+              open={status === "running"}
+            >
               <summary className="cursor-pointer list-none text-sm font-medium text-[var(--ink)]">
                 Live worker logs
               </summary>
               <div className="mt-4 grid gap-4 xl:grid-cols-2">
                 <div className="rounded-3xl bg-[var(--panel)] p-4">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                  <div className="text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
                     {artifactMeta?.stdoutFileName ?? "worker-stdout.txt"}
                   </div>
-                  <pre className="mt-3 overflow-x-auto whitespace-pre-wrap break-words text-xs leading-6 text-[var(--muted-strong)]">
+                  <pre className="mt-3 overflow-x-auto text-xs leading-6 break-words whitespace-pre-wrap text-[var(--muted-strong)]">
                     {liveStdout || "No stdout yet."}
                   </pre>
                 </div>
                 <div className="rounded-3xl bg-[var(--panel)] p-4">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                  <div className="text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
                     {artifactMeta?.stderrFileName ?? "worker-stderr.txt"}
                   </div>
-                  <pre className="mt-3 overflow-x-auto whitespace-pre-wrap break-words text-xs leading-6 text-[var(--muted-strong)]">
+                  <pre className="mt-3 overflow-x-auto text-xs leading-6 break-words whitespace-pre-wrap text-[var(--muted-strong)]">
                     {liveStderr || "No stderr yet."}
                   </pre>
                 </div>
@@ -283,12 +307,18 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
           {/* Summary section */}
           {curated?.summary ? (
             <section>
-              <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
-                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Summary</h2>
-                <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">AI Generated</span>
+              <div className="mb-5 flex items-baseline justify-between border-b border-[var(--line)] pb-3">
+                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">
+                  Summary
+                </h2>
+                <span className="text-[0.6875rem] font-semibold tracking-[0.08em] text-[var(--muted)] uppercase">
+                  AI Generated
+                </span>
               </div>
               <div className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-8 py-7">
-                <p className="text-[1.0625rem] leading-7 text-[var(--muted-strong)]">{curated.summary}</p>
+                <p className="text-[1.0625rem] leading-7 text-[var(--muted-strong)]">
+                  {curated.summary}
+                </p>
               </div>
             </section>
           ) : null}
@@ -296,15 +326,26 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
           {/* Key Takeaways section */}
           {curated?.takeaways?.length ? (
             <section>
-              <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
-                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Key Takeaways</h2>
-                <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">{curated.takeaways.length} insights</span>
+              <div className="mb-5 flex items-baseline justify-between border-b border-[var(--line)] pb-3">
+                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">
+                  Key Takeaways
+                </h2>
+                <span className="text-[0.6875rem] font-semibold tracking-[0.08em] text-[var(--muted)] uppercase">
+                  {curated.takeaways.length} insights
+                </span>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {curated.takeaways.map((t, i) => (
-                  <div key={t} className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-6">
-                    <div className="font-display text-sm font-semibold text-[var(--accent)]">0{i + 1}</div>
-                    <p className="mt-2 text-[0.9375rem] leading-[1.65] text-[var(--muted-strong)]">{t}</p>
+                  <div
+                    key={t}
+                    className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-6"
+                  >
+                    <div className="font-display text-sm font-semibold text-[var(--accent)]">
+                      0{i + 1}
+                    </div>
+                    <p className="mt-2 text-[0.9375rem] leading-[1.65] text-[var(--muted-strong)]">
+                      {t}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -314,15 +355,26 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
           {/* Action Items section */}
           {curated?.actionItems?.length ? (
             <section>
-              <div className="flex items-baseline justify-between border-b border-[var(--line)] pb-3 mb-5">
-                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">Action Items</h2>
-                <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">{curated.actionItems.length} protocols</span>
+              <div className="mb-5 flex items-baseline justify-between border-b border-[var(--line)] pb-3">
+                <h2 className="font-display text-[1.375rem] font-semibold tracking-[-0.02em] text-[var(--ink)]">
+                  Action Items
+                </h2>
+                <span className="text-[0.6875rem] font-semibold tracking-[0.08em] text-[var(--muted)] uppercase">
+                  {curated.actionItems.length} protocols
+                </span>
               </div>
               <div className="space-y-2">
                 {curated.actionItems.map((item, i) => (
-                  <div key={item} className="flex gap-4 items-start rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-5">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--accent)]/8 text-[0.8125rem] font-bold text-[var(--accent)]">{i + 1}</div>
-                    <p className="pt-1 text-[0.9375rem] leading-[1.6] text-[var(--muted-strong)]">{item}</p>
+                  <div
+                    key={item}
+                    className="flex items-start gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface)] px-6 py-5"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--accent)]/8 text-[0.8125rem] font-bold text-[var(--accent)]">
+                      {i + 1}
+                    </div>
+                    <p className="pt-1 text-[0.9375rem] leading-[1.6] text-[var(--muted-strong)]">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -336,24 +388,27 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
         <div className="space-y-4">
           {/* Live worker logs (no insight yet) */}
           {stream && (liveStdout || liveStderr || status === "running") ? (
-            <details className="rounded-2xl border border-[var(--line)] bg-white/82 p-6" open={status === "running"}>
+            <details
+              className="rounded-2xl border border-[var(--line)] bg-white/82 p-6"
+              open={status === "running"}
+            >
               <summary className="cursor-pointer list-none text-sm font-medium text-[var(--ink)]">
                 Live worker logs
               </summary>
               <div className="mt-4 grid gap-4 xl:grid-cols-2">
                 <div className="rounded-3xl bg-[var(--panel)] p-4">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                  <div className="text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
                     {data?.artifacts.stdoutFileName ?? "worker-stdout.txt"}
                   </div>
-                  <pre className="mt-3 overflow-x-auto whitespace-pre-wrap break-words text-xs leading-6 text-[var(--muted-strong)]">
+                  <pre className="mt-3 overflow-x-auto text-xs leading-6 break-words whitespace-pre-wrap text-[var(--muted-strong)]">
                     {liveStdout || "No stdout yet."}
                   </pre>
                 </div>
                 <div className="rounded-3xl bg-[var(--panel)] p-4">
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-[var(--muted)]">
+                  <div className="text-[11px] tracking-[0.18em] text-[var(--muted)] uppercase">
                     {data?.artifacts.stderrFileName ?? "worker-stderr.txt"}
                   </div>
-                  <pre className="mt-3 overflow-x-auto whitespace-pre-wrap break-words text-xs leading-6 text-[var(--muted-strong)]">
+                  <pre className="mt-3 overflow-x-auto text-xs leading-6 break-words whitespace-pre-wrap text-[var(--muted-strong)]">
                     {liveStderr || "No stderr yet."}
                   </pre>
                 </div>
@@ -361,7 +416,9 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
             </details>
           ) : null}
           <div className="rounded-2xl border border-dashed border-[var(--line)] bg-white/68 p-8 text-sm leading-7 text-[var(--muted)]">
-            Start analysis to generate an in-app summary while the video plays above.
+            {status === "failed"
+              ? "The latest analysis run failed. Review the error and worker logs above, then retry."
+              : "Start analysis to generate an in-app summary while the video plays above."}
           </div>
         </div>
       )}
