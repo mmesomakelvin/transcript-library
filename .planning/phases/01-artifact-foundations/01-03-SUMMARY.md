@@ -26,6 +26,7 @@ key-files:
       scripts/migrate-legacy-insights-to-json.ts,
       src/lib/__tests__/legacy-artifact-migration.test.ts,
       src/lib/insight-paths.ts,
+      playwright.existing-server.config.ts,
       .planning/phases/01-artifact-foundations/01-03-SUMMARY.md,
     ]
   modified:
@@ -98,6 +99,7 @@ Additional execution commits:
 - `docs/architecture/analysis-runtime.md` - describes migration-window runtime behavior and operator check.
 - `docs/plans/2026-03-09-self-hosted-proxmox-deployment.md` - corrects stale markdown-first guidance and adds the production migration workflow.
 - `data/insights/.migration-status.json` and `data/insights/*/analysis.json` - checked-in migration results for legacy insight artifacts.
+- `playwright.existing-server.config.ts` - lets the smoke suite reuse the already-running local app on port `3000`.
 
 ## Decisions Made
 
@@ -134,7 +136,7 @@ Additional execution commits:
 
 ## Issues Encountered
 
-- `npm run e2e` could not safely start a second `next dev` instance because another dev server already held `.next/dev/lock`; verification was completed by building the app and reusing a dedicated `next start` server on port `3939` for Playwright.
+- `npm run e2e` could not safely start a second `next dev` instance because another dev server already held `.next/dev/lock`; verification was completed with `playwright.existing-server.config.ts` against the already-running local app on port `3000`.
 
 ## User Setup Required
 
