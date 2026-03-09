@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Completed 01-artifact-foundations-01-PLAN.md
-last_updated: "2026-03-09T20:07:34Z"
-last_activity: 2026-03-09 — Completed Phase 1 Plan 1 artifact path foundations
+stopped_at: Completed 01-artifact-foundations-02-PLAN.md
+last_updated: "2026-03-09T20:20:19.617Z"
+last_activity: 2026-03-09 — Completed Plan 02 (structured analysis contract)
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -26,30 +26,31 @@ See: .planning/PROJECT.md (updated 2026-03-09)
 ## Current Position
 
 Phase: 1 of 4 (Artifact Foundations)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-03-09 — Completed Plan 01 (artifact path foundations)
+Last activity: 2026-03-09 — Completed Plan 02 (structured analysis contract)
 
-Progress: [███░░░░░░░] 33%
+Progress: [███████░░░] 67%
 
 ## Performance Metrics
 
 **Velocity:**
 
 - Total plans completed: 0
-- Average duration: 4 min
-- Total execution time: 4 min
+- Average duration: 6 min
+- Total execution time: 12 min
 
 **By Phase:**
 
-| Phase                   | Plans | Total | Avg/Plan |
-| ----------------------- | ----- | ----- | -------- |
-| 01-artifact-foundations | 1     | 4 min | 4 min    |
+| Phase                   | Plans | Total  | Avg/Plan |
+| ----------------------- | ----- | ------ | -------- |
+| 01-artifact-foundations | 2     | 12 min | 6 min    |
 
 **Recent Trend:**
 
-- Last 5 plans: 4 min
-- Trend: Stable
+- Last 5 plans: 4 min, 8 min
+- Trend: Improving
+  | Phase 01-artifact-foundations P02 | 8 min | 3 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -63,6 +64,9 @@ Recent decisions affecting current work:
 - Phase 2 setup: Move catalog indexing from CSV to SQLite now instead of deferring the storage decision.
 - [Phase 01-artifact-foundations]: Use Vitest as the minimal node-focused harness for artifact path regressions
 - [Phase 01-artifact-foundations]: Keep src/lib/analysis.ts as the single runtime authority for insight root resolution and videoId path validation
+- [Phase 01-artifact-foundations]: Treat structured JSON as the write-time authority and reject invalid payloads before UI consumption.
+- [Phase 01-artifact-foundations]: Derive analysis.md from validated reportMarkdown while keeping analysis.json authoritative for structured sections.
+- [Phase 01-artifact-foundations]: Keep legacy markdown fallback during migration, but fail loudly when analysis.json exists and is invalid.
 
 ### Pending Todos
 
@@ -74,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-09 15:07
-Stopped at: Completed 01-artifact-foundations-01-PLAN.md
+Last session: 2026-03-09T20:20:19.615Z
+Stopped at: Completed 01-artifact-foundations-02-PLAN.md
 Resume file: None

@@ -13,10 +13,10 @@
 
 ### Structured Analysis
 
-- [ ] **ANLY-01**: New analysis runs write a validated `analysis.json` artifact alongside `analysis.md`
-- [ ] **ANLY-02**: The UI reads summary, takeaways, action items, and other structured sections from validated structured analysis data instead of markdown heuristics
-- [ ] **ANLY-03**: Existing markdown-only insights continue to render through a compatibility fallback during migration
-- [ ] **ANLY-04**: Invalid structured analysis payloads fail clearly and leave enough operational evidence to debug the failure
+- [x] **ANLY-01**: New analysis runs write a validated `analysis.json` artifact alongside `analysis.md`
+- [x] **ANLY-02**: The UI reads summary, takeaways, action items, and other structured sections from validated structured analysis data instead of markdown heuristics
+- [x] **ANLY-03**: Existing markdown-only insights continue to render through a compatibility fallback during migration
+- [x] **ANLY-04**: Invalid structured analysis payloads fail clearly and leave enough operational evidence to debug the failure
 
 ### Catalog And Query Performance
 
@@ -49,7 +49,7 @@
 ### Verification
 
 - [x] **TEST-01**: Automated tests cover the configurable insights base directory behavior and insight path resolution
-- [ ] **TEST-02**: Automated tests cover the structured analysis parser/contract and compatibility fallbacks
+- [x] **TEST-02**: Automated tests cover the structured analysis parser/contract and compatibility fallbacks
 - [ ] **TEST-03**: Automated tests cover SQLite-backed catalog reads and migration parity for representative catalog cases
 - [ ] **TEST-04**: Automated tests cover critical runtime lifecycle paths such as status transitions, sync behavior, and artifact reconciliation
 
@@ -80,10 +80,10 @@
 | DEPLOY-01   | Phase 1 | Complete |
 | DEPLOY-02   | Phase 1 | Complete |
 | DEPLOY-03   | Phase 4 | Pending  |
-| ANLY-01     | Phase 1 | Pending  |
-| ANLY-02     | Phase 1 | Pending  |
-| ANLY-03     | Phase 1 | Pending  |
-| ANLY-04     | Phase 1 | Pending  |
+| ANLY-01     | Phase 1 | Complete |
+| ANLY-02     | Phase 1 | Complete |
+| ANLY-03     | Phase 1 | Complete |
+| ANLY-04     | Phase 1 | Complete |
 | CAT-01      | Phase 2 | Pending  |
 | CAT-02      | Phase 2 | Pending  |
 | CAT-03      | Phase 2 | Pending  |
@@ -101,7 +101,7 @@
 | PERF-03     | Phase 3 | Pending  |
 | PERF-04     | Phase 2 | Pending  |
 | TEST-01     | Phase 1 | Complete |
-| TEST-02     | Phase 1 | Pending  |
+| TEST-02     | Phase 1 | Complete |
 | TEST-03     | Phase 2 | Pending  |
 | TEST-04     | Phase 3 | Pending  |
 
