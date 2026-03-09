@@ -9,10 +9,13 @@
  */
 export {
   getInsightArtifacts,
+  hasBlockedLegacyInsight,
   hasInsight,
+  isLegacyInsightFallbackAllowed,
   insightPaths,
   makePreview,
   readCuratedInsight,
+  readInsightMigrationStatus,
   readInsightLogTail,
   readInsightMarkdown,
   readRunMetadata,

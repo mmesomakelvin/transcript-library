@@ -215,6 +215,9 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
   const liveStdout = stream?.logs.stdout?.trim();
   const liveStderr = stream?.logs.stderr?.trim();
   const run = stream?.run ?? data?.run ?? null;
+  const blockedByMigration = Boolean(
+    data?.error?.toLowerCase().includes("legacy insight requires one-time migration"),
+  );
   const statusClassName =
     status === "failed"
       ? "bg-[#fbe9e7] text-[#7b342f]"
@@ -231,9 +234,11 @@ export function VideoAnalysisWorkspace({ videoId }: { videoId: string }) {
             {hasInsight ? "Analysis" : loading ? "Loading analysis" : "No analysis yet"}
           </h2>
           <p className="mt-1 text-sm text-[var(--muted)]">
-            {hasInsight
-              ? "Summary, takeaways, and action items from this video."
-              : "Generate analysis to see insights."}
+            {blockedByMigration
+              ? "This older artifact needs the one-time JSON migration before the app can read it normally."
+              : hasInsight
+                ? "Summary, takeaways, and action items from this video."
+                : "Generate analysis to see insights."}
           </p>
         </div>
         <div className="flex shrink-0 items-center gap-3">

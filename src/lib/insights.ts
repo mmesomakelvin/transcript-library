@@ -27,6 +27,13 @@ import { curateYouTubeAnalyzer } from "@/lib/curation";
 import { parseStructuredAnalysis } from "@/lib/analysis-contract";
 
 const VIDEO_ID_RE = /^[a-zA-Z0-9_-]{6,11}$/;
+const MIGRATION_STATUS_FILE = ".migration-status.json";
+
+type InsightMigrationStatus = {
+  schemaVersion: number;
+  lastRunAt: string;
+  remainingLegacyCount: number;
+};
 
 /**
  * Returns the key file paths for a video's insight directory.
@@ -44,6 +51,42 @@ export function insightPaths(videoId: string) {
   };
 }
 
+function migrationStatusPath() {
+  return path.join(insightsBaseDir(), MIGRATION_STATUS_FILE);
+}
+
+export function readInsightMigrationStatus(): InsightMigrationStatus | null {
+  try {
+    const raw = fs.readFileSync(migrationStatusPath(), "utf8");
+    const parsed = JSON.parse(raw) as Partial<InsightMigrationStatus>;
+
+    if (
+      typeof parsed?.schemaVersion !== "number" ||
+      typeof parsed?.lastRunAt !== "string" ||
+      typeof parsed?.remainingLegacyCount !== "number"
+    ) {
+      return null;
+    }
+
+    return {
+      schemaVersion: parsed.schemaVersion,
+      lastRunAt: parsed.lastRunAt,
+      remainingLegacyCount: parsed.remainingLegacyCount,
+    };
+  } catch {
+    return null;
+  }
+}
+
+export function isLegacyInsightFallbackAllowed(): boolean {
+  const status = readInsightMigrationStatus();
+  return !status || status.remainingLegacyCount > 0;
+}
+
+export function hasBlockedLegacyInsight(videoId: string): boolean {
+  return !isLegacyInsightFallbackAllowed() && fs.existsSync(insightPaths(videoId).legacy);
+}
+
 /** TTL-based cache: directory mtime misses nested file changes on APFS/ext4. */
 const CACHE_TTL_MS = 5_000;
 let _insightSetCache: { expiresAt: number; ids: Set<string> } | undefined;
@@ -57,6 +100,7 @@ let _insightSetCache: { expiresAt: number; ids: Set<string> } | undefined;
 function buildInsightSet(): Set<string> {
   const base = insightsBaseDir();
   const ids = new Set<string>();
+  const allowLegacyFallback = isLegacyInsightFallbackAllowed();
   try {
     const entries = fs.readdirSync(base, { withFileTypes: true });
     for (const e of entries) {
@@ -66,7 +110,7 @@ function buildInsightSet(): Set<string> {
         if (fs.existsSync(analysisPath(e.name))) {
           ids.add(e.name);
         }
-      } else if (e.isFile() && e.name.endsWith(".md")) {
+      } else if (allowLegacyFallback && e.isFile() && e.name.endsWith(".md")) {
         // Legacy: data/insights/{videoId}.md
         ids.add(e.name.slice(0, -3));
       }
@@ -126,12 +170,14 @@ export function readInsightMarkdown(videoId: string): {
     }
   }
 
-  try {
-    const md = fs.readFileSync(p.legacy, "utf8");
-    return { kind: "legacy", markdown: md, path: p.legacy };
-  } catch (err) {
-    if ((err as NodeJS.ErrnoException).code !== "ENOENT") {
-      console.debug("Unexpected error reading legacy insight:", err);
+  if (isLegacyInsightFallbackAllowed()) {
+    try {
+      const md = fs.readFileSync(p.legacy, "utf8");
+      return { kind: "legacy", markdown: md, path: p.legacy };
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") {
+        console.debug("Unexpected error reading legacy insight:", err);
+      }
     }
   }
 
@@ -289,6 +335,10 @@ export function readCuratedInsight(videoId: string): {
         source: "invalid-structured",
       };
     }
+  }
+
+  if (!isLegacyInsightFallbackAllowed()) {
+    return { curated: null, error: null, source: "none" };
   }
 
   const insight = readInsightMarkdown(videoId);

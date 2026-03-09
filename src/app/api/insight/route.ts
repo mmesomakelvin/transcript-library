@@ -10,6 +10,7 @@ import {
 } from "@/modules/analysis";
 import {
   getInsightArtifacts,
+  hasBlockedLegacyInsight,
   readCuratedInsight,
   readInsightMarkdown,
   readRunMetadata,
@@ -39,11 +40,16 @@ export async function GET(req: Request) {
   const insight = readInsightMarkdown(videoId).markdown;
   const curated = readCuratedInsight(videoId);
   const status = readStatus(videoId);
+  const blockedLegacyInsight = hasBlockedLegacyInsight(videoId);
 
   let state: "idle" | "running" | "complete" | "failed" = insight ? "complete" : "idle";
   let error: string | undefined = curated.error ?? undefined;
 
-  if (curated.error) {
+  if (blockedLegacyInsight) {
+    state = "failed";
+    error =
+      "Legacy insight requires one-time migration. Run node scripts/migrate-legacy-insights-to-json.ts --check, then rerun without --check to upgrade remaining artifacts.";
+  } else if (curated.error) {
     state = "failed";
   } else if (status?.status === "running") {
     if (!isProcessAlive(status.pid)) {
