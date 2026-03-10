@@ -255,4 +255,37 @@ describe("catalog sqlite importer", () => {
       fs.rmSync(tempRoot, { recursive: true, force: true });
     }
   });
+
+  it("validates into a temp snapshot without replacing the live catalog when checkOnly is enabled", () => {
+    const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), "catalog-check-only-"));
+    const csvPath = path.join(tempRoot, "videos.csv");
+    const liveDbPath = path.join(tempRoot, "catalog", "catalog.db");
+
+    fs.writeFileSync(
+      csvPath,
+      [
+        catalogCsvHeader,
+        [
+          "check123",
+          "",
+          "Check Only",
+          "Channel Check",
+          "testing",
+          "2026-03-01",
+          "2026-03-02",
+          "150",
+          "1",
+          "1",
+          "check/file.md",
+        ].join(","),
+      ].join("\n"),
+    );
+
+    const result = rebuildCatalogFromCsv({ csvPath, liveDbPath, checkOnly: true });
+
+    expect(result.checkOnly).toBe(true);
+    expect(fs.existsSync(liveDbPath)).toBe(false);
+
+    fs.rmSync(tempRoot, { recursive: true, force: true });
+  });
 });

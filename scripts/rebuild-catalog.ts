@@ -1,8 +1,24 @@
-import { rebuildCatalogFromCsv } from "../src/lib/catalog-import";
-import { catalogCsvPath } from "../src/lib/catalog";
-import { catalogDbPath } from "../src/lib/catalog-db";
+import { rebuildCatalogFromCsv } from "../src/lib/catalog-import.ts";
+import { catalogCsvPath } from "../src/lib/catalog.ts";
+import { catalogDbPath } from "../src/lib/catalog-db.ts";
 
 const args = new Set(process.argv.slice(2));
+
+function safeCatalogCsvPath(): string | undefined {
+  try {
+    return catalogCsvPath();
+  } catch {
+    return undefined;
+  }
+}
+
+function safeCatalogDbPath(): string | undefined {
+  try {
+    return catalogDbPath();
+  } catch {
+    return undefined;
+  }
+}
 
 try {
   const result = rebuildCatalogFromCsv({
@@ -28,8 +44,8 @@ try {
     JSON.stringify(
       {
         status: "failed",
-        csvPath: catalogCsvPath(),
-        liveDbPath: catalogDbPath(),
+        csvPath: safeCatalogCsvPath(),
+        liveDbPath: safeCatalogDbPath(),
         error: message,
       },
       null,

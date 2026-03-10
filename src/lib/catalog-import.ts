@@ -1,9 +1,9 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import type { VideoRow } from "@/lib/catalog";
-import { catalogCsvPath } from "@/lib/catalog";
-import { bootstrapCatalogDb, catalogDbPath, type CatalogDatabase } from "@/lib/catalog-db";
+import type { VideoRow } from "./catalog.ts";
+import { catalogCsvPath } from "./catalog.ts";
+import { bootstrapCatalogDb, catalogDbPath, type CatalogDatabase } from "./catalog-db.ts";
 
 const UNKNOWN_CHANNEL = "(unknown channel)";
 const UNKNOWN_TOPIC = "(uncategorized)";
@@ -136,6 +136,7 @@ function canonicalVideoId(row: VideoRow): string {
 }
 
 function normalizeVideoRecord(videoId: string, rows: VideoRow[]): CatalogVideoRecord {
+  // Canonical metadata comes from the earliest ordered transcript row so import-time choices stay deterministic.
   const orderedRows = [...rows].sort((left, right) => {
     const chunkDelta =
       integerField(left.chunk, "chunk index", videoId) -
@@ -337,6 +338,7 @@ export function rebuildCatalogFromCsv(options?: {
     if (options?.checkOnly) {
       fs.rmSync(tempDbPath, { force: true });
     } else {
+      // Publish only a fully validated snapshot so failed rebuilds never disturb the live catalog.
       fs.mkdirSync(path.dirname(liveDbFilePath), { recursive: true });
       fs.renameSync(tempDbPath, liveDbFilePath);
     }
