@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 
 /**
  * GET /api/channels
- * Returns all channels derived from the indexed transcript catalog.
+ * Returns all channels derived from the SQLite-backed transcript catalog.
  *
  * @returns JSON `{ channels }` — an array of channel name strings.
  */

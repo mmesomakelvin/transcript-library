@@ -9,7 +9,7 @@ export const runtime = "nodejs";
  * POST /api/analyze
  * Validates the video, assembles its full transcript, and spawns a background
  * analysis worker. Returns immediately; the worker writes artifacts to disk as it
- * runs.
+ * runs while metadata continues to come from the shared catalog snapshot.
  *
  * @param req - Incoming request. Expects `?videoId=` query param.
  * @returns JSON `{ ok: true, status: "running" }` on success, or a 400 / 404 /

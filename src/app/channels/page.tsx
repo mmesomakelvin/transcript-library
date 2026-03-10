@@ -4,6 +4,8 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { listChannels, groupVideos } from "@/modules/catalog";
 import { hasInsight } from "@/modules/insights";
 
+export const dynamic = "force-dynamic";
+
 /**
  * URL-encodes a string for safe use in path segments.
  *
@@ -20,10 +22,10 @@ function enc(value: string) {
  */
 export default async function ChannelsPage() {
   const channels = listChannels();
-  const videos = groupVideos();
+  const videos = Array.from(groupVideos().values());
 
   const analyzedByChannel: Record<string, number> = {};
-  for (const v of videos.values()) {
+  for (const v of videos) {
     if (hasInsight(v.videoId)) {
       analyzedByChannel[v.channel] = (analyzedByChannel[v.channel] || 0) + 1;
     }

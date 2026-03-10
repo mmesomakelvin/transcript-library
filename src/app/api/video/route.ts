@@ -22,6 +22,7 @@ function safeRead(p: string) {
 /**
  * GET /api/video
  * Returns video metadata and transcript part contents for the requested video.
+ * Catalog metadata comes from the shared SQLite-backed snapshot helper.
  *
  * @param req - Incoming request. Expects `?videoId=` query param.
  * @returns JSON with `video` and `parts` (each part includes file content), or a

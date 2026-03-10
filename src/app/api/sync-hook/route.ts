@@ -47,9 +47,9 @@ export async function POST(req: Request) {
 
   // Process asynchronously — return immediately so curl --max-time 10 doesn't timeout
   (async () => {
-    const videos = groupVideos();
+    for (const video of groupVideos().values()) {
+      const videoId = video.videoId;
 
-    for (const [videoId, video] of videos) {
       // Skip if analysis already exists
       try {
         fs.accessSync(analysisPath(videoId));

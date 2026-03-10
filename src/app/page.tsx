@@ -4,6 +4,8 @@ import { listChannels, groupVideos } from "@/modules/catalog";
 import { listRecentKnowledge } from "@/modules/recent";
 import { hasInsight } from "@/modules/insights";
 
+export const dynamic = "force-dynamic";
+
 /**
  * URL-encodes a string for safe use in path segments.
  *
@@ -22,12 +24,12 @@ function enc(value: string) {
 export default async function Page() {
   const channels = listChannels();
   const recentKnowledge = listRecentKnowledge(4);
-  const videos = groupVideos();
+  const videos = Array.from(groupVideos().values());
   const totalVideos = channels.reduce((sum, ch) => sum + ch.videoCount, 0);
 
   let analyzedCount = 0;
   const analyzedByChannel: Record<string, number> = {};
-  for (const v of videos.values()) {
+  for (const v of videos) {
     const has = hasInsight(v.videoId);
     if (has) {
       analyzedCount++;

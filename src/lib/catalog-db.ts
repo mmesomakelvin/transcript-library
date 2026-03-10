@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import Database from "better-sqlite3";
 
-export type CatalogDatabase = Database.Database;
+export type CatalogDatabase = InstanceType<typeof Database>;
 
 export function catalogDbPath(): string {
   const configured = process.env.CATALOG_DB_PATH?.trim();

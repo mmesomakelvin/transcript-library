@@ -5,8 +5,10 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { TranscriptViewer } from "@/components/TranscriptViewer";
 import { VideoAnalysisWorkspace } from "@/components/VideoAnalysisWorkspace";
 import { VideoPlayerEmbed } from "@/components/VideoPlayerEmbed";
-import { absTranscriptPath, groupVideos, getVideo } from "@/modules/catalog";
+import { absTranscriptPath, getVideo } from "@/modules/catalog";
 import { formatCount } from "@/lib/utils";
+
+export const dynamic = "force-dynamic";
 
 /**
  * Small SVG icon representing an external link (arrow-box motif).
@@ -27,18 +29,6 @@ function ExternalIcon() {
       <path d="M19 13v5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
     </svg>
   );
-}
-
-/**
- * Generates static route params for every video in the catalog so the
- * `/video/[videoId]` segment can be pre-rendered at build time.
- *
- * @returns An array of `{ videoId }` param objects.
- */
-export function generateStaticParams() {
-  return Array.from(groupVideos().values()).map((video) => ({
-    videoId: video.videoId,
-  }));
 }
 
 /**

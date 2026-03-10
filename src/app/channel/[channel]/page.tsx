@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { listChannels, listVideosByChannel } from "@/modules/catalog";
+import { listVideosByChannel } from "@/modules/catalog";
 import { hasInsight } from "@/modules/insights";
 import { formatCount } from "@/lib/utils";
+
+export const dynamic = "force-dynamic";
 
 /**
  * Safely decodes a percent-encoded URL segment, returning the original value if
@@ -30,18 +32,8 @@ function enc(value: string) {
 }
 
 /**
- * Generates static route params for every channel in the catalog so the
- * `/channel/[channel]` segment can be pre-rendered at build time.
- *
- * @returns An array of `{ channel }` param objects.
- */
-export function generateStaticParams() {
-  return listChannels().map((channel) => ({ channel: channel.channel }));
-}
-
-/**
  * Channel detail page — lists all videos for a channel with analysis status
- * indicators, topic summary, and publish dates.
+ * indicators, topic summary, and publish dates from the shared catalog facade.
  *
  * @param params - Resolved route params containing the percent-encoded channel name.
  */
