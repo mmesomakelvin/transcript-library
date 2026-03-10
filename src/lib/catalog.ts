@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { cache } from "react";
-import { openCatalogDb } from "./catalog-db.ts";
+import { catalogDbPath, openCatalogDb } from "./catalog-db.ts";
 
 export type VideoRow = {
   video_id: string;
@@ -53,6 +53,9 @@ type CatalogPartRow = {
 };
 
 type CatalogSnapshot = {
+  catalogVersion: string;
+  dbMtimeMs: number;
+  validationReportMtimeMs: number;
   mtimeMs: number;
   videosById: Map<string, Video>;
 };
@@ -78,13 +81,48 @@ export function catalogCsvPath(): string {
   );
 }
 
-function loadCatalogSnapshot(): CatalogSnapshot {
-  const dbPath = process.env.CATALOG_DB_PATH?.trim()
-    ? path.resolve(process.env.CATALOG_DB_PATH)
-    : path.resolve(process.cwd(), "data", "catalog", "catalog.db");
-  const stats = fs.statSync(dbPath);
+function catalogValidationReportPath(dbPath = catalogDbPath()): string {
+  return path.join(path.dirname(dbPath), "last-import-validation.json");
+}
 
-  if (snapshotCache && snapshotCache.mtimeMs === stats.mtimeMs) {
+function readCatalogVersionSignal(dbPath: string): {
+  catalogVersion: string;
+  dbMtimeMs: number;
+  validationReportMtimeMs: number;
+} {
+  const dbStats = fs.statSync(dbPath);
+  const validationPath = catalogValidationReportPath(dbPath);
+
+  try {
+    const validationStats = fs.statSync(validationPath);
+    const report = JSON.parse(fs.readFileSync(validationPath, "utf8")) as {
+      catalogVersion?: string;
+    };
+
+    return {
+      catalogVersion: report.catalogVersion ?? `db-mtime:${dbStats.mtimeMs}`,
+      dbMtimeMs: dbStats.mtimeMs,
+      validationReportMtimeMs: validationStats.mtimeMs,
+    };
+  } catch {
+    return {
+      catalogVersion: `db-mtime:${dbStats.mtimeMs}`,
+      dbMtimeMs: dbStats.mtimeMs,
+      validationReportMtimeMs: 0,
+    };
+  }
+}
+
+function loadCatalogSnapshot(): CatalogSnapshot {
+  const dbPath = catalogDbPath();
+  const versionSignal = readCatalogVersionSignal(dbPath);
+
+  if (
+    snapshotCache &&
+    snapshotCache.catalogVersion === versionSignal.catalogVersion &&
+    snapshotCache.dbMtimeMs === versionSignal.dbMtimeMs &&
+    snapshotCache.validationReportMtimeMs === versionSignal.validationReportMtimeMs
+  ) {
     return snapshotCache;
   }
 
@@ -154,7 +192,10 @@ function loadCatalogSnapshot(): CatalogSnapshot {
     }
 
     snapshotCache = {
-      mtimeMs: stats.mtimeMs,
+      catalogVersion: versionSignal.catalogVersion,
+      dbMtimeMs: versionSignal.dbMtimeMs,
+      validationReportMtimeMs: versionSignal.validationReportMtimeMs,
+      mtimeMs: versionSignal.dbMtimeMs,
       videosById,
     };
 

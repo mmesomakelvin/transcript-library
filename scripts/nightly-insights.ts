@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
-import { groupVideos } from "../src/lib/catalog";
+import { rebuildCatalogFromCsv } from "../src/lib/catalog-import.ts";
+import { absTranscriptPath, groupVideos, playlistTranscriptsRepoRoot } from "../src/lib/catalog";
 import { insightPaths } from "../src/lib/insights";
 
 type Job = {
@@ -29,17 +30,6 @@ type Job = {
   attempts: number;
   maxAttempts: number;
 };
-
-function repoRoot(): string {
-  return (
-    process.env.PLAYLIST_TRANSCRIPTS_REPO ||
-    "/Users/aojdevstudio/projects/clawd/playlist-transcripts"
-  );
-}
-
-function absTranscriptPath(filePath: string): string {
-  return path.join(repoRoot(), "youtube-transcripts", filePath);
-}
 
 function atomicWriteJson(filePath: string, obj: unknown) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
@@ -87,6 +77,7 @@ fs.mkdirSync(queueDir, { recursive: true });
 fs.mkdirSync(failedDir, { recursive: true });
 fs.mkdirSync(artifactsDir, { recursive: true });
 
+const refresh = rebuildCatalogFromCsv();
 const videos = Array.from(groupVideos().values());
 const missing = videos
   .filter((v) => !existsNonEmpty(insightPaths(v.videoId).analysis))
@@ -121,7 +112,7 @@ for (const v of toDo) {
       publishedDate: v.publishedDate,
     },
     transcripts: {
-      root: repoRoot(),
+      root: playlistTranscriptsRepoRoot(),
       parts,
     },
     output: { outDir: output.dir, outPath: output.analysis },
@@ -157,13 +148,14 @@ const summary = {
   at: stamp,
   limit,
   totalVideos: videos.length,
+  catalogVersion: refresh.catalogVersion,
   missingBefore: missing.length,
   enqueued,
   processed,
   newFailed,
 };
 
-const md = `# Nightly insights\n\n- at: ${summary.at}\n- limit: ${summary.limit}\n- totalVideos: ${summary.totalVideos}\n- missingBefore: ${summary.missingBefore}\n- enqueued: ${summary.enqueued}\n- processed: ${summary.processed}\n- newFailed: ${summary.newFailed}\n\n## Worklist\n\n${toDo
+const md = `# Nightly insights\n\n- at: ${summary.at}\n- limit: ${summary.limit}\n- catalogVersion: ${summary.catalogVersion}\n- totalVideos: ${summary.totalVideos}\n- missingBefore: ${summary.missingBefore}\n- enqueued: ${summary.enqueued}\n- processed: ${summary.processed}\n- newFailed: ${summary.newFailed}\n\n## Worklist\n\n${toDo
   .map((v) => `- ${v.videoId} — ${v.title} (${v.channel})`)
   .join("\n")}\n`;
 

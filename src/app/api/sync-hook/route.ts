@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
-import fs from "node:fs";
 import crypto from "node:crypto";
+import fs from "node:fs";
 import { groupVideos, absTranscriptPath } from "@/modules/catalog";
+import { rebuildCatalogFromCsv } from "@/lib/catalog-import";
 import { readStatus, isProcessAlive, analysisPath, spawnAnalysis } from "@/modules/analysis";
 
 export const runtime = "nodejs";
@@ -47,6 +48,13 @@ export async function POST(req: Request) {
 
   // Process asynchronously — return immediately so curl --max-time 10 doesn't timeout
   (async () => {
+    const refresh = rebuildCatalogFromCsv();
+    console.log("[sync-hook] Refreshed catalog", {
+      catalogVersion: refresh.catalogVersion,
+      videoCount: refresh.videoCount,
+      partCount: refresh.partCount,
+    });
+
     for (const video of groupVideos().values()) {
       const videoId = video.videoId;
 
