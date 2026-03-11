@@ -54,3 +54,4 @@ next-env.d.ts
 # analysis pipeline artifacts
 data/queue/
 data/insights/*/status.json
+.obsidian/
