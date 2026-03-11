@@ -72,7 +72,7 @@ Plans:
 Plans:
 
 - [x] 03-01: Introduce durable analysis job/run records and lifecycle transitions
-- [ ] 03-02: Rework sync/backfill flow around durable queue visibility and clearer outcomes
+- [x] 03-02: Rework sync/backfill flow around durable queue visibility and clearer outcomes
 - [ ] 03-03: Improve artifact reconciliation, runtime observability, and streaming/status behavior
 - [ ] 03-04: Surface runtime observability clearly in the workspace and docs
 
@@ -102,5 +102,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | ----------------------- | -------------- | ----------- | ---------- |
 | 1. Artifact Foundations | 3/3            | Complete    | 2026-03-09 |
 | 2. SQLite Catalog       | 3/3            | Complete    | 2026-03-10 |
-| 3. Durable Runtime      | 1/4            | In progress | -          |
+| 3. Durable Runtime      | 2/4            | In progress | -          |
 | 4. Hosted Hardening     | 0/2            | Not started | -          |
