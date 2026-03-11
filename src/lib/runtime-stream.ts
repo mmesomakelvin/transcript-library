@@ -31,6 +31,11 @@ export type RuntimeStreamPayload = {
     stderr: string;
   };
   recentLogs: string[];
+  retryGuidance: {
+    canRetry: boolean;
+    nextAction: "wait" | "rerun-analysis" | "review-mismatch";
+    message: string;
+  };
   reconciliation: Pick<
     RuntimeReconciliationRecord,
     "status" | "resolution" | "retryable" | "reasons"
@@ -87,6 +92,30 @@ function buildPayload(videoId: string): RuntimeStreamPayload {
   const reconciliation = reconcileRuntimeArtifacts(videoId);
   const logs = readInsightLogTail(videoId, 12_000);
   const recentLogs = readInsightRecentLines(videoId, 12_000, 12);
+  const retryGuidance =
+    snapshot.status === "running"
+      ? {
+          canRetry: false,
+          nextAction: "wait" as const,
+          message: "Analysis is still running.",
+        }
+      : reconciliation.status === "mismatch"
+        ? {
+            canRetry: true,
+            nextAction: "rerun-analysis" as const,
+            message: "The latest run is inconsistent. Start a clean rerun instead of trusting it.",
+          }
+        : snapshot.status === "failed"
+          ? {
+              canRetry: true,
+              nextAction: "rerun-analysis" as const,
+              message: "The latest run failed. Start a clean rerun when ready.",
+            }
+          : {
+              canRetry: false,
+              nextAction: "review-mismatch" as const,
+              message: "No retry is needed.",
+            };
 
   return {
     videoId,
@@ -101,6 +130,7 @@ function buildPayload(videoId: string): RuntimeStreamPayload {
         : snapshot.error,
     logs,
     recentLogs,
+    retryGuidance,
     reconciliation: {
       status: reconciliation.status,
       resolution: reconciliation.resolution,

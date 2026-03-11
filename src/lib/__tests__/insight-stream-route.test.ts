@@ -35,6 +35,11 @@ describe("insight stream route", () => {
         error: null,
         logs: { stdout: "stdout line 1", stderr: "" },
         recentLogs: ["stdout line 1"],
+        retryGuidance: {
+          canRetry: false,
+          nextAction: "wait",
+          message: "Analysis is still running.",
+        },
         reconciliation: {
           status: "ok",
           resolution: "none",
@@ -69,6 +74,7 @@ describe("insight stream route", () => {
     expect(text).toContain('"status":"running"');
     expect(text).toContain('"stage":{"key":"running","label":"Running"}');
     expect(text).toContain('"recentLogs":["stdout line 1"]');
+    expect(text).toContain('"retryGuidance":{"canRetry":false,"nextAction":"wait"');
     expect(text).toContain('"reconciliation":{"status":"ok","resolution":"none","retryable":false');
   });
 });

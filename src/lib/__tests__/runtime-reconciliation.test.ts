@@ -2,12 +2,12 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
-import { GET as getAnalyze } from "@/app/api/analyze/route";
 import { GET as getInsight } from "@/app/api/insight/route";
 import {
   __resetAnalysisRuntimeForTests,
   analysisPath,
   buildRunArtifacts,
+  stdoutLogPath,
   structuredAnalysisPath,
   writeRunLifecycle,
 } from "@/lib/analysis";
@@ -121,6 +121,7 @@ describe("runtime reconciliation", () => {
     fs.mkdirSync(path.dirname(analysisPath("abc123xyz89")), { recursive: true });
     fs.writeFileSync(analysisPath("abc123xyz89"), "# Analysis\n\nThis should not look healthy.");
     fs.writeFileSync(structuredAnalysisPath("abc123xyz89"), "{not-json");
+    fs.writeFileSync(stdoutLogPath("abc123xyz89"), "line one\nline two\nline three");
     writeRunLifecycle("abc123xyz89", {
       runId: "run-reconcile-3",
       provider: "claude-cli",
@@ -143,6 +144,12 @@ describe("runtime reconciliation", () => {
     expect(body.status).toBe("failed");
     expect(body.analyzeOutcome).toBe("retry-needed");
     expect(body.retryable).toBe(true);
+    expect(body.stage).toMatchObject({ key: "completed", label: "Completed" });
+    expect(body.recentLogs).toEqual(["line one", "line two", "line three"]);
+    expect(body.retryGuidance).toMatchObject({
+      canRetry: true,
+      nextAction: "rerun-analysis",
+    });
     expect(body.reconciliation).toMatchObject({
       status: "mismatch",
       resolution: "rerun-ready",

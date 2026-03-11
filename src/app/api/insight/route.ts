@@ -6,6 +6,7 @@ import {
   type RunLifecycle,
 } from "@/modules/analysis";
 import { reconcileRuntimeArtifacts } from "@/lib/runtime-reconciliation";
+import { readRuntimeStreamEvent } from "@/lib/runtime-stream";
 import {
   getInsightArtifacts,
   hasBlockedLegacyInsight,
@@ -38,6 +39,7 @@ export async function GET(req: Request) {
   const snapshot = readRuntimeSnapshot(videoId);
   const eligibility = getAnalyzeStartEligibility(videoId);
   const reconciliation = reconcileRuntimeArtifacts(videoId);
+  const runtimeEvidence = readRuntimeStreamEvent(videoId).payload;
   const blockedLegacyInsight = hasBlockedLegacyInsight(videoId);
 
   let state: "idle" | "running" | "complete" | "failed" =
@@ -72,8 +74,12 @@ export async function GET(req: Request) {
       retryable,
       analyzeOutcome,
       error,
+      stage: runtimeEvidence.stage,
       insight,
       curated: curated.curated,
+      logs: runtimeEvidence.logs,
+      recentLogs: runtimeEvidence.recentLogs,
+      retryGuidance: runtimeEvidence.retryGuidance,
       artifacts: getInsightArtifacts(videoId),
       reconciliation,
       run: snapshot.run,
