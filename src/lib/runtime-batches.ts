@@ -23,6 +23,7 @@ export type BatchRequestMetadata = {
   requestKey?: string;
   receivedAt?: string;
   idempotencyKey?: string | null;
+  identityStrategy?: "idempotency-key" | "time-window-fingerprint";
   replayWindowMs?: number;
   method?: string;
   path?: string;

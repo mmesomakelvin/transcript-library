@@ -36,6 +36,7 @@ function extractRequestIdentity(req: Request, bodyText: string): BatchRequestMet
       requestKey: `sync-hook:${idempotencyKey}`,
       receivedAt,
       idempotencyKey,
+      identityStrategy: "idempotency-key",
       method: "POST",
       path: "/api/sync-hook",
       remoteAddress: req.headers.get("x-forwarded-for"),
@@ -61,6 +62,7 @@ function extractRequestIdentity(req: Request, bodyText: string): BatchRequestMet
   return {
     requestKey: `sync-hook:fingerprint:${fingerprint}`,
     receivedAt,
+    identityStrategy: "time-window-fingerprint",
     method: "POST",
     path: "/api/sync-hook",
     remoteAddress: req.headers.get("x-forwarded-for"),

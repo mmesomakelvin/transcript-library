@@ -41,6 +41,7 @@ describe("sync-hook route", () => {
         request: {
           requestKey: "sync-hook:delivery-123",
           idempotencyKey: "delivery-123",
+          identityStrategy: "idempotency-key",
         },
       },
       items: [{ videoId: "alpha123xyz89" }, { videoId: "beta123xyz89" }],
@@ -74,6 +75,7 @@ describe("sync-hook route", () => {
       request: {
         requestKey: "sync-hook:delivery-123",
         idempotencyKey: "delivery-123",
+        identityStrategy: "idempotency-key",
       },
     });
     expect(mockSubmitRuntimeBatch).toHaveBeenCalledWith(
@@ -83,6 +85,7 @@ describe("sync-hook route", () => {
         request: expect.objectContaining({
           requestKey: "sync-hook:delivery-123",
           idempotencyKey: "delivery-123",
+          identityStrategy: "idempotency-key",
         }),
       }),
     );
@@ -106,6 +109,7 @@ describe("sync-hook route", () => {
         request: {
           requestKey: "sync-hook:delivery-123",
           idempotencyKey: "delivery-123",
+          identityStrategy: "idempotency-key",
         },
       },
       items: [{ videoId: "alpha123xyz89" }],
@@ -133,6 +137,7 @@ describe("sync-hook route", () => {
       },
       request: {
         requestKey: "sync-hook:delivery-123",
+        identityStrategy: "idempotency-key",
       },
     });
   });
