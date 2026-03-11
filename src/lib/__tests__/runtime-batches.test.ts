@@ -214,8 +214,10 @@ function setCatalogFixture(repoRoot: string) {
 
 describe("runtime batches", () => {
   it("creates durable batch and item records with honest started, skipped, pending, and failed outcomes", async () => {
-    const insightsRoot = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-batches-"));
+    const runtimeRoot = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-batches-"));
+    const insightsRoot = path.join(runtimeRoot, "insights");
     const transcriptRoot = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-transcripts-"));
+    fs.mkdirSync(insightsRoot, { recursive: true });
     process.env.INSIGHTS_BASE_DIR = insightsRoot;
     process.env.PLAYLIST_TRANSCRIPTS_REPO = transcriptRoot;
     setCatalogFixture(transcriptRoot);
@@ -327,8 +329,10 @@ describe("runtime batches", () => {
   });
 
   it("reuses a prior webhook batch when the request key is replayed inside the dedupe window", async () => {
-    const insightsRoot = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-batches-"));
+    const runtimeRoot = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-batches-"));
+    const insightsRoot = path.join(runtimeRoot, "insights");
     const transcriptRoot = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-transcripts-"));
+    fs.mkdirSync(insightsRoot, { recursive: true });
     process.env.INSIGHTS_BASE_DIR = insightsRoot;
     process.env.PLAYLIST_TRANSCRIPTS_REPO = transcriptRoot;
     setCatalogFixture(transcriptRoot);
