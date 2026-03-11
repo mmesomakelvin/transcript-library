@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 3 Plan 02 complete; ready for Wave 3 (03-03)
-last_updated: "2026-03-11T00:14:18Z"
-last_activity: 2026-03-10 — Completed Phase 03 Plan 02 (Durable batch visibility)
+stopped_at: Phase 3 Plan 03 complete; ready for 03-04
+last_updated: "2026-03-11T00:25:35.411Z"
+last_activity: 2026-03-10 — Completed Phase 03 Plan 03 (Durable reconciliation and stream evidence)
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 12
-  completed_plans: 8
-  percent: 67
+  completed_plans: 9
+  percent: 75
 ---
 
 # Project State
@@ -26,19 +26,20 @@ See: .planning/PROJECT.md (updated 2026-03-09)
 ## Current Position
 
 Phase: 3 of 4 (Durable Runtime)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: Executing
-Last activity: 2026-03-10 — Completed Phase 03 Plan 02 (Durable batch visibility)
+Last activity: 2026-03-10 — Completed Phase 03 Plan 03 (Durable reconciliation and stream evidence)
 
-Progress: [███████░░░] 67%
+Progress: [███████▓░░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
 
 - Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 8 min
-- Total execution time: 63 min
+- Total execution time: 68 min
 
 **By Phase:**
 
@@ -46,17 +47,18 @@ Progress: [███████░░░] 67%
 | ----------------------- | ----- | ------ | -------- |
 | 01-artifact-foundations | 3     | 34 min | 11 min   |
 | 02-sqlite-catalog       | 3     | 21 min | 7 min    |
-| 03-durable-runtime      | 2     | 8 min  | 4 min    |
+| 03-durable-runtime      | 3     | 13 min | 4 min    |
 
 **Recent Trend:**
 
-- Last 5 plans: 7 min, 5 min, 9 min, 6 min, 2 min
+- Last 5 plans: 5 min, 9 min, 6 min, 2 min, 5 min
 - Trend: Stable
   | Phase 02-sqlite-catalog P01 | 7 min | 3 tasks | 9 files |
   | Phase 02-sqlite-catalog P02 | 5 min | 3 tasks | 19 files |
   | Phase 02-sqlite-catalog P03 | 9 min | 3 tasks | 12 files |
   | Phase 03-durable-runtime P01 | 6 min | 3 tasks | 7 files |
   | Phase 03-durable-runtime P02 | 2 min | 3 tasks | 7 files |
+  | Phase 03-durable-runtime P03 | 5 min | 3 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -91,6 +93,9 @@ Recent decisions affecting current work:
 - [Phase 03-durable-runtime]: Persist sync-hook and nightly automation under one runtime batch contract with item-level started, pending, skipped, failed, and completed counts.
 - [Phase 03-durable-runtime]: Prefer explicit sync-hook idempotency keys and fall back to a time-window request fingerprint for replay resistance in the private deployment.
 - [Phase 03-durable-runtime]: Keep nightly reporting and sync-hook JSON responses derived from the same durable batch record rather than a separate queue summary.
+- [Phase 03-durable-runtime]: Persist reconciliation state in a dedicated per-video record with reason codes, timestamps, and rerun-ready guidance instead of hiding mismatch logic in routes.
+- [Phase 03-durable-runtime]: Reuse a shared per-video stream snapshot cache so concurrent viewers read one status-first payload rather than polling disk independently.
+- [Phase 03-durable-runtime]: Expose explicit stage, recentLogs, retryGuidance, and reconciliation fields directly from runtime routes so follow-up UI work stays thin.
 
 ### Pending Todos
 
@@ -102,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T00:14:18Z
-Stopped at: Phase 3 Plan 02 complete; ready for Wave 3 (03-03)
+Last session: 2026-03-11T00:25:35.410Z
+Stopped at: Phase 3 Plan 03 complete; ready for 03-04
 Resume file: .planning/phases/03-durable-runtime/03-CONTEXT.md

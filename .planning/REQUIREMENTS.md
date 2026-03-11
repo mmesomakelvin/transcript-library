@@ -29,7 +29,7 @@
 
 - [ ] **RUN-01**: Analysis job lifecycle state is stored durably enough that run status does not depend only on in-memory counters or PID checks
 - [ ] **RUN-02**: Sync/backfill flows report what work started, what remains pending, and what failed instead of only returning a generic success message
-- [ ] **RUN-03**: Artifact state can be reconciled well enough that mismatches between output files and job status are detectable instead of silently treated as normal
+- [x] **RUN-03**: Artifact state can be reconciled well enough that mismatches between output files and job status are detectable instead of silently treated as normal
 - [ ] **RUN-04**: Existing observability artifacts such as `status.json`, `run.json`, and worker logs remain available or are mapped cleanly during the transition
 
 ### Security And Validation
@@ -43,7 +43,7 @@
 
 - [x] **PERF-01**: Hot request paths reduce unnecessary synchronous filesystem work so common private browsing stays fast under hosted use
 - [ ] **PERF-02**: Page generation and read strategies remain practical as the library approaches roughly 1000 videos
-- [ ] **PERF-03**: Live status/log streaming avoids unbounded polling or connection behavior that degrades noticeably as concurrent viewers increase
+- [x] **PERF-03**: Live status/log streaming avoids unbounded polling or connection behavior that degrades noticeably as concurrent viewers increase
 - [x] **PERF-04**: The app uses caching or revalidation strategies where appropriate to improve repeated catalog-backed reads without compromising correctness
 
 ### Verification
@@ -51,7 +51,7 @@
 - [x] **TEST-01**: Automated tests cover the configurable insights base directory behavior and insight path resolution
 - [x] **TEST-02**: Automated tests cover the structured analysis parser/contract and compatibility fallbacks
 - [x] **TEST-03**: Automated tests cover SQLite-backed catalog reads and migration parity for representative catalog cases
-- [ ] **TEST-04**: Automated tests cover critical runtime lifecycle paths such as status transitions, sync behavior, and artifact reconciliation
+- [x] **TEST-04**: Automated tests cover critical runtime lifecycle paths such as status transitions, sync behavior, and artifact reconciliation
 
 ## v2 Requirements
 
@@ -90,7 +90,7 @@
 | CAT-04      | Phase 2 | Complete |
 | RUN-01      | Phase 3 | Pending  |
 | RUN-02      | Phase 3 | Pending  |
-| RUN-03      | Phase 3 | Pending  |
+| RUN-03      | Phase 3 | Complete |
 | RUN-04      | Phase 3 | Pending  |
 | SAFE-01     | Phase 4 | Pending  |
 | SAFE-02     | Phase 3 | Pending  |
@@ -98,12 +98,12 @@
 | SAFE-04     | Phase 2 | Complete |
 | PERF-01     | Phase 2 | Complete |
 | PERF-02     | Phase 4 | Pending  |
-| PERF-03     | Phase 3 | Pending  |
+| PERF-03     | Phase 3 | Complete |
 | PERF-04     | Phase 2 | Complete |
 | TEST-01     | Phase 1 | Complete |
 | TEST-02     | Phase 1 | Complete |
 | TEST-03     | Phase 2 | Complete |
-| TEST-04     | Phase 3 | Pending  |
+| TEST-04     | Phase 3 | Complete |
 
 **Coverage:**
 
