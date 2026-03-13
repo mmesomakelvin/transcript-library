@@ -2,34 +2,36 @@
 
 ## Active
 
+(none)
+
+## Validated
+
 ### DEPLOY-03 — Hosted deployment prerequisites are validated clearly enough that missing critical environment or filesystem requirements fail before user-triggered analysis flows
 
-- Status: active
+- Status: validated
 - Class: core-capability
 - Source: inferred
-- Primary Slice: none yet
+- Primary Slice: S04
 
 Hosted deployment prerequisites are validated clearly enough that missing critical environment or filesystem requirements fail before user-triggered analysis flows
 
 ### SAFE-01 — Internal API routes that expose transcripts, artifacts, or local path-derived data are protected appropriately for the private hosted deployment model
 
-- Status: active
+- Status: validated
 - Class: core-capability
 - Source: inferred
-- Primary Slice: none yet
+- Primary Slice: S04
 
 Internal API routes that expose transcripts, artifacts, or local path-derived data are protected appropriately for the private hosted deployment model
 
 ### PERF-02 — Page generation and read strategies remain practical as the library approaches roughly 1000 videos
 
-- Status: active
+- Status: validated
 - Class: core-capability
 - Source: inferred
-- Primary Slice: none yet
+- Primary Slice: S04
 
 Page generation and read strategies remain practical as the library approaches roughly 1000 videos
-
-## Validated
 
 ### RUN-01 — Analysis job lifecycle state is stored durably enough that run status does not depend only on in-memory counters or PID checks
 
