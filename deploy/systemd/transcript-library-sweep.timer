@@ -1,0 +1,11 @@
+[Unit]
+Description=Transcript Library — Daily Sweep Timer
+Requires=transcript-library-sweep.service
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

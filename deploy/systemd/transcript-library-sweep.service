@@ -1,0 +1,19 @@
+[Unit]
+Description=Transcript Library — Daily Operational Sweep
+After=network.target
+
+[Service]
+Type=oneshot
+User=deploy
+Group=deploy
+WorkingDirectory=/opt/transcript-library/current
+ExecStart=/usr/bin/node --import tsx scripts/daily-operational-sweep.ts
+Environment=NODE_ENV=production
+
+# Timeout: sweeps should complete within 30 minutes
+TimeoutStartSec=1800
+
+# Logging goes to systemd journal
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=transcript-library-sweep

@@ -1,0 +1,26 @@
+# =============================================================================
+# Transcript Library — Cloudflare Tunnel Config
+# =============================================================================
+# Place this at /home/deploy/.cloudflared/config.yml after creating the tunnel.
+#
+# Replace <TUNNEL_ID> with the actual tunnel ID from:
+#   cloudflared tunnel create transcript-library
+#
+# The credentials file is auto-created by cloudflared tunnel create at:
+#   /home/deploy/.cloudflared/<TUNNEL_ID>.json
+# =============================================================================
+
+tunnel: <TUNNEL_ID>
+credentials-file: /home/deploy/.cloudflared/<TUNNEL_ID>.json
+
+ingress:
+  # Friend-facing app (protected by Cloudflare Access OTP)
+  - hostname: library.aojdevstudio.me
+    service: http://localhost:3000
+
+  # Deploy webhook listener (protected by HMAC signature verification)
+  - hostname: library-deploy.aojdevstudio.me
+    service: http://localhost:9000
+
+  # Catch-all — reject unmatched requests
+  - service: http_status:404
