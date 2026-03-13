@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { insightsBaseDir } from "@/lib/analysis";
 import { submitRuntimeBatch } from "../src/lib/runtime-batches.ts";
 
 function takeArg(name: string, fallback?: string): string | undefined {
@@ -8,16 +9,26 @@ function takeArg(name: string, fallback?: string): string | undefined {
   return fallback;
 }
 
+function nightlyInsightsRuntimeDir(): string {
+  return path.join(
+    path.dirname(insightsBaseDir()),
+    "runtime",
+    "explicit-analysis-workflows",
+    "nightly-insights",
+  );
+}
+
 const limit = Number.parseInt(takeArg("limit", process.env.LIMIT || "20") || "20", 10) || 20;
-const appDir = process.cwd();
-const artifactsDir = path.join(appDir, "docs", "ops", "artifacts");
+const artifactsDir = nightlyInsightsRuntimeDir();
 
 fs.mkdirSync(artifactsDir, { recursive: true });
 
+// Legacy explicit analysis workflow. This script is not the unattended default.
+// Schedule scripts/daily-operational-sweep.ts for unattended refresh-only ingest + safe repair.
 const submission = submitRuntimeBatch({
   source: "nightly",
   limit,
-  logPrefix: "[nightly-insights]",
+  logPrefix: "[nightly-insights:explicit-analysis-workflow]",
 });
 
 const stamp = new Date().toISOString();
@@ -38,6 +49,10 @@ const summary = {
 };
 
 const md = `# Nightly insights
+
+> Legacy explicit analysis workflow. Not the unattended default.
+> Use \`node --import tsx scripts/daily-operational-sweep.ts\` for unattended refresh-only ingest,
+> conservative repair, durable sweep artifacts, and manual follow-up reporting.
 
 - at: ${summary.at}
 - limit: ${summary.limit}
@@ -78,7 +93,19 @@ const outFile = path.join(
 );
 fs.writeFileSync(outFile, md);
 
-console.log(JSON.stringify(summary, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      ...summary,
+      scriptScope: "legacy-explicit-analysis-workflow",
+      unattendedDefault: "node --import tsx scripts/daily-operational-sweep.ts",
+      notesPath: outFile,
+      nightlyInsightsRuntimeDir: artifactsDir,
+    },
+    null,
+    2,
+  ),
+);
 
 if (summary.counts.failed > 0) {
   process.exit(2);

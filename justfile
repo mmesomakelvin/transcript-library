@@ -43,9 +43,13 @@ typecheck:
 fmt:
   bunx prettier --write "src/**/*.{ts,tsx,json,css}"
 
-# Run nightly insights script
+# Run the unattended daily sweep (refresh-only ingest + safe repair, no analysis launch)
+daily-sweep:
+  node --import tsx scripts/daily-operational-sweep.ts
+
+# Run the legacy nightly analysis workflow explicitly; not the unattended default
 insights:
-  bun scripts/nightly-insights.ts
+  node --import tsx scripts/nightly-insights.ts
 
 # Rebuild the SQLite-backed catalog snapshot with the supported runtime
 rebuild-catalog:

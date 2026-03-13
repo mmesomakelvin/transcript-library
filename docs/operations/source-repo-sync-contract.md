@@ -7,9 +7,10 @@ This document defines the supported boundary between the upstream `playlist-tran
 - **Upstream `playlist-transcripts` owns ingestion and commits.** It pulls playlist changes, writes transcript files, rebuilds its transcript index, and pushes git commits.
 - **Transcript Library owns refreshing its local checkout.** It fast-forwards the local `PLAYLIST_TRANSCRIPTS_REPO` checkout, rebuilds SQLite from that checkout, and records refresh evidence beside the catalog.
 - **Refresh is refresh-only.** It updates source state and browse state; it does **not** start analysis work.
-- **Analysis remains on-demand.** Users start it from `/api/analyze`, or operators trigger it through explicit analysis workflows such as nightly repair/sweep jobs.
+- **The unattended default is the daily operational sweep.** Operators schedule `node --import tsx scripts/daily-operational-sweep.ts`, which runs the supported refresh authority first and then only the conservative historical repair pass.
+- **Analysis remains on-demand.** Users start it from `/api/analyze`, or operators trigger it through explicit analysis workflows when they intentionally want analysis work.
 
-If you need new browse content to appear automatically, use the refresh entrypoints below. If you need AI artifacts for a video, run an analysis workflow separately.
+If you need new browse content to appear automatically, use the refresh entrypoints below or schedule the daily sweep that wraps refresh plus safe repair. If you need AI artifacts for a video, run an analysis workflow separately.
 
 ## Supported Repository Shape
 
@@ -77,6 +78,27 @@ Behavior:
 - Also accepts `PRIVATE_API_TOKEN` as the hosted private-boundary override.
 - Records request identity metadata in the refresh record.
 - Returns refresh outcomes (`updated`, `noop`, `failed`) instead of analysis batch submission details.
+
+## Daily Sweep Layered on Top of Refresh
+
+When operators want one unattended command, schedule:
+
+```bash
+node --import tsx scripts/daily-operational-sweep.ts
+```
+
+The daily sweep keeps the refresh contract intact:
+
+1. run the supported source refresh authority
+2. run the conservative historical repair pass
+3. write durable sweep evidence to `data/runtime/daily-operational-sweep/latest.json`
+4. archive the full per-run record at `data/runtime/daily-operational-sweep/archive/<sweepId>.json`
+
+The sweep outcome is `clean`, `repaired`, `manual-follow-up`, or `failed`.
+
+If `manualFollowUpVideoIds` is non-empty, those videos need manual follow-up because the sweep saw a
+rerun-only mismatch such as `artifacts-without-run`. That is an intentional stop signal: the sweep
+leaves those videos visible for an explicit rerun and does not fabricate missing run history or auto-start analysis.
 
 ## What Refresh Does **Not** Do
 
@@ -177,10 +199,13 @@ Use cron/systemd on the app host to run:
 
 ```bash
 cd /opt/transcript-library/current
-node --import tsx scripts/refresh-source-catalog.ts
+node --import tsx scripts/daily-operational-sweep.ts
 ```
 
-Use this when the app host is the only machine responsible for keeping the local checkout fresh.
+Use this when the app host is responsible for unattended refresh-only ingest plus the conservative
+historical repair pass. Inspect `data/runtime/daily-operational-sweep/latest.json` (or the sibling
+`runtime/` tree next to `INSIGHTS_BASE_DIR`) after each run; if `manualFollowUpVideoIds` is non-empty,
+those rerun-only videos need explicit operator follow-up and analysis remains on-demand.
 
 ### B. Upstream webhook or external caller
 

@@ -1,7 +1,7 @@
 # GSD State
 
 **Active Milestone:** M002 — Reliability + Hosted Launch
-**Active Slice:** S04 — Daily Operational Sweep and Repair Automation
+**Active Slice:** S05 — Hosted Auth and Access Shape
 **Phase:** planning
 **Requirements Status:** 15 active · 10 validated · 3 deferred · 4 out of scope
 
@@ -17,4 +17,4 @@
 - None
 
 ## Next Action
-Plan slice S04 (Daily Operational Sweep and Repair Automation).
+Plan slice S05 (Hosted Auth and Access Shape).

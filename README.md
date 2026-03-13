@@ -223,8 +223,9 @@ npx tsx scripts/rebuild-catalog.ts --check
   DB, while still updating `last-import-validation.json` for operator review.
 - A failed validation leaves the last known-good `catalog.db` in place. The app does not fall back
   to `videos.csv` at runtime anymore.
-- `POST /api/sync-hook` and `scripts/nightly-insights.ts` both refresh SQLite before reading browse
-  metadata, so operational automation and the app use the same catalog authority.
+- `POST /api/sync-hook` and `scripts/daily-operational-sweep.ts` both use the supported refresh
+  authority before reading browse metadata, so unattended automation and the app use the same
+  catalog authority.
 
 ### Provider Abstraction
 
@@ -264,15 +265,35 @@ GET  /api/raw?path=...                Serve raw transcript chunks
 ## Commands
 
 ```bash
-just start            # Dev server
-just prod-start       # Production
-just build            # Next.js build
-just lint             # ESLint
-just typecheck        # tsc --noEmit
-just backfill-insights  # Re-run analysis for existing videos
+just start              # Dev server
+just prod-start         # Production
+just build              # Next.js build
+just lint               # ESLint
+just typecheck          # tsc --noEmit
+just daily-sweep        # Unattended daily sweep: refresh-only ingest + safe repair, no analysis launch
+just backfill-insights  # Explicit analysis workflow for existing videos
 npx tsx scripts/rebuild-catalog.ts --check  # Validate catalog parity without cutover
 npx tsx scripts/benchmark-hosted-scale.ts --check  # Scale validation (1000-video benchmark)
 ```
+
+### Unattended daily sweep
+
+Schedule this command for unattended operation:
+
+```bash
+just daily-sweep
+# or: node --import tsx scripts/daily-operational-sweep.ts
+```
+
+The daily sweep is the unattended default. It refreshes source state, republishes browse state, runs
+only the conservative historical repair pass, and writes a durable operator record to
+`data/runtime/daily-operational-sweep/latest.json` by default (or the sibling `runtime/`
+directory next to `INSIGHTS_BASE_DIR` on hosted installs). Each run also writes an immutable archive
+record under `data/runtime/daily-operational-sweep/archive/<sweepId>.json`.
+
+When the sweep reports `manualFollowUpVideoIds`, those are rerun-only videos: the sweep left them
+visible for manual follow-up instead of fabricating `run.json` or starting analysis work. Analysis
+remains on-demand or explicit.
 
 ---
 

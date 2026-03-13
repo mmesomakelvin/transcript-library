@@ -10,7 +10,8 @@
     "test": "vitest run",
     "e2e": "playwright test",
     "e2e:headed": "playwright test --headed",
-    "nightly:insights": "bun run scripts/nightly-insights.ts",
+    "daily:sweep": "node --import tsx scripts/daily-operational-sweep.ts",
+    "nightly:insights": "node --import tsx scripts/nightly-insights.ts",
     "prepare": "husky"
   },
   "dependencies": {

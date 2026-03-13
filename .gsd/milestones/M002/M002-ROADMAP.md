@@ -63,7 +63,7 @@ This milestone is complete only when all are true:
 
   > After this: a real upstream transcript update flows into the app automatically, with the cross-repo refresh contract documented and enforced clearly enough for unattended use.
 
-- [ ] **S04: Daily Operational Sweep and Repair Automation** `risk:medium` `depends:[S02,S03]`
+- [x] **S04: Daily Operational Sweep and Repair Automation** `risk:medium` `depends:[S02,S03]`
 
   > After this: an unattended daily job can refresh source data, detect/repair runtime drift, and leave evidence of what it fixed or could not fix.
 

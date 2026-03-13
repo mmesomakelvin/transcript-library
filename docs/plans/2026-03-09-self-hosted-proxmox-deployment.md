@@ -8,6 +8,11 @@
 
 This is a good deployment direction for this app.
 
+For unattended operations, the command to schedule is `node --import tsx scripts/daily-operational-sweep.ts`.
+That daily sweep is refresh-only with conservative repair: it refreshes the local transcript checkout,
+rebuilds browse state, repairs only already-approved safe historical mismatches, writes durable sweep
+artifacts, and leaves rerun-only videos in manual follow-up instead of auto-starting analysis.
+
 The core adjustment is simple but important:
 
 - do **not** run production from a git worktree that also stores mutable analysis artifacts
@@ -220,7 +225,14 @@ Clone transcript data into:
 
 - `/srv/transcript-library/playlist-transcripts`
 
-Then refresh through the app-owned refresh contract, not a bare `git pull` cron. Supported entrypoints:
+For unattended operation, schedule the daily sweep rather than a bare `git pull` cron:
+
+```bash
+cd /opt/transcript-library/current
+node --import tsx scripts/daily-operational-sweep.ts
+```
+
+That unattended command runs the app-owned refresh contract first, then the conservative repair pass, and writes durable operator evidence. If you need refresh without the repair layer, use the narrower refresh entrypoints:
 
 ```bash
 cd /opt/transcript-library/current
@@ -234,18 +246,17 @@ POST /api/sync-hook
 Authorization: Bearer <SYNC_TOKEN>
 ```
 
-That contract fast-forwards the local checkout, rebuilds SQLite, and writes durable evidence beside the catalog.
-
-Inspect after each refresh with:
+Inspect after each unattended sweep with:
 
 ```bash
 cat /srv/transcript-library/catalog/last-source-refresh.json
 cat /srv/transcript-library/catalog/last-import-validation.json
+cat /srv/transcript-library/runtime/daily-operational-sweep/latest.json
 ```
 
-Those files live next to `CATALOG_DB_PATH`, so keep the catalog on shared storage rather than inside the release tree.
+Those files live next to `CATALOG_DB_PATH` or `INSIGHTS_BASE_DIR`, so keep the catalog and runtime storage on shared storage rather than inside the release tree.
 
-This is deliberately refresh-only: new videos become browsable after refresh, but analysis remains on-demand.
+If the sweep artifact reports `manualFollowUpVideoIds`, those are rerun-only videos that need explicit operator follow-up. This is deliberately refresh-only at the ingest boundary: new videos become browsable after refresh, while analysis remains on-demand or part of an explicit workflow.
 
 ### 8. Process Management
 
@@ -316,7 +327,7 @@ Important note:
 17. Point `current` symlink at the new release
 18. Start pm2 app from `/opt/transcript-library/current`
 19. Verify app on `http://localhost:3000`
-20. Run `node --import tsx scripts/refresh-source-catalog.ts --check` from the current release and confirm `last-source-refresh.json` plus `last-import-validation.json` exist where the hosted runtime expects them
+20. Run `node --import tsx scripts/daily-operational-sweep.ts` from the current release and confirm `last-source-refresh.json`, `last-import-validation.json`, and `runtime/daily-operational-sweep/latest.json` exist where the hosted runtime expects them
 
 ### Phase 4 - Tunnel and Access
 
@@ -348,11 +359,12 @@ Important note:
 ### Phase 7 - Hardening
 
 31. Add pm2 log rotation
-32. Add a refresh-only cron or systemd timer that runs `node --import tsx scripts/refresh-source-catalog.ts`
-33. Test `POST /api/sync-hook` with `SYNC_TOKEN`
-34. Test LXC reboot
-35. Test rollback to previous release
-36. Snapshot the LXC
+32. Add a daily sweep cron or systemd timer that runs `node --import tsx scripts/daily-operational-sweep.ts`
+33. After each unattended run, inspect `/srv/transcript-library/runtime/daily-operational-sweep/latest.json` and confirm whether `manualFollowUpVideoIds` is empty or names rerun-only videos that need explicit operator follow-up
+34. Test `POST /api/sync-hook` with `SYNC_TOKEN`
+35. Test LXC reboot
+36. Test rollback to previous release
+37. Snapshot the LXC
 
 ## Pre-Deploy Code Changes
 
@@ -381,16 +393,17 @@ Important note:
 
 ## Risks and Mitigations
 
-| Risk                           | Mitigation                                                                                                                                  |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Production repo becomes dirty  | Never run production from a mutable git worktree                                                                                            |
-| Deploy fails during pull/build | Build fresh release directory, then swap symlink                                                                                            |
-| Claude CLI login expires       | Re-auth the runtime user; API key is optional but billable                                                                                  |
-| Build OOM                      | Start with 2 GB, bump if Linux build proves tight                                                                                           |
-| Transcript repo drift          | Refresh-only cron/webhook using `scripts/refresh-source-catalog.ts` or `POST /api/sync-hook`, plus inspection of `last-source-refresh.json` |
-| Webhook abuse                  | HMAC verification, dedicated deploy hostname                                                                                                |
-| Access blocks webhook          | Keep deploy hostname outside OTP Access app                                                                                                 |
-| Rollback is painful            | Keep previous release directory and repoint symlink                                                                                         |
+| Risk                           | Mitigation                                                                                                                                                                                                                        |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Production repo becomes dirty  | Never run production from a mutable git worktree                                                                                                                                                                                  |
+| Deploy fails during pull/build | Build fresh release directory, then swap symlink                                                                                                                                                                                  |
+| Claude CLI login expires       | Re-auth the runtime user; API key is optional but billable                                                                                                                                                                        |
+| Build OOM                      | Start with 2 GB, bump if Linux build proves tight                                                                                                                                                                                 |
+| Transcript repo drift          | Schedule the daily sweep `scripts/daily-operational-sweep.ts` or trigger refresh with `POST /api/sync-hook`; inspect `last-source-refresh.json`, `last-import-validation.json`, and `runtime/daily-operational-sweep/latest.json` |
+| Rerun-only drift is hidden     | Treat non-empty `manualFollowUpVideoIds` in the daily sweep artifact as manual follow-up; analysis remains on-demand and requires an explicit rerun workflow                                                                      |
+| Webhook abuse                  | HMAC verification, dedicated deploy hostname                                                                                                                                                                                      |
+| Access blocks webhook          | Keep deploy hostname outside OTP Access app                                                                                                                                                                                       |
+| Rollback is painful            | Keep previous release directory and repoint symlink                                                                                                                                                                               |
 
 ## Cost
 
