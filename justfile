@@ -47,6 +47,14 @@ fmt:
 insights:
   bun scripts/nightly-insights.ts
 
+# Rebuild the SQLite-backed catalog snapshot with the supported runtime
+rebuild-catalog:
+  npx tsx scripts/rebuild-catalog.ts
+
+# Validate catalog parity without replacing the live snapshot
+rebuild-catalog-check:
+  npx tsx scripts/rebuild-catalog.ts --check
+
 # Backfill canonical/title artifacts for existing insights
 backfill-insights:
   bun run scripts/backfill-insight-artifacts.ts

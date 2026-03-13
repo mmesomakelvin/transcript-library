@@ -4,6 +4,51 @@ import Database from "better-sqlite3";
 
 export type CatalogDatabase = InstanceType<typeof Database>;
 
+export type CatalogPreconditionFailure = {
+  reason: "missing-schema" | "invalid-snapshot" | "unreadable-db";
+  message: string;
+  repairCommand: "npx tsx scripts/rebuild-catalog.ts";
+};
+
+const CATALOG_REPAIR_COMMAND = "npx tsx scripts/rebuild-catalog.ts" as const;
+
+const missingSchemaPattern = /no such table:\s*catalog_(videos|parts)/i;
+const invalidSnapshotPatterns = [/file is not a database/i, /database disk image is malformed/i];
+const unreadableDbPatterns = [/unable to open database file/i, /database is locked/i];
+
+export function describeCatalogPreconditionFailure(
+  error: unknown,
+): CatalogPreconditionFailure | null {
+  const message = error instanceof Error ? error.message : String(error);
+
+  if (missingSchemaPattern.test(message)) {
+    return {
+      reason: "missing-schema",
+      message:
+        "Catalog snapshot is missing the required tables. Rebuild the catalog, then retry analysis.",
+      repairCommand: CATALOG_REPAIR_COMMAND,
+    };
+  }
+
+  if (invalidSnapshotPatterns.some((pattern) => pattern.test(message))) {
+    return {
+      reason: "invalid-snapshot",
+      message: "Catalog snapshot is unreadable. Rebuild the catalog, then retry analysis.",
+      repairCommand: CATALOG_REPAIR_COMMAND,
+    };
+  }
+
+  if (unreadableDbPatterns.some((pattern) => pattern.test(message))) {
+    return {
+      reason: "unreadable-db",
+      message: "Catalog snapshot could not be opened. Rebuild the catalog, then retry analysis.",
+      repairCommand: CATALOG_REPAIR_COMMAND,
+    };
+  }
+
+  return null;
+}
+
 export function catalogDbPath(): string {
   const configured = process.env.CATALOG_DB_PATH?.trim();
   if (configured) {

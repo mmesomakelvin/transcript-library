@@ -13,6 +13,7 @@ import {
   runAttemptMetadataPath,
   stdoutLogPath,
   stderrLogPath,
+  structuredAnalysisSchemaPath,
   writeRunLifecycle,
 } from "@/lib/analysis";
 
@@ -126,5 +127,73 @@ describe("runtime run authority", () => {
     expect(fs.readFileSync(attemptStdoutLogPath("abc123xyz89", secondRunId), "utf8")).toBe(
       "second run stdout",
     );
+  });
+
+  it("persists the first meaningful stdout failure line as durable run and status truth", () => {
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-runs-"));
+    process.env.INSIGHTS_BASE_DIR = tmpDir;
+
+    fs.mkdirSync(path.dirname(stdoutLogPath("abc123xyz89")), { recursive: true });
+    fs.writeFileSync(
+      stdoutLogPath("abc123xyz89"),
+      [
+        "[claude] connecting",
+        "Credit balance is too low to continue.",
+        "Try again after topping up the account.",
+      ].join("\n"),
+    );
+    fs.writeFileSync(stderrLogPath("abc123xyz89"), "\n\n");
+
+    writeRunLifecycle("abc123xyz89", {
+      runId: "run-005",
+      provider: "claude-cli",
+      command: "claude",
+      args: ["-p"],
+      lifecycle: "failed",
+      startedAt: "2026-03-10T18:07:00.000Z",
+      promptResolvedAt: "2026-03-10T18:06:59.000Z",
+      pid: 4321,
+      completedAt: "2026-03-10T18:08:00.000Z",
+      exitCode: 1,
+      error: "exit code 1",
+      artifacts: buildRunArtifacts("abc123xyz89", "Test Title", "run-005"),
+    });
+
+    expect(readRunMetadata("abc123xyz89")).toMatchObject({
+      runId: "run-005",
+      lifecycle: "failed",
+      status: "failed",
+      error: "Credit balance is too low to continue.",
+    });
+    expect(readStatus("abc123xyz89")).toMatchObject({
+      runId: "run-005",
+      lifecycle: "failed",
+      status: "failed",
+      error: "Credit balance is too low to continue.",
+    });
+  });
+
+  it("ships a structured analysis schema file for the codex provider path", () => {
+    const schemaPath = structuredAnalysisSchemaPath();
+    const schema = JSON.parse(fs.readFileSync(schemaPath, "utf8")) as {
+      type: string;
+      required: string[];
+      properties: Record<string, { type?: string; const?: number }>;
+    };
+
+    expect(path.basename(schemaPath)).toBe("structured-analysis.schema.json");
+    expect(schema.type).toBe("object");
+    expect(schema.required).toEqual([
+      "schemaVersion",
+      "videoId",
+      "title",
+      "summary",
+      "takeaways",
+      "actionItems",
+      "notablePoints",
+      "reportMarkdown",
+    ]);
+    expect(schema.properties.schemaVersion).toMatchObject({ type: "integer", const: 1 });
+    expect(schema.properties.reportMarkdown).toMatchObject({ type: "string" });
   });
 });

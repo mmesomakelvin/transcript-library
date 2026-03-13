@@ -9,6 +9,7 @@ import {
   analysisPath,
   buildRunArtifacts,
   readStatus,
+  structuredAnalysisPath,
   writeRunLifecycle,
 } from "@/lib/analysis";
 import { getInsightArtifacts } from "@/lib/insights";
@@ -67,6 +68,19 @@ describe("runtime compatibility", () => {
 
     fs.mkdirSync(path.dirname(analysisPath("abc123xyz89")), { recursive: true });
     fs.writeFileSync(analysisPath("abc123xyz89"), "# Analysis\n\nCompleted report.");
+    fs.writeFileSync(
+      structuredAnalysisPath("abc123xyz89"),
+      JSON.stringify({
+        schemaVersion: 1,
+        videoId: "abc123xyz89",
+        title: "Compatibility Test",
+        summary: "Completed report.",
+        takeaways: ["One takeaway"],
+        actionItems: ["One action item"],
+        notablePoints: ["One notable point"],
+        reportMarkdown: "# Analysis\n\nCompleted report.",
+      }),
+    );
     writeRunLifecycle("abc123xyz89", {
       runId: "run-101",
       provider: "claude-cli",
@@ -102,6 +116,54 @@ describe("runtime compatibility", () => {
       runFileName: "run.json",
       stdoutFileName: "worker-stdout.txt",
       stderrFileName: "worker-stderr.txt",
+    });
+  });
+
+  it("surfaces stdout-derived failure summaries through the durable insight payload", async () => {
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-compat-"));
+    process.env.INSIGHTS_BASE_DIR = tmpDir;
+
+    fs.mkdirSync(path.dirname(analysisPath("abc123xyz89")), { recursive: true });
+    fs.writeFileSync(
+      path.join(tmpDir, "abc123xyz89", "worker-stdout.txt"),
+      ["Connecting to provider", "Credit balance is too low to continue."].join("\n"),
+    );
+    fs.writeFileSync(path.join(tmpDir, "abc123xyz89", "worker-stderr.txt"), "");
+    writeRunLifecycle("abc123xyz89", {
+      runId: "run-102",
+      provider: "claude-cli",
+      command: "claude",
+      args: ["-p"],
+      lifecycle: "failed",
+      startedAt: "2026-03-10T19:07:00.000Z",
+      promptResolvedAt: "2026-03-10T19:06:59.000Z",
+      pid: 1235,
+      completedAt: "2026-03-10T19:08:00.000Z",
+      exitCode: 1,
+      error: "exit code 1",
+      artifacts: buildRunArtifacts("abc123xyz89", "Compatibility Test", "run-102"),
+    });
+
+    const response = await getInsight(
+      new Request("http://localhost/api/insight?videoId=abc123xyz89"),
+    );
+    const body = (await response.json()) as {
+      status: string;
+      lifecycle: string | null;
+      error?: string;
+      run: { runId: string; lifecycle: string; status: string; error?: string } | null;
+    };
+
+    expect(body).toMatchObject({
+      status: "failed",
+      lifecycle: "failed",
+      error: "Credit balance is too low to continue.",
+      run: {
+        runId: "run-102",
+        lifecycle: "failed",
+        status: "failed",
+        error: "Credit balance is too low to continue.",
+      },
     });
   });
 });

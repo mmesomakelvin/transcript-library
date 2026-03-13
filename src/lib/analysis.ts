@@ -179,6 +179,12 @@ const LEGACY_CLAUDE_STDOUT_FILE = "claude-stdout.txt";
 const LEGACY_CLAUDE_STDERR_FILE = "claude-stderr.txt";
 const ATTEMPTS_DIR = "runs";
 const ATTEMPT_RUN_FILE = "run.json";
+const STRUCTURED_ANALYSIS_SCHEMA_FILE = path.join(
+  process.cwd(),
+  "src",
+  "lib",
+  "structured-analysis.schema.json",
+);
 let _initialized = false;
 
 function compatibilityStatusForLifecycle(lifecycle: RunLifecycle): CompatibilityStatus {
@@ -418,6 +424,10 @@ function resolveRepoRoot(): string {
   return repoRoot;
 }
 
+export function structuredAnalysisSchemaPath(): string {
+  return STRUCTURED_ANALYSIS_SCHEMA_FILE;
+}
+
 function resolvePrompt(meta: AnalysisMeta): HeadlessAnalysisMeta {
   return enrichAnalysisMeta({
     videoId: meta.videoId,
@@ -442,6 +452,8 @@ function resolveProviderSpec(videoId: string, runId: string): ProviderSpec {
       "--skip-git-repo-check",
       "-C",
       process.cwd(),
+      "--output-schema",
+      structuredAnalysisSchemaPath(),
       "-o",
       outputPath,
       "-",
@@ -498,6 +510,78 @@ function atomicWriteText(filePath: string, contents: string): void {
   fs.renameSync(tmpPath, filePath);
 }
 
+function stripAnsi(value: string): string {
+  return value.replace(/\u001b\[[0-9;]*m/g, "");
+}
+
+function normalizeEvidenceLine(value: string): string {
+  return stripAnsi(value).replace(/\s+/g, " ").trim();
+}
+
+function isMeaningfulFailureLine(line: string): boolean {
+  if (!line) return false;
+  if (/^[`~\-=*_#>.()[\]{}|/:;,!?\\]+$/.test(line)) return false;
+  if (/^(stdout|stderr)\s*:?$/i.test(line)) return false;
+  if (
+    /^(connecting|connected|starting|running|waiting|processing|analyzing|thinking)(\b|\s)/i.test(
+      line,
+    )
+  ) {
+    return false;
+  }
+  if (
+    /^\[[^\]]+\]\s*(connecting|connected|starting|running|waiting|processing|analyzing|thinking)(\b|\s)/i.test(
+      line,
+    )
+  ) {
+    return false;
+  }
+  return true;
+}
+
+function firstMeaningfulFailureLine(...streamContents: Array<string | undefined>): string | null {
+  for (const content of streamContents) {
+    if (!content) continue;
+    for (const rawLine of content.split(/\r?\n/)) {
+      const line = normalizeEvidenceLine(rawLine);
+      if (isMeaningfulFailureLine(line)) {
+        return line;
+      }
+    }
+  }
+  return null;
+}
+
+function readTextIfExists(filePath: string): string {
+  try {
+    return fs.readFileSync(filePath, "utf8");
+  } catch {
+    return "";
+  }
+}
+
+function resolveDurableFailureError(
+  videoId: string,
+  runId: string,
+  currentError: string | undefined,
+  streamContents?: { stderr?: string; stdout?: string },
+): string | undefined {
+  const evidence = firstMeaningfulFailureLine(
+    streamContents?.stderr,
+    streamContents?.stdout,
+    readTextIfExists(attemptStderrLogPath(videoId, runId)),
+    readTextIfExists(attemptStdoutLogPath(videoId, runId)),
+    readTextIfExists(stderrLogPath(videoId)),
+    readTextIfExists(stdoutLogPath(videoId)),
+  );
+
+  if (evidence) {
+    return evidence;
+  }
+
+  return currentError;
+}
+
 function writeAttemptRunMetadata(videoId: string, run: RunFile): void {
   atomicWriteJson(runAttemptMetadataPath(videoId, run.runId), run);
 }
@@ -534,10 +618,16 @@ export function buildRunArtifacts(videoId: string, title: string, runId: string)
 }
 
 export function writeRunLifecycle(videoId: string, payload: RunLifecycleWriteInput): RunFile {
+  const error =
+    payload.lifecycle === "failed" || payload.lifecycle === "interrupted"
+      ? resolveDurableFailureError(videoId, payload.runId, payload.error)
+      : payload.error;
+
   const run: RunFile = {
     schemaVersion: RUN_SCHEMA_VERSION,
     videoId,
     ...payload,
+    error,
     status: compatibilityStatusForLifecycle(payload.lifecycle),
   };
   atomicWriteJson(runMetadataPath(videoId), run);
@@ -1013,16 +1103,13 @@ export function startAnalysis(
       return;
     }
 
-    const stderrSummary = stderr
-      .trim()
-      .split(/\r?\n/)
-      .find((line) => line.trim().length > 0);
     const error =
       code === null
         ? "process killed (timeout)"
-        : stderrSummary
-          ? `exit code ${code}: ${stderrSummary}`
-          : `exit code ${code}`;
+        : (resolveDurableFailureError(videoId, runId, `exit code ${code}`, {
+            stderr,
+            stdout: output,
+          }) ?? `exit code ${code}`);
     writeRunLifecycle(videoId, {
       runId,
       provider: provider.provider,

@@ -40,3 +40,7 @@
 - "Keep ingestion and analysis decoupled for launch: new videos should appear automatically from the source repo, while analysis remains on-demand."
 - "Treat runtime/artifact drift as a user-visible rerun-ready failure state, but add unattended daily repair automation so users rarely encounter it."
 - "Preserve `videoId` as the machine key while planning future collection/playlist identity as an additive concern for M003."
+- "Close M002/S01 only when the analyze entrypoint distinguishes broken catalog preconditions from worker execution failures and at least one representative on-demand run completes through the normal runtime path."
+- "Map broken catalog lookup errors at the analyze route boundary into a retryable `catalog-rebuild-needed` outcome with the supported `npx tsx scripts/rebuild-catalog.ts` repair command instead of surfacing an opaque 500."
+- "Promote worker failure summaries inside `writeRunLifecycle` by reusing stdout/stderr evidence from the current run logs so `run.json`, `status.json`, and route payloads share one durable top-line cause."
+- "Constrain the Codex recovery path with a checked-in structured-analysis JSON schema so server-owned provider selection can switch to a real working provider without weakening the app's strict artifact contract."

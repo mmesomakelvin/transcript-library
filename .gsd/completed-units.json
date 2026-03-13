@@ -1,1 +1,9 @@
-[]
+[
+  "execute-task/M001/S04/T01",
+  "execute-task/M001/S04/T02",
+  "research-slice/M002/S01",
+  "plan-slice/M002/S01",
+  "execute-task/M002/S01/T01",
+  "execute-task/M002/S01/T02",
+  "execute-task/M002/S01/T03"
+]

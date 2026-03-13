@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "node:fs";
 import { absTranscriptPath, getVideo } from "@/modules/catalog";
 import { getAnalyzeStartEligibility, isValidVideoId, spawnAnalysis } from "@/modules/analysis";
+import { describeCatalogPreconditionFailure } from "@/lib/catalog-db";
 import { reconcileRuntimeArtifacts } from "@/lib/runtime-reconciliation";
 import { requirePrivateApi, sanitizePayload } from "@/lib/private-api-guard";
 
@@ -29,7 +30,29 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "invalid videoId" }, { status: 400 });
   }
 
-  const video = getVideo(videoId);
+  let video;
+  try {
+    video = getVideo(videoId);
+  } catch (error) {
+    const catalogFailure = describeCatalogPreconditionFailure(error);
+    if (catalogFailure) {
+      return NextResponse.json(
+        sanitizePayload({
+          ok: false,
+          error: "catalog unavailable",
+          outcome: "catalog-rebuild-needed",
+          retryable: true,
+          stage: "catalog-precondition",
+          message: `${catalogFailure.message} Rebuild the catalog with \`${catalogFailure.repairCommand}\`.`,
+          repairCommand: catalogFailure.repairCommand,
+        }),
+        { status: 503 },
+      );
+    }
+
+    throw error;
+  }
+
   if (!video) {
     return NextResponse.json({ ok: false, error: "not found" }, { status: 404 });
   }

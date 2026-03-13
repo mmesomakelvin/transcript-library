@@ -1,8 +1,47 @@
+import fs from "node:fs";
+import path from "node:path";
 import { rebuildCatalogFromCsv } from "../src/lib/catalog-import.ts";
 import { catalogCsvPath } from "../src/lib/catalog.ts";
 import { catalogDbPath } from "../src/lib/catalog-db.ts";
 
 const args = new Set(process.argv.slice(2));
+
+function loadLocalEnvDefaults() {
+  const envPath = path.resolve(process.cwd(), ".env.local");
+  if (!fs.existsSync(envPath)) {
+    return;
+  }
+
+  const raw = fs.readFileSync(envPath, "utf8");
+  for (const line of raw.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) {
+      continue;
+    }
+
+    const match = trimmed.match(/^(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)=(.*)$/);
+    if (!match) {
+      continue;
+    }
+
+    const [, key, value] = match;
+    if (process.env[key] !== undefined) {
+      continue;
+    }
+
+    let normalized = value.trim();
+    if (
+      (normalized.startsWith('"') && normalized.endsWith('"')) ||
+      (normalized.startsWith("'") && normalized.endsWith("'"))
+    ) {
+      normalized = normalized.slice(1, -1);
+    }
+
+    process.env[key] = normalized;
+  }
+}
+
+loadLocalEnvDefaults();
 
 function safeCatalogCsvPath(): string | undefined {
   try {

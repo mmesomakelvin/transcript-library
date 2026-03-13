@@ -7,7 +7,7 @@ Transcript Library is a private internal tool for a small friend group. The grou
 ## Core flow
 
 1. A video is added to the shared playlist and lands in the transcript repo.
-2. `node scripts/rebuild-catalog.ts` validates transcript metadata from `PLAYLIST_TRANSCRIPTS_REPO` and atomically publishes `data/catalog/catalog.db`.
+2. `npx tsx scripts/rebuild-catalog.ts` validates transcript metadata from `PLAYLIST_TRANSCRIPTS_REPO` and atomically publishes `data/catalog/catalog.db`.
 3. A user opens a video page and watches the YouTube video inside the app.
 4. The user starts analysis from the app.
 5. The server resolves metadata, builds a deterministic headless prompt, and launches the configured provider runtime.
@@ -81,8 +81,8 @@ At 1000 videos, all benchmarks operate with 25×–250× headroom. The current S
 
 - Live browse catalog: `data/catalog/catalog.db` by default, or `CATALOG_DB_PATH` when configured
 - Validation report: `data/catalog/last-import-validation.json`
-- Manual validation: `node scripts/rebuild-catalog.ts --check`
-- Manual publish: `node scripts/rebuild-catalog.ts`
+- Manual validation: `npx tsx scripts/rebuild-catalog.ts --check`
+- Manual publish: `npx tsx scripts/rebuild-catalog.ts`
 - Automated refresh callers: `POST /api/sync-hook` and `scripts/nightly-insights.ts`
 
 ## Analysis runtime operations

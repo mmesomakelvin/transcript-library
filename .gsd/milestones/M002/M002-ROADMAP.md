@@ -51,7 +51,7 @@ This milestone is complete only when all are true:
 
 ## Slices
 
-- [ ] **S01: Runtime Failure Triage and Analysis Recovery** `risk:high` `depends:[]`
+- [x] **S01: Runtime Failure Triage and Analysis Recovery** `risk:high` `depends:[]`
 
   > After this: at least one currently failing video can complete an end-to-end analysis run again, and remaining failure modes produce concrete operator evidence instead of opaque exit-code-1 behavior.
 

@@ -213,13 +213,13 @@ Browse reads are SQLite-only after Phase 2. The app keeps the live catalog at
 `data/catalog/last-import-validation.json` unless `CATALOG_DB_PATH` points somewhere else.
 
 ```bash
-node scripts/rebuild-catalog.ts
-node scripts/rebuild-catalog.ts --check
+npx tsx scripts/rebuild-catalog.ts
+npx tsx scripts/rebuild-catalog.ts --check
 ```
 
-- `node scripts/rebuild-catalog.ts` rebuilds a temp SQLite snapshot, validates it, and atomically
+- `npx tsx scripts/rebuild-catalog.ts` rebuilds a temp SQLite snapshot, validates it, and atomically
   swaps it into place only when the import passes.
-- `node scripts/rebuild-catalog.ts --check` runs the same validation gate without replacing the live
+- `npx tsx scripts/rebuild-catalog.ts --check` runs the same validation gate without replacing the live
   DB, while still updating `last-import-validation.json` for operator review.
 - A failed validation leaves the last known-good `catalog.db` in place. The app does not fall back
   to `videos.csv` at runtime anymore.
@@ -270,7 +270,7 @@ just build            # Next.js build
 just lint             # ESLint
 just typecheck        # tsc --noEmit
 just backfill-insights  # Re-run analysis for existing videos
-node scripts/rebuild-catalog.ts --check  # Validate catalog parity without cutover
+npx tsx scripts/rebuild-catalog.ts --check  # Validate catalog parity without cutover
 npx tsx scripts/benchmark-hosted-scale.ts --check  # Scale validation (1000-video benchmark)
 ```
 
