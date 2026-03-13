@@ -35,3 +35,8 @@
 - "Validate hosted scale with a repeatable benchmark exercising real catalog/insight code paths against synthetic data rather than relying on manual judgment or side-path-only benchmarks."
 - "Set benchmark thresholds at 10-100× headroom above 1000-video timings to catch regressions without chasing tight SaaS p99 targets inappropriate for a friend-group deployment."
 - "Document the SQLite + filesystem architecture as validated through ~5000 videos and define specific escalation triggers (rebuild >3s, cold load >200ms, insight scan >1s) for when to consider the next storage step."
+- "Sequence the next phase as two milestones: M002 for reliability + private hosted launch, then M003 for multi-playlist expansion."
+- "Use Cloudflare-managed approved-friend access as the launch auth boundary instead of building app-managed password or magic-link auth in M002."
+- "Keep ingestion and analysis decoupled for launch: new videos should appear automatically from the source repo, while analysis remains on-demand."
+- "Treat runtime/artifact drift as a user-visible rerun-ready failure state, but add unattended daily repair automation so users rarely encounter it."
+- "Preserve `videoId` as the machine key while planning future collection/playlist identity as an additive concern for M003."
