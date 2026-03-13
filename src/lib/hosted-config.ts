@@ -13,30 +13,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 
-// ---------------------------------------------------------------------------
-// Environment detection
-// ---------------------------------------------------------------------------
-
-/**
- * Returns true when the app is running in hosted/production mode.
- * Hosted mode is activated by setting `HOSTED=true` or `HOSTED=1`.
- * When not set, the app assumes local development.
- */
-export function isHosted(): boolean {
-  const v = process.env.HOSTED;
-  return v === "true" || v === "1";
-}
-
-/**
- * Returns true when running in local development (i.e. not hosted).
- */
-export function isLocalDev(): boolean {
-  return !isHosted();
-}
-
-// ---------------------------------------------------------------------------
-// Preflight validation
-// ---------------------------------------------------------------------------
+export type HostedAccessConfig = {
+  cloudflareAccessAud: string | null;
+  cloudflareAccessTeamDomain: string | null;
+  cloudflareJwtHeader: "cf-access-jwt-assertion";
+  cloudflareEmailHeader: "cf-access-authenticated-user-email";
+};
 
 export type PreflightResult = {
   ok: boolean;
@@ -44,6 +26,27 @@ export type PreflightResult = {
   errors: string[];
   warnings: string[];
 };
+
+export function isHosted(): boolean {
+  const v = process.env.HOSTED;
+  return v === "true" || v === "1";
+}
+
+export function isLocalDev(): boolean {
+  return !isHosted();
+}
+
+export function getHostedAccessConfig(): HostedAccessConfig {
+  const cloudflareAccessAud = process.env.CLOUDFLARE_ACCESS_AUD?.trim() || null;
+  const cloudflareAccessTeamDomain = process.env.CLOUDFLARE_ACCESS_TEAM_DOMAIN?.trim() || null;
+
+  return {
+    cloudflareAccessAud,
+    cloudflareAccessTeamDomain,
+    cloudflareJwtHeader: "cf-access-jwt-assertion",
+    cloudflareEmailHeader: "cf-access-authenticated-user-email",
+  };
+}
 
 function runGit(repoRoot: string, args: string[]): string {
   return execFileSync("git", args, {
@@ -61,9 +64,7 @@ function catalogDirPath(): string {
 
 function validateHostedSourceRepoContract(errors: string[], warnings: string[]) {
   const repoRoot = process.env.PLAYLIST_TRANSCRIPTS_REPO?.trim();
-  if (!repoRoot) {
-    return;
-  }
+  if (!repoRoot) return;
 
   if (!path.isAbsolute(repoRoot)) {
     errors.push(
@@ -124,31 +125,27 @@ function validateHostedSourceRepoContract(errors: string[], warnings: string[]) 
   }
 }
 
-/**
- * Validates the runtime environment and returns a structured result.
- *
- * In hosted mode, missing critical env vars produce errors (the deploy should
- * fail). In local mode, the same gaps produce warnings at most.
- *
- * Critical hosted requirements:
- * - `PLAYLIST_TRANSCRIPTS_REPO` — transcript source directory
- * - `PRIVATE_API_TOKEN` — shared secret for private API boundary
- *
- * Hosted refresh contract checks:
- * - `PLAYLIST_TRANSCRIPTS_REPO` must resolve to an app-owned git checkout
- * - detached HEAD requires explicit `PLAYLIST_TRANSCRIPTS_BRANCH`
- * - operators should have `last-source-refresh.json` and `last-import-validation.json`
- *
- * Non-critical but recommended:
- * - `SYNC_TOKEN` — webhook authentication (warns if missing in hosted mode)
- */
+function validateHostedAccessContract(errors: string[], warnings: string[]) {
+  const config = getHostedAccessConfig();
+
+  if (!config.cloudflareAccessAud) {
+    errors.push(
+      "CLOUDFLARE_ACCESS_AUD is not set. Hosted browser access cannot be trusted until the app knows which Cloudflare Access audience the origin should accept.",
+    );
+  }
+
+  if (!config.cloudflareAccessTeamDomain) {
+    warnings.push(
+      "CLOUDFLARE_ACCESS_TEAM_DOMAIN is not set. Add the Cloudflare Access team domain so hosted startup logs make the browser trust boundary explicit for operators.",
+    );
+  }
+}
+
 export function runPreflight(): PreflightResult {
   const hosted = isHosted();
   const mode = hosted ? "hosted" : "local";
   const errors: string[] = [];
   const warnings: string[] = [];
-
-  // --- Critical env vars (errors in hosted, warnings in local) ---
 
   if (!process.env.PLAYLIST_TRANSCRIPTS_REPO) {
     const msg =
@@ -159,18 +156,15 @@ export function runPreflight(): PreflightResult {
 
   if (!process.env.PRIVATE_API_TOKEN) {
     const msg =
-      "PRIVATE_API_TOKEN is not set. Internal API routes will be unprotected. Set a strong random token to enable the private API boundary.";
+      "PRIVATE_API_TOKEN is not set. Machine-authenticated internal API routes will be unavailable. Set a strong random token to keep the hosted machine caller path enabled.";
     if (hosted) errors.push(msg);
     else warnings.push(msg);
   }
 
-  // --- Hosted refresh contract ---
-
   if (hosted) {
+    validateHostedAccessContract(errors, warnings);
     validateHostedSourceRepoContract(errors, warnings);
   }
-
-  // --- Recommended env vars (warnings only) ---
 
   if (hosted && !process.env.SYNC_TOKEN) {
     warnings.push(
@@ -186,10 +180,6 @@ export function runPreflight(): PreflightResult {
   };
 }
 
-/**
- * Runs preflight and throws with actionable guidance if validation fails.
- * Called once from `instrumentation.ts` at server startup.
- */
 export function assertPreflight(): PreflightResult {
   const result = runPreflight();
 
@@ -199,10 +189,12 @@ export function assertPreflight(): PreflightResult {
 
   if (!result.ok) {
     const summary = result.errors.map((e) => `  ✗ ${e}`).join("\n");
+    const config = getHostedAccessConfig();
     const message = [
       `[hosted-config] Hosted preflight failed (${result.errors.length} error(s)):`,
       summary,
       "",
+      `[hosted-config] Hosted browser contract: ${config.cloudflareJwtHeader} + ${config.cloudflareEmailHeader}${config.cloudflareAccessAud ? ` (aud=${config.cloudflareAccessAud})` : ""}${config.cloudflareAccessTeamDomain ? ` via ${config.cloudflareAccessTeamDomain}` : ""}`,
       "Fix the environment variables above and redeploy.",
       "Set HOSTED=true only when all required vars are configured.",
       "For local development, leave HOSTED unset — no configuration is required.",
@@ -214,13 +206,27 @@ export function assertPreflight(): PreflightResult {
     );
   }
 
+  const config = getHostedAccessConfig();
+  const contract = hostedContractSummary(config);
+
   if (result.warnings.length === 0) {
-    console.log(`[hosted-config] ✓ Preflight passed (mode=${result.mode})`);
+    console.log(`[hosted-config] ✓ Preflight passed (mode=${result.mode}; ${contract})`);
   } else {
     console.log(
-      `[hosted-config] ✓ Preflight passed with ${result.warnings.length} warning(s) (mode=${result.mode})`,
+      `[hosted-config] ✓ Preflight passed with ${result.warnings.length} warning(s) (mode=${result.mode}; ${contract})`,
     );
   }
 
   return result;
+}
+
+function hostedContractSummary(config: HostedAccessConfig): string {
+  if (!isHosted()) return "local-dev";
+
+  const aud = config.cloudflareAccessAud ? `aud=${config.cloudflareAccessAud}` : "aud=unset";
+  const team = config.cloudflareAccessTeamDomain
+    ? `team=${config.cloudflareAccessTeamDomain}`
+    : "team=unset";
+
+  return `browser=${config.cloudflareJwtHeader}+${config.cloudflareEmailHeader}, ${aud}, ${team}, machine=bearer(PRIVATE_API_TOKEN)`;
 }

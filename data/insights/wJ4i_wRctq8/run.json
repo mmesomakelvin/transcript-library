@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "videoId": "wJ4i_wRctq8",
+  "runId": "20260313183518154-b57af7",
+  "provider": "claude-cli",
+  "command": "claude",
+  "args": ["--dangerously-skip-permissions", "-p"],
+  "lifecycle": "failed",
+  "startedAt": "2026-03-13T18:35:19.696Z",
+  "promptResolvedAt": "2026-03-13T18:35:18.154Z",
+  "pid": 93929,
+  "completedAt": "2026-03-13T18:35:35.459Z",
+  "exitCode": 1,
+  "error": "Credit balance is too low",
+  "artifacts": {
+    "structuredFileName": "analysis.json",
+    "canonicalFileName": "analysis.md",
+    "displayFileName": "the-us-iran-conflict-will-make-smart-investors-rich-here-s-how.md",
+    "metadataFileName": "video-metadata.json",
+    "stdoutFileName": "worker-stdout.txt",
+    "stderrFileName": "worker-stderr.txt",
+    "attemptDirectory": "runs/20260313183518154-b57af7",
+    "attemptRunFileName": "run.json",
+    "attemptStdoutFileName": "worker-stdout.txt",
+    "attemptStderrFileName": "worker-stderr.txt"
+  },
+  "status": "failed"
+}

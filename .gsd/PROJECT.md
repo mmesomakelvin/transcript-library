@@ -21,11 +21,17 @@ M001 is complete. The app already has:
 
 What is not yet proven in real use:
 
-- analysis generation is still failing for some runs
-- historical artifacts have reconciliation drift in the checked-in data set
-- source repo updates are not feeding the app reliably enough
-- Proxmox deployment, Cloudflare access, and unattended daily automation are not yet operationalized
-- multi-playlist ingestion is not yet built
+- Proxmox deployment, tunnel config, and live Cloudflare Access gate are not yet operationalized (S06/S07)
+- End-to-end hosted launch proof with real friend access has not been exercised yet (S07)
+- multi-playlist ingestion is not yet built (M003)
+
+What M002 has already proven:
+
+- analysis generation works on demand with explainable failures for remaining edge cases (S01)
+- historical artifact drift is detectable, repairable, and operator-readable (S02)
+- source repo sync is automatic with durable refresh evidence (S03)
+- daily unattended sweep refreshes source data and repairs drift (S04)
+- hosted auth distinguishes browser-via-Cloudflare-Access from machine-via-bearer callers (S05)
 
 ## Architecture / Key Patterns
 

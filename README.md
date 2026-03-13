@@ -159,14 +159,21 @@ INSIGHTS_BASE_DIR=/srv/transcript-library/insights   # hosted deploys
 CATALOG_DB_PATH=/srv/transcript-library/catalog/catalog.db
 
 # Hosted deployment (set these when deploying, not for local dev)
-HOSTED=true                          # enables preflight validation + API guard
-PRIVATE_API_TOKEN=<strong-random>    # required in hosted mode — protects all /api/* routes
+HOSTED=true                          # enables preflight validation + hosted guard
+CLOUDFLARE_ACCESS_AUD=<cf-access-aud> # required — trusts browser identity from Cloudflare Access
+PRIVATE_API_TOKEN=<strong-random>    # machine token for supported automation entrypoints
 SYNC_TOKEN=<webhook-secret>          # recommended — authenticates /api/sync-hook callers
 ```
 
 > **Local dev needs zero hosted config.** Leave `HOSTED` unset and all API routes
 > work without authentication. The server logs warnings for missing vars but never
 > blocks startup.
+>
+> **Hosted access model:** `library.aojdevstudio.me` is the friend-facing Cloudflare Access
+> hostname. Approved friends use browser access there with Cloudflare-managed identity.
+> Do not ship `PRIVATE_API_TOKEN` to the browser or assume bearer-only access is supported on
+> that hostname. Machine access stays on explicit automation paths such as `/api/sync-hook`,
+> same-host cron/systemd jobs, or a dedicated automation/deploy hostname.
 
 ### Run
 

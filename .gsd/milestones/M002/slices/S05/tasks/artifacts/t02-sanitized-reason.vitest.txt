@@ -1,0 +1,10 @@
+
+ RUN  v3.2.4 /Users/ossieirondi/Projects/transcript-library
+
+ ✓ src/lib/__tests__/private-api-guard.test.ts (9 tests | 7 skipped) 22ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed | 7 skipped (9)
+   Start at  13:28:10
+   Duration  263ms (transform 26ms, setup 0ms, collect 22ms, tests 22ms, environment 0ms, prepare 33ms)
+

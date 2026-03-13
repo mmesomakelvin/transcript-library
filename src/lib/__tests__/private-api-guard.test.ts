@@ -1,11 +1,37 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-// Mock hosted-config so we control isHosted() without env coupling
 const mockIsHosted = vi.fn();
 vi.mock("@/lib/hosted-config", () => ({
   isHosted: () => mockIsHosted(),
   isLocalDev: () => !mockIsHosted(),
+  getHostedAccessConfig: () => ({
+    cloudflareAccessAud: process.env.CLOUDFLARE_ACCESS_AUD?.trim() || null,
+    cloudflareAccessTeamDomain: process.env.CLOUDFLARE_ACCESS_TEAM_DOMAIN?.trim() || null,
+    cloudflareJwtHeader: "cf-access-jwt-assertion",
+    cloudflareEmailHeader: "cf-access-authenticated-user-email",
+  }),
 }));
+
+type RequestOptions = {
+  token?: string;
+  headers?: Record<string, string>;
+};
+
+function makeAccessJwt(payload: Record<string, unknown>): string {
+  const header = Buffer.from(JSON.stringify({ alg: "none", typ: "JWT" })).toString("base64url");
+  const body = Buffer.from(JSON.stringify(payload)).toString("base64url");
+  return `${header}.${body}.signature`;
+}
+
+function makeReq(options: RequestOptions = {}): Request {
+  const headers = new Headers(options.headers);
+  if (options.token) headers.set("authorization", `Bearer ${options.token}`);
+  return new Request("http://localhost/api/test", { headers });
+}
+
+async function loadGuard() {
+  return await import("@/lib/private-api-guard");
+}
 
 describe("private-api-guard", () => {
   const originalEnv = { ...process.env };
@@ -16,18 +42,6 @@ describe("private-api-guard", () => {
     vi.resetModules();
   });
 
-  function makeReq(token?: string): Request {
-    const headers: Record<string, string> = {};
-    if (token) headers["authorization"] = `Bearer ${token}`;
-    return new Request("http://localhost/api/test", { headers });
-  }
-
-  async function loadGuard() {
-    return await import("@/lib/private-api-guard");
-  }
-
-  // --- Local dev: always allowed ---
-
   it("allows requests in local dev without any token", async () => {
     mockIsHosted.mockReturnValue(false);
     const { requirePrivateApi } = await loadGuard();
@@ -36,45 +50,119 @@ describe("private-api-guard", () => {
     if (result.allowed) expect(result.reason).toBe("local-dev");
   });
 
-  // --- Hosted mode: token required ---
-
-  it("rejects requests in hosted mode without a token", async () => {
+  it("allows hosted browser requests with trusted Cloudflare Access identity", async () => {
     mockIsHosted.mockReturnValue(true);
-    process.env.PRIVATE_API_TOKEN = "secret";
-    const { requirePrivateApi } = await loadGuard();
-    const result = requirePrivateApi(makeReq());
-    expect(result.allowed).toBe(false);
-    if (!result.allowed) expect(result.response.status).toBe(401);
-  });
+    process.env.PRIVATE_API_TOKEN = "machine-secret";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
 
-  it("rejects requests with the wrong token in hosted mode", async () => {
-    mockIsHosted.mockReturnValue(true);
-    process.env.PRIVATE_API_TOKEN = "correct-secret";
     const { requirePrivateApi } = await loadGuard();
-    const result = requirePrivateApi(makeReq("wrong-secret"));
-    expect(result.allowed).toBe(false);
-    if (!result.allowed) expect(result.response.status).toBe(401);
+    const result = requirePrivateApi(
+      makeReq({
+        headers: {
+          "cf-access-jwt-assertion": makeAccessJwt({ aud: ["aud-123"], sub: "user-1" }),
+          "cf-access-authenticated-user-email": "friend@example.com",
+        },
+      }),
+    );
+
+    expect(result.allowed).toBe(true);
+    if (result.allowed) expect(result.reason).toBe("cloudflare-access");
   });
 
   it("allows requests with the correct token in hosted mode", async () => {
     mockIsHosted.mockReturnValue(true);
     process.env.PRIVATE_API_TOKEN = "correct-secret";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
+
     const { requirePrivateApi } = await loadGuard();
-    const result = requirePrivateApi(makeReq("correct-secret"));
+    const result = requirePrivateApi(makeReq({ token: "correct-secret" }));
+
     expect(result.allowed).toBe(true);
     if (result.allowed) expect(result.reason).toBe("valid-token");
   });
 
-  it("returns 503 in hosted mode when PRIVATE_API_TOKEN is not configured", async () => {
+  it("rejects hosted anonymous requests with a sanitized reason", async () => {
     mockIsHosted.mockReturnValue(true);
-    delete process.env.PRIVATE_API_TOKEN;
+    process.env.PRIVATE_API_TOKEN = "secret";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
+
     const { requirePrivateApi } = await loadGuard();
-    const result = requirePrivateApi(makeReq("any-token"));
+    const result = requirePrivateApi(makeReq());
+
     expect(result.allowed).toBe(false);
-    if (!result.allowed) expect(result.response.status).toBe(503);
+    if (!result.allowed) {
+      expect(result.response.status).toBe(401);
+      await expect(result.response.json()).resolves.toEqual({
+        ok: false,
+        error: "unauthorized",
+        reason: "missing-browser-identity",
+      });
+    }
   });
 
-  // --- sanitizePayload ---
+  it("rejects hosted requests with the wrong token using a sanitized machine-auth reason", async () => {
+    mockIsHosted.mockReturnValue(true);
+    process.env.PRIVATE_API_TOKEN = "correct-secret";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
+
+    const { requirePrivateApi } = await loadGuard();
+    const result = requirePrivateApi(makeReq({ token: "wrong-secret" }));
+
+    expect(result.allowed).toBe(false);
+    if (!result.allowed) {
+      expect(result.response.status).toBe(401);
+      await expect(result.response.json()).resolves.toEqual({
+        ok: false,
+        error: "unauthorized",
+        reason: "invalid-machine-token",
+      });
+    }
+  });
+
+  it("rejects malformed Cloudflare identity with a sanitized reason", async () => {
+    mockIsHosted.mockReturnValue(true);
+    process.env.PRIVATE_API_TOKEN = "correct-secret";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
+
+    const { requirePrivateApi } = await loadGuard();
+    const result = requirePrivateApi(
+      makeReq({
+        headers: {
+          "cf-access-jwt-assertion": "not-a-jwt",
+          "cf-access-authenticated-user-email": "friend@example.com",
+        },
+      }),
+    );
+
+    expect(result.allowed).toBe(false);
+    if (!result.allowed) {
+      expect(result.response.status).toBe(401);
+      await expect(result.response.json()).resolves.toEqual({
+        ok: false,
+        error: "unauthorized",
+        reason: "invalid-browser-identity",
+      });
+    }
+  });
+
+  it("returns 503 in hosted mode when PRIVATE_API_TOKEN is not configured for a machine caller", async () => {
+    mockIsHosted.mockReturnValue(true);
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
+    delete process.env.PRIVATE_API_TOKEN;
+
+    const { requirePrivateApi } = await loadGuard();
+    const result = requirePrivateApi(makeReq({ token: "any-token" }));
+
+    expect(result.allowed).toBe(false);
+    if (!result.allowed) {
+      expect(result.response.status).toBe(503);
+      await expect(result.response.json()).resolves.toEqual({
+        ok: false,
+        error: "private API not configured",
+        reason: "machine-token-not-configured",
+      });
+    }
+  });
 
   it("strips sensitive keys in hosted mode", async () => {
     mockIsHosted.mockReturnValue(true);

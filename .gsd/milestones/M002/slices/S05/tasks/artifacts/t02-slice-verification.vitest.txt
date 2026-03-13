@@ -1,0 +1,16 @@
+
+ RUN  v3.2.4 /Users/ossieirondi/Projects/transcript-library
+
+ ✓ src/lib/__tests__/private-api-guard.test.ts (9 tests) 45ms
+ ✓ src/lib/__tests__/hosted-browser-access.test.ts (5 tests) 58ms
+ ✓ src/lib/__tests__/route-access-control.test.ts (32 tests) 82ms
+stdout | src/lib/__tests__/hosted-config.test.ts > hosted-config > does not throw in local dev with no vars
+[hosted-config] ✓ Preflight passed with 2 warning(s) (mode=local; local-dev)
+
+ ✓ src/lib/__tests__/hosted-config.test.ts (17 tests) 1227ms
+
+ Test Files  4 passed (4)
+      Tests  63 passed (63)
+   Start at  13:28:08
+   Duration  1.51s (transform 168ms, setup 0ms, collect 153ms, tests 1.41s, environment 0ms, prepare 168ms)
+

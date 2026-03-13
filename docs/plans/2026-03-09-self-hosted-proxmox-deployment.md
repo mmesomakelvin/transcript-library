@@ -191,11 +191,15 @@ ingress:
 
 ### 5. Cloudflare Access
 
-Protect only the user-facing app hostname:
+Protect only the friend-facing app hostname:
 
 - application: `library.aojdevstudio.me`
 - identity provider: One-time PIN
 - policy: allowlisted emails only
+
+This hostname is for **browser access** by approved friends. The browser reaches app routes through Cloudflare-managed identity; it should not be given `PRIVATE_API_TOKEN`, `SYNC_TOKEN`, or any other app-managed secret.
+
+At the origin, hosted browser trust depends on the Cloudflare Access request shape (`cf-access-jwt-assertion` + authenticated email headers) plus `CLOUDFLARE_ACCESS_AUD` configured on the app.
 
 Do **not** put OTP in front of the GitHub webhook endpoint.
 
@@ -203,6 +207,7 @@ For `library-deploy.aojdevstudio.me`, rely on:
 
 - GitHub webhook secret signature verification
 - optional IP allowlisting if you want extra filtering
+- Cloudflare service-token protection if you later want edge-authenticated deploy automation without reusing the friend-facing browser flow
 
 ### 6. CI/CD
 
@@ -239,12 +244,18 @@ cd /opt/transcript-library/current
 node --import tsx scripts/refresh-source-catalog.ts
 ```
 
-or:
+or, for machine callers:
 
 ```http
 POST /api/sync-hook
 Authorization: Bearer <SYNC_TOKEN>
 ```
+
+Topology note:
+
+- Do **not** model `library.aojdevstudio.me` as a generic bearer-auth hostname.
+- Browser traffic on that hostname is the friend-facing Cloudflare Access flow.
+- If an external automation caller must cross the Cloudflare edge to reach `/api/sync-hook`, give it a Cloudflare service token or route it through a dedicated automation hostname rather than expecting bearer-only access on the friend-facing hostname.
 
 Inspect after each unattended sweep with:
 
@@ -280,6 +291,7 @@ PLAYLIST_TRANSCRIPTS_REPO=/srv/transcript-library/playlist-transcripts
 PLAYLIST_TRANSCRIPTS_BRANCH=master
 CATALOG_DB_PATH=/srv/transcript-library/catalog/catalog.db
 INSIGHTS_BASE_DIR=/srv/transcript-library/insights
+CLOUDFLARE_ACCESS_AUD=<cloudflare-access-audience>
 PRIVATE_API_TOKEN=<strong-random-token>
 SYNC_TOKEN=<strong-random-token>
 ANALYSIS_PROVIDER=claude-cli

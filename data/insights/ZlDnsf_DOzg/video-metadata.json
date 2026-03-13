@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "source": "yt-dlp",
+  "videoId": "ZlDnsf_DOzg",
+  "title": "Every Claude Code Concept Explained for Normal People",
+  "channel": "Simon Scrapes",
+  "topic": "ai-llms",
+  "publishedDate": "2026-02-28",
+  "sourceUrl": "https://youtube.com/watch?v=ZlDnsf_DOzg",
+  "durationSeconds": 1644,
+  "description": "🚀 Build agentic systems that run your business: https://skool.com/scrapes\nFeeling lost in Claude Code? This ultimate guide is the shortcut you've been looking for. We break down 27 essential Claude Code concepts—from the absolute basics to game-changing power features—each explained for a non-technical audience. By the end of this video, you'll have the mental model to build confidently, automate tasks, and ship projects without the guesswork.\n\nSECTION 1 - The Foundations (Concepts 1-8)\nSECTION 2 - Making Claude Personal (Concepts 9-14)\nSECTION 3 - Power Features (Concepts 15-23)\nSECTION 4 - Using Claude Autonomously (Concepts 24-27)\n\n00:00 - Every Claude Code Concept Explained\n01:00 - What is Claude Code?\n01:40 - The Terminal\n02:30 - Prompts\n03:09 - Permissions\n05:29 - Tools (Read / Write / Bash)\n06:22 - Context Window\n07:20 - Conversation History / Resume \n08:00 - Token Usage / Cost Tracking \n08:52 - CLAUDE.md \n09:25 - Memory Usage \n10:30 - Compact Context\n11:26 - Models (Sonnet, Opus, Haiku)\n12:05 - Denying Access to Files\n12:56 - Flags\n14:13 - Extended Thinking\n15:03 - Slash Commands\n15:50 - Skills\n16:46 - Hooks\n17:23 - MCP Servers\n18:00 - Sub-Agents\n19:30 - Agent Teams\n20:48 - Image / Screenshot Support\n21:38 - Checkpoints / Undo\n22:19 - Git Integration\n23:09 - Headless Mode\n24:23 - Claude Max vs API (How You Pay)\n25:02 - Worktrees\n26:00 - What next?\n\n#claudecodetutorial #claudecodebeginner #claudecode",
+  "githubRepos": [],
+  "contentType": "commentary",
+  "analysisDepth": "standard",
+  "updatedAt": "2026-03-13T18:51:31.190Z"
+}

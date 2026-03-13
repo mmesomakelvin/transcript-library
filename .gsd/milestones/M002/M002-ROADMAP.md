@@ -67,7 +67,7 @@ This milestone is complete only when all are true:
 
   > After this: an unattended daily job can refresh source data, detect/repair runtime drift, and leave evidence of what it fixed or could not fix.
 
-- [ ] **S05: Hosted Auth and Access Shape** `risk:medium` `depends:[S03]`
+- [x] **S05: Hosted Auth and Access Shape** `risk:medium` `depends:[S03]`
 
   > After this: the intended private-friend access flow is operationally defined around Cloudflare-managed access, with approved users reaching the app without app-password scope.
 

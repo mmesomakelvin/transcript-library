@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "videoId": "ZlDnsf_DOzg",
+  "runId": "20260313185129878-2ef367",
+  "provider": "claude-cli",
+  "command": "claude",
+  "args": ["--dangerously-skip-permissions", "-p"],
+  "lifecycle": "failed",
+  "startedAt": "2026-03-13T18:51:31.223Z",
+  "promptResolvedAt": "2026-03-13T18:51:29.878Z",
+  "pid": 23890,
+  "completedAt": "2026-03-13T18:51:47.112Z",
+  "exitCode": 1,
+  "error": "Credit balance is too low",
+  "artifacts": {
+    "structuredFileName": "analysis.json",
+    "canonicalFileName": "analysis.md",
+    "displayFileName": "every-claude-code-concept-explained-for-normal-people.md",
+    "metadataFileName": "video-metadata.json",
+    "stdoutFileName": "worker-stdout.txt",
+    "stderrFileName": "worker-stderr.txt",
+    "attemptDirectory": "runs/20260313185129878-2ef367",
+    "attemptRunFileName": "run.json",
+    "attemptStdoutFileName": "worker-stdout.txt",
+    "attemptStderrFileName": "worker-stderr.txt"
+  },
+  "status": "failed"
+}

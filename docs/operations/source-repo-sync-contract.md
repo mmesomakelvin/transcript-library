@@ -79,6 +79,13 @@ Behavior:
 - Records request identity metadata in the refresh record.
 - Returns refresh outcomes (`updated`, `noop`, `failed`) instead of analysis batch submission details.
 
+Important hosted boundary:
+
+- `library.aojdevstudio.me` is the **friend-facing** Cloudflare Access hostname.
+- That hostname is for approved-human browser access to the app and its browser-driven API calls.
+- Do **not** assume a bearer token alone is a supported way to reach browser routes on that hostname.
+- `/api/sync-hook` is the supported bearer-based machine entrypoint, not the model for the whole browser surface.
+
 ## Daily Sweep Layered on Top of Refresh
 
 When operators want one unattended command, schedule:
@@ -191,31 +198,38 @@ This is a startup-visible contract. The goal is to fail or warn before operators
 
 ## Hosted Topologies
 
-Two supported automation shapes:
+The hosted contract now has one explicit split:
 
-### A. Same-machine cron
+### Human browser access
 
-Use cron/systemd on the app host to run:
+- `https://library.aojdevstudio.me` is the **friend-facing** hostname.
+- Cloudflare Access is the browser identity system on that hostname.
+- Browser API calls rely on Cloudflare-managed identity reaching the origin guard; the app does **not** issue browser secrets, passwords, or bearer tokens.
+- Routes used by the video workspace (`/api/insight`, `/api/analyze`, `/api/insight/stream`) are expected to work for approved friends through that browser identity shape.
 
-```bash
-cd /opt/transcript-library/current
-node --import tsx scripts/daily-operational-sweep.ts
-```
+### Machine access
 
-Use this when the app host is responsible for unattended refresh-only ingest plus the conservative
-historical repair pass. Inspect `data/runtime/daily-operational-sweep/latest.json` (or the sibling
-`runtime/` tree next to `INSIGHTS_BASE_DIR`) after each run; if `manualFollowUpVideoIds` is non-empty,
-those rerun-only videos need explicit operator follow-up and analysis remains on-demand.
+Supported machine entrypoints stay explicit and narrow:
 
-### B. Upstream webhook or external caller
+1. **Same-machine automation**
+   - Prefer cron/systemd on the app host to run:
 
-Have a trusted automation caller hit:
+   ```bash
+   cd /opt/transcript-library/current
+   node --import tsx scripts/daily-operational-sweep.ts
+   ```
 
-```text
-POST https://<host>/api/sync-hook
-```
+   - Use this when the app host is responsible for unattended refresh-only ingest plus the conservative historical repair pass.
+   - Inspect `data/runtime/daily-operational-sweep/latest.json` (or the sibling `runtime/` tree next to `INSIGHTS_BASE_DIR`) after each run; if `manualFollowUpVideoIds` is non-empty, those rerun-only videos need explicit operator follow-up and analysis remains on-demand.
 
-with `Authorization: Bearer <SYNC_TOKEN>` (or `PRIVATE_API_TOKEN` when you intentionally want the broader private boundary token).
+2. **External refresh automation crossing the edge**
+   - Call `POST /api/sync-hook` with `Authorization: Bearer <SYNC_TOKEN>`.
+   - `PRIVATE_API_TOKEN` remains a broader hosted override, but treat it as an operator-controlled machine token, not a browser credential.
+   - If the caller must traverse Cloudflare to reach the origin, protect that automation path with a Cloudflare service token or place it on a dedicated automation hostname instead of assuming the friend-facing Access hostname accepts bearer-only callers.
+
+3. **Deploy automation**
+   - Use a dedicated deploy hostname such as `library-deploy.aojdevstudio.me` for deploy hooks and other unattended machine-only ingress.
+   - Keep that hostname outside the friend-facing OTP/browser flow and secure it with webhook signature verification plus optional Cloudflare service-token policy when the caller is not already constrained another way.
 
 For hosted deployment, do **not** rely on the historical `http://localhost:3939/api/sync-hook` callback assumption from upstream scripts unless the caller really is running on the same machine and port layout.
 

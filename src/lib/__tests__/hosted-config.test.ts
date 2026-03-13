@@ -14,9 +14,7 @@ describe("hosted-config", () => {
 
     while (tempDirs.length > 0) {
       const dir = tempDirs.pop();
-      if (dir) {
-        fs.rmSync(dir, { recursive: true, force: true });
-      }
+      if (dir) fs.rmSync(dir, { recursive: true, force: true });
     }
   });
 
@@ -83,7 +81,19 @@ describe("hosted-config", () => {
     return { repoRoot, catalogRoot };
   }
 
-  // --- isHosted / isLocalDev ---
+  function configureHostedEnv(
+    fixture = makeHostedRepoFixture({ withRefreshRecord: true, withValidationReport: true }),
+  ) {
+    process.env.HOSTED = "true";
+    process.env.PLAYLIST_TRANSCRIPTS_REPO = fixture.repoRoot;
+    process.env.CATALOG_DB_PATH = path.join(fixture.catalogRoot, "catalog.db");
+    process.env.PRIVATE_API_TOKEN = "test-token";
+    process.env.SYNC_TOKEN = "sync-secret";
+    process.env.PLAYLIST_TRANSCRIPTS_BRANCH = "main";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
+    process.env.CLOUDFLARE_ACCESS_TEAM_DOMAIN = "aojdev.cloudflareaccess.com";
+    return fixture;
+  }
 
   it("reports local dev when HOSTED is unset", async () => {
     delete process.env.HOSTED;
@@ -111,12 +121,11 @@ describe("hosted-config", () => {
     expect(isHosted()).toBe(false);
   });
 
-  // --- runPreflight ---
-
   it("passes in local dev with no env vars", async () => {
     delete process.env.HOSTED;
     delete process.env.PLAYLIST_TRANSCRIPTS_REPO;
     delete process.env.PRIVATE_API_TOKEN;
+    delete process.env.CLOUDFLARE_ACCESS_AUD;
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(true);
@@ -129,6 +138,7 @@ describe("hosted-config", () => {
     process.env.HOSTED = "true";
     delete process.env.PLAYLIST_TRANSCRIPTS_REPO;
     process.env.PRIVATE_API_TOKEN = "test-token";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(false);
@@ -139,6 +149,7 @@ describe("hosted-config", () => {
     process.env.HOSTED = "true";
     process.env.PLAYLIST_TRANSCRIPTS_REPO = path.join(os.tmpdir(), "missing-transcript-repo");
     process.env.PRIVATE_API_TOKEN = "test-token";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(false);
@@ -150,6 +161,7 @@ describe("hosted-config", () => {
     process.env.HOSTED = "true";
     process.env.PLAYLIST_TRANSCRIPTS_REPO = repoRoot;
     process.env.PRIVATE_API_TOKEN = "test-token";
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(false);
@@ -161,6 +173,7 @@ describe("hosted-config", () => {
     process.env.HOSTED = "true";
     process.env.PLAYLIST_TRANSCRIPTS_REPO = fixture.repoRoot;
     process.env.CATALOG_DB_PATH = path.join(fixture.catalogRoot, "catalog.db");
+    process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
     delete process.env.PRIVATE_API_TOKEN;
     const { runPreflight } = await loadModule();
     const result = runPreflight();
@@ -168,14 +181,17 @@ describe("hosted-config", () => {
     expect(result.errors.some((e) => e.includes("PRIVATE_API_TOKEN"))).toBe(true);
   });
 
+  it("fails in hosted mode when Cloudflare Access audience is missing", async () => {
+    configureHostedEnv();
+    delete process.env.CLOUDFLARE_ACCESS_AUD;
+    const { runPreflight } = await loadModule();
+    const result = runPreflight();
+    expect(result.ok).toBe(false);
+    expect(result.errors.some((e) => e.includes("CLOUDFLARE_ACCESS_AUD"))).toBe(true);
+  });
+
   it("passes in hosted mode when required vars are set and repo is a git checkout", async () => {
-    const fixture = makeHostedRepoFixture({ withRefreshRecord: true, withValidationReport: true });
-    process.env.HOSTED = "true";
-    process.env.PLAYLIST_TRANSCRIPTS_REPO = fixture.repoRoot;
-    process.env.CATALOG_DB_PATH = path.join(fixture.catalogRoot, "catalog.db");
-    process.env.PRIVATE_API_TOKEN = "test-token";
-    process.env.SYNC_TOKEN = "sync-secret";
-    process.env.PLAYLIST_TRANSCRIPTS_BRANCH = "main";
+    configureHostedEnv();
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(true);
@@ -185,17 +201,21 @@ describe("hosted-config", () => {
   });
 
   it("warns in hosted mode when SYNC_TOKEN is missing", async () => {
-    const fixture = makeHostedRepoFixture({ withRefreshRecord: true, withValidationReport: true });
-    process.env.HOSTED = "true";
-    process.env.PLAYLIST_TRANSCRIPTS_REPO = fixture.repoRoot;
-    process.env.CATALOG_DB_PATH = path.join(fixture.catalogRoot, "catalog.db");
-    process.env.PRIVATE_API_TOKEN = "test-token";
-    process.env.PLAYLIST_TRANSCRIPTS_BRANCH = "main";
+    configureHostedEnv();
     delete process.env.SYNC_TOKEN;
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(true);
     expect(result.warnings.some((w) => w.includes("SYNC_TOKEN"))).toBe(true);
+  });
+
+  it("warns in hosted mode when Cloudflare team domain is missing so trust assumptions stay explicit", async () => {
+    configureHostedEnv();
+    delete process.env.CLOUDFLARE_ACCESS_TEAM_DOMAIN;
+    const { runPreflight } = await loadModule();
+    const result = runPreflight();
+    expect(result.ok).toBe(true);
+    expect(result.warnings.some((w) => w.includes("CLOUDFLARE_ACCESS_TEAM_DOMAIN"))).toBe(true);
   });
 
   it("warns in hosted mode when the repo is detached HEAD and no branch is configured", async () => {
@@ -204,11 +224,7 @@ describe("hosted-config", () => {
       withRefreshRecord: true,
       withValidationReport: true,
     });
-    process.env.HOSTED = "true";
-    process.env.PLAYLIST_TRANSCRIPTS_REPO = fixture.repoRoot;
-    process.env.CATALOG_DB_PATH = path.join(fixture.catalogRoot, "catalog.db");
-    process.env.PRIVATE_API_TOKEN = "test-token";
-    process.env.SYNC_TOKEN = "sync-secret";
+    configureHostedEnv(fixture);
     delete process.env.PLAYLIST_TRANSCRIPTS_BRANCH;
     const { runPreflight } = await loadModule();
     const result = runPreflight();
@@ -222,12 +238,7 @@ describe("hosted-config", () => {
 
   it("warns in hosted mode when refresh evidence files are missing", async () => {
     const fixture = makeHostedRepoFixture();
-    process.env.HOSTED = "true";
-    process.env.PLAYLIST_TRANSCRIPTS_REPO = fixture.repoRoot;
-    process.env.CATALOG_DB_PATH = path.join(fixture.catalogRoot, "catalog.db");
-    process.env.PRIVATE_API_TOKEN = "test-token";
-    process.env.SYNC_TOKEN = "sync-secret";
-    process.env.PLAYLIST_TRANSCRIPTS_BRANCH = "main";
+    configureHostedEnv(fixture);
     const { runPreflight } = await loadModule();
     const result = runPreflight();
     expect(result.ok).toBe(true);
@@ -235,12 +246,11 @@ describe("hosted-config", () => {
     expect(result.warnings.some((w) => w.includes("last-import-validation.json"))).toBe(true);
   });
 
-  // --- assertPreflight ---
-
   it("throws in hosted mode on missing required vars", async () => {
     process.env.HOSTED = "true";
     delete process.env.PLAYLIST_TRANSCRIPTS_REPO;
     delete process.env.PRIVATE_API_TOKEN;
+    delete process.env.CLOUDFLARE_ACCESS_AUD;
     const { assertPreflight } = await loadModule();
     expect(() => assertPreflight()).toThrow(/Hosted preflight failed/);
   });
@@ -249,6 +259,7 @@ describe("hosted-config", () => {
     delete process.env.HOSTED;
     delete process.env.PLAYLIST_TRANSCRIPTS_REPO;
     delete process.env.PRIVATE_API_TOKEN;
+    delete process.env.CLOUDFLARE_ACCESS_AUD;
     const { assertPreflight } = await loadModule();
     expect(() => assertPreflight()).not.toThrow();
   });

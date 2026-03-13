@@ -1,21 +1,17 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-/**
- * Integration-level test that proves guarded routes reject untrusted callers
- * in hosted mode and allow local dev access without tokens.
- *
- * Each route is imported dynamically so vi.mock and env overrides take effect.
- */
-
-// --- Shared mocks ---
-
 const mockIsHosted = vi.fn();
 vi.mock("@/lib/hosted-config", () => ({
   isHosted: () => mockIsHosted(),
   isLocalDev: () => !mockIsHosted(),
+  getHostedAccessConfig: () => ({
+    cloudflareAccessAud: process.env.CLOUDFLARE_ACCESS_AUD?.trim() || null,
+    cloudflareAccessTeamDomain: process.env.CLOUDFLARE_ACCESS_TEAM_DOMAIN?.trim() || null,
+    cloudflareJwtHeader: "cf-access-jwt-assertion",
+    cloudflareEmailHeader: "cf-access-authenticated-user-email",
+  }),
 }));
 
-// Mock catalog/analysis modules so routes don't need real data
 vi.mock("@/modules/catalog", () => ({
   getVideo: vi.fn().mockReturnValue(null),
   listVideosByChannel: vi.fn().mockReturnValue([]),
@@ -61,15 +57,21 @@ vi.mock("@/modules/insights", () => ({
   hasBlockedLegacyInsight: vi.fn().mockReturnValue(false),
 }));
 
+function makeAccessJwt(payload: Record<string, unknown>): string {
+  const header = Buffer.from(JSON.stringify({ alg: "none", typ: "JWT" })).toString("base64url");
+  const body = Buffer.from(JSON.stringify(payload)).toString("base64url");
+  return `${header}.${body}.signature`;
+}
+
 describe("route access control", () => {
   afterEach(() => {
     mockIsHosted.mockReset();
     vi.clearAllMocks();
     delete process.env.PRIVATE_API_TOKEN;
     delete process.env.PLAYLIST_TRANSCRIPTS_REPO;
+    delete process.env.CLOUDFLARE_ACCESS_AUD;
   });
 
-  // Set PLAYLIST_TRANSCRIPTS_REPO so /api/raw doesn't 503 from its own logic
   function setRawEnv() {
     process.env.PLAYLIST_TRANSCRIPTS_REPO = "/tmp/fake-transcripts";
   }
@@ -116,9 +118,10 @@ describe("route access control", () => {
   ];
 
   for (const route of guardedRoutes) {
-    it(`${route.name} rejects unauthenticated requests in hosted mode`, async () => {
+    it(`${route.name} rejects anonymous hosted requests with a sanitized reason`, async () => {
       mockIsHosted.mockReturnValue(true);
       process.env.PRIVATE_API_TOKEN = "test-secret";
+      process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
       setRawEnv();
 
       const mod = await import(route.importPath);
@@ -127,25 +130,40 @@ describe("route access control", () => {
       const response = await handler(new Request(url, { method: route.method }));
 
       expect(response.status).toBe(401);
+      await expect(response.json()).resolves.toMatchObject({
+        ok: false,
+        error: "unauthorized",
+        reason: "missing-browser-identity",
+      });
     });
 
-    it(`${route.name} allows requests in local dev without token`, async () => {
-      mockIsHosted.mockReturnValue(false);
+    it(`${route.name} allows hosted browser requests with Cloudflare Access identity`, async () => {
+      mockIsHosted.mockReturnValue(true);
+      process.env.PRIVATE_API_TOKEN = "test-secret";
+      process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
       setRawEnv();
 
       const mod = await import(route.importPath);
       const handler = mod[route.method];
       const url = `http://localhost${route.name}${route.query ?? ""}`;
-      const response = await handler(new Request(url, { method: route.method }));
+      const response = await handler(
+        new Request(url, {
+          method: route.method,
+          headers: {
+            "cf-access-jwt-assertion": makeAccessJwt({ aud: ["aud-123"], sub: "user-1" }),
+            "cf-access-authenticated-user-email": "friend@example.com",
+          },
+        }),
+      );
 
-      // Should not be 401 or 503 — any other status means the guard passed
       expect(response.status).not.toBe(401);
       expect(response.status).not.toBe(503);
     });
 
-    it(`${route.name} allows authenticated requests in hosted mode`, async () => {
+    it(`${route.name} allows authenticated machine requests in hosted mode`, async () => {
       mockIsHosted.mockReturnValue(true);
       process.env.PRIVATE_API_TOKEN = "test-secret";
+      process.env.CLOUDFLARE_ACCESS_AUD = "aud-123";
       setRawEnv();
 
       const mod = await import(route.importPath);
@@ -157,6 +175,19 @@ describe("route access control", () => {
           headers: { authorization: "Bearer test-secret" },
         }),
       );
+
+      expect(response.status).not.toBe(401);
+      expect(response.status).not.toBe(503);
+    });
+
+    it(`${route.name} allows requests in local dev without token`, async () => {
+      mockIsHosted.mockReturnValue(false);
+      setRawEnv();
+
+      const mod = await import(route.importPath);
+      const handler = mod[route.method];
+      const url = `http://localhost${route.name}${route.query ?? ""}`;
+      const response = await handler(new Request(url, { method: route.method }));
 
       expect(response.status).not.toBe(401);
       expect(response.status).not.toBe(503);

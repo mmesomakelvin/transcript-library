@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "source": "yt-dlp",
+  "videoId": "6pP8x8sXoaM",
+  "title": "The Great Transition",
+  "channel": "Unsupervised Learning",
+  "topic": "business",
+  "publishedDate": "2026-02-28",
+  "sourceUrl": "https://youtube.com/watch?v=6pP8x8sXoaM",
+  "durationSeconds": 5003,
+  "description": "There are a bunch of different transitions happening right now — all at the same time, all heading in the same direction. Knowledge going public, products becoming APIs, consumers disappearing, enterprises becoming graphs, automation replacing labor, humans going post-corporate, cybersecurity becoming AI vs. AI, industries inverting into use cases, everything going custom, and all of it converging on ideal state management.\n\nThis is my attempt to wrap all of that into a single mental model — a container you can use so that when the next big AI announcement drops, you're not surprised. You just nod and say, yeah, that fits.\n\nRead the full blog post: https://danielmiessler.com/blog/the-great-transition\n\n---\n\nTHE TEN TRANSITIONS\n\n00:00 — Introduction\nKnowledge: Private → Public\nProducts: Software → APIs\nConsumer: Human → Agent\nInterface: UI → Agent\nEnterprise: Hierarchy → Graph\nAutomation: Helper → Replacement\nHuman 3.0: Corporate → Individual\nCybersecurity: Human → AI vs. AI\nThe Inversion: Industries → Use Cases\nCustom: Standard → Bespoke\nIdeal State Management\n\n---\n\nREFERENCED POSTS\n\nThe Real Internet of Things (2016) — https://danielmiessler.com/blog/the-real-internet-of-things\nBusinesses Become APIs — https://danielmiessler.com/blog/mobile-ai-digital-assistants-business-apis\nCompanies Are a Graph of Algorithms — https://danielmiessler.com/blog/companies-graph-of-algorithms\nLaunching Daemon — https://danielmiessler.com/blog/launching-daemon-personal-api\nUniversal Daemonization — https://danielmiessler.com/blog/universal-daemonization-future-internet-iot\nWe've Been Thinking About AI All Wrong — https://danielmiessler.com/blog/weve-been-thinking-about-ai-all-wrong\nNobody Is Talking About Generalized Hill Climbing — https://danielmiessler.com/blog/nobody-is-talking-about-generalized-hill-climbing\nThe Last Algorithm — https://danielmiessler.com/blog/the-last-algorithm\nI'm Worried It Might Get Bad — https://danielmiessler.com/blog/im-worried-it-might-get-bad\n\n---\n\nEXTERNAL REFERENCES\n\nAndrej Karpathy — https://x.com/karpathy\nAnthropic Claude Code Skills — https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/skills\nDeepSeek — https://www.deepseek.com\nModel Context Protocol (MCP) — https://modelcontextprotocol.io\nRobert Putnam, Bowling Alone — https://en.wikipedia.org/wiki/Bowling_Alone\n\n---\n\nCONNECT\n\nNewsletter: https://unsupervised-learning.com\nWebsite: https://danielmiessler.com\nX/Twitter: https://x.com/DanielMiessler",
+  "githubRepos": [],
+  "contentType": "general",
+  "analysisDepth": "standard",
+  "updatedAt": "2026-03-13T18:35:25.074Z"
+}

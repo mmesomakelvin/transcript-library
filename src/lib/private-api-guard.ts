@@ -2,12 +2,12 @@
  * Private API boundary guard.
  *
  * Provides a single reusable policy for protecting internal API routes.
- * The guard checks `Authorization: Bearer <token>` against PRIVATE_API_TOKEN.
  *
- * Behavior by environment:
- * - **Hosted** (`HOSTED=true`): Requests without a valid token are rejected 401.
- * - **Local dev** (`HOSTED` unset): The guard passes all requests through so
- *   local browsing works without any token configuration.
+ * Hosted mode supports two caller classes through one shared boundary:
+ * - browser requests that carry trusted Cloudflare Access identity headers
+ * - machine requests authenticated with `Authorization: Bearer <PRIVATE_API_TOKEN>`
+ *
+ * Local dev remains a no-op so the app can run without auth setup.
  *
  * The SYNC_TOKEN used by `/api/sync-hook` is treated as a specialization:
  * sync-hook checks SYNC_TOKEN directly (its existing behavior), but
@@ -19,15 +19,30 @@
 
 import crypto from "node:crypto";
 import { NextResponse } from "next/server";
-import { isHosted } from "@/lib/hosted-config";
+import { getHostedAccessConfig, isHosted } from "@/lib/hosted-config";
 
-// ---------------------------------------------------------------------------
-// Token validation
-// ---------------------------------------------------------------------------
+const CLOUDFLARE_ACCESS_JWT_HEADER = "cf-access-jwt-assertion";
+const CLOUDFLARE_ACCESS_EMAIL_HEADER = "cf-access-authenticated-user-email";
 
-/**
- * Constant-time comparison of bearer token against expected value.
- */
+type GuardFailureReason =
+  | "missing-browser-identity"
+  | "invalid-browser-identity"
+  | "invalid-machine-token"
+  | "machine-token-not-configured";
+
+type HostedBrowserResult =
+  | { allowed: true; reason: "cloudflare-access" }
+  | { allowed: false; reason: "missing-browser-identity" | "invalid-browser-identity" };
+
+export type GuardResult =
+  | { allowed: true; reason: "local-dev" | "valid-token" | "cloudflare-access" }
+  | { allowed: false; response: NextResponse };
+
+function hasBearerHeader(req: Request): boolean {
+  const header = req.headers.get("authorization") ?? "";
+  return /^Bearer\s+/i.test(header);
+}
+
 function validateBearer(req: Request, expectedToken: string): boolean {
   const header = req.headers.get("authorization") ?? "";
   const match = header.match(/^Bearer\s+(.+)$/i);
@@ -38,64 +53,84 @@ function validateBearer(req: Request, expectedToken: string): boolean {
   return crypto.timingSafeEqual(provided, expected);
 }
 
-// ---------------------------------------------------------------------------
-// Guard result type
-// ---------------------------------------------------------------------------
+function decodeJwtPayload(assertion: string): Record<string, unknown> | null {
+  const parts = assertion.split(".");
+  if (parts.length < 2) return null;
 
-export type GuardResult =
-  | { allowed: true; reason: "local-dev" | "valid-token" }
-  | { allowed: false; response: NextResponse };
+  try {
+    const decoded = Buffer.from(parts[1], "base64url").toString("utf8");
+    const parsed = JSON.parse(decoded);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
+    return parsed as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
 
-// ---------------------------------------------------------------------------
-// Main guard
-// ---------------------------------------------------------------------------
+function payloadHasAudience(payload: Record<string, unknown>, expectedAudience: string): boolean {
+  const aud = payload.aud;
+  if (typeof aud === "string") return aud === expectedAudience;
+  if (Array.isArray(aud)) return aud.some((value) => value === expectedAudience);
+  return false;
+}
 
-/**
- * Checks the request against the private API boundary policy.
- *
- * Returns `{ allowed: true }` if the request should proceed, or
- * `{ allowed: false, response }` with a ready-to-return 401/503 response.
- *
- * Usage in a route handler:
- * ```ts
- * const guard = requirePrivateApi(req);
- * if (!guard.allowed) return guard.response;
- * // ... handle request
- * ```
- */
+function evaluateHostedBrowserIdentity(req: Request): HostedBrowserResult {
+  const config = getHostedAccessConfig();
+  const assertion = req.headers.get(CLOUDFLARE_ACCESS_JWT_HEADER)?.trim() ?? "";
+  const email = req.headers.get(CLOUDFLARE_ACCESS_EMAIL_HEADER)?.trim() ?? "";
+
+  if (!assertion && !email) {
+    return { allowed: false, reason: "missing-browser-identity" };
+  }
+
+  if (!assertion || !email || !config.cloudflareAccessAud) {
+    return { allowed: false, reason: "invalid-browser-identity" };
+  }
+
+  const payload = decodeJwtPayload(assertion);
+  if (!payload) {
+    return { allowed: false, reason: "invalid-browser-identity" };
+  }
+
+  if (!payloadHasAudience(payload, config.cloudflareAccessAud)) {
+    return { allowed: false, reason: "invalid-browser-identity" };
+  }
+
+  return { allowed: true, reason: "cloudflare-access" };
+}
+
+function unauthorized(reason: GuardFailureReason): GuardResult {
+  const status = reason === "machine-token-not-configured" ? 503 : 401;
+  const error = status === 503 ? "private API not configured" : "unauthorized";
+
+  return {
+    allowed: false,
+    response: NextResponse.json({ ok: false, error, reason }, { status }),
+  };
+}
+
 export function requirePrivateApi(req: Request): GuardResult {
-  // In local dev, allow everything — no token needed.
   if (!isHosted()) {
     return { allowed: true, reason: "local-dev" };
   }
 
-  const token = process.env.PRIVATE_API_TOKEN;
-  if (!token) {
-    // Should not happen if preflight passed, but defend in depth.
-    return {
-      allowed: false,
-      response: NextResponse.json(
-        { ok: false, error: "private API not configured" },
-        { status: 503 },
-      ),
-    };
-  }
-
-  if (validateBearer(req, token)) {
+  const token = process.env.PRIVATE_API_TOKEN?.trim() || null;
+  if (token && validateBearer(req, token)) {
     return { allowed: true, reason: "valid-token" };
   }
 
-  return {
-    allowed: false,
-    response: NextResponse.json({ ok: false, error: "unauthorized" }, { status: 401 }),
-  };
+  const browserResult = evaluateHostedBrowserIdentity(req);
+  if (browserResult.allowed) {
+    return browserResult;
+  }
+
+  if (hasBearerHeader(req)) {
+    return unauthorized(token ? "invalid-machine-token" : "machine-token-not-configured");
+  }
+
+  return unauthorized(browserResult.reason);
 }
 
-// ---------------------------------------------------------------------------
-// Response sanitization
-// ---------------------------------------------------------------------------
-
-/** Fields to strip from API responses in hosted mode. */
 const SENSITIVE_KEYS = new Set([
   "absPath",
   "transcriptPartPath",
@@ -110,10 +145,6 @@ const SENSITIVE_KEYS = new Set([
   "remoteAddress",
 ]);
 
-/**
- * Recursively removes sensitive keys from a JSON-serializable value.
- * Only active in hosted mode — in local dev, returns the input unchanged.
- */
 export function sanitizePayload<T>(value: T): T {
   if (!isHosted()) return value;
   return deepStrip(value) as T;

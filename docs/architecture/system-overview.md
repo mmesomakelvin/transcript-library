@@ -43,9 +43,18 @@ The app supports two deployment modes controlled by the `HOSTED` environment var
 - **Local dev** (`HOSTED` unset): No authentication required. All API routes are open. No configuration needed to browse or iterate.
 - **Hosted** (`HOSTED=true`): Server startup runs a preflight check via `src/instrumentation.ts` that validates both env presence and the source-refresh contract. Hosted startup now checks that `PLAYLIST_TRANSCRIPTS_REPO` is configured as an absolute-path git checkout, warns if the checkout is detached HEAD without `PLAYLIST_TRANSCRIPTS_BRANCH`, and warns when `last-source-refresh.json` or `last-import-validation.json` have not been produced yet.
 
-All internal API routes (`/api/*`) are protected by a shared private API boundary (`src/lib/private-api-guard.ts`). In hosted mode, callers must present `Authorization: Bearer <PRIVATE_API_TOKEN>`. In local dev, the guard is a no-op.
+Hosted mode has **two caller classes** behind one shared origin guard (`src/lib/private-api-guard.ts`):
 
-The `/api/sync-hook` endpoint is a refresh-only entrypoint. It continues to accept `SYNC_TOKEN` for dedicated webhook callers, and `PRIVATE_API_TOKEN` is also accepted as a universal override on sync-hook.
+1. **Friend-facing browser access** on `library.aojdevstudio.me`
+   - Cloudflare Access is the identity system.
+   - Browser requests are trusted only when they arrive with both `cf-access-jwt-assertion` and `cf-access-authenticated-user-email` and the app is configured with `CLOUDFLARE_ACCESS_AUD`.
+   - The browser does **not** receive or manage `PRIVATE_API_TOKEN`.
+2. **Machine access** for automation callers
+   - Bearer authentication remains supported for machine-only entrypoints.
+   - `/api/sync-hook` accepts `SYNC_TOKEN` for dedicated refresh callers and also accepts `PRIVATE_API_TOKEN` as the broader hosted override.
+   - Any automation that must cross the Cloudflare edge should use either a dedicated automation hostname or Cloudflare service-token protection rather than assuming bearer-only access will work on the friend-facing hostname.
+
+This means hosted `/api/*` is **not** a single bearer-only contract anymore. Human browser routes such as `/api/insight`, `/api/analyze`, and `/api/insight/stream` are meant to succeed through Cloudflare-managed browser identity, while machine workflows keep explicit bearer/service-token paths.
 
 In hosted mode, response payloads are sanitized to strip internal filesystem paths, provider details, and worker PIDs. Local dev responses include full diagnostic detail.
 
@@ -53,13 +62,14 @@ The supported hosted contract is documented in `docs/operations/source-repo-sync
 
 ### Required env vars (hosted mode)
 
-| Variable                      | Purpose                                                                          |
-| ----------------------------- | -------------------------------------------------------------------------------- |
-| `HOSTED`                      | Set to `true` or `1` to enable hosted mode                                       |
-| `PLAYLIST_TRANSCRIPTS_REPO`   | Absolute path to the app-owned transcript git checkout                           |
-| `PRIVATE_API_TOKEN`           | Shared secret for the private API boundary                                       |
-| `SYNC_TOKEN`                  | Refresh webhook authentication for dedicated callers (recommended, not required) |
-| `PLAYLIST_TRANSCRIPTS_BRANCH` | Recommended when the transcript checkout may be detached HEAD                    |
+| Variable                      | Purpose                                                                                         |
+| ----------------------------- | ----------------------------------------------------------------------------------------------- |
+| `HOSTED`                      | Set to `true` or `1` to enable hosted mode                                                      |
+| `PLAYLIST_TRANSCRIPTS_REPO`   | Absolute path to the app-owned transcript git checkout                                          |
+| `CLOUDFLARE_ACCESS_AUD`       | Required trust anchor for browser access arriving from the Cloudflare Access-protected hostname |
+| `PRIVATE_API_TOKEN`           | Hosted bearer token for supported machine callers                                               |
+| `SYNC_TOKEN`                  | Refresh webhook authentication for dedicated callers (recommended, not required)                |
+| `PLAYLIST_TRANSCRIPTS_BRANCH` | Recommended when the transcript checkout may be detached HEAD                                   |
 
 ## Scale validation
 

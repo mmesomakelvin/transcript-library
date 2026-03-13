@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "videoId": "9FvcaLkoaG0",
+  "runId": "20260313185124323-606207",
+  "provider": "claude-cli",
+  "command": "claude",
+  "args": ["--dangerously-skip-permissions", "-p"],
+  "lifecycle": "failed",
+  "startedAt": "2026-03-13T18:51:25.580Z",
+  "promptResolvedAt": "2026-03-13T18:51:24.324Z",
+  "pid": 23334,
+  "completedAt": "2026-03-13T18:51:41.796Z",
+  "exitCode": 1,
+  "error": "Credit balance is too low",
+  "artifacts": {
+    "structuredFileName": "analysis.json",
+    "canonicalFileName": "analysis.md",
+    "displayFileName": "why-i-don-t-judge-my-income-etfs-by-price-and-neither-should-you.md",
+    "metadataFileName": "video-metadata.json",
+    "stdoutFileName": "worker-stdout.txt",
+    "stderrFileName": "worker-stderr.txt",
+    "attemptDirectory": "runs/20260313185124323-606207",
+    "attemptRunFileName": "run.json",
+    "attemptStdoutFileName": "worker-stdout.txt",
+    "attemptStderrFileName": "worker-stderr.txt"
+  },
+  "status": "failed"
+}

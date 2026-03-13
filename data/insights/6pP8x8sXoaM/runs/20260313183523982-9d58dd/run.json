@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "videoId": "6pP8x8sXoaM",
+  "runId": "20260313183523982-9d58dd",
+  "provider": "claude-cli",
+  "command": "claude",
+  "args": ["--dangerously-skip-permissions", "-p"],
+  "lifecycle": "failed",
+  "startedAt": "2026-03-13T18:35:25.104Z",
+  "promptResolvedAt": "2026-03-13T18:35:23.982Z",
+  "pid": 94460,
+  "completedAt": "2026-03-13T18:35:40.353Z",
+  "exitCode": 1,
+  "error": "Credit balance is too low",
+  "artifacts": {
+    "structuredFileName": "analysis.json",
+    "canonicalFileName": "analysis.md",
+    "displayFileName": "the-great-transition.md",
+    "metadataFileName": "video-metadata.json",
+    "stdoutFileName": "worker-stdout.txt",
+    "stderrFileName": "worker-stderr.txt",
+    "attemptDirectory": "runs/20260313183523982-9d58dd",
+    "attemptRunFileName": "run.json",
+    "attemptStdoutFileName": "worker-stdout.txt",
+    "attemptStderrFileName": "worker-stderr.txt"
+  },
+  "status": "failed"
+}

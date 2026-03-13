@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "videoId": "wJ4i_wRctq8",
+  "runId": "20260313183518154-b57af7",
+  "status": "ok",
+  "resolution": "none",
+  "retryable": false,
+  "checkedAt": "2026-03-13T18:35:21.724Z",
+  "detectedAt": null,
+  "resolvedAt": null,
+  "reasons": [],
+  "artifactState": {
+    "canonicalAnalysis": false,
+    "structuredAnalysis": "missing",
+    "statusFile": true,
+    "runFile": true
+  },
+  "evidence": {
+    "stdoutTail": "",
+    "stderrTail": ""
+  }
+}

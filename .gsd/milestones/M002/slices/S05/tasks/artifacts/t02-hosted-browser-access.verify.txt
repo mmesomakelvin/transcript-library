@@ -1,0 +1,11 @@
+[verify-s05] using PLAYLIST_TRANSCRIPTS_REPO=/Users/ossieirondi/Projects/desktop-commander/repos/playlist-transcripts
+[verify-s05] using videoId=Sg74Di2Yc88
+[verify-s05] starting hosted app on http://127.0.0.1:3123
+[verify-s05] checking browser callers stay secret-free in client code
+[verify-s05] client-auth-surface status=pass reason=no-app-managed-bearer-found
+[verify-s05] route=insight caller=browser status=200 reason=ok
+[verify-s05] route=analyze caller=browser status=200 reason=started
+[verify-s05] route=stream caller=browser status=200 reason=snapshot-received
+[verify-s05] route=insight caller=anonymous status=401 reason=missing-browser-identity
+[verify-s05] route=sync-hook caller=browser-only status=401 reason=machine-boundary-preserved
+[verify-s05] PASS hosted browser access proof complete
