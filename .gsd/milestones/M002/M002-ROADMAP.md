@@ -71,7 +71,7 @@ This milestone is complete only when all are true:
 
   > After this: the intended private-friend access flow is operationally defined around Cloudflare-managed access, with approved users reaching the app without app-password scope.
 
-- [ ] **S06: Proxmox Runtime and Release Pipeline** `risk:high` `depends:[S03,S05]`
+- [x] **S06: Proxmox Runtime and Release Pipeline** `risk:high` `depends:[S03,S05]`
 
   > After this: the app runs on the target Proxmox layout with persistent storage, supervised process management, and unattended deploy/restart mechanics that preserve rollback paths.
 

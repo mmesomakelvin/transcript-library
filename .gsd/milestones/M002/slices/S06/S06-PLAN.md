@@ -50,7 +50,7 @@
   - Verify: `shellcheck deploy/deploy.sh deploy/rollback.sh deploy/setup-lxc.sh` passes with no errors
   - Done when: all 9 deploy artifacts exist, shellcheck clean, paths consistent across all files
 
-- [ ] **T02: Build deploy-hook listener and slice verification** `est:1h`
+- [x] **T02: Build deploy-hook listener and slice verification** `est:1h`
   - Why: The deploy-hook listener is the only real application code in this slice — it receives GitHub webhooks and triggers deploys. Slice verification proves all artifacts are internally consistent.
   - Files: `deploy/deploy-hook.ts`, `deploy/__tests__/deploy-hook.test.ts`, `scripts/verify-s06-deploy-artifacts.sh`
   - Do: Write deploy-hook.ts as a standalone Node HTTP server on port 9000 that verifies GitHub HMAC-SHA256 webhook signatures using `crypto.timingSafeEqual`, invokes deploy.sh on valid push events to main, and returns structured JSON responses. Write Vitest tests covering signature verification, event filtering, and rejection paths. Write the slice verification script that checks all deploy artifacts exist, paths are consistent, env template coverage matches hosted-config.ts, and shellcheck passes.
