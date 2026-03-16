@@ -12,6 +12,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+<<<<<<< HEAD
+=======
+
+// ---------------------------------------------------------------------------
+// Environment detection
+// ---------------------------------------------------------------------------
+>>>>>>> gsd/M002/S03
 
 export type HostedAccessConfig = {
   cloudflareAccessAud: string | null;
@@ -27,6 +34,7 @@ export type PreflightResult = {
   warnings: string[];
 };
 
+<<<<<<< HEAD
 export function isHosted(): boolean {
   const v = process.env.HOSTED;
   return v === "true" || v === "1";
@@ -48,6 +56,8 @@ export function getHostedAccessConfig(): HostedAccessConfig {
   };
 }
 
+=======
+>>>>>>> gsd/M002/S03
 function runGit(repoRoot: string, args: string[]): string {
   return execFileSync("git", args, {
     cwd: repoRoot,
@@ -64,7 +74,13 @@ function catalogDirPath(): string {
 
 function validateHostedSourceRepoContract(errors: string[], warnings: string[]) {
   const repoRoot = process.env.PLAYLIST_TRANSCRIPTS_REPO?.trim();
+<<<<<<< HEAD
   if (!repoRoot) return;
+=======
+  if (!repoRoot) {
+    return;
+  }
+>>>>>>> gsd/M002/S03
 
   if (!path.isAbsolute(repoRoot)) {
     errors.push(
@@ -125,6 +141,7 @@ function validateHostedSourceRepoContract(errors: string[], warnings: string[]) 
   }
 }
 
+<<<<<<< HEAD
 function validateHostedAccessContract(errors: string[], warnings: string[]) {
   const config = getHostedAccessConfig();
 
@@ -141,6 +158,26 @@ function validateHostedAccessContract(errors: string[], warnings: string[]) {
   }
 }
 
+=======
+/**
+ * Validates the runtime environment and returns a structured result.
+ *
+ * In hosted mode, missing critical env vars produce errors (the deploy should
+ * fail). In local mode, the same gaps produce warnings at most.
+ *
+ * Critical hosted requirements:
+ * - `PLAYLIST_TRANSCRIPTS_REPO` — transcript source directory
+ * - `PRIVATE_API_TOKEN` — shared secret for private API boundary
+ *
+ * Hosted refresh contract checks:
+ * - `PLAYLIST_TRANSCRIPTS_REPO` must resolve to an app-owned git checkout
+ * - detached HEAD requires explicit `PLAYLIST_TRANSCRIPTS_BRANCH`
+ * - operators should have `last-source-refresh.json` and `last-import-validation.json`
+ *
+ * Non-critical but recommended:
+ * - `SYNC_TOKEN` — webhook authentication (warns if missing in hosted mode)
+ */
+>>>>>>> gsd/M002/S03
 export function runPreflight(): PreflightResult {
   const hosted = isHosted();
   const mode = hosted ? "hosted" : "local";
@@ -161,10 +198,20 @@ export function runPreflight(): PreflightResult {
     else warnings.push(msg);
   }
 
+<<<<<<< HEAD
   if (hosted) {
     validateHostedAccessContract(errors, warnings);
     validateHostedSourceRepoContract(errors, warnings);
   }
+=======
+  // --- Hosted refresh contract ---
+
+  if (hosted) {
+    validateHostedSourceRepoContract(errors, warnings);
+  }
+
+  // --- Recommended env vars (warnings only) ---
+>>>>>>> gsd/M002/S03
 
   if (hosted && !process.env.SYNC_TOKEN) {
     warnings.push(
