@@ -6,6 +6,7 @@ import {
   analysisPath,
   insightsBaseDir,
   readRunMetadata,
+  restoreStatusFromRun,
   structuredAnalysisPath,
 } from "../src/lib/analysis";
 import {
@@ -48,7 +49,10 @@ export type HistoricalArtifactRepairReport = {
 };
 
 const REPORT_SCHEMA_VERSION = 1;
-const REPAIRABLE_REASON: ReconciliationReasonCode = "missing-structured-analysis";
+const REPAIRABLE_REASONS: ReconciliationReasonCode[] = [
+  "missing-structured-analysis",
+  "missing-status-record",
+];
 const ALL_REASON_CODES: ReconciliationReasonCode[] = [
   "missing-run-record",
   "missing-status-record",
@@ -86,11 +90,13 @@ function listCandidateVideoIds(selectedVideoIds?: string[]): string[] {
 }
 
 function canRepairInPlace(record: RuntimeReconciliationRecord): boolean {
+  const primaryReason = record.reasons[0]?.code;
   return (
     record.reasons.length === 1 &&
-    record.reasons[0]?.code === REPAIRABLE_REASON &&
-    record.artifactState.canonicalAnalysis &&
-    record.runId !== null
+    primaryReason !== undefined &&
+    REPAIRABLE_REASONS.includes(primaryReason) &&
+    record.runId !== null &&
+    (primaryReason === "missing-status-record" || record.artifactState.canonicalAnalysis)
   );
 }
 
@@ -117,6 +123,11 @@ function repairStructuredAnalysis(videoId: string): { displayArtifact: string | 
   const structured = deriveStructuredAnalysisFromMarkdown(videoId, markdown);
   atomicWriteJson(structuredAnalysisPath(videoId), structured);
   return { displayArtifact: ensureDisplayArtifact(videoId, { refresh: true }) };
+}
+
+function repairMissingStatusRecord(videoId: string): { displayArtifact: string | null } {
+  restoreStatusFromRun(videoId);
+  return { displayArtifact: null };
 }
 
 export function repairHistoricalArtifacts(
@@ -162,7 +173,10 @@ export function repairHistoricalArtifacts(
     }
 
     try {
-      const repaired = repairStructuredAnalysis(videoId);
+      const repaired =
+        reasonCodes[0] === "missing-status-record"
+          ? repairMissingStatusRecord(videoId)
+          : repairStructuredAnalysis(videoId);
       const after = reconcileRuntimeArtifacts(videoId);
       results.push({
         videoId,

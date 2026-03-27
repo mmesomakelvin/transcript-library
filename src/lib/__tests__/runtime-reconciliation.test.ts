@@ -97,6 +97,59 @@ function writeHistoricalCompletedRunFixture(tmpDir: string, videoId = "hist123xy
   );
 }
 
+function writeMissingStatusOnlyFixture(tmpDir: string, videoId = "histmissing9") {
+  const dir = path.join(tmpDir, videoId);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "analysis.md"), "# Analysis\n\nRecovered report.");
+  fs.writeFileSync(
+    structuredAnalysisPath(videoId),
+    JSON.stringify({
+      schemaVersion: 1,
+      videoId,
+      title: "Missing Status Only",
+      summary: "Summary",
+      takeaways: ["Takeaway"],
+      actionItems: ["Action"],
+      notablePoints: ["Point"],
+      reportMarkdown: "# Analysis\n\nRecovered report.",
+    }),
+  );
+  fs.writeFileSync(
+    path.join(dir, "run.json"),
+    JSON.stringify(
+      {
+        schemaVersion: 2,
+        runId: "run-missing-status",
+        provider: "claude-cli",
+        command: "claude",
+        args: ["-p"],
+        status: "complete",
+        lifecycle: "completed",
+        videoId,
+        startedAt: "2026-03-13T18:35:19.000Z",
+        promptResolvedAt: "2026-03-13T18:35:00.000Z",
+        pid: 23322,
+        completedAt: "2026-03-13T18:40:00.000Z",
+        exitCode: 0,
+        artifacts: {
+          structuredFileName: "analysis.json",
+          canonicalFileName: "analysis.md",
+          displayFileName: "missing-status-only.md",
+          metadataFileName: "video-metadata.json",
+          stdoutFileName: "worker-stdout.txt",
+          stderrFileName: "worker-stderr.txt",
+          attemptDirectory: "runs/run-missing-status",
+          attemptRunFileName: "run.json",
+          attemptStdoutFileName: "worker-stdout.txt",
+          attemptStderrFileName: "worker-stderr.txt",
+        },
+      },
+      null,
+      2,
+    ),
+  );
+}
+
 describe("runtime reconciliation", () => {
   it("persists a durable mismatch record when a completed run is missing canonical artifacts", () => {
     const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-reconciliation-"));
@@ -192,6 +245,32 @@ describe("runtime reconciliation", () => {
     });
     expect(record.reasons).toEqual([
       expect.objectContaining({ code: "missing-structured-analysis" }),
+    ]);
+  });
+
+
+  it("flags a completed directory with run.json but no status.json as a retry-needed mismatch", () => {
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "runtime-reconciliation-"));
+    process.env.INSIGHTS_BASE_DIR = tmpDir;
+
+    writeMissingStatusOnlyFixture(tmpDir, "misstat8AbC");
+
+    const record = reconcileRuntimeArtifacts("misstat8AbC");
+
+    expect(record).toMatchObject({
+      runId: "run-missing-status",
+      status: "mismatch",
+      resolution: "rerun-ready",
+      retryable: true,
+      artifactState: {
+        canonicalAnalysis: true,
+        structuredAnalysis: "valid",
+        statusFile: false,
+        runFile: true,
+      },
+    });
+    expect(record.reasons).toEqual([
+      expect.objectContaining({ code: "missing-status-record" }),
     ]);
   });
 

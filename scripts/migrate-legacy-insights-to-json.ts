@@ -1,25 +1,25 @@
 import fs from "node:fs";
-import { createRequire } from "node:module";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
-import type { StructuredAnalysis } from "../src/lib/analysis-contract";
-
-const require = createRequire(import.meta.url);
-const { parseStructuredAnalysis } =
-  require("../src/lib/analysis-contract.ts") as typeof import("../src/lib/analysis-contract");
-const { curateYouTubeAnalyzer } =
-  require("../src/lib/curation.ts") as typeof import("../src/lib/curation");
-const {
+import {
+  parseStructuredAnalysis,
+  type StructuredAnalysis,
+} from "../src/lib/analysis-contract";
+import { curateYouTubeAnalyzer } from "../src/lib/curation";
+import {
   analysisPath,
   insightDir,
   insightsBaseDir,
   isValidVideoId,
   legacyInsightPath,
   structuredAnalysisPath,
-} = require("../src/lib/insight-paths.ts") as typeof import("../src/lib/insight-paths");
-const { ensureDisplayArtifact, readTitleFromFrontmatter, resolveInsightTitle } =
-  require("./backfill-insight-artifacts.ts") as typeof import("./backfill-insight-artifacts");
+} from "../src/lib/insight-paths";
+import {
+  ensureDisplayArtifact,
+  readTitleFromFrontmatter,
+  resolveInsightTitle,
+} from "./backfill-insight-artifacts";
 
 export const MIGRATION_STATUS_FILE = ".migration-status.json";
 

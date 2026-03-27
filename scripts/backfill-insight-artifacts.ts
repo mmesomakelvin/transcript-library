@@ -1,11 +1,12 @@
 import fs from "node:fs";
-import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-
-const require = createRequire(import.meta.url);
-const { analysisPath, displayAnalysisPath, insightsBaseDir, metadataCachePath } =
-  require("../src/lib/insight-paths.ts") as typeof import("../src/lib/insight-paths");
+import {
+  analysisPath,
+  displayAnalysisPath,
+  insightsBaseDir,
+  metadataCachePath,
+} from "../src/lib/insight-paths";
 
 function readJson(filePath: string): Record<string, unknown> | null {
   try {

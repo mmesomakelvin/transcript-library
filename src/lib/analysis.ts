@@ -602,6 +602,30 @@ function writeStatusFromRun(videoId: string, run: RunFile): void {
   } satisfies StatusFile);
 }
 
+export function restoreStatusFromRun(videoId: string): StatusFile {
+  const run = readRunMetadata(videoId);
+  if (!run) {
+    throw new Error(`Cannot restore status.json without run.json for ${videoId}.`);
+  }
+
+  const status: StatusFile = {
+    schemaVersion: RUN_SCHEMA_VERSION,
+    videoId,
+    runId: run.runId,
+    status: run.status,
+    lifecycle: run.lifecycle,
+    pid: run.pid,
+    startedAt: run.startedAt,
+    completedAt: run.completedAt,
+    error: run.error,
+    reconciledAt: run.reconciledAt,
+    reconciliationReason: run.reconciliationReason,
+  };
+
+  atomicWriteJson(statusPath(videoId), status);
+  return status;
+}
+
 export function buildRunArtifacts(videoId: string, title: string, runId: string): RunArtifacts {
   return {
     structuredFileName: path.basename(structuredAnalysisPath(videoId)),

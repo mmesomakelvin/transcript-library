@@ -99,6 +99,66 @@ function writeHistoricalMissingStructuredFixture(baseDir: string, videoId = "abc
   return { dir, videoId, markdown };
 }
 
+function writeMissingStatusFixture(baseDir: string, videoId = "missstatus1") {
+  const dir = path.join(baseDir, videoId);
+  fs.mkdirSync(dir, { recursive: true });
+
+  fs.writeFileSync(path.join(dir, "analysis.md"), "# Analysis\n\nHealthy markdown.");
+  fs.writeFileSync(
+    structuredAnalysisPath(videoId),
+    JSON.stringify(
+      {
+        schemaVersion: 1,
+        videoId,
+        title: "Missing Status Fixture",
+        summary: "Summary",
+        takeaways: ["Takeaway"],
+        actionItems: ["Action"],
+        notablePoints: ["Point"],
+        reportMarkdown: "# Analysis\n\nHealthy markdown.",
+      },
+      null,
+      2,
+    ),
+  );
+  fs.writeFileSync(
+    path.join(dir, "run.json"),
+    JSON.stringify(
+      {
+        schemaVersion: 2,
+        runId: "run-missing-status",
+        provider: "claude-cli",
+        command: "claude",
+        args: ["-p"],
+        status: "complete",
+        lifecycle: "completed",
+        videoId,
+        startedAt: "2026-03-13T18:35:19.000Z",
+        promptResolvedAt: "2026-03-13T18:35:00.000Z",
+        pid: 23322,
+        completedAt: "2026-03-13T18:40:00.000Z",
+        exitCode: 0,
+        artifacts: {
+          structuredFileName: "analysis.json",
+          canonicalFileName: "analysis.md",
+          displayFileName: "missing-status-fixture.md",
+          metadataFileName: "video-metadata.json",
+          stdoutFileName: "worker-stdout.txt",
+          stderrFileName: "worker-stderr.txt",
+          attemptDirectory: "runs/run-missing-status",
+          attemptRunFileName: "run.json",
+          attemptStdoutFileName: "worker-stdout.txt",
+          attemptStderrFileName: "worker-stderr.txt",
+        },
+      },
+      null,
+      2,
+    ),
+  );
+
+  return { dir, videoId };
+}
+
 describe("repairHistoricalArtifacts", () => {
   it("repairs only missing-structured-analysis directories in place and resolves reconciliation", () => {
     const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "historical-artifact-repair-"));
@@ -154,6 +214,58 @@ describe("repairHistoricalArtifacts", () => {
       resolution: "resolved",
       retryable: false,
       runId: "legacy-20260308205303",
+    });
+  });
+
+
+  it("rebuilds missing status.json from the durable run record when that is the only mismatch", () => {
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "historical-artifact-repair-"));
+    process.env.INSIGHTS_BASE_DIR = tmpDir;
+
+    const { videoId, dir } = writeMissingStatusFixture(tmpDir, "stat123ab9Q");
+
+    const before = reconcileRuntimeArtifacts(videoId);
+    expect(before.reasons.map((reason) => reason.code)).toEqual(["missing-status-record"]);
+    expect(fs.existsSync(path.join(dir, "status.json"))).toBe(false);
+
+    const result = repairHistoricalArtifacts({ videoIds: [videoId] });
+
+    expect(result).toMatchObject({
+      repairedCount: 1,
+      rerunNeededCount: 0,
+      skippedCount: 0,
+      mismatchClassCounts: {
+        "missing-status-record": 1,
+      },
+    });
+    expect(result.results[0]).toMatchObject({
+      videoId,
+      action: "repaired",
+      reasonCodes: ["missing-status-record"],
+      runId: "run-missing-status",
+      operatorEvidence: {
+        retryable: false,
+        analyzeOutcome: "resolved",
+        resolution: "resolved",
+        primaryReasonCode: "missing-status-record",
+      },
+    });
+
+    const repairedStatus = JSON.parse(fs.readFileSync(path.join(dir, "status.json"), "utf8")) as {
+      runId: string;
+      lifecycle: string;
+      status: string;
+    };
+    expect(repairedStatus).toMatchObject({
+      runId: "run-missing-status",
+      lifecycle: "completed",
+      status: "complete",
+    });
+    expect(readRuntimeReconciliation(videoId)).toMatchObject({
+      status: "resolved",
+      resolution: "resolved",
+      retryable: false,
+      runId: "run-missing-status",
     });
   });
 
