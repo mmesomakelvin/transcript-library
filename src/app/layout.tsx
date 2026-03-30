@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Fraunces } from "next/font/google";
 import Link from "next/link";
 import { NavHeader } from "@/components/NavHeader";
+import { SearchBar } from "@/components/SearchBar";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -48,11 +49,14 @@ export default function RootLayout({
           </a>
 
           <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[var(--app-bg)]/95 saturate-[1.4] backdrop-blur-[20px]">
-            <div className="mx-auto flex h-16 max-w-[1320px] items-center justify-between px-8">
+            <div className="mx-auto flex max-w-[1320px] flex-wrap items-center gap-4 px-8 py-3">
               <Link href="/" className="font-display text-xl tracking-[-0.03em] text-[var(--ink)]">
                 Transcript Library
               </Link>
-              <NavHeader />
+              <div className="ml-auto flex min-w-0 flex-1 flex-wrap items-center justify-end gap-3">
+                <NavHeader />
+                <SearchBar variant="compact" className="w-full min-[980px]:max-w-[360px]" />
+              </div>
             </div>
           </header>
 
