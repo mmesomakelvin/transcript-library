@@ -67,13 +67,9 @@ export function __resetCatalogSnapshotForTests(): void {
 }
 
 export function playlistTranscriptsRepoRoot(): string {
-  const repo = process.env.PLAYLIST_TRANSCRIPTS_REPO;
-  if (!repo) {
-    throw new Error(
-      "PLAYLIST_TRANSCRIPTS_REPO is not set. Add it to .env.local pointing to your playlist-transcripts repo.",
-    );
-  }
-  return repo;
+  const override = process.env.PLAYLIST_TRANSCRIPTS_REPO;
+  if (override) return override;
+  return path.join(process.cwd(), "pipeline");
 }
 
 export function catalogCsvPath(): string {
