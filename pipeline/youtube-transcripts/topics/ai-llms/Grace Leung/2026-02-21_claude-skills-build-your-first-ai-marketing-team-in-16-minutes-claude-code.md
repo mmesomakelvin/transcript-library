@@ -4,7 +4,7 @@ title: "Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude 
 channel: "Grace Leung"
 topic: "ai-llms"
 published_date: "2026-02-21"
-ingested_date: "2026-03-02"
+ingested_date: "2026-04-21"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=X8afcX2s2Mo"
 duration: 1002

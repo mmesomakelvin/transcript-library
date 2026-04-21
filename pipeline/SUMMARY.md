@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-04-21 17:06 UTC
+> Last sync: 2026-04-21 20:56 UTC
 
 ## This Run
 
@@ -12,6 +12,8 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
+| Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Mac Mini Agents: OpenClaw is a NIGHTMARE... Use these SKILLS instead | IndyDevDan | ai-llms |
 | Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
@@ -71,7 +73,6 @@
 | Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything. | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | Never Run claude /init | Matt Pocock | ai-llms |
 | My Production Dockerfile Rules: How I Build Docker Images | DevOps & AI Toolkit | software-engineering |
-| My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
@@ -123,7 +124,6 @@
 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | ai-llms |
 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | ai-llms |
 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | ai-llms |
-| Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Claude Cowork Just Changed How You Do Marketing | Grace Leung | ai-llms |
 | Claude Code just replaced your blog writer - AI slop is OVER | Agrici Daniel | ai-llms |
 | Claude Code just replaced your ad agency - here's how | Agrici Daniel | ai-llms |
@@ -273,5 +273,5 @@
 
 | Date | New |
 |---|---|
-| (none) | 0 |
+| 2026-04-21 | 2 |
 

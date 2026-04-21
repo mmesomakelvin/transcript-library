@@ -4,7 +4,7 @@ title: "My Multi-Agent Team with OpenClaw"
 channel: "Brian Casel"
 topic: "ai-llms"
 published_date: "2026-02-16"
-ingested_date: "2026-03-02"
+ingested_date: "2026-04-21"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=bzWI3Dil9Ig"
 duration: 868
