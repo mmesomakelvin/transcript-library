@@ -4,7 +4,7 @@ title: "Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The
 channel: "AI News & Strategy Daily | Nate B Jones"
 topic: "ai-llms"
 published_date: "2026-02-02"
-ingested_date: "2026-03-06"
+ingested_date: "2026-04-22"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=p9acrso71KU"
 duration: 1321

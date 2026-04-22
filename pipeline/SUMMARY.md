@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-04-22 13:32 UTC
+> Last sync: 2026-04-22 17:05 UTC
 
 ## This Run
 
@@ -13,6 +13,7 @@
 | Title | Channel | Topic |
 |---|---|---|
 | How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
+| Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
 | Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Mac Mini Agents: OpenClaw is a NIGHTMARE... Use these SKILLS instead | IndyDevDan | ai-llms |
@@ -21,7 +22,6 @@
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
 | How to create JOBS for OpenClaw agents | Brian Casel | business |
-| Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | ai-llms |
 | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | ai-llms |
 | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | ai-llms |
@@ -273,6 +273,6 @@
 
 | Date | New |
 |---|---|
-| 2026-04-22 | 1 |
+| 2026-04-22 | 2 |
 | 2026-04-21 | 2 |
 
