@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-04-21 20:56 UTC
+> Last sync: 2026-04-22 02:40 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
 | Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Mac Mini Agents: OpenClaw is a NIGHTMARE... Use these SKILLS instead | IndyDevDan | ai-llms |
@@ -90,7 +91,6 @@
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | How to Discern God Opportunities vs Business Traps | GOSHEN | business |
 | How To Use NotebookLM - 7 Crazy Ways | AI LABS | ai-llms |
-| How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
@@ -273,5 +273,6 @@
 
 | Date | New |
 |---|---|
+| 2026-04-22 | 1 |
 | 2026-04-21 | 2 |
 

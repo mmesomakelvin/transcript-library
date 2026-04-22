@@ -4,7 +4,7 @@ title: "How McKinsey Plans to Survive AI (and Reinvent Consulting)"
 channel: "Harvard Business Review"
 topic: "business"
 published_date: "2026-02-09"
-ingested_date: "2026-03-02"
+ingested_date: "2026-04-22"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=hSpem_oGAf0"
 duration: 1896
