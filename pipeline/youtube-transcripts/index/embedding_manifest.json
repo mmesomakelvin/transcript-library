@@ -1,6 +1,6 @@
 {
-  "generated": "2026-04-24T20:53:36",
-  "total_files": 244,
+  "generated": "2026-04-25T02:32:14",
+  "total_files": 245,
   "total_chunks": 108,
   "files": [
     {
@@ -1185,6 +1185,14 @@
       "word_count": 3996,
       "chunk": 2,
       "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/IndyDevDan/2026-04-06_my-pi-agent-teams-claude-code-leak-signal-harness-engineering.md",
+      "video_id": "RairMJflUSA",
+      "word_count": 6899,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {

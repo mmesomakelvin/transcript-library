@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-04-24 20:53 UTC
+> Last sync: 2026-04-25 02:32 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 244 |
-| Total transcripts | 244 |
+| New transcripts | 245 |
+| Total transcripts | 245 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| My Pi Agent Teams. Claude Code Leak SIGNAL. Harness Engineering | IndyDevDan | ai-llms |
 | How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
 | Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
@@ -261,18 +262,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 152 | 57 |
+| ai-llms | 153 | 57 |
 | software-engineering | 43 | 16 |
 | business | 24 | 15 |
 | finance-investing | 15 | 6 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **244** |  |
+| **Total** | **245** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-04-25 | 1 |
 | 2026-04-22 | 2 |
 | 2026-04-21 | 2 |
 
