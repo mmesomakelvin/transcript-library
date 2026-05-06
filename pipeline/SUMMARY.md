@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-06 17:43 UTC
+> Last sync: 2026-05-06 21:14 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 245 |
-| Total transcripts | 245 |
+| New transcripts | 246 |
+| Total transcripts | 246 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The 6 Levels of Claude Code Explained | Chase AI | ai-llms |
 | My Pi Agent Teams. Claude Code Leak SIGNAL. Harness Engineering | IndyDevDan | ai-llms |
 | How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
 | Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
@@ -262,17 +263,17 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 153 | 57 |
+| ai-llms | 154 | 57 |
 | software-engineering | 43 | 16 |
 | business | 24 | 15 |
 | finance-investing | 15 | 6 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **245** |  |
+| **Total** | **246** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
-| (none) | 0 |
+| 2026-05-06 | 1 |
 

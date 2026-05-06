@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-06T17:43:09",
-  "total_files": 245,
+  "generated": "2026-05-06T21:14:35",
+  "total_files": 246,
   "total_chunks": 108,
   "files": [
     {
@@ -951,6 +951,14 @@
       "path": "topics/ai-llms/Chase AI/2026-02-05_stealing-10k-website-designs-with-claude-code.md",
       "video_id": "AaO6ujcx6TY",
       "word_count": 3552,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Chase AI/2026-03-08_the-6-levels-of-claude-code-explained.md",
+      "video_id": "TUKYbUIXLOE",
+      "word_count": 7048,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
