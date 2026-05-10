@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-09T20:46:18",
-  "total_files": 246,
+  "generated": "2026-05-10T03:01:47",
+  "total_files": 247,
   "total_chunks": 108,
   "files": [
     {
@@ -663,6 +663,14 @@
       "path": "topics/ai-llms/Unsupervised Learning/2026-02-05_a-conversation-with-jiquan-ngiam-about-agent-mcp-security.md",
       "video_id": "M02kXnomB2U",
       "word_count": 6174,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Unsupervised Learning/2026-04-15_were-all-building-a-single-digital-assistant.md",
+      "video_id": "uUForkn00mk",
+      "word_count": 6909,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
