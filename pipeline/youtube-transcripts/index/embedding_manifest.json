@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-10T09:29:41",
-  "total_files": 247,
+  "generated": "2026-05-10T13:21:51",
+  "total_files": 248,
   "total_chunks": 108,
   "files": [
     {
@@ -369,6 +369,14 @@
       "word_count": 494,
       "chunk": 4,
       "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Business Insider/2026-01-24_why-owning-nothing-is-so-expensive.md",
+      "video_id": "8AKn-zJMIwY",
+      "word_count": 3705,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
