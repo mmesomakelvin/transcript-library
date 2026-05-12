@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-12 06:39 UTC
+> Last sync: 2026-05-12 10:34 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 248 |
-| Total transcripts | 248 |
+| New transcripts | 249 |
+| Total transcripts | 249 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Once I Understood This About Investing, My Life Changed. | Chamath Palihapitiya | finance-investing |
 | Why Owning Nothing Is So Expensive | Business Insider | ai-llms |
 | We're All Building a Single Digital Assistant | Unsupervised Learning | ai-llms |
 | The 6 Levels of Claude Code Explained | Chase AI | ai-llms |
@@ -268,15 +269,16 @@
 | ai-llms | 156 | 58 |
 | software-engineering | 43 | 16 |
 | business | 24 | 15 |
-| finance-investing | 15 | 6 |
+| finance-investing | 16 | 7 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **248** |  |
+| **Total** | **249** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-05-12 | 1 |
 | 2026-05-10 | 2 |
 | 2026-05-06 | 1 |
 

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-12T06:39:52",
-  "total_files": 248,
+  "generated": "2026-05-12T10:34:19",
+  "total_files": 249,
   "total_chunks": 108,
   "files": [
     {
@@ -1943,6 +1943,14 @@
       "path": "topics/finance-investing/Investing Simplified - Professor G/2026-02-21_a-weak-dollar-is-coming-smart-investors-are-doing-this.md",
       "video_id": "GgQvi_RB1kQ",
       "word_count": 1993,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Chamath Palihapitiya/2026-03-27_once-i-understood-this-about-investing-my-life-changed.md",
+      "video_id": "J2qKVjRR12w",
+      "word_count": 2892,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
