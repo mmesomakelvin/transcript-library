@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-13 14:38 UTC
+> Last sync: 2026-05-13 18:04 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 249 |
-| Total transcripts | 249 |
+| New transcripts | 250 |
+| Total transcripts | 250 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The Biggest Tax Changes in 2026 | George Kamel | finance-investing |
 | Once I Understood This About Investing, My Life Changed. | Chamath Palihapitiya | finance-investing |
 | Why Owning Nothing Is So Expensive | Business Insider | ai-llms |
 | We're All Building a Single Digital Assistant | Unsupervised Learning | ai-llms |
@@ -269,15 +270,16 @@
 | ai-llms | 156 | 58 |
 | software-engineering | 43 | 16 |
 | business | 24 | 15 |
-| finance-investing | 16 | 7 |
+| finance-investing | 17 | 8 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **249** |  |
+| **Total** | **250** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-05-13 | 1 |
 | 2026-05-12 | 1 |
 | 2026-05-10 | 2 |
 | 2026-05-06 | 1 |

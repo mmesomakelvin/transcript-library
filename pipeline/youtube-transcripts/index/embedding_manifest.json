@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-13T14:38:59",
-  "total_files": 249,
+  "generated": "2026-05-13T18:04:27",
+  "total_files": 250,
   "total_chunks": 108,
   "files": [
     {
@@ -1967,6 +1967,14 @@
       "path": "topics/finance-investing/Heresy Financial/2026-02-26_the-markets-will-never-be-the-same---ai-takeover.md",
       "video_id": "0vLeHFO7-HE",
       "word_count": 4057,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/George Kamel/2026-03-11_the-biggest-tax-changes-in-2026.md",
+      "video_id": "hKmVr4GW7bo",
+      "word_count": 3129,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
