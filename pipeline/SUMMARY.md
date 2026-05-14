@@ -1,17 +1,19 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-14 10:19 UTC
+> Last sync: 2026-05-14 14:15 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 250 |
-| Total transcripts | 250 |
+| New transcripts | 252 |
+| Total transcripts | 252 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How I Use Claude Code For B2B Outreach (35% Reply Rate) | Oleg Melnikov | ai-llms |
+| EVERYTHING you need to know to build a Dashboard UI in 8 minutes (beginner friendly) | Kole Jain | business |
 | The Biggest Tax Changes in 2026 | George Kamel | finance-investing |
 | Once I Understood This About Investing, My Life Changed. | Chamath Palihapitiya | finance-investing |
 | Why Owning Nothing Is So Expensive | Business Insider | ai-llms |
@@ -267,18 +269,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 156 | 58 |
+| ai-llms | 157 | 59 |
 | software-engineering | 43 | 16 |
-| business | 24 | 15 |
+| business | 25 | 16 |
 | finance-investing | 17 | 8 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **250** |  |
+| **Total** | **252** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-05-14 | 2 |
 | 2026-05-13 | 1 |
 | 2026-05-12 | 1 |
 | 2026-05-10 | 2 |

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-14T10:19:27",
-  "total_files": 250,
+  "generated": "2026-05-14T14:15:43",
+  "total_files": 252,
   "total_chunks": 108,
   "files": [
     {
@@ -183,6 +183,14 @@
       "path": "topics/business/EntreLeadership/2026-01-31_the-simple-strategy-dave-uses-to-motivate-his-team.md",
       "video_id": "5x1t9JkCNOM",
       "word_count": 6355,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/business/Kole Jain/2025-08-30_everything-you-need-to-know-to-build-a-dashboard-ui-in-8-minutes-beginner-friend.md",
+      "video_id": "B7k5rOgmOGY",
+      "word_count": 1772,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -663,6 +671,14 @@
       "path": "topics/ai-llms/Ray Amjad/2026-02-25_anthropic-just-dropped-the-feature-everyone-asked-for.md",
       "video_id": "y3xzYwxQuHc",
       "word_count": 2352,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Oleg Melnikov/2026-04-02_how-i-use-claude-code-for-b2b-outreach-35-reply-rate.md",
+      "video_id": "Jjz4YxtlwHQ",
+      "word_count": 2310,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
