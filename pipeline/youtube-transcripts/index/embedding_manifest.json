@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-17T06:46:46",
+  "generated": "2026-05-17T09:50:26",
   "total_files": 252,
   "total_chunks": 108,
   "files": [
@@ -1374,7 +1374,7 @@
     {
       "path": "topics/software-engineering/Better Stack/2026-02-08_this-sandbox-tool-makes-claude-code-unstoppable-code-on-incus.md",
       "video_id": "t78-JUnTK5Q",
-      "word_count": 1808,
+      "word_count": 1812,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

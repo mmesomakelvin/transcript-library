@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-17 06:46 UTC
+> Last sync: 2026-05-17 09:50 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| This Sandbox Tool Makes Claude Code Unstoppable (Code On Incus) | Better Stack | software-engineering |
 | How I Use Claude Code For B2B Outreach (35% Reply Rate) | Oleg Melnikov | ai-llms |
 | EVERYTHING you need to know to build a Dashboard UI in 8 minutes (beginner friendly) | Kole Jain | business |
 | The Biggest Tax Changes in 2026 | George Kamel | finance-investing |
@@ -47,7 +48,6 @@
 | Visualizing the Business Cycle | Benjamin Cowen | finance-investing |
 | Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
 | Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How) | Ticker Symbol: YOU | finance-investing |
-| This Sandbox Tool Makes Claude Code Unstoppable (Code On Incus) | Better Stack | software-engineering |
 | This FREE AI Tool Auto-Generates Gridfinity Bins! | CNC Kitchen | software-engineering |
 | The US Iran Conflict Will Make Smart Investors Rich (Here's How) | Ticker Symbol: YOU | ai-llms |
 | The Psychology of Premium Websites | Sam Crawford | Squarespace Expert | software-engineering |
@@ -281,6 +281,7 @@
 
 | Date | New |
 |---|---|
+| 2026-05-17 | 1 |
 | 2026-05-14 | 2 |
 | 2026-05-13 | 1 |
 | 2026-05-12 | 1 |
