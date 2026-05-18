@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-18T08:07:30",
-  "total_files": 252,
-  "total_chunks": 108,
+  "generated": "2026-05-18T15:36:14",
+  "total_files": 256,
+  "total_chunks": 112,
   "files": [
     {
       "path": "topics/hardware-homelab/Stephen Robles/2026-01-31_m4-mac-mini---the-perfect-home-server.md",
@@ -1068,11 +1068,43 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-03.md",
+      "video_id": "6pP8x8sXoaM",
+      "word_count": 3997,
+      "chunk": 3,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Unsupervised Learning/2026-02-05_a-conversation-with-jiquan-ngiam-about-agent-mcp-security.md",
       "video_id": "M02kXnomB2U",
       "word_count": 6174,
       "chunk": null,
       "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-02.md",
+      "video_id": "6pP8x8sXoaM",
+      "word_count": 3994,
+      "chunk": 2,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-04.md",
+      "video_id": "6pP8x8sXoaM",
+      "word_count": 1947,
+      "chunk": 4,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-01.md",
+      "video_id": "6pP8x8sXoaM",
+      "word_count": 3996,
+      "chunk": 1,
+      "total_chunks": 4,
       "embedding_ready": true
     },
     {

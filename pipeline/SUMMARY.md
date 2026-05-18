@@ -1,17 +1,21 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-18 08:07 UTC
+> Last sync: 2026-05-18 15:36 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 252 |
-| Total transcripts | 252 |
+| New transcripts | 256 |
+| Total transcripts | 256 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The Great Transition | Unsupervised Learning | ai-llms |
+| The Great Transition | Unsupervised Learning | ai-llms |
+| The Great Transition | Unsupervised Learning | ai-llms |
+| The Great Transition | Unsupervised Learning | ai-llms |
 | This Sandbox Tool Makes Claude Code Unstoppable (Code On Incus) | Better Stack | software-engineering |
 | How I Use Claude Code For B2B Outreach (35% Reply Rate) | Oleg Melnikov | ai-llms |
 | EVERYTHING you need to know to build a Dashboard UI in 8 minutes (beginner friendly) | Kole Jain | business |
@@ -269,18 +273,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 157 | 59 |
+| ai-llms | 161 | 59 |
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
 | finance-investing | 17 | 8 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **252** |  |
+| **Total** | **256** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-05-18 | 4 |
 | 2026-05-17 | 1 |
 | 2026-05-14 | 2 |
 | 2026-05-13 | 1 |
