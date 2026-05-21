@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-21 18:02 UTC
+> Last sync: 2026-05-21 21:30 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
@@ -81,7 +82,6 @@
 | Stop Prompting, Start Engineering: The "Context as Code" Shift | AI Native Dev | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
 | Stealing $10K Website Designs with Claude Code | Chase AI | ai-llms |
-| Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | faith |
 | Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything. | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | Never Run claude /init | Matt Pocock | ai-llms |
@@ -285,6 +285,7 @@
 
 | Date | New |
 |---|---|
+| 2026-05-21 | 1 |
 | 2026-05-18 | 4 |
 | 2026-05-17 | 1 |
 | 2026-05-14 | 2 |
