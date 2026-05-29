@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-29 11:35 UTC
+> Last sync: 2026-05-29 15:36 UTC
 
 ## This Run
 
@@ -12,6 +12,9 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
+| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
+| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
 | Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
@@ -156,9 +159,6 @@
 | Claude Code & Cowork Now Run 24/7 — Scheduled Tasks | Kenny Liao | ai-llms |
 | Claude Can Now Do "OpenClaw" Natively (Remote Control + Tasks) | JeredBlu | ai-llms |
 | Cathie Wood's Big Ideas 2026 Recap | ARK Invest | ai-llms |
-| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
-| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
-| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
 | Build your own marketing tools with Claude Code | Brian Casel | ai-llms |
 | Automate tasks with the Codex app | OpenAI | ai-llms |
 | Anthropic killed Tool calling | AI Jason | ai-llms |
@@ -285,5 +285,5 @@
 
 | Date | New |
 |---|---|
-| (none) | 0 |
+| 2026-05-29 | 3 |
 

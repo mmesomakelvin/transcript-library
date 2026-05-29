@@ -4,7 +4,7 @@ title: "CISL Seminar – Boyuan (Keven) Guan (Florida International University)"
 channel: "NSF NCAR Computational and Information Systems Lab"
 topic: "ai-llms"
 published_date: "2026-02-02"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-29"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=EKv42s8YnOM"
 duration: 3733
