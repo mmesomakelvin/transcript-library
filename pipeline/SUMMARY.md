@@ -1,21 +1,50 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-05-30 21:00 UTC
+> Last sync: 2026-05-31 03:58 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 256 |
-| Total transcripts | 256 |
+| New transcripts | 259 |
+| Total transcripts | 259 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
-| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
-| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
-| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
+| You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
+| You Should Be Using Tailscale | Syntax | ai-llms |
+| Why a Doomsday AI Blog Wiped Out $300 Billion | Prof G Markets | Prof G Markets | ai-llms |
+| Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How) | Ticker Symbol: YOU | finance-investing |
+| The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
+| The AI Agent Economy Is Here | Y Combinator | ai-llms |
+| Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
+| THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
+| Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
+| Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
 | Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
+| My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
+| Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
+| How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
+| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
+| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
+| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| FREE Phone Calls with Claude Code | NetworkChuck | ai-llms |
+| Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
+| Claude Code just replaced your ad agency - here's how | Agrici Daniel | ai-llms |
+| Anthropic Just Killed Tool Calling | Prompt Engineering | ai-llms |
+| Anthropic Just Dropped 17 New Claude Code Features | Ray Amjad | ai-llms |
+| 5 SaaS UI/UX mistakes that SCREAM you Vibe Code | Kole Jain | software-engineering |
+| 10 CLI Tools I'm using alongside Claude Code | Starmorph AI | StarMorph AI | ai-llms |
+| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
+| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
+| CISL Seminar – Boyuan (Keven) Guan (Florida International University) | NSF NCAR Computational and Information Systems Lab | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
 | The Great Transition | Unsupervised Learning | ai-llms |
@@ -30,7 +59,6 @@
 | The 6 Levels of Claude Code Explained | Chase AI | ai-llms |
 | My Pi Agent Teams. Claude Code Leak SIGNAL. Harness Engineering | IndyDevDan | ai-llms |
 | How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
-| Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
 | Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Mac Mini Agents: OpenClaw is a NIGHTMARE... Use these SKILLS instead | IndyDevDan | ai-llms |
@@ -44,8 +72,6 @@
 | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | ai-llms |
 | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | ai-llms |
 | Your codebase is NOT ready for AI (here's how to fix it) | Matt Pocock | software-engineering |
-| You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
-| You Should Be Using Tailscale | Syntax | ai-llms |
 | Why the 60-30-10 Rule is RUINING Your UI Designs | Kole Jain | ai-llms |
 | Why a Doomsday AI Blog Wiped Out $300 Billion | Prof G Markets | The Prof G Pod – Scott Galloway | ai-llms |
 | Why Owning Nothing Is So Expensive | Business Insider | hardware-homelab |
@@ -55,7 +81,6 @@
 | WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | business |
 | Visualizing the Business Cycle | Benjamin Cowen | finance-investing |
 | Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
-| Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How) | Ticker Symbol: YOU | finance-investing |
 | This FREE AI Tool Auto-Generates Gridfinity Bins! | CNC Kitchen | software-engineering |
 | The US Iran Conflict Will Make Smart Investors Rich (Here's How) | Ticker Symbol: YOU | ai-llms |
 | The Psychology of Premium Websites | Sam Crawford | Squarespace Expert | software-engineering |
@@ -67,7 +92,6 @@
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
-| The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
 | The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
 | The Correct Way to Use Claude Code Teams | AI LABS | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
@@ -77,20 +101,13 @@
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
-| The AI Agent Economy Is Here | Y Combinator | ai-llms |
 | The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
-| Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
-| THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
-| Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | Stop Prompting, Start Engineering: The "Context as Code" Shift | AI Native Dev | ai-llms |
-| Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
 | Stealing $10K Website Designs with Claude Code | Chase AI | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | faith |
 | Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything. | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | Never Run claude /init | Matt Pocock | ai-llms |
 | My Production Dockerfile Rules: How I Build Docker Images | DevOps & AI Toolkit | software-engineering |
-| My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
-| Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
@@ -101,23 +118,13 @@
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Found the Fastest Way to Get Great App UX | Sean Kochel | ai-llms |
 | I Built 3 SaaS Apps to $200K MRR: Here's My Exact Playbook | Starter Story | business |
-| How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
 | How to Transplant Your ChatGPT Brain into Claude (AI Memory Transfer) | Eliot Prince | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | How to Discern God Opportunities vs Business Traps | GOSHEN | business |
 | How To Use NotebookLM - 7 Crazy Ways | AI LABS | ai-llms |
-| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
-| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
-| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
 | How I Get Unlimited Leads Using Claude Code (For Cold Email) | Taylor Haren | ai-llms |
 | How Does Private Equity Actually Work | Alux.com | business |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | He got 1,000 SaaS Clients in 12 Months Using 5-Minute Looms (No Sales Calls) | ItsKeaton | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
@@ -141,7 +148,6 @@
 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | ai-llms |
 | Claude Cowork Just Changed How You Do Marketing | Grace Leung | ai-llms |
 | Claude Code just replaced your blog writer - AI slop is OVER | Agrici Daniel | ai-llms |
-| Claude Code just replaced your ad agency - here's how | Agrici Daniel | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
@@ -162,9 +168,7 @@
 | Build your own marketing tools with Claude Code | Brian Casel | ai-llms |
 | Automate tasks with the Codex app | OpenAI | ai-llms |
 | Anthropic killed Tool calling | AI Jason | ai-llms |
-| Anthropic Just Killed Tool Calling | Prompt Engineering | ai-llms |
 | Anthropic Just Dropped the Feature Everyone Asked For | Ray Amjad | ai-llms |
-| Anthropic Just Dropped 17 New Claude Code Features | Ray Amjad | ai-llms |
 | Agentic AI in Trading: The Evolution of Trading Bots with Irene Aldridge | Quantopian | ai-llms |
 | Agent memory resolved? | AI Jason | business |
 | AI changes *Nothing* — Dax Raad, OpenCode | AI Engineer | ai-llms |
@@ -173,7 +177,6 @@
 | A Conversation with Jiquan Ngiam About Agent + MCP Security | Unsupervised Learning | ai-llms |
 | 7 Modern UI Layouts from 50 Top Software Companies (+ Free Figma File) | Kole Jain | software-engineering |
 | 6 Tiny Habits That Save Me 15 Hours A Week In My Business | Layla at ProcessDriven | business |
-| 5 SaaS UI/UX mistakes that SCREAM you Vibe Code | Kole Jain | software-engineering |
 | 5 OpenClaw agents run my home, finances, and code | Jesse Genet | How I AI | ai-llms |
 | 5 OpenClaw agents run my home, finances, and code | Jesse Genet | How I AI | ai-llms |
 | 5 OpenClaw agents run my home, finances, and code | Jesse Genet | How I AI | ai-llms |
@@ -273,17 +276,18 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 161 | 59 |
+| ai-llms | 164 | 61 |
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
 | finance-investing | 17 | 8 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **256** |  |
+| **Total** | **259** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-05-31 | 30 |
 | 2026-05-29 | 3 |
 

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-05-30T21:00:45",
-  "total_files": 256,
+  "generated": "2026-05-31T03:58:14",
+  "total_files": 259,
   "total_chunks": 112,
   "files": [
     {
@@ -14,7 +14,7 @@
     {
       "path": "topics/ai-llms/Ray Amjad/2026-02-21_anthropic-just-dropped-17-new-claude-code-features.md",
       "video_id": "F_frSYyhzOE",
-      "word_count": 3924,
+      "word_count": 3953,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -174,7 +174,7 @@
     {
       "path": "topics/ai-llms/Prompt Engineering/2026-02-18_anthropic-just-killed-tool-calling.md",
       "video_id": "8dVCSPXG6Mw",
-      "word_count": 1963,
+      "word_count": 1960,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -206,7 +206,7 @@
     {
       "path": "topics/ai-llms/Leon van Zyl/2026-02-23_stop-using-claude-code-without-this-tool.md",
       "video_id": "CQeKmG1o85E",
-      "word_count": 3012,
+      "word_count": 3010,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -358,7 +358,15 @@
     {
       "path": "topics/ai-llms/AI Jason/2026-02-25_how-to-prompt-gemini-31-for-epic-animations.md",
       "video_id": "kcOowmrVI7k",
-      "word_count": 1008,
+      "word_count": 1011,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/StarMorph AI/2026-02-22_10-cli-tools-im-using-alongside-claude-code-starmorph-ai.md",
+      "video_id": "3NzCBIcIqD0",
+      "word_count": 1791,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -502,7 +510,7 @@
     {
       "path": "topics/ai-llms/Marcus Vorwaller/2026-02-07_meet-sidecar-you-might-never-open-cursor-again.md",
       "video_id": "5QZxWmDl_tc",
-      "word_count": 1738,
+      "word_count": 1741,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -510,7 +518,7 @@
     {
       "path": "topics/ai-llms/Y Combinator/2026-02-21_the-ai-agent-economy-is-here.md",
       "video_id": "Q8wVMdwhlh4",
-      "word_count": 4940,
+      "word_count": 4882,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -646,7 +654,7 @@
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-06.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 1027,
+      "word_count": 953,
       "chunk": 6,
       "total_chunks": 6,
       "embedding_ready": true
@@ -654,7 +662,7 @@
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-04.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3992,
+      "word_count": 3995,
       "chunk": 4,
       "total_chunks": 6,
       "embedding_ready": true
@@ -670,7 +678,7 @@
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-02.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3997,
+      "word_count": 3996,
       "chunk": 2,
       "total_chunks": 6,
       "embedding_ready": true
@@ -678,7 +686,7 @@
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-03.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3997,
+      "word_count": 3992,
       "chunk": 3,
       "total_chunks": 6,
       "embedding_ready": true
@@ -686,7 +694,7 @@
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-05.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3992,
+      "word_count": 3998,
       "chunk": 5,
       "total_chunks": 6,
       "embedding_ready": true
@@ -740,6 +748,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/NetworkChuck/2026-01-23_free-phone-calls-with-claude-code.md",
+      "video_id": "cT22fTzotYc",
+      "word_count": 4538,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/NetworkChuck/2024-06-07_dump-chatgpt-use-fabric-instead.md",
       "video_id": "ad-OHmjAU_Y",
       "word_count": 97,
@@ -758,7 +774,7 @@
     {
       "path": "topics/ai-llms/Syntax/2026-02-16_this-is-how-to-expose-your-apps-to-ai-webmcp.md",
       "video_id": "sOPhVSeimtI",
-      "word_count": 3414,
+      "word_count": 3388,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -951,6 +967,14 @@
       "path": "topics/ai-llms/T\u00c2CHES TEACHES/2025-11-13_stop-telling-claude-code-what-to-do.md",
       "video_id": "8_7Sq6Vu0S4",
       "word_count": 5441,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Prof G Markets/2026-02-25_why-a-doomsday-ai-blog-wiped-out-300-billion-prof-g-markets.md",
+      "video_id": "OzeJsrhh4k0",
+      "word_count": 5462,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1190,7 +1214,7 @@
     {
       "path": "topics/ai-llms/IndyDevDan/2026-02-16_my-4-layer-claude-code-playwright-cli-skill-agentic-browser-automation.md",
       "video_id": "efctPj6bjCY",
-      "word_count": 6023,
+      "word_count": 6038,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

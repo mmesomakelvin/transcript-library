@@ -4,7 +4,7 @@ title: "5 SaaS UI/UX mistakes that SCREAM you Vibe Code"
 channel: "Kole Jain"
 topic: "software-engineering"
 published_date: "2026-02-12"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-31"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=PDcQJOPby1k"
 duration: 392

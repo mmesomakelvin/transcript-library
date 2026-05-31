@@ -4,7 +4,7 @@ title: "The Exact Claude Setup That Writes My Documents Automatically"
 channel: "Dylan Davis"
 topic: "ai-llms"
 published_date: "2026-01-20"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-31"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=u2xcbJNhZIY"
 duration: 1005

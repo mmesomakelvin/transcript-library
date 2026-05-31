@@ -4,7 +4,7 @@ title: "Claude Code just replaced your ad agency - here's how"
 channel: "Agrici Daniel"
 topic: "ai-llms"
 published_date: "2026-02-12"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-31"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Kf7ejOtl5KU"
 duration: 733

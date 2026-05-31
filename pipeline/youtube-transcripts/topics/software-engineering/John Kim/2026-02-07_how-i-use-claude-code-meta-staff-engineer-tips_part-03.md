@@ -4,7 +4,7 @@ title: "How I use Claude Code (Meta Staff Engineer Tips)"
 channel: "John Kim"
 topic: "software-engineering"
 published_date: "2026-02-07"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-31"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=mZzhfPle9QU"
 duration: 2772

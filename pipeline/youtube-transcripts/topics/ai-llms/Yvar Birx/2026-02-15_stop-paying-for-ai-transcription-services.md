@@ -4,7 +4,7 @@ title: "Stop Paying for AI Transcription Services"
 channel: "Yvar Birx"
 topic: "ai-llms"
 published_date: "2026-02-15"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-31"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=qnVyY0zicF0"
 duration: 211

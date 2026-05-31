@@ -4,7 +4,7 @@ title: "Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How)"
 channel: "Ticker Symbol: YOU"
 topic: "finance-investing"
 published_date: "2026-02-22"
-ingested_date: "2026-03-02"
+ingested_date: "2026-05-31"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=pPk9zHhP0ug"
 duration: 866
