@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-01 04:10 UTC
+> Last sync: 2026-06-01 13:39 UTC
 
 ## This Run
 
@@ -12,6 +12,9 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
+| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
+| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | You Should Be Using Tailscale | Syntax | ai-llms |
 | Why a Doomsday AI Blog Wiped Out $300 Billion | Prof G Markets | Prof G Markets | ai-llms |
@@ -26,9 +29,6 @@
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
 | How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
-| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
-| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
-| How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
@@ -288,6 +288,7 @@
 
 | Date | New |
 |---|---|
-| 2026-05-31 | 30 |
+| 2026-06-01 | 3 |
+| 2026-05-31 | 27 |
 | 2026-05-29 | 3 |
 
