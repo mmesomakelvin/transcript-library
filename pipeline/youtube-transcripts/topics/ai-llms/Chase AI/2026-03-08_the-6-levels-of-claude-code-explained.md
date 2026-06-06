@@ -4,7 +4,7 @@ title: "The 6 Levels of Claude Code Explained"
 channel: "Chase AI"
 topic: "ai-llms"
 published_date: "2026-03-08"
-ingested_date: "2026-05-06"
+ingested_date: "2026-06-06"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=TUKYbUIXLOE"
 duration: 1955

@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-06 13:46 UTC
+> Last sync: 2026-06-06 17:16 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The 6 Levels of Claude Code Explained | Chase AI | ai-llms |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
@@ -56,7 +57,6 @@
 | Once I Understood This About Investing, My Life Changed. | Chamath Palihapitiya | finance-investing |
 | Why Owning Nothing Is So Expensive | Business Insider | ai-llms |
 | We're All Building a Single Digital Assistant | Unsupervised Learning | ai-llms |
-| The 6 Levels of Claude Code Explained | Chase AI | ai-llms |
 | My Pi Agent Teams. Claude Code Leak SIGNAL. Harness Engineering | IndyDevDan | ai-llms |
 | How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
@@ -288,6 +288,7 @@
 
 | Date | New |
 |---|---|
+| 2026-06-06 | 1 |
 | 2026-06-01 | 3 |
 | 2026-05-31 | 27 |
 
