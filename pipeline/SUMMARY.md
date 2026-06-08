@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-08 18:28 UTC
+> Last sync: 2026-06-08 21:52 UTC
 
 ## This Run
 
@@ -12,6 +12,9 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
+| Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
+| Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | The 6 Levels of Claude Code Explained | Chase AI | ai-llms |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
@@ -126,9 +129,6 @@
 | How I Get Unlimited Leads Using Claude Code (For Cold Email) | Taylor Haren | ai-llms |
 | How Does Private Equity Actually Work | Alux.com | business |
 | He got 1,000 SaaS Clients in 12 Months Using 5-Minute Looms (No Sales Calls) | ItsKeaton | ai-llms |
-| Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
-| Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
-| Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Fine-Tune an Open Source LLM with Claude Code/Codex (Hugging Face Model Trainer Skill) | Alejandro AO | ai-llms |
 | FREE Phone Calls with Claude Code | NetworkChuck | hardware-homelab |
 | Every Claude Code Concept Explained for Normal People | Simon Scrapes | ai-llms |
@@ -288,6 +288,7 @@
 
 | Date | New |
 |---|---|
+| 2026-06-08 | 3 |
 | 2026-06-06 | 1 |
 | 2026-06-01 | 3 |
 

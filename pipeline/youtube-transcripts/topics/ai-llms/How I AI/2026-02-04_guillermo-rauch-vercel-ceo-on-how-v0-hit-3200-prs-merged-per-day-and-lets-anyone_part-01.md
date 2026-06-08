@@ -4,7 +4,7 @@ title: "Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and 
 channel: "How I AI"
 topic: "ai-llms"
 published_date: "2026-02-04"
-ingested_date: "2026-03-02"
+ingested_date: "2026-06-08"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Yb9IyTOh0xg"
 duration: 2616
