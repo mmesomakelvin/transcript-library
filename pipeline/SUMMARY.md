@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-09 18:07 UTC
+> Last sync: 2026-06-09 21:50 UTC
 
 ## This Run
 
@@ -13,6 +13,9 @@
 | Title | Channel | Topic |
 |---|---|---|
 | New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
+| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
+| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
+| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
@@ -117,9 +120,6 @@
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
 | Keep Using Your Local Claude Code Session from Any Device | Huge Unlock! | JeredBlu | ai-llms |
 | I Tried Every AI Coding Agent... Here's My 2026 Setup | Your Average Tech Bro | ai-llms |
-| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
-| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
-| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Found the Fastest Way to Get Great App UX | Sean Kochel | ai-llms |
 | I Built 3 SaaS Apps to $200K MRR: Here's My Exact Playbook | Starter Story | business |
 | How to Transplant Your ChatGPT Brain into Claude (AI Memory Transfer) | Eliot Prince | ai-llms |
@@ -289,7 +289,7 @@
 
 | Date | New |
 |---|---|
-| 2026-06-09 | 1 |
+| 2026-06-09 | 4 |
 | 2026-06-08 | 3 |
 | 2026-06-06 | 1 |
 
