@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-09 11:18 UTC
+> Last sync: 2026-06-09 14:54 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 259 |
-| Total transcripts | 259 |
+| New transcripts | 260 |
+| Total transcripts | 260 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
@@ -276,18 +277,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 164 | 61 |
+| ai-llms | 165 | 61 |
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
 | finance-investing | 17 | 8 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **259** |  |
+| **Total** | **260** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-09 | 1 |
 | 2026-06-08 | 3 |
 | 2026-06-06 | 1 |
 
