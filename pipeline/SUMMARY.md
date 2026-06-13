@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-13 10:30 UTC
+> Last sync: 2026-06-13 14:02 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 260 |
-| Total transcripts | 260 |
+| New transcripts | 261 |
+| Total transcripts | 261 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
@@ -277,18 +278,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 165 | 61 |
+| ai-llms | 166 | 61 |
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
 | finance-investing | 17 | 8 |
 | hardware-homelab | 7 | 6 |
 | faith | 3 | 3 |
-| **Total** | **260** |  |
+| **Total** | **261** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-13 | 1 |
 | 2026-06-09 | 4 |
 | 2026-06-08 | 3 |
 | 2026-06-06 | 1 |

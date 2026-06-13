@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-13T10:30:45",
-  "total_files": 260,
+  "generated": "2026-06-13T14:02:17",
+  "total_files": 261,
   "total_chunks": 112,
   "files": [
     {
@@ -1031,6 +1031,14 @@
       "path": "topics/ai-llms/Better Stack/2026-01-31_how-to-build-a-rag-system-that-actually-works.md",
       "video_id": "pvCabUerwss",
       "word_count": 2331,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Better Stack/2026-03-08_googles-new-cli-is-the-missing-piece-for-claude-code.md",
+      "video_id": "EKG9kX86u0s",
+      "word_count": 1792,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
