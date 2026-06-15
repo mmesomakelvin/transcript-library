@@ -6,9 +6,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 <!-- BADGES:START -->
-[![Transcripts](https://img.shields.io/badge/transcripts-261-brightgreen)]()
+[![Transcripts](https://img.shields.io/badge/transcripts-265-brightgreen)]()
 [![Topics](https://img.shields.io/badge/topics-6-orange)]()
-[![Channels](https://img.shields.io/badge/channels-95-purple)]()
+[![Channels](https://img.shields.io/badge/channels-96-purple)]()
 <!-- BADGES:END -->
 [![Sync](https://img.shields.io/badge/sync-every%204h-informational)]()
 
@@ -79,7 +79,7 @@ A fully automated pipeline — codenamed **Jarvis** — that syncs a YouTube pla
 ## What's Inside
 
 <!-- STATS:START -->
-The vault currently holds **261 transcripts** from **95 channels** across **6 topics**:
+The vault currently holds **265 transcripts** from **96 channels** across **6 topics**:
 
 | Topic | Transcripts | Channels | What's Covered |
 |:------|:-----------:|:--------:|:---------------|
@@ -87,8 +87,8 @@ The vault currently holds **261 transcripts** from **95 channels** across **6 to
 | **software-engineering** | 43 | 16 | Software development practices, architecture, dev tooling, coding workflows, and engineering operations |
 | **business** | 25 | 16 | Company building, operations, management, hiring, leadership, and strategy |
 | **finance-investing** | 17 | 8 | Investing, markets, valuation, personal finance stacks, and financial strategy |
+| **faith** | 7 | 4 | Religious teaching, sermons, faith‑based content |
 | **hardware-homelab** | 7 | 6 | Hardware builds, servers, homelab, local infrastructure |
-| **faith** | 3 | 3 | Religious teaching, sermons, faith‑based content |
 <!-- STATS:END -->
 
 Each topic is defined with **scope**, **exclusions**, and **keywords** in its own `README.md` — the classifier reads these definitions to make routing decisions.

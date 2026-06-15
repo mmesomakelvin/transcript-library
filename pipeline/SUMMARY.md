@@ -1,17 +1,21 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-15 13:57 UTC
+> Last sync: 2026-06-15 19:49 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 261 |
-| Total transcripts | 261 |
+| New transcripts | 265 |
+| Total transcripts | 265 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| I Believe, But Help My Unbelief | With The Perrys | faith |
+| I Believe, But Help My Unbelief | With The Perrys | faith |
+| I Believe, But Help My Unbelief | With The Perrys | faith |
+| I Believe, But Help My Unbelief | With The Perrys | faith |
 | Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
@@ -282,14 +286,15 @@
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
 | finance-investing | 17 | 8 |
+| faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| faith | 3 | 3 |
-| **Total** | **261** |  |
+| **Total** | **265** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-15 | 4 |
 | 2026-06-13 | 1 |
 | 2026-06-09 | 4 |
 | 2026-06-08 | 3 |

@@ -1,7 +1,7 @@
 {
-  "generated": "2026-06-15T13:57:02",
-  "total_files": 261,
-  "total_chunks": 112,
+  "generated": "2026-06-15T19:49:55",
+  "total_files": 265,
+  "total_chunks": 116,
   "files": [
     {
       "path": "topics/software-engineering/Sam Crawford | Squarespace Expert/2026-02-15_the-psychology-of-premium-websites.md",
@@ -681,6 +681,38 @@
       "word_count": 4349,
       "chunk": null,
       "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/faith/With The Perrys/2026-03-05_i-believe-but-help-my-unbelief_part-03.md",
+      "video_id": "gcO3kOlpYlM",
+      "word_count": 3995,
+      "chunk": 3,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/faith/With The Perrys/2026-03-05_i-believe-but-help-my-unbelief_part-04.md",
+      "video_id": "gcO3kOlpYlM",
+      "word_count": 1267,
+      "chunk": 4,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/faith/With The Perrys/2026-03-05_i-believe-but-help-my-unbelief_part-02.md",
+      "video_id": "gcO3kOlpYlM",
+      "word_count": 3999,
+      "chunk": 2,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/faith/With The Perrys/2026-03-05_i-believe-but-help-my-unbelief_part-01.md",
+      "video_id": "gcO3kOlpYlM",
+      "word_count": 4000,
+      "chunk": 1,
+      "total_chunks": 4,
       "embedding_ready": true
     },
     {
