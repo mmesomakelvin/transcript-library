@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-16 19:38 UTC
+> Last sync: 2026-06-16 22:13 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 265 |
-| Total transcripts | 265 |
+| New transcripts | 266 |
+| Total transcripts | 266 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Build an Obsidian SYSTEM Not a Second Brain! | Eric Michaud | ai-llms |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
@@ -282,18 +283,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 166 | 61 |
+| ai-llms | 167 | 62 |
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
 | finance-investing | 17 | 8 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **265** |  |
+| **Total** | **266** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-16 | 1 |
 | 2026-06-15 | 4 |
 | 2026-06-13 | 1 |
 | 2026-06-09 | 4 |

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-16T19:38:19",
-  "total_files": 265,
+  "generated": "2026-06-16T22:13:16",
+  "total_files": 266,
   "total_chunks": 116,
   "files": [
     {
@@ -1265,6 +1265,14 @@
       "word_count": 3996,
       "chunk": 2,
       "total_chunks": 6,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Eric Michaud/2026-05-05_build-an-obsidian-system-not-a-second-brain.md",
+      "video_id": "OZ3ZNhrPbF4",
+      "word_count": 1951,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
