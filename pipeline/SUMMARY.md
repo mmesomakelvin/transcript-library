@@ -1,17 +1,19 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-23 17:57 UTC
+> Last sync: 2026-06-23 21:44 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 266 |
-| Total transcripts | 266 |
+| New transcripts | 268 |
+| Total transcripts | 268 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Even Anthropic Engineers Use This Claude Code Workflow | Ray Amjad | ai-llms |
+| Ben Lost Everything" - Patreon Video | Benjamin | finance-investing |
 | Build an Obsidian SYSTEM Not a Second Brain! | Eric Michaud | ai-llms |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
@@ -283,17 +285,18 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 167 | 62 |
+| ai-llms | 168 | 62 |
 | software-engineering | 43 | 16 |
 | business | 25 | 16 |
-| finance-investing | 17 | 8 |
+| finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **266** |  |
+| **Total** | **268** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-23 | 2 |
 | 2026-06-16 | 1 |
 

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-23T17:57:18",
-  "total_files": 266,
+  "generated": "2026-06-23T21:44:38",
+  "total_files": 268,
   "total_chunks": 116,
   "files": [
     {
@@ -439,6 +439,14 @@
       "path": "topics/finance-investing/Chamath Palihapitiya/2026-03-27_once-i-understood-this-about-investing-my-life-changed.md",
       "video_id": "J2qKVjRR12w",
       "word_count": 2892,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Benjamin/2026-03-06_ben-lost-everything---patreon-video.md",
+      "video_id": "_wPSSUjpnPE",
+      "word_count": 3048,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1199,6 +1207,14 @@
       "path": "topics/ai-llms/Ray Amjad/2026-02-25_anthropic-just-dropped-the-feature-everyone-asked-for.md",
       "video_id": "y3xzYwxQuHc",
       "word_count": 2352,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Ray Amjad/2026-04-15_even-anthropic-engineers-use-this-claude-code-workflow.md",
+      "video_id": "ASAaKhK1B5w",
+      "word_count": 2804,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
