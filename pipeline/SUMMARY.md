@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-28 17:13 UTC
+> Last sync: 2026-06-28 21:03 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 268 |
-| Total transcripts | 268 |
+| New transcripts | 269 |
+| Total transcripts | 269 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| 15 Garage Upgrades Everyone Needs | Spencley Design Co. | software-engineering |
 | Even Anthropic Engineers Use This Claude Code Workflow | Ray Amjad | ai-llms |
 | Ben Lost Everything" - Patreon Video | Benjamin | finance-investing |
 | Build an Obsidian SYSTEM Not a Second Brain! | Eric Michaud | ai-llms |
@@ -286,16 +287,17 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 168 | 62 |
-| software-engineering | 43 | 16 |
+| software-engineering | 44 | 17 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **268** |  |
+| **Total** | **269** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-28 | 1 |
 | 2026-06-23 | 2 |
 

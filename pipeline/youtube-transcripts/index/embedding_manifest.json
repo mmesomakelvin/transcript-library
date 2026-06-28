@@ -1,6 +1,6 @@
 {
-  "generated": "2026-06-28T17:13:46",
-  "total_files": 268,
+  "generated": "2026-06-28T21:03:09",
+  "total_files": 269,
   "total_chunks": 116,
   "files": [
     {
@@ -295,6 +295,14 @@
       "path": "topics/software-engineering/CNC Kitchen/2025-08-30_this-free-ai-tool-auto-generates-gridfinity-bins.md",
       "video_id": "e3EhJJlWwws",
       "word_count": 2570,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Spencley Design Co./2026-05-21_15-garage-upgrades-everyone-needs.md",
+      "video_id": "K65VEWTD4dw",
+      "word_count": 7477,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
