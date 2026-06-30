@@ -1,17 +1,21 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-06-29 21:28 UTC
+> Last sync: 2026-06-30 03:41 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 269 |
-| Total transcripts | 269 |
+| New transcripts | 273 |
+| Total transcripts | 273 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
+| Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
+| Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
+| Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
 | 15 Garage Upgrades Everyone Needs | Spencley Design Co. | software-engineering |
 | Even Anthropic Engineers Use This Claude Code Workflow | Ray Amjad | ai-llms |
 | Ben Lost Everything" - Patreon Video | Benjamin | finance-investing |
@@ -286,18 +290,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 168 | 62 |
+| ai-llms | 172 | 63 |
 | software-engineering | 44 | 17 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **269** |  |
+| **Total** | **273** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-06-30 | 4 |
 | 2026-06-28 | 1 |
 | 2026-06-23 | 2 |
 

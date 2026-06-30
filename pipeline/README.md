@@ -6,9 +6,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 <!-- BADGES:START -->
-[![Transcripts](https://img.shields.io/badge/transcripts-269-brightgreen)]()
+[![Transcripts](https://img.shields.io/badge/transcripts-273-brightgreen)]()
 [![Topics](https://img.shields.io/badge/topics-6-orange)]()
-[![Channels](https://img.shields.io/badge/channels-99-purple)]()
+[![Channels](https://img.shields.io/badge/channels-100-purple)]()
 <!-- BADGES:END -->
 [![Sync](https://img.shields.io/badge/sync-every%204h-informational)]()
 
@@ -79,11 +79,11 @@ A fully automated pipeline — codenamed **Jarvis** — that syncs a YouTube pla
 ## What's Inside
 
 <!-- STATS:START -->
-The vault currently holds **269 transcripts** from **99 channels** across **6 topics**:
+The vault currently holds **273 transcripts** from **100 channels** across **6 topics**:
 
 | Topic | Transcripts | Channels | What's Covered |
 |:------|:-----------:|:--------:|:---------------|
-| **ai-llms** | 168 | 62 | Large language models, AI agents, prompt engineering, RAG, model tooling, and agent workflows |
+| **ai-llms** | 172 | 63 | Large language models, AI agents, prompt engineering, RAG, model tooling, and agent workflows |
 | **software-engineering** | 44 | 17 | Software development practices, architecture, dev tooling, coding workflows, and engineering operations |
 | **business** | 25 | 16 | Company building, operations, management, hiring, leadership, and strategy |
 | **finance-investing** | 18 | 9 | Investing, markets, valuation, personal finance stacks, and financial strategy |
