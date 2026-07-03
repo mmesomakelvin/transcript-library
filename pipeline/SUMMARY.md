@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-03 14:06 UTC
+> Last sync: 2026-07-03 17:27 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 274 |
-| Total transcripts | 274 |
+| New transcripts | 275 |
+| Total transcripts | 275 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| If I rebuilt my Smart Home, I’d want THIS | Smart Home Solver | software-engineering |
 | Claude Certified Architect (CCA-F): Study Guide to Pass First Try | Preporato | AI for Engineers | ai-llms |
 | Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
 | Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
@@ -292,17 +293,18 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 173 | 64 |
-| software-engineering | 44 | 17 |
+| software-engineering | 45 | 18 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **274** |  |
+| **Total** | **275** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-03 | 1 |
 | 2026-07-01 | 1 |
 | 2026-06-30 | 4 |
 | 2026-06-28 | 1 |
