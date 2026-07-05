@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-04 20:59 UTC
+> Last sync: 2026-07-05 03:30 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 275 |
-| Total transcripts | 275 |
+| New transcripts | 276 |
+| Total transcripts | 276 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How To Create Stunning AI Image Ads with AI (Claude Code + Nano Banana 2) | Mike Futia | SCALE AI | ai-llms |
 | If I rebuilt my Smart Home, I’d want THIS | Smart Home Solver | software-engineering |
 | Claude Certified Architect (CCA-F): Study Guide to Pass First Try | Preporato | AI for Engineers | ai-llms |
 | Webinar: CRISPR & Gene Editing for LDL Cholesterol | Dr. Curnew MD | Dr. Greg Curnew | ai-llms |
@@ -292,18 +293,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 173 | 64 |
+| ai-llms | 174 | 65 |
 | software-engineering | 45 | 18 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **275** |  |
+| **Total** | **276** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-05 | 1 |
 | 2026-07-03 | 1 |
 | 2026-07-01 | 1 |
 | 2026-06-30 | 4 |

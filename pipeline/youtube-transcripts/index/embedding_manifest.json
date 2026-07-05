@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-04T20:59:29",
-  "total_files": 275,
+  "generated": "2026-07-05T03:30:18",
+  "total_files": 276,
   "total_chunks": 120,
   "files": [
     {
@@ -1511,6 +1511,14 @@
       "path": "topics/ai-llms/Alejandro AO and HuggingFace/2026-01-31_claude-code-skills-skillssh---crash-course.md",
       "video_id": "rcRS8-7OgBo",
       "word_count": 4071,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Mike Futia | SCALE AI/2026-03-13_how-to-create-stunning-ai-image-ads-with-ai-claude-code-nano-banana-2.md",
+      "video_id": "tFyKaGP64M4",
+      "word_count": 3432,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
