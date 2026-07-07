@@ -4,7 +4,7 @@ title: "Claude Certified Architect (CCA-F): Study Guide to Pass First Try"
 channel: "Preporato | AI for Engineers"
 topic: "ai-llms"
 published_date: "2026-06-23"
-ingested_date: "2026-07-01"
+ingested_date: "2026-07-07"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=akzKBQVyFEI"
 duration: 1486
