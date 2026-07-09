@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-09T15:13:14",
-  "total_files": 276,
+  "generated": "2026-07-09T18:00:30",
+  "total_files": 277,
   "total_chunks": 120,
   "files": [
     {
@@ -311,6 +311,14 @@
       "path": "topics/software-engineering/Spencley Design Co./2026-05-21_15-garage-upgrades-everyone-needs.md",
       "video_id": "K65VEWTD4dw",
       "word_count": 7477,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Munroe Recaps /2026-01-09_success-doesnt-come-by-chance-dr-myles-munroe.md",
+      "video_id": "9NxMbmNL-kI",
+      "word_count": 2032,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

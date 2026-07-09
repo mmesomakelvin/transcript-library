@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-09 15:13 UTC
+> Last sync: 2026-07-09 18:00 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 276 |
-| Total transcripts | 276 |
+| New transcripts | 277 |
+| Total transcripts | 277 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
 | Claude Certified Architect (CCA-F): Study Guide to Pass First Try | Preporato | AI for Engineers | ai-llms |
 | How To Create Stunning AI Image Ads with AI (Claude Code + Nano Banana 2) | Mike Futia | SCALE AI | ai-llms |
 | If I rebuilt my Smart Home, I’d want THIS | Smart Home Solver | software-engineering |
@@ -294,17 +295,18 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 174 | 65 |
-| software-engineering | 45 | 18 |
+| software-engineering | 46 | 19 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **276** |  |
+| **Total** | **277** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-09 | 1 |
 | 2026-07-07 | 1 |
 | 2026-07-05 | 1 |
 | 2026-07-03 | 1 |
