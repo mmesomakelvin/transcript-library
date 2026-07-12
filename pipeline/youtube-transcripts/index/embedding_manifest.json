@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-12T17:02:31",
-  "total_files": 277,
+  "generated": "2026-07-12T20:51:41",
+  "total_files": 278,
   "total_chunks": 120,
   "files": [
     {
@@ -1071,6 +1071,14 @@
       "path": "topics/ai-llms/Y Combinator/2026-02-21_the-ai-agent-economy-is-here.md",
       "video_id": "Q8wVMdwhlh4",
       "word_count": 4882,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Sean Matthew/2026-02-24_i-gave-openclaw-its-own-computer-heres-why.md",
+      "video_id": "QCf8BCT-Kzo",
+      "word_count": 1848,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

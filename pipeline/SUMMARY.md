@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-12 17:02 UTC
+> Last sync: 2026-07-12 20:51 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 277 |
-| Total transcripts | 277 |
+| New transcripts | 278 |
+| Total transcripts | 278 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| I Gave OpenClaw Its Own Computer (Here's Why) | Sean Matthew | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
 | Claude Certified Architect (CCA-F): Study Guide to Pass First Try | Preporato | AI for Engineers | ai-llms |
 | How To Create Stunning AI Image Ads with AI (Claude Code + Nano Banana 2) | Mike Futia | SCALE AI | ai-llms |
@@ -294,18 +295,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 174 | 65 |
+| ai-llms | 175 | 66 |
 | software-engineering | 46 | 19 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **277** |  |
+| **Total** | **278** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-12 | 1 |
 | 2026-07-09 | 1 |
 | 2026-07-07 | 1 |
 | 2026-07-05 | 1 |
