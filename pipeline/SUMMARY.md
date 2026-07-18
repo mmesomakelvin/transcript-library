@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-18 17:01 UTC
+> Last sync: 2026-07-18 20:50 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 278 |
-| Total transcripts | 278 |
+| New transcripts | 279 |
+| Total transcripts | 279 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Claude Ads just replaced your ad agency - here's how (free Claude Code skill) | Agrici Daniel | software-engineering |
 | I Gave OpenClaw Its Own Computer (Here's Why) | Sean Matthew | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
 | Claude Certified Architect (CCA-F): Study Guide to Pass First Try | Preporato | AI for Engineers | ai-llms |
@@ -296,16 +297,17 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 175 | 66 |
-| software-engineering | 46 | 19 |
+| software-engineering | 47 | 20 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **278** |  |
+| **Total** | **279** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-18 | 1 |
 | 2026-07-12 | 1 |
 

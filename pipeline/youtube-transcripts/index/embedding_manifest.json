@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-18T17:01:22",
-  "total_files": 278,
+  "generated": "2026-07-18T20:50:50",
+  "total_files": 279,
   "total_chunks": 120,
   "files": [
     {
@@ -335,6 +335,14 @@
       "path": "topics/software-engineering/Sam Crawford | Squarespace Expert/2026-02-15_the-psychology-of-premium-websites.md",
       "video_id": "f2mGqlLLqok",
       "word_count": 1333,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Agrici Daniel/2026-02-12_claude-ads-just-replaced-your-ad-agency---heres-how-free-claude-code-skill.md",
+      "video_id": "Kf7ejOtl5KU",
+      "word_count": 2788,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
