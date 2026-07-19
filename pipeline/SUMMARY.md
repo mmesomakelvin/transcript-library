@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-19 17:01 UTC
+> Last sync: 2026-07-19 20:54 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 279 |
-| Total transcripts | 279 |
+| New transcripts | 280 |
+| Total transcripts | 280 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Why the 60-30-10 Rule is RUINING Your UI Designs | Kole Jain | software-engineering |
 | Claude Ads just replaced your ad agency - here's how (free Claude Code skill) | Agrici Daniel | software-engineering |
 | I Gave OpenClaw Its Own Computer (Here's Why) | Sean Matthew | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
@@ -297,17 +298,18 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 175 | 66 |
-| software-engineering | 47 | 20 |
+| software-engineering | 48 | 20 |
 | business | 25 | 16 |
 | finance-investing | 18 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **279** |  |
+| **Total** | **280** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-19 | 1 |
 | 2026-07-18 | 1 |
 | 2026-07-12 | 1 |
 

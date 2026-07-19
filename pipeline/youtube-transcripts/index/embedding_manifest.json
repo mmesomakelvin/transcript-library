@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-19T17:01:33",
-  "total_files": 279,
+  "generated": "2026-07-19T20:54:24",
+  "total_files": 280,
   "total_chunks": 120,
   "files": [
     {
@@ -287,6 +287,14 @@
       "path": "topics/software-engineering/Kole Jain/2026-02-12_5-saas-uiux-mistakes-that-scream-you-vibe-code.md",
       "video_id": "PDcQJOPby1k",
       "word_count": 1409,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Kole Jain/2026-01-08_why-the-60-30-10-rule-is-ruining-your-ui-designs.md",
+      "video_id": "66oOi9OLMCw",
+      "word_count": 1358,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
