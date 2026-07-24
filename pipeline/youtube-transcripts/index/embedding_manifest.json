@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24T13:48:28",
+  "generated": "2026-07-24T17:40:59",
   "total_files": 280,
   "total_chunks": 120,
   "files": [
@@ -1310,7 +1310,7 @@
     {
       "path": "topics/ai-llms/OpenAI/2026-02-03_automate-tasks-with-the-codex-app.md",
       "video_id": "xHnlzAPD9QI",
-      "word_count": 1011,
+      "word_count": 1013,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
