@@ -4,7 +4,7 @@ title: "Google's New CLI Is The Missing Piece for Claude Code"
 channel: "Better Stack"
 topic: "ai-llms"
 published_date: "2026-03-08"
-ingested_date: "2026-06-13"
+ingested_date: "2026-07-29"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=EKG9kX86u0s"
 duration: 511

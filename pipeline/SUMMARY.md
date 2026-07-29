@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-29 17:18 UTC
+> Last sync: 2026-07-29 20:59 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | Automate tasks with the Codex app | OpenAI | ai-llms |
 | Why the 60-30-10 Rule is RUINING Your UI Designs | Kole Jain | software-engineering |
 | Claude Ads just replaced your ad agency - here's how (free Claude Code skill) | Agrici Daniel | software-engineering |
@@ -32,7 +33,6 @@
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
-| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
@@ -309,5 +309,6 @@
 
 | Date | New |
 |---|---|
+| 2026-07-29 | 1 |
 | 2026-07-24 | 1 |
 
