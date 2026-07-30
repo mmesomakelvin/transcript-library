@@ -1,17 +1,22 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-30 10:27 UTC
+> Last sync: 2026-07-30 14:05 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 280 |
-| Total transcripts | 280 |
+| New transcripts | 285 |
+| Total transcripts | 285 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Stop Investing Like Everyone Else — Run Your Portfolio Like a Business | Paycheck To Portfolio | finance-investing |
+| How to Structure an AI Project for Data Engineering | Kahan Data Solutions | ai-llms |
+| Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
+| Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
+| Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
 | Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | Automate tasks with the Codex app | OpenAI | ai-llms |
 | Why the 60-30-10 Rule is RUINING Your UI Designs | Kole Jain | software-engineering |
@@ -297,18 +302,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 175 | 66 |
-| software-engineering | 48 | 20 |
+| ai-llms | 176 | 67 |
+| software-engineering | 51 | 20 |
 | business | 25 | 16 |
-| finance-investing | 18 | 9 |
+| finance-investing | 19 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **280** |  |
+| **Total** | **285** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-30 | 5 |
 | 2026-07-29 | 1 |
 | 2026-07-24 | 1 |
 

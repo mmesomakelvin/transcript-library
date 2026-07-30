@@ -6,9 +6,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 <!-- BADGES:START -->
-[![Transcripts](https://img.shields.io/badge/transcripts-280-brightgreen)]()
+[![Transcripts](https://img.shields.io/badge/transcripts-285-brightgreen)]()
 [![Topics](https://img.shields.io/badge/topics-6-orange)]()
-[![Channels](https://img.shields.io/badge/channels-104-purple)]()
+[![Channels](https://img.shields.io/badge/channels-105-purple)]()
 <!-- BADGES:END -->
 [![Sync](https://img.shields.io/badge/sync-every%204h-informational)]()
 
@@ -79,14 +79,14 @@ A fully automated pipeline — codenamed **Jarvis** — that syncs a YouTube pla
 ## What's Inside
 
 <!-- STATS:START -->
-The vault currently holds **280 transcripts** from **104 channels** across **6 topics**:
+The vault currently holds **285 transcripts** from **105 channels** across **6 topics**:
 
 | Topic | Transcripts | Channels | What's Covered |
 |:------|:-----------:|:--------:|:---------------|
-| **ai-llms** | 175 | 66 | Large language models, AI agents, prompt engineering, RAG, model tooling, and agent workflows |
-| **software-engineering** | 48 | 20 | Software development practices, architecture, dev tooling, coding workflows, and engineering operations |
+| **ai-llms** | 176 | 67 | Large language models, AI agents, prompt engineering, RAG, model tooling, and agent workflows |
+| **software-engineering** | 51 | 20 | Software development practices, architecture, dev tooling, coding workflows, and engineering operations |
 | **business** | 25 | 16 | Company building, operations, management, hiring, leadership, and strategy |
-| **finance-investing** | 18 | 9 | Investing, markets, valuation, personal finance stacks, and financial strategy |
+| **finance-investing** | 19 | 9 | Investing, markets, valuation, personal finance stacks, and financial strategy |
 | **faith** | 7 | 4 | Religious teaching, sermons, faith‑based content |
 | **hardware-homelab** | 7 | 6 | Hardware builds, servers, homelab, local infrastructure |
 <!-- STATS:END -->

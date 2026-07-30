@@ -1,7 +1,7 @@
 {
-  "generated": "2026-07-30T10:27:24",
-  "total_files": 280,
-  "total_chunks": 120,
+  "generated": "2026-07-30T14:05:01",
+  "total_files": 285,
+  "total_chunks": 123,
   "files": [
     {
       "path": "topics/ai-llms/10x Builder/2026-02-19_10-claude-code-tips-for-non-developers-no-terminal-needed.md",
@@ -980,6 +980,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Kahan Data Solutions/2026-04-02_how-to-structure-an-ai-project-for-data-engineering.md",
+      "video_id": "EhNrAtnuMuM",
+      "word_count": 2678,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/nunomaduro/2026-01-26_dax-raad-claude-code-opencode-ai-agents-and-future-of-programming.md",
       "video_id": "kKGeOE641b0",
       "word_count": 7368,
@@ -1468,6 +1476,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/finance-investing/Paycheck To Portfolio/2026-03-14_stop-investing-like-everyone-else-run-your-portfolio-like-a-business.md",
+      "video_id": "U7LVR5VaTfc",
+      "word_count": 2927,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/finance-investing/Paycheck To Portfolio/2026-02-28_why-i-dont-judge-my-income-etfs-by-price-and-neither-should-you_part-03.md",
       "video_id": "9FvcaLkoaG0",
       "word_count": 2641,
@@ -1769,6 +1785,30 @@
       "word_count": 2013,
       "chunk": null,
       "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Matt Pocock/2026-03-18_building-a-real-feature-with-claude-code-every-step-explained_part-03.md",
+      "video_id": "hX7yG1KVYhI",
+      "word_count": 2243,
+      "chunk": 3,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Matt Pocock/2026-03-18_building-a-real-feature-with-claude-code-every-step-explained_part-01.md",
+      "video_id": "hX7yG1KVYhI",
+      "word_count": 3991,
+      "chunk": 1,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Matt Pocock/2026-03-18_building-a-real-feature-with-claude-code-every-step-explained_part-02.md",
+      "video_id": "hX7yG1KVYhI",
+      "word_count": 3996,
+      "chunk": 2,
+      "total_chunks": 3,
       "embedding_ready": true
     },
     {
