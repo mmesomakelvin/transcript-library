@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-07-31 10:41 UTC
+> Last sync: 2026-07-31 14:09 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 285 |
-| Total transcripts | 285 |
+| New transcripts | 286 |
+| Total transcripts | 286 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | Stop Investing Like Everyone Else — Run Your Portfolio Like a Business | Paycheck To Portfolio | finance-investing |
 | How to Structure an AI Project for Data Engineering | Kahan Data Solutions | ai-llms |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
@@ -302,18 +303,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 176 | 67 |
+| ai-llms | 177 | 67 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 19 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **285** |  |
+| **Total** | **286** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-07-31 | 1 |
 | 2026-07-30 | 5 |
 | 2026-07-29 | 1 |
 | 2026-07-24 | 1 |

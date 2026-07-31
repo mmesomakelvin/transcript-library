@@ -1,6 +1,6 @@
 {
-  "generated": "2026-07-31T10:41:35",
-  "total_files": 285,
+  "generated": "2026-07-31T14:09:57",
+  "total_files": 286,
   "total_chunks": 123,
   "files": [
     {
@@ -535,6 +535,14 @@
       "path": "topics/ai-llms/Ticker Symbol: YOU/2026-03-01_the-us-iran-conflict-will-make-smart-investors-rich-heres-how.md",
       "video_id": "wJ4i_wRctq8",
       "word_count": 3098,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Ticker Symbol: YOU/2026-03-01_the-biggest-ai-jump-just-happened-investors-arent-ready.md",
+      "video_id": "wJ4i_wRctq8",
+      "word_count": 3096,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
