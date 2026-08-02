@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-02T17:02:13",
-  "total_files": 287,
+  "generated": "2026-08-02T20:58:37",
+  "total_files": 288,
   "total_chunks": 123,
   "files": [
     {
@@ -980,6 +980,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/AI Engineer/2026-07-07_what-if-the-harness-mattered-more-than-the-model---aditya-bhargava-etsy.md",
+      "video_id": "2e9ANoOEn28",
+      "word_count": 4594,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/AI Engineer/2025-11-23_ai-changes-nothing-dax-raad-opencode.md",
       "video_id": "o3gmwzo-Mik",
       "word_count": 3562,
@@ -1190,7 +1198,7 @@
     {
       "path": "topics/ai-llms/IndyDevDan/2026-02-23_the-pi-coding-agent-the-only-real-claude-code-competitor_part-02.md",
       "video_id": "f8cfH5XX-XU",
-      "word_count": 3994,
+      "word_count": 3999,
       "chunk": 2,
       "total_chunks": 3,
       "embedding_ready": true
@@ -1262,7 +1270,7 @@
     {
       "path": "topics/ai-llms/IndyDevDan/2026-02-23_the-pi-coding-agent-the-only-real-claude-code-competitor_part-01.md",
       "video_id": "f8cfH5XX-XU",
-      "word_count": 3996,
+      "word_count": 3992,
       "chunk": 1,
       "total_chunks": 3,
       "embedding_ready": true
@@ -1270,7 +1278,7 @@
     {
       "path": "topics/ai-llms/IndyDevDan/2026-02-23_the-pi-coding-agent-the-only-real-claude-code-competitor_part-03.md",
       "video_id": "f8cfH5XX-XU",
-      "word_count": 3424,
+      "word_count": 3440,
       "chunk": 3,
       "total_chunks": 3,
       "embedding_ready": true

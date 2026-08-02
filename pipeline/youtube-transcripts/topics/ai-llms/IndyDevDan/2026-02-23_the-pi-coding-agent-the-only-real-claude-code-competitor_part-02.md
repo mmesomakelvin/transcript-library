@@ -4,15 +4,16 @@ title: "The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR"
 channel: "IndyDevDan"
 topic: "ai-llms"
 published_date: "2026-02-23"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-02"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=f8cfH5XX-XU"
 duration: 3096
-word_count: 3994
+word_count: 3999
 chunk: 2
 total_chunks: 3
 parent_video_id: "f8cfH5XX-XU"
 ---
+is. It's gone. Right. Let's get rid of
 sub aent one. And now let's continue
 running sub aent 3. And I want to say
 expand into four sentence description.
@@ -53,22 +54,23 @@ cannot be using the tools that everyone
 else is using. Right? It's called, you
 know, the middle of a distribution for a
 reason, right? Everyone's using cloud
-code now, okay? Uh that unique value is
-is, you know, still there. There's a lot
-of capability there. We're going to keep
-covering on the channel. But I also want
-to start pushing you in some new
-directions here for your engineering
-work. Make sure you like, comment,
-subscribe so that the algorithm knows
-you're interested in continuing to push
-your limits by pushing the tools you
-use, right? Because every engineer is
-limited based on the tools they use. And
-so when we're done with our sub agents,
-we can of course come in here and sub uh
-clear. And now we're fresh. And we can
-of course just type / new. This is a
+code now, okay? [laughter] Uh that
+unique value is is, you know, still
+there. There's a lot of capability
+there. We're going to keep covering on
+the channel. But I also want to start
+pushing you in some new directions here
+for your engineering work. Make sure you
+like, comment, subscribe so that the
+algorithm knows you're interested in
+continuing to push your limits by
+pushing the tools you use, right?
+Because every engineer is limited based
+on the tools they use. And so when we're
+done with our sub agents, we can of
+course come in here and sub uh clear.
+And now we're fresh. And we can of
+course just type / new. This is a
 built-in PI tool or PI command. And that
 will reset the session. Okay. So great
 stuff. Uh very very clean, minimalistic
@@ -366,7 +368,7 @@ costs you must use the API key for the
 cloud code programmatic mode. And that's
 the exact same with PI agents or uh if
 the model provider plan supports it, you
-can use that.
+can use that. [music]
 All right. Now, let's move on to our
 tier 2 PI agents. Now, this is where
 things get really interesting. With PI,
@@ -399,10 +401,11 @@ behalf. Dispatch agent ran. Our scouter
 found all the TS files and it returned
 it to our primary agent. Okay, very very
 powerful. Let me get out of haiku mode
-here. Um get out of the haiku model and
-let's hop back to that powerful. Let's
-go and do like a flash, right? Let's do
-um Gemini 3 flash here. So we can do
+here. [laughter]
+Um get out of the haiku model and let's
+hop back to that powerful. Let's go and
+do like a flash, right? Let's do um
+Gemini 3 flash here. So we can do
 something like this, right? We'll have
 the builder move the tree.md h3s moved
 right after the tree file as a bullet
@@ -538,4 +541,3 @@ Let's get rid of claude completely. We
 can't because we have hooks blocking it.
 Just a quick showcase. You can block any
 command you want. You can control any
-piece of pie that you want to. All

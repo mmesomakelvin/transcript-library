@@ -4,15 +4,16 @@ title: "The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR"
 channel: "IndyDevDan"
 topic: "ai-llms"
 published_date: "2026-02-23"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-02"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=f8cfH5XX-XU"
 duration: 3096
-word_count: 3424
+word_count: 3440
 chunk: 3
 total_chunks: 3
 parent_video_id: "f8cfH5XX-XU"
 ---
+piece of pie that you want to. All
 right? And so, we did that with the
 damage control extension. Okay? This is
 where things get really interesting. And
@@ -36,26 +37,26 @@ specializing everything here. Okay, so I
 have a three agent execution workflow.
 It's going to run a scouter, another
 scouter, and then another scouter. Okay,
-so this might seem really simple and
-kind of like redundant, but you know,
-you can put together any agent you want
-to. And you know, we talk about this on
-the channel a lot. To scale your impact,
-you scale your compute. Imagine you
-create a plan. And and you know, we
-don't need to talk about this. We can
-actually just do it. Okay. So, I'm going
-to copy this again. Fire up a new
-version of this. So, we'll select a
-plan, build, review team. And so, you
-can see we have three unique agents
-chained together. user team plan out a
-new minimal yet unique PI agent. Right
-away, our primary agent is going to do a
-little research to understand what's
-going on here. Then it's going to kick
-off its agent team. And so this is very
-powerful. We have the orchestrator
+[laughter and gasps] so this might seem
+really simple and kind of like
+redundant, but you know, you can put
+together any agent you want to. And you
+know, we talk about this on the channel
+a lot. To scale your impact, you scale
+your compute. Imagine you create a plan.
+And and you know, we don't need to talk
+about this. We can actually just do it.
+Okay. So, I'm going to copy this again.
+Fire up a new version of this. So, we'll
+select a plan, build, review team. And
+so, you can see we have three unique
+agents chained together. user team plan
+out a new minimal yet unique PI agent.
+Right away, our primary agent is going
+to do a little research to understand
+what's going on here. Then it's going to
+kick off its agent team. And so this is
+very powerful. We have the orchestrator
 working on the top level and then it's
 going to dial its work into its team.
 You can imagine what's happening here,
@@ -102,11 +103,11 @@ then you can see the build is finished.
 Now the reviewer is going to run get
 status. We can see that it created some
 type of totem extension. No idea what
-that is or if that's going to be
-valuable. All right, so that's tier two,
-right? you can fully orchestrate your
-agents. Very powerful. We have to give
-credit where it's due. So, this was
+that is or [laughter] if that's going to
+be valuable. All right, so that's tier
+two, right? you can fully orchestrate
+your agents. Very powerful. We have to
+give credit where it's due. So, this was
 created by Mario Zechner. He's a
 prolific engineer. I've been following
 his work for a while. You know, if we go
@@ -125,30 +126,31 @@ and as you can see it is customizable to
 the core. All right, so there are many
 many reasons to choose this tool over
 another. Big shout out Mario doing great
-work and you know you can see he's been
-building a lot recently with the release
-of this great tool. So tools MCP
-servers. Let me just quickly go through
-the kind of highle ideas here. One
-interesting part about PI kind of
-continuing on that trend is that it does
-not have MCP support. I think Mario
-realized relatively early that you can
-just call the skill via a script or a
-CLI. All right, so it kind of skipped
-that step. It skipped that growing phase
-that cloud code went through. Tool
-override. This is another cool
-capability. You can override the default
-tools. Edit, write, bash, all of them
-can be overwritten. MCP support not
-there. Tool observability available in
-both. And of course default tools, we've
-covered that. multi- aent orchestration
-as you saw this is all there cloud code
-has a lot of this built in but it does
-not have Asian chains or Asian pipelines
-it does have Asian teams pi doesn't have
+work and you know you can see
+[laughter and gasps] he's been building
+a lot recently with the release of this
+great tool. So tools MCP servers. Let me
+just quickly go through the kind of
+highle ideas here. One interesting part
+about PI kind of continuing on that
+trend is that it does not have MCP
+support. I think Mario realized
+relatively early that you can just call
+the skill via a script or a CLI. All
+right, so it kind of skipped that step.
+It skipped that growing phase that cloud
+code went through. Tool override. This
+is another cool capability. You can
+override the default tools. Edit, write,
+bash, all of them can be overwritten.
+MCP support not there. Tool
+observability available in both. And of
+course default tools, we've covered
+that. multi- aent orchestration as you
+saw this is all there cloud code has a
+lot of this built in but it does not
+have Asian chains or Asian pipelines it
+does have Asian teams pi doesn't have
 any of it but once again you can build
 it and I hope this theme you know I've
 kind of repeated this theme a million
@@ -308,29 +310,29 @@ have to use cloud code. PI agent is
 really only experimental, right? Use it
 inside of your products in very specific
 ways. Don't deploy this across your
-entire enterprise, right? Cloud code has
-much better support for that. They're
-winning on the enterprise level. And
-this is what you should expect, right?
-PI agents literally built by one guy in
-open source. Let's let's wrap this all
-up. Who is PI agent for? You probably
-have the gist by now. If you want full
-control over the agent harness, system
-prop tools, event loop, use PI. If cloud
-code does what you need and you don't
-need more, use cloud code. There's
-nothing wrong with that. But know that
-you will be limited by what this tool
-offers and you'll have to be fine with
-some more lock in. So pi is great if you
-want to use any model out the box. If
-you want a hedge against cloud code, if
-you don't want to get locked in,
-definitely use pi. Cloud code is great
-for those out of the box, you know,
-simple customizations. If you need to
-use a stable agent that doesn't break
+entire enterprise, right? [laughter]
+Cloud code has much better support for
+that. They're winning on the enterprise
+level. And this is what you should
+expect, right? PI agents literally built
+by one guy in open source. Let's let's
+wrap this all up. Who is PI agent for?
+You probably have the gist by now. If
+you want full control over the agent
+harness, system prop tools, event loop,
+use PI. If cloud code does what you need
+and you don't need more, use cloud code.
+There's nothing wrong with that. But
+know that you will be limited by what
+this tool offers and you'll have to be
+fine with some more lock in. So pi is
+great if you want to use any model out
+the box. If you want a hedge against
+cloud code, if you don't want to get
+locked in, definitely use pi. Cloud code
+is great for those out of the box, you
+know, simple customizations. If you need
+to use a stable agent that doesn't break
 with changes, you know, frankly, both
 these these tools change quite a bit.
 But with Pi, you know, an open source

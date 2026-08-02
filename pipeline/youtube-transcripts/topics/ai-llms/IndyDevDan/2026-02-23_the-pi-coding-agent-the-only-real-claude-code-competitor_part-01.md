@@ -4,11 +4,11 @@ title: "The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR"
 channel: "IndyDevDan"
 topic: "ai-llms"
 published_date: "2026-02-23"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-02"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=f8cfH5XX-XU"
 duration: 3096
-word_count: 3996
+word_count: 3992
 chunk: 1
 total_chunks: 3
 parent_video_id: "f8cfH5XX-XU"
@@ -55,8 +55,9 @@ against cloud code and break through the
 current limits of your agentic coding
 tool. This tool is the open-source,
 unopinionated, customizable
-counterattack to claw code. Let's have a
-slice of pie.
+counterattack [music]
+to claw code. Let's have a slice of pie.
+[music]
 There are many coding agents, but this
 one is mine. The catchphrase says it
 all. Let me show you exactly what I mean
@@ -172,53 +173,53 @@ Pi doesn't care. Pi wants you to use any
 model you want to to solve the problem.
 So, this immediately kind of changes the
 fabric of your agent coding experience
-when it's any model versus specific
-models. All right, so let's just really
-really dial into these raw differences.
-What does this mean as an engineer?
-Okay, so we have closed source versus
-open source. We have the agenda coding
-leader with unique minimal approach. We
-have great out of- the-box defaults,
-customizable to the core, and you saw
-that right here, right? As we work
-through these examples, you're going to
-see exactly how you can dial into
-everything down to the font color. We're
-going to move all the way up to powerful
-multi-agent orchestration, which is
-insane that you can, you know, customize
-a tool to that ability. But PI gives you
-that capability. We're going to look at
-that in a second. Do it our way with
-some customization. We have to give
-Cloud Code some credit. It is a decently
-customizable tool. Pi takes us a step
-further, right? If you don't like a new
-feature, disable it, overwrite it, or
-pin a version. Once again, open source
-always gives you that ability. You can
-just pin and forget. Here is kind of a
-where things get tricky, right? With
-great defaults comes strong opinions.
-When Cloud Code rolls out a change, you
-can't really do anything about it.
-They're not going to add a feature flag
-for everything they roll out as much as
-some of us wish they would. As mentioned
-with Pi, you can just roll it back
-anytime you want. Use our models,
-disincentivize using others. Pi doesn't
-care. You can change anything you want.
-And last but not least here, we have
-programmatic support for both. All
-right, so this is super important as we
-talk about on the channel. Your agents
-must have programmatic support. This is
-how you move into outloop agent coding.
-This is how you build products with
-agents and this is how you get out of
-the terminal. I think with the whole
+when it's any model [clears throat]
+versus specific models. All right, so
+let's just really really dial into these
+raw differences. What does this mean as
+an engineer? Okay, so we have closed
+source versus open source. We have the
+agenda coding leader with unique minimal
+approach. We have great out of- the-box
+defaults, customizable to the core, and
+you saw that right here, right? As we
+work through these examples, you're
+going to see exactly how you can dial
+into everything down to the font color.
+We're going to move all the way up to
+powerful multi-agent orchestration,
+which is insane that you can, you know,
+customize a tool to that ability. But PI
+gives you that capability. We're going
+to look at that in a second. Do it our
+way with some customization. We have to
+give Cloud Code some credit. It is a
+decently customizable tool. Pi takes us
+a step further, right? If you don't like
+a new feature, disable it, overwrite it,
+or pin a version. Once again, open
+source always gives you that ability.
+You can just pin and forget. Here is
+kind of a where things get tricky,
+right? With great defaults comes strong
+opinions. When Cloud Code rolls out a
+change, you can't really do anything
+about it. They're not going to add a
+feature flag for everything they roll
+out as much as some of us wish they
+would. As mentioned with Pi, you can
+just roll it back anytime you want. Use
+our models, disincentivize using others.
+Pi doesn't care. You can change anything
+you want. And last but not least here,
+we have programmatic support for both.
+All right, so this is super important as
+we talk about on the channel. Your
+agents must have programmatic support.
+This is how you move into outloop agent
+coding. This is how you build products
+with agents and this is how you get out
+of the terminal. I think with the whole
 open claw phenomenon, people are
 starting to understand why that's so
 important. is so that you don't have to
@@ -307,18 +308,19 @@ you want to stay in the flow, you use
 this and then it's just you talking with
 the model. The exact model you're using
 doesn't matter. Your context doesn't
-matter. Nothing matters. All right? Just
-you and the agent just flowing back and
-forth. What else can we do with this
-tool? Being purely focused in the flow
-isn't always going to get you a concrete
-result. You do want some information to
-know what model you're running and how
-much context you have left. So, we can
-run something like this. And the great
-part about Pi, notice this, is that I'm
-stacking extensions. So I'm now going to
-put together two extensions in one. Very
+matter. Nothing matters. [laughter]
+All right? Just you and the agent just
+flowing back and forth. What else can we
+do with this tool? Being purely focused
+in the flow isn't always going to get
+you a concrete result. You do want some
+information to know what model you're
+running and how much context you have
+left. So, we can run something like
+this. And the great part about Pi,
+notice this, is that I'm stacking
+extensions. So I'm now going to put
+together two extensions in one. Very
 cool. So I'm going to copy this line,
 paste it in, and you can see here we
 have our own customized footer. Cloudset
@@ -413,8 +415,8 @@ these. I'm mix and matching these
 different capabilities of my
 customizable agent via an extension.
 Remember, there are many coding agents,
-but this one is mine. I love that
-slogan. Okay. Um, so tool counter,
+but this one is mine. [laughter] I love
+that slogan. Okay. Um, so tool counter,
 right? Let's just keep customizing what
 we can do with our fully customizable
 agent, right? So, let's try this off.
@@ -548,4 +550,3 @@ And I have full control over this. I can
 build the sub aent system of my dreams
 here. And so can you slash sub remove.
 Let's get rid of sub aent uh 4. There it
-is. It's gone. Right. Let's get rid of

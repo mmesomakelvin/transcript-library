@@ -1,17 +1,21 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-02 17:02 UTC
+> Last sync: 2026-08-02 20:58 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 287 |
-| Total transcripts | 287 |
+| New transcripts | 288 |
+| Total transcripts | 288 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| What if the harness mattered more than the model? - Aditya Bhargava, Etsy | AI Engineer | ai-llms |
+| The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
+| The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
+| The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | MARKET CRASH = WEALTH TRANSFER | Paycheck To Portfolio | finance-investing |
 | The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | Stop Investing Like Everyone Else — Run Your Portfolio Like a Business | Paycheck To Portfolio | finance-investing |
@@ -119,9 +123,6 @@
 | This FREE AI Tool Auto-Generates Gridfinity Bins! | CNC Kitchen | software-engineering |
 | The US Iran Conflict Will Make Smart Investors Rich (Here's How) | Ticker Symbol: YOU | ai-llms |
 | The Psychology of Premium Websites | Sam Crawford | Squarespace Expert | software-engineering |
-| The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
-| The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
-| The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | The Markets will Never Be the Same - AI Takeover | Heresy Financial | finance-investing |
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
@@ -304,19 +305,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 177 | 67 |
+| ai-llms | 178 | 67 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **287** |  |
+| **Total** | **288** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
-| 2026-08-02 | 1 |
+| 2026-08-02 | 5 |
 | 2026-07-31 | 1 |
 | 2026-07-30 | 5 |
 | 2026-07-29 | 1 |
