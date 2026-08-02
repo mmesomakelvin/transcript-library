@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-02T13:23:27",
-  "total_files": 286,
+  "generated": "2026-08-02T17:02:13",
+  "total_files": 287,
   "total_chunks": 123,
   "files": [
     {
@@ -1513,6 +1513,14 @@
       "word_count": 3997,
       "chunk": 1,
       "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Paycheck To Portfolio/2026-03-21_market-crash-wealth-transfer.md",
+      "video_id": "vz-2Rk0uvTg",
+      "word_count": 2283,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {

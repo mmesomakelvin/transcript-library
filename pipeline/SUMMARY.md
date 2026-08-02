@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-02 13:23 UTC
+> Last sync: 2026-08-02 17:02 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 286 |
-| Total transcripts | 286 |
+| New transcripts | 287 |
+| Total transcripts | 287 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| MARKET CRASH = WEALTH TRANSFER | Paycheck To Portfolio | finance-investing |
 | The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | Stop Investing Like Everyone Else — Run Your Portfolio Like a Business | Paycheck To Portfolio | finance-investing |
 | How to Structure an AI Project for Data Engineering | Kahan Data Solutions | ai-llms |
@@ -306,15 +307,16 @@
 | ai-llms | 177 | 67 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
-| finance-investing | 19 | 9 |
+| finance-investing | 20 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **286** |  |
+| **Total** | **287** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-08-02 | 1 |
 | 2026-07-31 | 1 |
 | 2026-07-30 | 5 |
 | 2026-07-29 | 1 |
