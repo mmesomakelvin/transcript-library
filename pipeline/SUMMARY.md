@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-07 16:58 UTC
+> Last sync: 2026-08-07 20:43 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 288 |
-| Total transcripts | 288 |
+| New transcripts | 289 |
+| Total transcripts | 289 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Context Is Eating Software Development | AI Native Dev | ai-llms |
 | What if the harness mattered more than the model? - Aditya Bhargava, Etsy | AI Engineer | ai-llms |
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
@@ -305,18 +306,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 178 | 67 |
+| ai-llms | 179 | 67 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **288** |  |
+| **Total** | **289** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-08-07 | 1 |
 | 2026-08-02 | 5 |
 | 2026-07-31 | 1 |
 
