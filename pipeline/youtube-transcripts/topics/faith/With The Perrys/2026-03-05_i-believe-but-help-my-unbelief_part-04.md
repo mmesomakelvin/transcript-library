@@ -4,7 +4,7 @@ title: "I Believe, But Help My Unbelief"
 channel: "With The Perrys"
 topic: "faith"
 published_date: "2026-03-05"
-ingested_date: "2026-06-15"
+ingested_date: "2026-08-08"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=gcO3kOlpYlM"
 duration: 3852

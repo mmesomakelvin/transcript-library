@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-08 12:50 UTC
+> Last sync: 2026-08-08 16:38 UTC
 
 ## This Run
 
@@ -12,6 +12,10 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| I Believe, But Help My Unbelief | With The Perrys | faith |
+| I Believe, But Help My Unbelief | With The Perrys | faith |
+| I Believe, But Help My Unbelief | With The Perrys | faith |
+| I Believe, But Help My Unbelief | With The Perrys | faith |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
 | What if the harness mattered more than the model? - Aditya Bhargava, Etsy | AI Engineer | ai-llms |
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
@@ -41,10 +45,6 @@
 | Even Anthropic Engineers Use This Claude Code Workflow | Ray Amjad | ai-llms |
 | Ben Lost Everything" - Patreon Video | Benjamin | finance-investing |
 | Build an Obsidian SYSTEM Not a Second Brain! | Eric Michaud | ai-llms |
-| I Believe, But Help My Unbelief | With The Perrys | faith |
-| I Believe, But Help My Unbelief | With The Perrys | faith |
-| I Believe, But Help My Unbelief | With The Perrys | faith |
-| I Believe, But Help My Unbelief | With The Perrys | faith |
 | New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
@@ -318,6 +318,7 @@
 
 | Date | New |
 |---|---|
+| 2026-08-08 | 4 |
 | 2026-08-07 | 1 |
 | 2026-08-02 | 5 |
 
