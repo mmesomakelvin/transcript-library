@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-08T20:32:45",
-  "total_files": 289,
+  "generated": "2026-08-09T01:47:46",
+  "total_files": 290,
   "total_chunks": 123,
   "files": [
     {
@@ -1055,6 +1055,14 @@
       "path": "topics/ai-llms/Preporato | AI for Engineers/2026-06-23_claude-certified-architect-cca-f-study-guide-to-pass-first-try.md",
       "video_id": "akzKBQVyFEI",
       "word_count": 3733,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Nate Herk | AI Automation/2026-04-05_andrej-karpathy-just-10xd-everyones-claude-code.md",
+      "video_id": "sboNwYmH3AY",
+      "word_count": 4507,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

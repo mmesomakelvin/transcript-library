@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-08 20:32 UTC
+> Last sync: 2026-08-09 01:47 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 289 |
-| Total transcripts | 289 |
+| New transcripts | 290 |
+| Total transcripts | 290 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Andrej Karpathy Just 10x’d Everyone’s Claude Code | Nate Herk | AI Automation | ai-llms |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
@@ -306,18 +307,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 179 | 67 |
+| ai-llms | 180 | 68 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **289** |  |
+| **Total** | **290** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-08-09 | 1 |
 | 2026-08-08 | 4 |
 | 2026-08-07 | 1 |
 | 2026-08-02 | 5 |
