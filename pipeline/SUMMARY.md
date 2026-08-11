@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-10 20:44 UTC
+> Last sync: 2026-08-11 01:48 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
 | Andrej Karpathy Just 10x’d Everyone’s Claude Code | Nate Herk | AI Automation | ai-llms |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
@@ -63,7 +64,6 @@
 | Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How) | Ticker Symbol: YOU | finance-investing |
 | The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
 | The AI Agent Economy Is Here | Y Combinator | ai-llms |
-| Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
 | THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
 | Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
@@ -319,6 +319,7 @@
 
 | Date | New |
 |---|---|
+| 2026-08-11 | 1 |
 | 2026-08-09 | 1 |
 | 2026-08-08 | 4 |
 | 2026-08-07 | 1 |

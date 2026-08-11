@@ -4,7 +4,7 @@ title: "Testing Claude in Excel: Building a Three-Statement Financial Model"
 channel: "Corporate Finance Institute"
 topic: "ai-llms"
 published_date: "2026-02-07"
-ingested_date: "2026-05-31"
+ingested_date: "2026-08-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=BX2PxxM15Zc"
 duration: 1176
