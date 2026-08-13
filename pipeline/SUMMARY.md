@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-13 09:15 UTC
+> Last sync: 2026-08-13 13:13 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
 | Andrej Karpathy Just 10x’d Everyone’s Claude Code | Nate Herk | AI Automation | ai-llms |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
@@ -67,7 +68,6 @@
 | THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
 | Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
-| Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
 | How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
@@ -319,6 +319,7 @@
 
 | Date | New |
 |---|---|
+| 2026-08-13 | 1 |
 | 2026-08-11 | 1 |
 | 2026-08-09 | 1 |
 | 2026-08-08 | 4 |
