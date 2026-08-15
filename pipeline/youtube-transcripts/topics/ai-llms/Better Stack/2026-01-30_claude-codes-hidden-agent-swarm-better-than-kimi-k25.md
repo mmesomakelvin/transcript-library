@@ -4,7 +4,7 @@ title: "Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?)"
 channel: "Better Stack"
 topic: "ai-llms"
 published_date: "2026-01-30"
-ingested_date: "2026-03-12"
+ingested_date: "2026-08-15"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=eRu5kIYAAz8"
 duration: 408

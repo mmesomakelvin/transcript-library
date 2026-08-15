@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-15 16:26 UTC
+> Last sync: 2026-08-15 20:24 UTC
 
 ## This Run
 
@@ -12,6 +12,8 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
+| Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
 | Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
 | Andrej Karpathy Just 10x’d Everyone’s Claude Code | Nate Herk | AI Automation | ai-llms |
@@ -59,7 +61,6 @@
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta Staff Engineer Tips) | John Kim | software-engineering |
-| You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | You Should Be Using Tailscale | Syntax | ai-llms |
 | Why a Doomsday AI Blog Wiped Out $300 Billion | Prof G Markets | Prof G Markets | ai-llms |
 | Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How) | Ticker Symbol: YOU | finance-investing |
@@ -103,7 +104,6 @@
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
 | Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Mac Mini Agents: OpenClaw is a NIGHTMARE... Use these SKILLS instead | IndyDevDan | ai-llms |
-| Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
@@ -319,6 +319,7 @@
 
 | Date | New |
 |---|---|
+| 2026-08-15 | 2 |
 | 2026-08-13 | 1 |
 | 2026-08-11 | 1 |
 | 2026-08-09 | 1 |

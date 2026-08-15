@@ -4,7 +4,7 @@ title: "You're Procrastinating 80% of Your Time (Here's How I Fixed It)"
 channel: "Leila Hormozi"
 topic: "business"
 published_date: "2026-02-06"
-ingested_date: "2026-05-31"
+ingested_date: "2026-08-15"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=LpNODHhn-60"
 duration: 1366
