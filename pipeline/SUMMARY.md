@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-16 12:41 UTC
+> Last sync: 2026-08-16 16:27 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 290 |
-| Total transcripts | 290 |
+| New transcripts | 291 |
+| Total transcripts | 291 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
 | Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
@@ -307,18 +308,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 180 | 68 |
+| ai-llms | 181 | 69 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **290** |  |
+| **Total** | **291** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-08-16 | 1 |
 | 2026-08-15 | 2 |
 | 2026-08-13 | 1 |
 | 2026-08-11 | 1 |

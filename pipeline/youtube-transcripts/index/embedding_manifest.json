@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-16T12:41:00",
-  "total_files": 290,
+  "generated": "2026-08-16T16:27:22",
+  "total_files": 291,
   "total_chunks": 123,
   "files": [
     {
@@ -1647,6 +1647,14 @@
       "path": "topics/ai-llms/Corporate Finance Institute/2026-02-07_testing-claude-in-excel-building-a-three-statement-financial-model.md",
       "video_id": "BX2PxxM15Zc",
       "word_count": 3470,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/EO/2026-03-19_how-the-top-1-of-learners-use-ai-to-think-better-anthropic-drew-bent.md",
+      "video_id": "kvZKl7eLSX8",
+      "word_count": 3878,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
