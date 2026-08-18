@@ -4,7 +4,7 @@ title: "Head of Claude Code: What happens after coding is solved | Boris Cherny"
 channel: "Lenny's Podcast"
 topic: "ai-llms"
 published_date: "2026-02-19"
-ingested_date: "2026-05-31"
+ingested_date: "2026-08-18"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=We7BZVKbCVw"
 duration: 5265

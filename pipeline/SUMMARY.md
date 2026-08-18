@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-17 20:30 UTC
+> Last sync: 2026-08-18 01:15 UTC
 
 ## This Run
 
@@ -12,6 +12,12 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
+| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
@@ -73,12 +79,6 @@
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
 | How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | FREE Phone Calls with Claude Code | NetworkChuck | ai-llms |
 | Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | Claude Code just replaced your ad agency - here's how | Agrici Daniel | ai-llms |
@@ -320,6 +320,7 @@
 
 | Date | New |
 |---|---|
+| 2026-08-18 | 6 |
 | 2026-08-16 | 1 |
 | 2026-08-15 | 2 |
 | 2026-08-13 | 1 |
