@@ -4,7 +4,7 @@ title: "This FREE AI Tool Auto-Generates Gridfinity Bins!"
 channel: "CNC Kitchen"
 topic: "software-engineering"
 published_date: "2025-08-30"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-19"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=e3EhJJlWwws"
 duration: 815
