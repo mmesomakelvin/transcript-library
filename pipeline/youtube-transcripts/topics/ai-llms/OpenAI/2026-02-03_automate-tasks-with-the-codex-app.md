@@ -4,7 +4,7 @@ title: "Automate tasks with the Codex app"
 channel: "OpenAI"
 topic: "ai-llms"
 published_date: "2026-02-03"
-ingested_date: "2026-07-24"
+ingested_date: "2026-08-19"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=xHnlzAPD9QI"
 duration: 275
