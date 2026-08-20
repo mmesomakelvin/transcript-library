@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-19T20:30:28",
-  "total_files": 291,
+  "generated": "2026-08-20T01:16:41",
+  "total_files": 292,
   "total_chunks": 123,
   "files": [
     {
@@ -422,7 +422,7 @@
     {
       "path": "topics/ai-llms/Grace Leung/2026-02-21_claude-skills-build-your-first-ai-marketing-team-in-16-minutes-claude-code.md",
       "video_id": "X8afcX2s2Mo",
-      "word_count": 3061,
+      "word_count": 3073,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1855,6 +1855,14 @@
       "path": "topics/ai-llms/Kahan Data Solutions/2026-04-02_how-to-structure-an-ai-project-for-data-engineering.md",
       "video_id": "EhNrAtnuMuM",
       "word_count": 2678,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Eero Alvar/2026-04-16_second-brain-setup-for-doing.md",
+      "video_id": "Y1xO9OsCBC4",
+      "word_count": 1844,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

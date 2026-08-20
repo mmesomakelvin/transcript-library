@@ -1,17 +1,19 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-19 20:30 UTC
+> Last sync: 2026-08-20 01:16 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 291 |
-| Total transcripts | 291 |
+| New transcripts | 292 |
+| Total transcripts | 292 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Second brain setup for doing | Eero Alvar | ai-llms |
+| Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | This FREE AI Tool Auto-Generates Gridfinity Bins! | CNC Kitchen | software-engineering |
 | Automate tasks with the Codex app | OpenAI | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
@@ -104,7 +106,6 @@
 | My Pi Agent Teams. Claude Code Leak SIGNAL. Harness Engineering | IndyDevDan | ai-llms |
 | How McKinsey Plans to Survive AI (and Reinvent Consulting) | Harvard Business Review | business |
 | My Multi-Agent Team with OpenClaw | Brian Casel | ai-llms |
-| Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | Mac Mini Agents: OpenClaw is a NIGHTMARE... Use these SKILLS instead | IndyDevDan | ai-llms |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
 | Why I Don’t Judge My Income ETFs By Price (And Neither Should You) | Paycheck To Portfolio | finance-investing |
@@ -308,18 +309,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 181 | 69 |
+| ai-llms | 182 | 70 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **291** |  |
+| **Total** | **292** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-08-20 | 2 |
 | 2026-08-19 | 2 |
 | 2026-08-18 | 6 |
 | 2026-08-16 | 1 |
