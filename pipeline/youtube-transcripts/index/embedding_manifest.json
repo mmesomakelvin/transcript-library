@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T04:08:09",
+  "generated": "2026-08-28T19:59:46",
   "total_files": 292,
   "total_chunks": 123,
   "files": [
@@ -702,7 +702,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-08.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3377,
+      "word_count": 3393,
       "chunk": 8,
       "total_chunks": 8,
       "embedding_ready": true
@@ -710,7 +710,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-03.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3995,
+      "word_count": 3999,
       "chunk": 3,
       "total_chunks": 8,
       "embedding_ready": true
@@ -718,7 +718,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-06.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 4000,
+      "word_count": 3995,
       "chunk": 6,
       "total_chunks": 8,
       "embedding_ready": true
@@ -726,7 +726,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-02.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3993,
+      "word_count": 3996,
       "chunk": 2,
       "total_chunks": 8,
       "embedding_ready": true
@@ -734,7 +734,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-05.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3994,
+      "word_count": 4000,
       "chunk": 5,
       "total_chunks": 8,
       "embedding_ready": true
@@ -742,7 +742,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-07.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3994,
+      "word_count": 3996,
       "chunk": 7,
       "total_chunks": 8,
       "embedding_ready": true
@@ -750,7 +750,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-04.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3994,
+      "word_count": 3998,
       "chunk": 4,
       "total_chunks": 8,
       "embedding_ready": true
@@ -758,7 +758,7 @@
     {
       "path": "topics/ai-llms/Latent Space/2026-02-24_claude-code-for-finance-the-global-memory-shortage-doug-olaughlin-semianalysis_part-01.md",
       "video_id": "x9rWFiIubmc",
-      "word_count": 3993,
+      "word_count": 4000,
       "chunk": 1,
       "total_chunks": 8,
       "embedding_ready": true

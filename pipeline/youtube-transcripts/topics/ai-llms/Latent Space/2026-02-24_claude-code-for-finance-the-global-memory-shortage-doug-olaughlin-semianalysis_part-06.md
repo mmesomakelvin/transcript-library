@@ -4,11 +4,11 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 4000
+word_count: 3995
 chunk: 6
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
@@ -67,13 +67,13 @@ exploit
 everything and um you know the
 &gt;&gt; it makes a market and you there's no
 right answer for everyone.
-&gt;&gt; Exactly. Yeah. Yeah. I mean it's Yeah.
-That's one that's one of those things
-where like even the really small
-percentages in AI still really matter
-because they're they're huge and like
-people are very happy, very productive,
-make money.
+&gt;&gt; Exactly. [laughter] Yeah. Yeah. I mean
+it's Yeah. That's one that's one of
+those things where like even the really
+small percentages in AI still really
+matter because they're they're huge and
+like people are very happy, very
+productive, make money.
 &gt;&gt; Okay. It's good to be an analyst in the
 space because um it's fun to keep up
 with it, right? Like I agree like I I
@@ -197,7 +197,7 @@ decision where they were the lead
 investors in OpenAI. They had the deal
 and they consciously obviously stepped
 back. They're still good partners, but
-like what happened? Like, so
+like what happened? Like, so [laughter]
 I I think the biggest blunder of all
 time that the part that like is kind of
 crazy to me about that one is like,
@@ -392,7 +392,7 @@ was done from a supply demand
 perspective and I think they can pay for
 it. What what are you all right?
 Microsoft could have just internally
-funded this and like fine
+funded this and like [laughter] fine
 &gt;&gt; Microsoft could have internally funded
 this. It would have been totally fine
 100%. And like this example where it's
@@ -547,4 +547,3 @@ our expectation is like they're they're
 the best TCO by a meaningful amount
 right now. Enthropic is very clear how
 they feel like like everyone is very
-clear. I think even OpenAI would take I

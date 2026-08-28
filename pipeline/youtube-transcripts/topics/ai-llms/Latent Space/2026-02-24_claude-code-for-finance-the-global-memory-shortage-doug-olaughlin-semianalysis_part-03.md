@@ -4,11 +4,11 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3995
+word_count: 3999
 chunk: 3
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
@@ -46,7 +46,7 @@ increases the speed of information, that
 matters a lot. Um and so I think we're
 much more so pretty much the new charts
 will outweigh the old charts because
-it'll just grow.
+it'll just grow. [laughter]
 &gt;&gt; Um so yeah, I think it it it is a little
 inconsistent. We have the same
 watermarking. Honestly, I think it's
@@ -198,7 +198,7 @@ yeah, Kimmy Kimmy's pretty interesting.
 everything.
 &gt;&gt; I know.
 &gt;&gt; They got Kimmy Manis. Kimmy Claw. Kimmy
-Claw.
+Claw. [laughter]
 &gt;&gt; Yeah, I know. Kimmy Claw. I haven't.
 Yeah, dude. I was gonna say um Have you
 messed around with OpenClaw? Because I
@@ -251,7 +251,7 @@ things that they could have done in
 Zapier with Cloudbot because they're
 like, well, you know, now I'm like AIDS,
 but actually they just done it more
-securely with Zapier.
+securely with Zapier. [laughter]
 &gt;&gt; Okay. I think it's kind of interesting.
 I guess I I I do think it's kind of
 interesting. But I think there's But the
@@ -441,6 +441,7 @@ their onto their own
 &gt;&gt; Yeah. Which reduces your sample size.
 And so then at the end of the at the end
 of the day, you end up being like, well,
+[laughter]
 it kind of just like I guess it's um
 here's some heristics. Good luck, have
 fun, right? Here's your checklist to see

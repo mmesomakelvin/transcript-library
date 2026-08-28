@@ -4,15 +4,16 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3377
+word_count: 3393
 chunk: 8
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
 ---
+there's like all kinds of deal issues
 with that. I haven't been keeping up
 with that one as much.
 &gt;&gt; Yeah. I I always I always try to mention
@@ -109,7 +110,7 @@ anything else and then all of a sudden
 just a little tiny slope on top of it,
 you're like boom, shortage.
 &gt;&gt; Yeah. Yeah. Amazing. Semi guys say semi
-numbers go up the
+numbers go up the [laughter]
 &gt;&gt; That's That's one way to put it. Yeah. I
 I The thing that's crazy is we talked
 about the demand,
@@ -152,11 +153,11 @@ to writing. Um let's just specifically
 talk on this a little bit.
 &gt;&gt; Yeah. Just just just like explain
 yourself, you know.
-&gt;&gt; Okay. So um the thing uh before LLM's
-came around the thing I felt the
-strongest about my my number one
-information skill is I was able to read
-and synthesize and process at like
+&gt;&gt; Okay. So um [laughter] the thing uh
+before LLM's came around the thing I
+felt the strongest about my my number
+one information skill is I was able to
+read and synthesize and process at like
 really high speed really high throughput
 decently high comprehension the
 adjustment is speed in terms of
@@ -329,13 +330,14 @@ hardest, biggest accomplishment I could
 possibly imagine. And I thought if I
 never have an opportunity to ever do
 this ever again, which so far seems to
-be pretty correct, um, which one am I
-going to do to feel the most like, hey,
-I did the thing that I really wanted to
-do because I've always wanted to do a
-longdistance hike. And so I I chose the
-Continental Divide Trail. I did that in
-2021 preI and
+be pretty correct,
+&gt;&gt; [laughter]
+&gt;&gt; um, which one am I going to do to feel
+the most like, hey, I did the thing that
+I really wanted to do because I've
+always wanted to do a longdistance hike.
+And so I I chose the Continental Divide
+Trail. I did that in 2021 preI and
 &gt;&gt; but after the GPC3 essay
 &gt;&gt; after the GPC3 essay. Yeah, I felt like
 I was missing out a lot and there's like
@@ -448,3 +450,4 @@ psychosis all the way to the semis all
 the way to the hiking.
 &gt;&gt; Yeah, thank you. Thanks for having us.
 Yeah, so this Yeah, great to catch up.
+[music]

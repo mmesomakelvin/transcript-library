@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-28 04:08 UTC
+> Last sync: 2026-08-28 19:59 UTC
 
 ## This Run
 
@@ -12,6 +12,15 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
+| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Second brain setup for doing | Eero Alvar | ai-llms |
 | Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | This FREE AI Tool Auto-Generates Gridfinity Bins! | CNC Kitchen | software-engineering |
@@ -44,7 +53,6 @@
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
-| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | Why the 60-30-10 Rule is RUINING Your UI Designs | Kole Jain | software-engineering |
 | Claude Ads just replaced your ad agency - here's how (free Claude Code skill) | Agrici Daniel | software-engineering |
 | I Gave OpenClaw Its Own Computer (Here's Why) | Sean Matthew | ai-llms |
@@ -182,14 +190,6 @@
 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | ai-llms |
 | Claude Cowork Just Changed How You Do Marketing | Grace Leung | ai-llms |
 | Claude Code just replaced your blog writer - AI slop is OVER | Agrici Daniel | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
-| Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Claude Code Task System: ANTI-HYPE Agentic Coding (Advanced) | IndyDevDan | ai-llms |
 | Claude Code Multi-Agent Orchestration with Opus 4.6, Tmux and Agent Sandboxes | IndyDevDan | ai-llms |
 | Claude Code Just Built Me My Own NotebookLM (and made it way better) | Mark Kashef | ai-llms |
@@ -321,5 +321,5 @@
 
 | Date | New |
 |---|---|
-| (none) | 0 |
+| 2026-08-28 | 9 |
 

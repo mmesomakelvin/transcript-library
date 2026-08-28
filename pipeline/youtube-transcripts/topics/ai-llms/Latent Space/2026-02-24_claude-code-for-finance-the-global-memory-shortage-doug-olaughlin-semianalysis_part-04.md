@@ -4,11 +4,11 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3994
+word_count: 3998
 chunk: 4
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
@@ -221,18 +221,18 @@ we're getting dumber or something first
 generation I don't know I'm not going to
 maybe that's like
 &gt;&gt; you see the the Coinbase uh earnings all
-the coins so so like you have this thing
-where it's like okay and it's cute and
-all but like it's such an addictive
-technology that like I feel very
-grateful that I'm like well I understand
-what I'm doing have this history of
-doing stuff and able to apply a tool but
-like people who are riding this curve
-it's going to be very dangerous it's
-like giving everyone right now I'm
-strong
-&gt;&gt; yeah it's so funny
+the coins [laughter] so so like you have
+this thing where it's like okay and it's
+cute and all but like it's such an
+addictive technology that like I feel
+very grateful that I'm like well I
+understand what I'm doing have this
+history of doing stuff and able to apply
+a tool but like people who are riding
+this curve it's going to be very
+dangerous it's like giving everyone
+right now I'm strong
+&gt;&gt; yeah it's so funny [laughter]
 &gt;&gt; I I think you should just do that well
 we we we do we do deal with some of the
 seal analysis memes you know and and the
@@ -305,17 +305,18 @@ like to me. Like, hey, it's really
 addicting to be like, you know,
 whatever, press the button over and over
 and over, but sometimes you do actually
-have to like think um you know, uh so so
-I think that that's uh it's going to be
-really interesting. I mean have you
-tried like uh so so I mean the this the
-way to model the sort of metalarning SS
-element is like once a night you do a
-batch job of like look over everything
-I've done like like extract some
-learnings um you know and open claw I I
-think one of the interesting things I
-really liked about it was this heartbeat
+have to like think um [laughter] you
+know, uh so so I think that that's uh
+it's going to be really interesting. I
+mean have you tried like uh so so I mean
+the this the way to model the sort of
+metalarning SS element is like once a
+night you do a batch job of like look
+over everything I've done like like
+extract some learnings um you know and
+open claw I I think one of the
+interesting things I really liked about
+it was this heartbeat
 heartbeat and I'm like people aren't
 like excited enough about this because
 like well this is the first instance
@@ -405,12 +406,12 @@ things.
 &gt;&gt; So to me like this is the AGI
 definition, isn't it?
 &gt;&gt; Yeah. Yeah. This is this is and so like
-I think I think the problem though Yeah.
-I would say that that is the definition.
-Um, so the thing that's crazy is cuz
-there's like this ASI element that
-people are like really really focused
-on.
+I think I [laughter] think the problem
+though Yeah. I would say that that is
+the definition. Um, so the thing that's
+crazy is cuz there's like this ASI
+element that people are like really
+really focused on.
 &gt;&gt; Yeah, we're moving the goalpost.
 &gt;&gt; Yeah, we're moving the gold post. But
 I'm like, bro, I the the goalpost like I

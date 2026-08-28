@@ -4,11 +4,11 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3993
+word_count: 4000
 chunk: 1
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
@@ -43,7 +43,8 @@ expert because like you have to still do
 something. You can't just like slop it
 up. It's very obvious to me what it's
 sloping.
-Doug Loft, welcome to the inspace.
+&gt;&gt; [music]
+&gt;&gt; Doug Loft, welcome to the inspace.
 &gt;&gt; Yeah, thank you for having me. Yeah. Um,
 I after all this time, I just Is it okay
 if I just call you Swiss? I feel the
@@ -63,15 +64,16 @@ party.
 &gt;&gt; Yeah. Yeah. Yeah.
 &gt;&gt; And you were like, "Hey, like who's this
 called, dude?" I'm like, "Oh, okay."
-&gt;&gt; Yay. Yeah. Well, I mean, it's just like
-I I knew about you and we we've like
-been internet, you know, pen pals for a
-long time, so it was like cool meeting
-in person. Yeah. Yeah. I think that was
-the first time I ever met you in person.
-So, yeah. Amazing. I I didn't go to the
-New Orleans one. I really wish I did. I
-love New Orleans, obviously.
+&gt;&gt; Yay. [laughter]
+Yeah. Well, I mean, it's just like I I
+knew about you and we we've like been
+internet, you know, pen pals for a long
+time, so it was like cool meeting in
+person. Yeah. Yeah. I think that was the
+first time I ever met you in person. So,
+yeah. Amazing. I I didn't go to the New
+Orleans one. I really wish I did. I love
+New Orleans, obviously.
 &gt;&gt; So, we have two New Orleanses in a row.
 And um yeah, honestly, we should go back
 there.
@@ -366,9 +368,10 @@ are, you know, like be like, oh, Nvidia
 was good, right? Nvidia is pretty good.
 Um, and then it's like, no, Nvidia is
 now the most valuable company in the
-world. And I think if you had me read
-that and like truly, hey, I wrote that.
-I believed it. Um, I still wouldn't
+world. [laughter] And I think if you had
+me read that and like truly, hey, I
+wrote that. I believed it. Um, I still
+wouldn't
 &gt;&gt; have put that together or like I
 wouldn't have believed it if you
 &gt;&gt; This is one of many thesis at the time.

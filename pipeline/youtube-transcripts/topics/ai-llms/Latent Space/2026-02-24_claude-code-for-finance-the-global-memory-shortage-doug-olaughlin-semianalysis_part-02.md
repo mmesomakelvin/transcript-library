@@ -4,11 +4,11 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3993
+word_count: 3996
 chunk: 2
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
@@ -278,22 +278,23 @@ god let's see how much this is growing
 and it's like okay chart go up and
 you're like how big is it as a percent
 percentage of GitHub you're like chart
-go up it's a huge deal and I'm just like
-watching your uh you know I have like a
-crown job updating it every single day
-blah blah blah and I'm like this is a
-huge deal like this is the the biggest
-deal I I love watching trends I love
-watching exponential trends and I've
-never seen one even remotely at this
-rate you would you know 4% in like two
-weeks or something.
+go up [laughter] it's a huge deal and
+I'm just like watching your uh you know
+I have like a crown job updating it
+every single day blah blah blah and I'm
+like this is a huge deal like this is
+the the biggest deal I I love watching
+trends I love watching exponential
+trends and I've never seen one even
+remotely at this rate you would you know
+4% in like two weeks or something.
 &gt;&gt; Do you have a PR Arena?
 &gt;&gt; Uh,
 &gt;&gt; it's a it's a previous attempt prior to
 you, but somehow they didn't they didn't
 uh they didn't talk about they just talk
 about merge rates, but they didn't they
+[laughter]
 don't they don't plot it as nicely as
 you do.
 &gt;&gt; Yeah. Well, and also you want to Okay.
@@ -322,9 +323,10 @@ It has like has like I had it go read
 like 70 books or something. I'm like
 give me like you know the like
 &gt;&gt; it's probably a waste like
-part it is a waste look tokens are free
-the the cost of doing this is nothing
-that's the part that's so amazing
+part it is a waste [laughter] look
+tokens are free the the cost of doing
+this is nothing that's the part that's
+so amazing
 &gt;&gt; the cost of doing this is nothing the
 information gathering and synthesis is
 like hey if it cost effectively the same

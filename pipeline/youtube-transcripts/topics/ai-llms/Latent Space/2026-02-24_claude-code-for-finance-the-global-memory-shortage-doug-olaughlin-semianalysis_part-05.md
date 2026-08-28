@@ -4,11 +4,11 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3994
+word_count: 4000
 chunk: 5
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
@@ -88,6 +88,7 @@ GDP? Cuz I think that's I think the the
 way you make it convertible.
 &gt;&gt; Uh Stargate itself 2% of US GDP. Um and
 uh I mean it's going to go up like
+[laughter]
 &gt;&gt; Yeah. Yeah. That's a Yeah. And it's not
 all going to be in one year, right? But
 um it's okay. So yeah, so total capex
@@ -106,27 +107,28 @@ like But the thing is crazy.
 &gt;&gt; probably. Yeah.
 &gt;&gt; Yeah. No, no, not probably. Like we
 should, but Okay. Like this is bigger.
-&gt;&gt; Yeah.
+&gt;&gt; Yeah. [laughter]
 &gt;&gt; Okay. I I'm I'm like I I would like to
 say Yeah, sure. I Yeah, we we will do
 it. I I'm worrying. I mean, like, dude,
 where are we going to get all the money?
 That's like such a like the pedestrian
-concern. Yeah, it's not a pedestrian. I
-mean, that's what happens every capital.
-I'm worried like we must hands in the
-Middle East. You'll flip the thing. we
-must we must what this happens every
-single time. That's the reason why the
-like bubbles happen, right? Is like we
-essentially get so big where it's like
-this must be built. It doesn't matter
-the price and then all of a sudden we
-look at it, we're like, "Oo, that was a
-steep ass price." Um, but I think I mean
-the thing I think about this is like how
-I think about the big picture is there's
-a demand curve and a supply curve and we
+concern. Yeah, [laughter]
+it's not a pedestrian. I mean, that's
+what happens every capital. I'm worried
+like we must hands in the Middle East.
+You'll flip the thing. we must we must
+what this happens every single time.
+That's the reason why the like bubbles
+happen, right? Is like we essentially
+get so big where it's like this must be
+built. It doesn't matter the price and
+then all of a sudden we look at it,
+we're like, "Oo, that was a steep ass
+price." Um, but I think I mean the thing
+I think about this is like how I think
+about the big picture is there's a
+demand curve and a supply curve and we
 have no idea when they cross. They will
 cross one day and every single year the
 demand then we're finding that demand
@@ -173,53 +175,54 @@ It's it's
 &gt;&gt; Yeah. It's like it's it's two it's three
 months old.
 &gt;&gt; Exactly. It is two month that that's the
-correct way to put it. It's like it's it
-was definitely a skill issue that you
-didn't know how to get like your
-settings on your iPhone to work. We know
-at one point one point in time, but like
-in the very first month of us having it,
-no one's going to be like, "Yeah, you
-idiot, you rube." You don't know how to
-use your completely new technology that
-got birthed last month. Um I think it's
-just about a it's a bit of time. And
-it's like kind of interesting cuz you're
-like watching I mean it's cool is that
-if you're like on this absolute bleeding
-edge you get to see the design patterns
-like blossom in real time and like um we
-have this like really old uh older guy
-who's like been through the history of
-technology since like forever back then.
-He's like one of the most interesting uh
-intelligent people semi analysis and he
-talks about how who is he? Uh, Tanch.
-Okay. So, like you said this like we we
-we had this conversation one time. He's
-talking about like early internet how
-like it wasn't actually sure if the
-browser was going to win. It was like a
-remote web file service. Some people
-thought like, well, it just I'm just
-going to reach and play with someone
-else's web files remotely, right? Who
-knows, right? And that kind of, you
-know, it kind of is a remote web file.
-Who who the hell knows? They were design
-pattern searching back then. And I think
-we're at that again where all the design
-patterns are open. And it's like really
-interesting because there's many
-different ways this could go. And we're
-gonna have to kind of collectively agree
-what's the best set of hygiene, set of
-design patterns, what's the level of
-abstraction, and then like all the rest
-of how much SAS will disrupt all
-everything else. Who the hell knows? But
-you get to watch it like front row seat
-right now.
+correct way to put it. It's like
+[laughter]
+it's it was definitely a skill issue
+that you didn't know how to get like
+your settings on your iPhone to work. We
+know at one point one point in time, but
+like in the very first month of us
+having it, no one's going to be like,
+"Yeah, you idiot, you rube." You don't
+know how to use your completely new
+technology that got birthed last month.
+Um I think it's just about a it's a bit
+of time. And it's like kind of
+interesting cuz you're like watching I
+mean it's cool is that if you're like on
+this absolute bleeding edge you get to
+see the design patterns like blossom in
+real time and like um we have this like
+really old uh older guy who's like been
+through the history of technology since
+like forever back then. He's like one of
+the most interesting uh intelligent
+people semi analysis and he talks about
+how who is he? Uh, Tanch. Okay. So, like
+you said this like we we we had this
+conversation one time. He's talking
+about like early internet how like it
+wasn't actually sure if the browser was
+going to win. It was like a remote web
+file service. Some people thought like,
+well, it just I'm just going to reach
+and play with someone else's web files
+remotely, right? Who knows, right? And
+that kind of, you know, it kind of is a
+remote web file. Who who the hell knows?
+They were design pattern searching back
+then. And I think we're at that again
+where all the design patterns are open.
+And it's like really interesting because
+there's many different ways this could
+go. And we're gonna have to kind of
+collectively agree what's the best set
+of hygiene, set of design patterns,
+what's the level of abstraction, and
+then like all the rest of how much SAS
+will disrupt all everything else. Who
+the hell knows? But you get to watch it
+like front row seat right now.
 &gt;&gt; Yeah. Yeah. I mean, my biggest one uh
 and I I I do want to bring it to semi in
 a little bit, but uh is the IDE. two
@@ -228,7 +231,7 @@ Gastown talk about how66 would be your
 idea died and I like two weeks ago three
 weeks ago I recently was like [&nbsp;__&nbsp;] he's
 absolutely [&nbsp;__&nbsp;] right
-&gt;&gt; it's over
+&gt;&gt; it's over [laughter]
 I'm really wondering too because like ID
 so so I think that same
 my like my the reason why I'm so excited
@@ -351,7 +354,7 @@ right? And so
 &gt;&gt; immediately you save 10 to 20k.
 &gt;&gt; Yeah.
 &gt;&gt; For switching down.
-&gt;&gt; Yeah. There you go.
+&gt;&gt; Yeah. There [laughter] you go.
 &gt;&gt; It's amazing.
 &gt;&gt; Yeah.
 &gt;&gt; Uh by the way, what was your cloud code

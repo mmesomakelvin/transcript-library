@@ -4,15 +4,16 @@ title: "Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, S
 channel: "Latent Space"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-08-28"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=x9rWFiIubmc"
 duration: 7659
-word_count: 3994
+word_count: 3996
 chunk: 7
 total_chunks: 8
 parent_video_id: "x9rWFiIubmc"
 ---
+clear. I think even OpenAI would take I
 think everyone would eat as much TPU V7
 as possible if you had it in a perfectly
 unconstrained world. it would probably
@@ -285,9 +286,10 @@ moving
 &gt;&gt; to buy I had to buy an SD card for this
 thing. Yeah, like it was bucks.
 &gt;&gt; Yeah, that's that's nothing too. That's
-and that cuz like that that's just the
-nan side. Dude, have you looked up like
-like I want to say like 64 GB of of DRAM
+and [laughter] that cuz like that that's
+just the nan side. Dude, have you looked
+up like like I want to say like 64 GB of
+of DRAM
 &gt;&gt; like like I'm moving up like I I need to
 refresh my iPhone.
 &gt;&gt; I'm moving it up because I'm doing this
@@ -381,8 +383,9 @@ That's the real
 rationing just came to me. I'm like,
 [&nbsp;__&nbsp;] Like we're going to have like
 vouchers for like, okay, you can have
-this amount of context today. Like it's
-like, yeah, you have to you have to
+this amount of context today. Like
+[laughter]
+it's like, yeah, you have to you have to
 learn how to use it well because of the
 DM. Yeah. So, I actually have a
 question. I know cuz like Okay, long
@@ -532,4 +535,3 @@ are they going to do with Cerebrus? So
 &gt;&gt; is is Salmanova?
 &gt;&gt; Uh no I think Smanov is like a much more
 interesting one but I think there's like
-there's like all kinds of deal issues
