@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-08-28 19:59 UTC
+> Last sync: 2026-08-29 02:47 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 292 |
-| Total transcripts | 292 |
+| New transcripts | 293 |
+| Total transcripts | 293 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| 20 minutes is all it takes to learn AI | Caleb Curry | ai-llms |
 | Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
@@ -309,17 +310,18 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 182 | 70 |
+| ai-llms | 183 | 71 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
 | faith | 7 | 4 |
 | hardware-homelab | 7 | 6 |
-| **Total** | **292** |  |
+| **Total** | **293** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-08-29 | 1 |
 | 2026-08-28 | 9 |
 

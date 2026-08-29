@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-28T19:59:46",
-  "total_files": 292,
+  "generated": "2026-08-29T02:47:29",
+  "total_files": 293,
   "total_chunks": 123,
   "files": [
     {
@@ -1807,6 +1807,14 @@
       "path": "topics/ai-llms/Preporato | AI for Engineers/2026-06-23_claude-certified-architect-cca-f-study-guide-to-pass-first-try.md",
       "video_id": "akzKBQVyFEI",
       "word_count": 3733,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Caleb Curry/2026-08-15_20-minutes-is-all-it-takes-to-learn-ai.md",
+      "video_id": "UpuCujQL1JI",
+      "word_count": 4560,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
