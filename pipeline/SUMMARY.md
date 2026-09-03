@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-03 08:38 UTC
+> Last sync: 2026-09-03 15:58 UTC
 
 ## This Run
 
@@ -314,8 +314,8 @@
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
 | finance-investing | 20 | 9 |
-| hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
+| hardware-homelab | 7 | 6 |
 | **Total** | **293** |  |
 
 ## Recent Activity (Last 7 Days)
