@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-04 18:57 UTC
+> Last sync: 2026-09-04 22:13 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Agent memory resolved? | AI Jason | business |
 | 20 minutes is all it takes to learn AI | Caleb Curry | ai-llms |
 | Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
@@ -204,7 +205,6 @@
 | Anthropic killed Tool calling | AI Jason | ai-llms |
 | Anthropic Just Dropped the Feature Everyone Asked For | Ray Amjad | ai-llms |
 | Agentic AI in Trading: The Evolution of Trading Bots with Irene Aldridge | Quantopian | ai-llms |
-| Agent memory resolved? | AI Jason | business |
 | AI changes *Nothing* — Dax Raad, OpenCode | AI Engineer | ai-llms |
 | A Weak Dollar Is Coming… Smart Investors Are Doing THIS | Investing Simplified - Professor G | finance-investing |
 | A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
@@ -322,6 +322,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-04 | 1 |
 | 2026-08-29 | 1 |
 | 2026-08-28 | 9 |
 

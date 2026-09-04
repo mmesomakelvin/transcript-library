@@ -4,7 +4,7 @@ title: "Agent memory resolved?"
 channel: "AI Jason"
 topic: "business"
 published_date: "2026-02-18"
-ingested_date: "2026-03-02"
+ingested_date: "2026-09-04"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=pAIF7vZm5k0"
 duration: 928
