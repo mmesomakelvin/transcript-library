@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-05T18:01:06",
-  "total_files": 294,
+  "generated": "2026-09-05T22:00:59",
+  "total_files": 295,
   "total_chunks": 123,
   "files": [
     {
@@ -721,6 +721,14 @@
       "word_count": 2641,
       "chunk": 3,
       "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Paycheck To Portfolio/2026-05-06_how-i-live-out-of-my-brokerage-account-my-fire-strategy.md",
+      "video_id": "zhyRrNKYVzs",
+      "word_count": 2434,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {

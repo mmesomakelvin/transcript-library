@@ -1,18 +1,19 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-05 18:01 UTC
+> Last sync: 2026-09-05 22:00 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 294 |
-| Total transcripts | 294 |
+| New transcripts | 295 |
+| Total transcripts | 295 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
 | How I Run 5 AI Coding Agents in Parallel | Elie Steinbock | ai-llms |
+| How I Live Out of My Brokerage Account (My FIRE Strategy) | Paycheck To Portfolio | finance-investing |
 | Agent memory resolved? | AI Jason | business |
 | 20 minutes is all it takes to learn AI | Caleb Curry | ai-llms |
 | Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
@@ -314,16 +315,16 @@
 | ai-llms | 184 | 72 |
 | software-engineering | 51 | 20 |
 | business | 25 | 16 |
-| finance-investing | 20 | 9 |
+| finance-investing | 21 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **294** |  |
+| **Total** | **295** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
-| 2026-09-05 | 1 |
+| 2026-09-05 | 2 |
 | 2026-09-04 | 1 |
 | 2026-08-29 | 1 |
 
