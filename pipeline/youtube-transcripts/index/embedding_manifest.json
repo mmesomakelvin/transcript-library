@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-04T22:13:51",
-  "total_files": 293,
+  "generated": "2026-09-05T03:19:02",
+  "total_files": 294,
   "total_chunks": 123,
   "files": [
     {
@@ -1809,6 +1809,14 @@
       "word_count": 3971,
       "chunk": 2,
       "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Elie Steinbock/2026-01-25_how-i-run-5-ai-coding-agents-in-parallel.md",
+      "video_id": "b06w8JoOoRc",
+      "word_count": 1907,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
