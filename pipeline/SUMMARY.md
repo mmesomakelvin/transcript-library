@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-08 08:42 UTC
+> Last sync: 2026-09-08 16:10 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
 | How I Run 5 AI Coding Agents in Parallel | Elie Steinbock | ai-llms |
 | How I Live Out of My Brokerage Account (My FIRE Strategy) | Paycheck To Portfolio | finance-investing |
 | Agent memory resolved? | AI Jason | business |
@@ -171,7 +172,6 @@
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | How to Discern God Opportunities vs Business Traps | GOSHEN | business |
 | How To Use NotebookLM - 7 Crazy Ways | AI LABS | ai-llms |
-| How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
 | How I Get Unlimited Leads Using Claude Code (For Cold Email) | Taylor Haren | ai-llms |
 | How Does Private Equity Actually Work | Alux.com | business |
 | He got 1,000 SaaS Clients in 12 Months Using 5-Minute Looms (No Sales Calls) | ItsKeaton | ai-llms |
@@ -324,6 +324,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-08 | 1 |
 | 2026-09-05 | 2 |
 | 2026-09-04 | 1 |
 

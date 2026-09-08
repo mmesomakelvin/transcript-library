@@ -4,7 +4,7 @@ title: "How I Turned Claude Code Into My Dev Team"
 channel: "Kenny Liao"
 topic: "ai-llms"
 published_date: "2026-02-09"
-ingested_date: "2026-03-02"
+ingested_date: "2026-09-08"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=jsI18Htgf8k"
 duration: 1317
