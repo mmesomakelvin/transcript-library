@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-10T19:02:31",
-  "total_files": 295,
-  "total_chunks": 123,
+  "generated": "2026-09-10T22:22:25",
+  "total_files": 299,
+  "total_chunks": 127,
   "files": [
     {
       "path": "topics/software-engineering/Agrici Daniel/2026-02-12_claude-ads-just-replaced-your-ad-agency---heres-how-free-claude-code-skill.md",
@@ -498,6 +498,38 @@
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
+    },
+    {
+      "path": "topics/business/Your Average Tech Bro/2026-04-24_ultimate-saas-social-media-marketing-guide-in-48-minutes_part-03.md",
+      "video_id": "fBTs-RID8Bg",
+      "word_count": 3998,
+      "chunk": 3,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/business/Your Average Tech Bro/2026-04-24_ultimate-saas-social-media-marketing-guide-in-48-minutes_part-02.md",
+      "video_id": "fBTs-RID8Bg",
+      "word_count": 3995,
+      "chunk": 2,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/business/Your Average Tech Bro/2026-04-24_ultimate-saas-social-media-marketing-guide-in-48-minutes_part-01.md",
+      "video_id": "fBTs-RID8Bg",
+      "word_count": 3998,
+      "chunk": 1,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/business/Your Average Tech Bro/2026-04-24_ultimate-saas-social-media-marketing-guide-in-48-minutes_part-04.md",
+      "video_id": "fBTs-RID8Bg",
+      "word_count": 173,
+      "chunk": 4,
+      "total_chunks": 4,
+      "embedding_ready": false
     },
     {
       "path": "topics/business/Brian Casel/2026-02-25_how-to-create-jobs-for-openclaw-agents.md",

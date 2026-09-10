@@ -1,17 +1,21 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-10 19:02 UTC
+> Last sync: 2026-09-10 22:22 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 295 |
-| Total transcripts | 295 |
+| New transcripts | 299 |
+| Total transcripts | 299 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
 | How I Run 5 AI Coding Agents in Parallel | Elie Steinbock | ai-llms |
@@ -314,17 +318,17 @@
 |---|---|---|
 | ai-llms | 184 | 72 |
 | software-engineering | 51 | 20 |
-| business | 25 | 16 |
+| business | 29 | 17 |
 | finance-investing | 21 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **295** |  |
+| **Total** | **299** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
-| 2026-09-10 | 1 |
+| 2026-09-10 | 5 |
 | 2026-09-08 | 1 |
 | 2026-09-05 | 2 |
 | 2026-09-04 | 1 |
