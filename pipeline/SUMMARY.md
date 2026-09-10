@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-10 15:58 UTC
+> Last sync: 2026-09-10 19:02 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
 | How I Run 5 AI Coding Agents in Parallel | Elie Steinbock | ai-llms |
 | How I Live Out of My Brokerage Account (My FIRE Strategy) | Paycheck To Portfolio | finance-investing |
@@ -90,7 +91,6 @@
 | The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
 | The AI Agent Economy Is Here | Y Combinator | ai-llms |
 | THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
-| Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
@@ -324,6 +324,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-10 | 1 |
 | 2026-09-08 | 1 |
 | 2026-09-05 | 2 |
 | 2026-09-04 | 1 |
