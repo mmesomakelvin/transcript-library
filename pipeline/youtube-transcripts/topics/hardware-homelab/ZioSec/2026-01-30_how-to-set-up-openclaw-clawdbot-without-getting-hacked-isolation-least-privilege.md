@@ -4,7 +4,7 @@ title: "How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Le
 channel: "ZioSec"
 topic: "hardware-homelab"
 published_date: "2026-01-30"
-ingested_date: "2026-03-02"
+ingested_date: "2026-09-12"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=fooZAZsBmpg"
 duration: 395

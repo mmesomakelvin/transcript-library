@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-12 08:27 UTC
+> Last sync: 2026-09-12 15:10 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
@@ -173,7 +174,6 @@
 | I Found the Fastest Way to Get Great App UX | Sean Kochel | ai-llms |
 | I Built 3 SaaS Apps to $200K MRR: Here's My Exact Playbook | Starter Story | business |
 | How to Transplant Your ChatGPT Brain into Claude (AI Memory Transfer) | Eliot Prince | ai-llms |
-| How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | How to Discern God Opportunities vs Business Traps | GOSHEN | business |
 | How To Use NotebookLM - 7 Crazy Ways | AI LABS | ai-llms |
 | How I Get Unlimited Leads Using Claude Code (For Cold Email) | Taylor Haren | ai-llms |
@@ -328,6 +328,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-12 | 1 |
 | 2026-09-10 | 5 |
 | 2026-09-08 | 1 |
 | 2026-09-05 | 2 |
