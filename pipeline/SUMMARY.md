@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-13 03:34 UTC
+> Last sync: 2026-09-13 15:46 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Context Is Eating Software Development | AI Native Dev | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
@@ -52,7 +53,6 @@
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
 | I Believe, But Help My Unbelief | With The Perrys | faith |
-| Context Is Eating Software Development | AI Native Dev | ai-llms |
 | What if the harness mattered more than the model? - Aditya Bhargava, Etsy | AI Engineer | ai-llms |
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
@@ -328,6 +328,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-13 | 1 |
 | 2026-09-12 | 1 |
 | 2026-09-10 | 5 |
 | 2026-09-08 | 1 |

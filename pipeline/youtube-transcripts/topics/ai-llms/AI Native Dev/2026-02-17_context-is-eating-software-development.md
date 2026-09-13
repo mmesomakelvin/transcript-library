@@ -4,7 +4,7 @@ title: "Context Is Eating Software Development"
 channel: "AI Native Dev"
 topic: "ai-llms"
 published_date: "2026-02-17"
-ingested_date: "2026-08-07"
+ingested_date: "2026-09-13"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=z6mgrQCg1NM"
 duration: 1835
