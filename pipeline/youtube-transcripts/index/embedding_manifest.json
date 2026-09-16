@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-16T09:10:24",
-  "total_files": 299,
+  "generated": "2026-09-16T16:19:25",
+  "total_files": 300,
   "total_chunks": 127,
   "files": [
     {
@@ -1375,6 +1375,14 @@
       "path": "topics/ai-llms/AI Engineer/2026-07-07_what-if-the-harness-mattered-more-than-the-model---aditya-bhargava-etsy.md",
       "video_id": "2e9ANoOEn28",
       "word_count": 4594,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/AI Engineer/2026-08-08_anthropics-cca-exam-as-a-field-guide-for-agentic-engineering-frank-coyle-uc-berk.md",
+      "video_id": "Z-c11pV_uvU",
+      "word_count": 3081,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

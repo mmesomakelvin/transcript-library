@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-16 09:10 UTC
+> Last sync: 2026-09-16 16:19 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 299 |
-| Total transcripts | 299 |
+| New transcripts | 300 |
+| Total transcripts | 300 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
@@ -316,18 +317,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 184 | 72 |
+| ai-llms | 185 | 72 |
 | software-engineering | 51 | 20 |
 | business | 29 | 17 |
 | finance-investing | 21 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **299** |  |
+| **Total** | **300** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-09-16 | 1 |
 | 2026-09-13 | 1 |
 | 2026-09-12 | 1 |
 | 2026-09-10 | 5 |
