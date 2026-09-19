@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-19 15:31 UTC
+> Last sync: 2026-09-19 18:31 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
 | Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
@@ -160,7 +161,6 @@
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
-| The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
 | Stop Prompting, Start Engineering: The "Context as Code" Shift | AI Native Dev | ai-llms |
 | Stealing $10K Website Designs with Claude Code | Chase AI | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | faith |
@@ -329,6 +329,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-19 | 1 |
 | 2026-09-16 | 1 |
 | 2026-09-13 | 1 |
 | 2026-09-12 | 1 |

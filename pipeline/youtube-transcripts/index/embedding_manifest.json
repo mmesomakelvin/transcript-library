@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T15:31:43",
+  "generated": "2026-09-19T18:31:06",
   "total_files": 300,
   "total_chunks": 127,
   "files": [
@@ -470,7 +470,7 @@
     {
       "path": "topics/business/EntreLeadership/2026-02-02_the-3-mistakes-people-make-in-hard-conversations-and-how-to-avoid-them.md",
       "video_id": "UBsV1vHu7rY",
-      "word_count": 3080,
+      "word_count": 3111,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
