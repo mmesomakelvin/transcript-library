@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-20 18:34 UTC
+> Last sync: 2026-09-20 22:16 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 300 |
-| Total transcripts | 300 |
+| New transcripts | 301 |
+| Total transcripts | 301 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Did Codex Just Replace Lovable? + PewDiePie's AI, Claude Code Mega Agents & More | The Next New Thing | ai-llms |
 | The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
 | Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
@@ -317,18 +318,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 185 | 72 |
+| ai-llms | 186 | 73 |
 | software-engineering | 51 | 20 |
 | business | 29 | 17 |
 | finance-investing | 21 | 9 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **300** |  |
+| **Total** | **301** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-09-20 | 1 |
 | 2026-09-19 | 1 |
 | 2026-09-16 | 1 |
 | 2026-09-13 | 1 |

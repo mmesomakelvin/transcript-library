@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-20T18:34:14",
-  "total_files": 300,
+  "generated": "2026-09-20T22:16:41",
+  "total_files": 301,
   "total_chunks": 127,
   "files": [
     {
@@ -1601,6 +1601,14 @@
       "word_count": 3997,
       "chunk": 1,
       "total_chunks": 6,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/The Next New Thing/2026-06-05_did-codex-just-replace-lovable-pewdiepies-ai-claude-code-mega-agents-more.md",
+      "video_id": "eMJaEhTi8HA",
+      "word_count": 4611,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
