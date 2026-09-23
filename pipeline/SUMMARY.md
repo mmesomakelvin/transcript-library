@@ -1,17 +1,22 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-23 16:17 UTC
+> Last sync: 2026-09-23 22:47 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 301 |
-| Total transcripts | 301 |
+| New transcripts | 306 |
+| Total transcripts | 306 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
+| Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
+| Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
+| Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
+| Claude Code + NotebookLM + Obsidian = GOD MODE | Chase AI | ai-llms |
 | Did Codex Just Replace Lovable? + PewDiePie's AI, Claude Code Mega Agents & More | The Next New Thing | ai-llms |
 | The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
 | Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
@@ -318,18 +323,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 186 | 73 |
+| ai-llms | 187 | 73 |
 | software-engineering | 51 | 20 |
 | business | 29 | 17 |
-| finance-investing | 21 | 9 |
+| finance-investing | 25 | 10 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **301** |  |
+| **Total** | **306** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-09-23 | 5 |
 | 2026-09-20 | 1 |
 | 2026-09-19 | 1 |
 | 2026-09-16 | 1 |
