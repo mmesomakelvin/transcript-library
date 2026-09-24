@@ -4,7 +4,7 @@ title: "A Conversation with Jiquan Ngiam About Agent + MCP Security"
 channel: "Unsupervised Learning"
 topic: "ai-llms"
 published_date: "2026-02-05"
-ingested_date: "2026-03-02"
+ingested_date: "2026-09-24"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=M02kXnomB2U"
 duration: 1481

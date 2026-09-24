@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-24T16:40:15",
-  "total_files": 306,
-  "total_chunks": 131,
+  "generated": "2026-09-24T23:06:04",
+  "total_files": 309,
+  "total_chunks": 134,
   "files": [
     {
       "path": "topics/ai-llms/IndyDevDan/2026-02-16_my-4-layer-claude-code-playwright-cli-skill-agentic-browser-automation.md",
@@ -1916,7 +1916,31 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/software-engineering/John Kim/2026-02-07_how-i-use-claude-code-meta-l7-senior-staff-engineer-tips_part-01.md",
+      "video_id": "mZzhfPle9QU",
+      "word_count": 4000,
+      "chunk": 1,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/John Kim/2026-02-07_how-i-use-claude-code-meta-l7-senior-staff-engineer-tips_part-03.md",
+      "video_id": "mZzhfPle9QU",
+      "word_count": 793,
+      "chunk": 3,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/software-engineering/John Kim/2026-02-07_how-i-use-claude-code-meta-staff-engineer-tips_part-02.md",
+      "video_id": "mZzhfPle9QU",
+      "word_count": 3995,
+      "chunk": 2,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/John Kim/2026-02-07_how-i-use-claude-code-meta-l7-senior-staff-engineer-tips_part-02.md",
       "video_id": "mZzhfPle9QU",
       "word_count": 3995,
       "chunk": 2,

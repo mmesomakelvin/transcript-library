@@ -4,7 +4,7 @@ title: "Understand Business Metrics for Data Analysts (Most Get This Wrong)"
 channel: "Christine Jiang"
 topic: "business"
 published_date: "2026-01-29"
-ingested_date: "2026-03-02"
+ingested_date: "2026-09-24"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=9BwpcO-0LuI"
 duration: 691

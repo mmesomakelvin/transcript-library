@@ -1,17 +1,23 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-24 16:40 UTC
+> Last sync: 2026-09-24 23:06 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 306 |
-| Total transcripts | 306 |
+| New transcripts | 309 |
+| Total transcripts | 309 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
+| The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
+| How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
+| How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
+| How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
+| A Conversation with Jiquan Ngiam About Agent + MCP Security | Unsupervised Learning | ai-llms |
 | Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
 | Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
 | Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
@@ -150,7 +156,6 @@
 | Watch Before Your Church Buys a Camera in 2026 [Video + Live Stream] | Brady Shearer | software-engineering |
 | WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | business |
 | Visualizing the Business Cycle | Benjamin Cowen | finance-investing |
-| Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
 | The US Iran Conflict Will Make Smart Investors Rich (Here's How) | Ticker Symbol: YOU | ai-llms |
 | The Psychology of Premium Websites | Sam Crawford | Squarespace Expert | software-engineering |
 | The Markets will Never Be the Same - AI Takeover | Heresy Financial | finance-investing |
@@ -158,7 +163,6 @@
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
-| The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
 | The Correct Way to Use Claude Code Teams | AI LABS | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
 | The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack | The AI Automators | ai-llms |
@@ -221,7 +225,6 @@
 | AI changes *Nothing* — Dax Raad, OpenCode | AI Engineer | ai-llms |
 | A Weak Dollar Is Coming… Smart Investors Are Doing THIS | Investing Simplified - Professor G | finance-investing |
 | A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
-| A Conversation with Jiquan Ngiam About Agent + MCP Security | Unsupervised Learning | ai-llms |
 | 7 Modern UI Layouts from 50 Top Software Companies (+ Free Figma File) | Kole Jain | software-engineering |
 | 6 Tiny Habits That Save Me 15 Hours A Week In My Business | Layla at ProcessDriven | business |
 | 5 OpenClaw agents run my home, finances, and code | Jesse Genet | How I AI | ai-llms |
@@ -324,17 +327,18 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 187 | 73 |
-| software-engineering | 51 | 20 |
+| software-engineering | 54 | 20 |
 | business | 29 | 17 |
 | finance-investing | 25 | 10 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **306** |  |
+| **Total** | **309** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-09-24 | 6 |
 | 2026-09-23 | 5 |
 | 2026-09-20 | 1 |
 | 2026-09-19 | 1 |
