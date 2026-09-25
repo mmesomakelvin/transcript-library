@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-09-25 03:47 UTC
+> Last sync: 2026-09-25 09:28 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
 | The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
 | How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
@@ -111,7 +112,6 @@
 | The AI Agent Economy Is Here | Y Combinator | ai-llms |
 | THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
-| My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
 | How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
 | FREE Phone Calls with Claude Code | NetworkChuck | ai-llms |
@@ -338,6 +338,7 @@
 
 | Date | New |
 |---|---|
+| 2026-09-25 | 1 |
 | 2026-09-24 | 6 |
 | 2026-09-23 | 5 |
 | 2026-09-20 | 1 |

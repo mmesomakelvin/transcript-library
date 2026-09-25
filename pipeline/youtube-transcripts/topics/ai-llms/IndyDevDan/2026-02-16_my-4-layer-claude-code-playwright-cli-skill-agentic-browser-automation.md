@@ -4,7 +4,7 @@ title: "My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation
 channel: "IndyDevDan"
 topic: "ai-llms"
 published_date: "2026-02-16"
-ingested_date: "2026-05-31"
+ingested_date: "2026-09-25"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=efctPj6bjCY"
 duration: 1635
