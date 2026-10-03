@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-02 20:27 UTC
+> Last sync: 2026-10-03 04:07 UTC
 
 ## This Run
 
@@ -12,6 +12,10 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
+| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
 | The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
@@ -29,10 +33,6 @@
 | Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
-| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
-| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
-| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
-| Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
 | How I Run 5 AI Coding Agents in Parallel | Elie Steinbock | ai-llms |
@@ -338,5 +338,5 @@
 
 | Date | New |
 |---|---|
-| 2026-09-25 | 1 |
+| 2026-10-03 | 4 |
 

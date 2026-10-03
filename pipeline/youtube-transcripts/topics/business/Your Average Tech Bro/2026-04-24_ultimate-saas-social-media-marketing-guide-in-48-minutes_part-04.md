@@ -4,7 +4,7 @@ title: "Ultimate SaaS Social Media Marketing Guide in 48 Minutes"
 channel: "Your Average Tech Bro"
 topic: "business"
 published_date: "2026-04-24"
-ingested_date: "2026-09-10"
+ingested_date: "2026-10-03"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=fBTs-RID8Bg"
 duration: 2879
