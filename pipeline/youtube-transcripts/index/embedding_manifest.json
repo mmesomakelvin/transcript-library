@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T04:42:06",
+  "generated": "2026-10-12T17:30:12",
   "total_files": 310,
   "total_chunks": 134,
   "files": [
@@ -70,7 +70,7 @@
     {
       "path": "topics/ai-llms/IndyDevDan/2026-02-09_claude-code-multi-agent-orchestration-with-opus-46-tmux-and-agent-sandboxes.md",
       "video_id": "RpUTF_U4kiw",
-      "word_count": 5384,
+      "word_count": 5413,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

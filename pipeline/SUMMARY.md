@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-12 04:42 UTC
+> Last sync: 2026-10-12 17:30 UTC
 
 ## This Run
 
@@ -12,6 +12,9 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
+| Context Is Eating Software Development | AI Native Dev | ai-llms |
+| Claude Code Multi-Agent Orchestration with Opus 4.6, Tmux and Agent Sandboxes | IndyDevDan | ai-llms |
 | Session 1 (of 42): Introduction to Investment Philosophies | Aswath Damodaran | finance-investing |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
@@ -32,7 +35,6 @@
 | Did Codex Just Replace Lovable? + PewDiePie's AI, Claude Code Mega Agents & More | The Next New Thing | ai-llms |
 | The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
 | Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
-| Context Is Eating Software Development | AI Native Dev | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
 | How I Turned Claude Code Into My Dev Team | Kenny Liao | ai-llms |
@@ -60,7 +62,6 @@
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
-| You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
 | Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
@@ -211,7 +212,6 @@
 | Claude Cowork Just Changed How You Do Marketing | Grace Leung | ai-llms |
 | Claude Code just replaced your blog writer - AI slop is OVER | Agrici Daniel | ai-llms |
 | Claude Code Task System: ANTI-HYPE Agentic Coding (Advanced) | IndyDevDan | ai-llms |
-| Claude Code Multi-Agent Orchestration with Opus 4.6, Tmux and Agent Sandboxes | IndyDevDan | ai-llms |
 | Claude Code Just Built Me My Own NotebookLM (and made it way better) | Mark Kashef | ai-llms |
 | Claude Code Just Built Me My Own NotebookLM (and made it way better) | Mark Kashef | ai-llms |
 | Claude Code Just Built Me My Own NotebookLM (and made it way better) | Mark Kashef | ai-llms |
@@ -339,5 +339,6 @@
 
 | Date | New |
 |---|---|
+| 2026-10-12 | 3 |
 | 2026-10-10 | 1 |
 
