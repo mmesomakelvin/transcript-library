@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-22 03:36 UTC
+> Last sync: 2026-10-22 09:15 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
 | Claude Code Multi-Agent Orchestration with Opus 4.6, Tmux and Agent Sandboxes | IndyDevDan | ai-llms |
@@ -75,7 +76,6 @@
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | MARKET CRASH = WEALTH TRANSFER | Paycheck To Portfolio | finance-investing |
-| The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | Stop Investing Like Everyone Else — Run Your Portfolio Like a Business | Paycheck To Portfolio | finance-investing |
 | How to Structure an AI Project for Data Engineering | Kahan Data Solutions | ai-llms |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
@@ -339,5 +339,5 @@
 
 | Date | New |
 |---|---|
-| (none) | 0 |
+| 2026-10-22 | 1 |
 

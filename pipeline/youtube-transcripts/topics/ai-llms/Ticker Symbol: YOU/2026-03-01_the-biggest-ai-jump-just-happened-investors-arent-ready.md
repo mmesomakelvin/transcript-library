@@ -4,7 +4,7 @@ title: "The Biggest AI Jump Just Happened (Investors Aren't Ready)"
 channel: "Ticker Symbol: YOU"
 topic: "ai-llms"
 published_date: "2026-03-01"
-ingested_date: "2026-07-31"
+ingested_date: "2026-10-22"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=wJ4i_wRctq8"
 duration: 1070
