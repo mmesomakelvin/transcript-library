@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-23 22:59 UTC
+> Last sync: 2026-10-24 03:35 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
@@ -62,7 +63,6 @@
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
-| How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
 | Securing AI Agents with Zero Trust | IBM Technology | ai-llms |
 | Testing Claude in Excel: Building a Three-Statement Financial Model | Corporate Finance Institute | ai-llms |
@@ -339,5 +339,6 @@
 
 | Date | New |
 |---|---|
+| 2026-10-24 | 1 |
 | 2026-10-22 | 1 |
 

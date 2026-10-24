@@ -4,7 +4,7 @@ title: "How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent
 channel: "EO"
 topic: "ai-llms"
 published_date: "2026-03-19"
-ingested_date: "2026-08-16"
+ingested_date: "2026-10-24"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=kvZKl7eLSX8"
 duration: 1090
