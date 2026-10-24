@@ -4,7 +4,7 @@ title: "A One In A Lifetime Crash Is Coming (3 Warning Signs)"
 channel: "Ticker Symbol: YOU"
 topic: "finance-investing"
 published_date: "2026-01-31"
-ingested_date: "2026-03-02"
+ingested_date: "2026-10-24"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=te3W5UHierw"
 duration: 1093

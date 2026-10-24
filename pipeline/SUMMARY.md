@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-24 08:44 UTC
+> Last sync: 2026-10-24 15:33 UTC
 
 ## This Run
 
@@ -13,6 +13,7 @@
 | Title | Channel | Topic |
 |---|---|---|
 | How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
+| A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
 | The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
@@ -225,7 +226,6 @@
 | Agentic AI in Trading: The Evolution of Trading Bots with Irene Aldridge | Quantopian | ai-llms |
 | AI changes *Nothing* — Dax Raad, OpenCode | AI Engineer | ai-llms |
 | A Weak Dollar Is Coming… Smart Investors Are Doing THIS | Investing Simplified - Professor G | finance-investing |
-| A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
 | 7 Modern UI Layouts from 50 Top Software Companies (+ Free Figma File) | Kole Jain | software-engineering |
 | 6 Tiny Habits That Save Me 15 Hours A Week In My Business | Layla at ProcessDriven | business |
 | 5 OpenClaw agents run my home, finances, and code | Jesse Genet | How I AI | ai-llms |
@@ -339,6 +339,6 @@
 
 | Date | New |
 |---|---|
-| 2026-10-24 | 1 |
+| 2026-10-24 | 2 |
 | 2026-10-22 | 1 |
 
