@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-25 15:43 UTC
+> Last sync: 2026-10-25 18:49 UTC
 
 ## This Run
 
@@ -13,6 +13,8 @@
 | Title | Channel | Topic |
 |---|---|---|
 | WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
+| The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
+| The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
 | How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
 | The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
@@ -26,7 +28,6 @@
 | Ultimate SaaS Social Media Marketing Guide in 48 Minutes | Your Average Tech Bro | business |
 | My 4-Layer Claude Code Playwright CLI Skill  (Agentic Browser Automation) | IndyDevDan | ai-llms |
 | Understand Business Metrics for Data Analysts (Most Get This Wrong) | Christine Jiang | business |
-| The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
 | How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
 | How I use Claude Code (Meta L7 Senior Staff Engineer Tips) | John Kim | software-engineering |
@@ -112,7 +113,6 @@
 | You Should Be Using Tailscale | Syntax | ai-llms |
 | Why a Doomsday AI Blog Wiped Out $300 Billion | Prof G Markets | Prof G Markets | ai-llms |
 | Trump's 15% Tariffs Will Make Millionaires in 2026 (Here's How) | Ticker Symbol: YOU | finance-investing |
-| The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
 | The AI Agent Economy Is Here | Y Combinator | ai-llms |
 | THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
@@ -340,7 +340,7 @@
 
 | Date | New |
 |---|---|
-| 2026-10-25 | 1 |
+| 2026-10-25 | 3 |
 | 2026-10-24 | 2 |
 | 2026-10-22 | 1 |
 
