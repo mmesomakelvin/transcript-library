@@ -1,6 +1,6 @@
 {
-  "generated": "2026-10-25T09:02:04",
-  "total_files": 310,
+  "generated": "2026-10-25T15:43:54",
+  "total_files": 311,
   "total_chunks": 134,
   "files": [
     {
@@ -1887,6 +1887,14 @@
       "path": "topics/software-engineering/Munroe Recaps /2026-01-09_success-doesnt-come-by-chance-dr-myles-munroe.md",
       "video_id": "9NxMbmNL-kI",
       "word_count": 2032,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Munroe Recaps /2025-11-10_why-many-failed-in-business-dr-myles-munroe.md",
+      "video_id": "ZV_e6BwvHeI",
+      "word_count": 1677,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

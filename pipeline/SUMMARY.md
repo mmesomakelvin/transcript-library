@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-25 09:02 UTC
+> Last sync: 2026-10-25 15:43 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 310 |
-| Total transcripts | 310 |
+| New transcripts | 311 |
+| Total transcripts | 311 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
 | How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
 | The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
@@ -328,17 +329,18 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 187 | 73 |
-| software-engineering | 54 | 20 |
+| software-engineering | 55 | 20 |
 | business | 29 | 17 |
 | finance-investing | 26 | 11 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **310** |  |
+| **Total** | **311** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-10-25 | 1 |
 | 2026-10-24 | 2 |
 | 2026-10-22 | 1 |
 

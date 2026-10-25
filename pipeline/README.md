@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 <!-- BADGES:START -->
-[![Transcripts](https://img.shields.io/badge/transcripts-310-brightgreen)]()
+[![Transcripts](https://img.shields.io/badge/transcripts-311-brightgreen)]()
 [![Topics](https://img.shields.io/badge/topics-6-orange)]()
 [![Channels](https://img.shields.io/badge/channels-113-purple)]()
 <!-- BADGES:END -->
@@ -79,12 +79,12 @@ A fully automated pipeline — codenamed **Jarvis** — that syncs a YouTube pla
 ## What's Inside
 
 <!-- STATS:START -->
-The vault currently holds **310 transcripts** from **113 channels** across **6 topics**:
+The vault currently holds **311 transcripts** from **113 channels** across **6 topics**:
 
 | Topic | Transcripts | Channels | What's Covered |
 |:------|:-----------:|:--------:|:---------------|
 | **ai-llms** | 187 | 73 | Large language models, AI agents, prompt engineering, RAG, model tooling, and agent workflows |
-| **software-engineering** | 54 | 20 | Software development practices, architecture, dev tooling, coding workflows, and engineering operations |
+| **software-engineering** | 55 | 20 | Software development practices, architecture, dev tooling, coding workflows, and engineering operations |
 | **business** | 29 | 17 | Company building, operations, management, hiring, leadership, and strategy |
 | **finance-investing** | 26 | 11 | Investing, markets, valuation, personal finance stacks, and financial strategy |
 | **faith** | 7 | 4 | Religious teaching, sermons, faith‑based content |
