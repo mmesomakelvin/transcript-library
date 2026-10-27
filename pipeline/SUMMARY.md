@@ -1,17 +1,18 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-27 17:38 UTC
+> Last sync: 2026-10-27 23:36 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 311 |
-| Total transcripts | 311 |
+| New transcripts | 312 |
+| Total transcripts | 312 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| OpenClaw Mission Control: SubAgents Team Management and Monitoring | DevsKingdom | software-engineering |
 | WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
 | The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
 | The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
@@ -329,17 +330,18 @@
 | Topic | Transcripts | Channels |
 |---|---|---|
 | ai-llms | 187 | 73 |
-| software-engineering | 55 | 20 |
+| software-engineering | 56 | 21 |
 | business | 29 | 17 |
 | finance-investing | 26 | 11 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **311** |  |
+| **Total** | **312** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-10-27 | 1 |
 | 2026-10-25 | 3 |
 | 2026-10-24 | 2 |
 | 2026-10-22 | 1 |
