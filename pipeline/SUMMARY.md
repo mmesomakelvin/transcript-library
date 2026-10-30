@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-10-29 20:58 UTC
+> Last sync: 2026-10-30 04:43 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Never Run claude /init | Matt Pocock | ai-llms |
 | OpenClaw Mission Control: SubAgents Team Management and Monitoring | DevsKingdom | software-engineering |
 | WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
 | The Exact Claude Setup That Writes My Documents Automatically | Dylan Davis | ai-llms |
@@ -180,7 +181,6 @@
 | Stealing $10K Website Designs with Claude Code | Chase AI | ai-llms |
 | SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE | Munroe Recaps  | faith |
 | Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything. | AI News & Strategy Daily | Nate B Jones | ai-llms |
-| Never Run claude /init | Matt Pocock | ai-llms |
 | My Production Dockerfile Rules: How I Build Docker Images | DevOps & AI Toolkit | software-engineering |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
@@ -341,8 +341,8 @@
 
 | Date | New |
 |---|---|
+| 2026-10-30 | 1 |
 | 2026-10-27 | 1 |
 | 2026-10-25 | 3 |
 | 2026-10-24 | 2 |
-| 2026-10-22 | 1 |
 
