@@ -4,7 +4,7 @@ title: "How to prompt Gemini 3.1 for Epic animations"
 channel: "AI Jason"
 topic: "ai-llms"
 published_date: "2026-02-25"
-ingested_date: "2026-05-31"
+ingested_date: "2026-11-03"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=kcOowmrVI7k"
 duration: 293

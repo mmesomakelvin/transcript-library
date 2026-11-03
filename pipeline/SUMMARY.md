@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-11-02 17:59 UTC
+> Last sync: 2026-11-03 02:05 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
 | Never Run claude /init | Matt Pocock | ai-llms |
 | OpenClaw Mission Control: SubAgents Team Management and Monitoring | DevsKingdom | software-engineering |
 | WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE | Munroe Recaps  | software-engineering |
@@ -119,7 +120,6 @@
 | THIS is how to expose your apps to AI: WebMCP | Syntax | ai-llms |
 | Stop Paying for AI Transcription Services | Yvar Birx | ai-llms |
 | Meet Sidecar: You might never open Cursor again | Marcus Vorwaller | ai-llms |
-| How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
 | FREE Phone Calls with Claude Code | NetworkChuck | ai-llms |
 | Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | Claude Code just replaced your ad agency - here's how | Agrici Daniel | ai-llms |
@@ -341,6 +341,7 @@
 
 | Date | New |
 |---|---|
+| 2026-11-03 | 1 |
 | 2026-10-30 | 1 |
 | 2026-10-27 | 1 |
 
