@@ -1,13 +1,13 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-11-07 14:47 UTC
+> Last sync: 2026-11-07 19:59 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 312 |
-| Total transcripts | 312 |
+| New transcripts | 313 |
+| Total transcripts | 313 |
 
 ### New Transcripts
 | Title | Channel | Topic |
@@ -15,6 +15,7 @@
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
+| Cursor 3.0 Tutorial for Beginners (Introduction) | Brandon Charleson - AI Powered Junkie | ai-llms |
 | How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
 | Never Run claude /init | Matt Pocock | ai-llms |
 | OpenClaw Mission Control: SubAgents Team Management and Monitoring | DevsKingdom | software-engineering |
@@ -329,18 +330,18 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 187 | 73 |
+| ai-llms | 188 | 74 |
 | software-engineering | 56 | 21 |
 | business | 29 | 17 |
 | finance-investing | 26 | 11 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **312** |  |
+| **Total** | **313** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
-| 2026-11-07 | 3 |
+| 2026-11-07 | 4 |
 | 2026-11-03 | 1 |
 

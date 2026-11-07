@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-07T14:47:22",
-  "total_files": 312,
+  "generated": "2026-11-07T19:59:51",
+  "total_files": 313,
   "total_chunks": 134,
   "files": [
     {
@@ -1655,6 +1655,14 @@
       "path": "topics/ai-llms/Sean Matthew/2026-02-24_i-gave-openclaw-its-own-computer-heres-why.md",
       "video_id": "QCf8BCT-Kzo",
       "word_count": 1848,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Brandon Charleson - AI Powered Junkie/2026-05-11_cursor-30-tutorial-for-beginners-introduction.md",
+      "video_id": "PW8fo_SrsqU",
+      "word_count": 3709,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
