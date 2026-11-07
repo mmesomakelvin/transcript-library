@@ -4,7 +4,7 @@ title: "I Studied Stripe's AI Agents... Vibe Coding Is Already Dead"
 channel: "IndyDevDan"
 topic: "ai-llms"
 published_date: "2026-03-02"
-ingested_date: "2026-06-09"
+ingested_date: "2026-11-07"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=V5A1IU8VVp4"
 duration: 2431

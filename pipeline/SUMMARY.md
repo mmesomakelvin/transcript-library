@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-11-07 05:44 UTC
+> Last sync: 2026-11-07 14:47 UTC
 
 ## This Run
 
@@ -12,6 +12,9 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
+| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
+| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | How to prompt Gemini 3.1 for Epic animations | AI Jason | ai-llms |
 | Never Run claude /init | Matt Pocock | ai-llms |
 | OpenClaw Mission Control: SubAgents Team Management and Monitoring | DevsKingdom | software-engineering |
@@ -103,9 +106,6 @@
 | Ben Lost Everything" - Patreon Video | Benjamin | finance-investing |
 | Build an Obsidian SYSTEM Not a Second Brain! | Eric Michaud | ai-llms |
 | New AI coding paradiagm - OpenAI Symphony | AI Jason | ai-llms |
-| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
-| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
-| I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
 | Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship) | How I AI | ai-llms |
@@ -341,5 +341,6 @@
 
 | Date | New |
 |---|---|
+| 2026-11-07 | 3 |
 | 2026-11-03 | 1 |
 
