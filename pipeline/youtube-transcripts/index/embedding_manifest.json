@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-10T12:14:21",
-  "total_files": 313,
-  "total_chunks": 134,
+  "generated": "2026-11-10T21:43:48",
+  "total_files": 318,
+  "total_chunks": 137,
   "files": [
     {
       "path": "topics/hardware-homelab/NetworkChuck/2026-01-31_claude-code-on-your-phone-in-10-minutes.md",
@@ -260,6 +260,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/business/Your Average Tech Bro/2026-03-12_how-to-market-your-app-on-social-media-live-stream_part-01.md",
+      "video_id": "Tdh2IW1lwRo",
+      "word_count": 3993,
+      "chunk": 1,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/business/Your Average Tech Bro/2026-04-24_ultimate-saas-social-media-marketing-guide-in-48-minutes_part-02.md",
       "video_id": "fBTs-RID8Bg",
       "word_count": 3995,
@@ -284,11 +292,27 @@
       "embedding_ready": false
     },
     {
+      "path": "topics/business/Your Average Tech Bro/2026-03-12_how-to-market-your-app-on-social-media-live-stream_part-02.md",
+      "video_id": "Tdh2IW1lwRo",
+      "word_count": 3999,
+      "chunk": 2,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/business/Your Average Tech Bro/2026-04-24_ultimate-saas-social-media-marketing-guide-in-48-minutes_part-01.md",
       "video_id": "fBTs-RID8Bg",
       "word_count": 3998,
       "chunk": 1,
       "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/business/Your Average Tech Bro/2026-03-12_how-to-market-your-app-on-social-media-live-stream_part-03.md",
+      "video_id": "Tdh2IW1lwRo",
+      "word_count": 3835,
+      "chunk": 3,
+      "total_chunks": 3,
       "embedding_ready": true
     },
     {
@@ -1070,7 +1094,7 @@
     {
       "path": "topics/ai-llms/Ray Amjad/2026-02-25_anthropic-just-dropped-the-feature-everyone-asked-for.md",
       "video_id": "y3xzYwxQuHc",
-      "word_count": 2352,
+      "word_count": 2360,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1588,6 +1612,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Cody Schneider/2026-03-06_gtm-engineering-with-claude-code-crash-course.md",
+      "video_id": "paF4J941uqg",
+      "word_count": 3300,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Preporato | AI for Engineers/2026-06-23_claude-certified-architect-cca-f-study-guide-to-pass-first-try.md",
       "video_id": "akzKBQVyFEI",
       "word_count": 3733,
@@ -2014,7 +2046,7 @@
     {
       "path": "topics/finance-investing/Heresy Financial/2026-02-26_the-markets-will-never-be-the-same---ai-takeover.md",
       "video_id": "0vLeHFO7-HE",
-      "word_count": 4057,
+      "word_count": 4058,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2223,6 +2255,14 @@
       "path": "topics/software-engineering/CNC Kitchen/2025-08-30_this-free-ai-tool-auto-generates-gridfinity-bins.md",
       "video_id": "e3EhJJlWwws",
       "word_count": 2570,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/IBM Technology/2026-08-24_how-ai-coding-agents-understand-your-codebase-developer-tools.md",
+      "video_id": "zAe-sau06io",
+      "word_count": 1035,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

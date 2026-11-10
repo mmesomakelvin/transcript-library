@@ -4,7 +4,7 @@ title: "How to Structure an AI Project for Data Engineering"
 channel: "Kahan Data Solutions"
 topic: "ai-llms"
 published_date: "2026-04-02"
-ingested_date: "2026-07-30"
+ingested_date: "2026-11-10"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=EhNrAtnuMuM"
 duration: 669

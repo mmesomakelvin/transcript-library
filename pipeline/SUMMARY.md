@@ -1,17 +1,31 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-11-10 12:14 UTC
+> Last sync: 2026-11-10 21:43 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 313 |
-| Total transcripts | 313 |
+| New transcripts | 318 |
+| Total transcripts | 318 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| The Markets will Never Be the Same - AI Takeover | Heresy Financial | finance-investing |
+| The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
+| The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
+| Keep Using Your Local Claude Code Session from Any Device | Huge Unlock! | JeredBlu | ai-llms |
+| How to Structure an AI Project for Data Engineering | Kahan Data Solutions | ai-llms |
+| How To Market Your App On Social Media Live Stream | Your Average Tech Bro | business |
+| How To Market Your App On Social Media Live Stream | Your Average Tech Bro | business |
+| How To Market Your App On Social Media Live Stream | Your Average Tech Bro | business |
+| How AI Coding Agents Understand Your Codebase & Developer Tools | IBM Technology | software-engineering |
+| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
+| GTM Engineering with Claude Code Crash Course | Cody Schneider | ai-llms |
+| Claude Code + NotebookLM + Obsidian = GOD MODE | Chase AI | ai-llms |
+| Automate tasks with the Codex app | OpenAI | ai-llms |
+| Anthropic Just Dropped the Feature Everyone Asked For | Ray Amjad | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
 | I Studied Stripe's AI Agents... Vibe Coding Is Already Dead | IndyDevDan | ai-llms |
@@ -24,7 +38,6 @@
 | The Easy Way to Design Top Tier Websites | Sajid | ai-llms |
 | How the Top 1% of Learners Use AI to Think Better | Anthropic, Drew Bent | EO | ai-llms |
 | A One In A Lifetime Crash Is Coming (3 Warning Signs) | Ticker Symbol: YOU | finance-investing |
-| The Biggest AI Jump Just Happened (Investors Aren't Ready) | Ticker Symbol: YOU | ai-llms |
 | You're Procrastinating 80% of Your Time (Here's How I Fixed It) | Leila Hormozi | business |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
 | Claude Code Multi-Agent Orchestration with Opus 4.6, Tmux and Agent Sandboxes | IndyDevDan | ai-llms |
@@ -43,9 +56,7 @@
 | Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
 | Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
 | Howard Marks: AI, Debt vs Equity & The Next 40 Years Of Investing | Nikhil Kamath | People by WTF | Nikhil Kamath | finance-investing |
-| Claude Code + NotebookLM + Obsidian = GOD MODE | Chase AI | ai-llms |
 | Did Codex Just Replace Lovable? + PewDiePie's AI, Claude Code Mega Agents & More | The Next New Thing | ai-llms |
-| The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them) | EntreLeadership | business |
 | Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley | AI Engineer | ai-llms |
 | How to Set Up OpenClaw (Clawdbot) Without Getting Hacked: Isolation + Least Privilege + Firewall | ZioSec | hardware-homelab |
 | Stop Using Claude Code Without This Tool | Leon van Zyl | ai-llms |
@@ -54,7 +65,6 @@
 | How I Live Out of My Brokerage Account (My FIRE Strategy) | Paycheck To Portfolio | finance-investing |
 | Agent memory resolved? | AI Jason | business |
 | 20 minutes is all it takes to learn AI | Caleb Curry | ai-llms |
-| Google's New CLI Is The Missing Piece for Claude Code | Better Stack | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
 | Claude Code for Finance + The Global Memory Shortage: Doug O'Laughlin, SemiAnalysis | Latent Space | ai-llms |
@@ -66,7 +76,6 @@
 | Second brain setup for doing | Eero Alvar | ai-llms |
 | Claude Skills: Build Your First AI Marketing Team in 16 Minutes (Claude Code) | Grace Leung | ai-llms |
 | This FREE AI Tool Auto-Generates Gridfinity Bins! | CNC Kitchen | software-engineering |
-| Automate tasks with the Codex app | OpenAI | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
 | Head of Claude Code: What happens after coding is solved | Boris Cherny | Lenny's Podcast | ai-llms |
@@ -87,7 +96,6 @@
 | The Pi Coding Agent: The ONLY REAL Claude Code COMPETITOR | IndyDevDan | ai-llms |
 | MARKET CRASH = WEALTH TRANSFER | Paycheck To Portfolio | finance-investing |
 | Stop Investing Like Everyone Else — Run Your Portfolio Like a Business | Paycheck To Portfolio | finance-investing |
-| How to Structure an AI Project for Data Engineering | Kahan Data Solutions | ai-llms |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
 | Building a REAL feature with Claude Code: every step explained | Matt Pocock | software-engineering |
@@ -165,7 +173,6 @@
 | Visualizing the Business Cycle | Benjamin Cowen | finance-investing |
 | The US Iran Conflict Will Make Smart Investors Rich (Here's How) | Ticker Symbol: YOU | ai-llms |
 | The Psychology of Premium Websites | Sam Crawford | Squarespace Expert | software-engineering |
-| The Markets will Never Be the Same - AI Takeover | Heresy Financial | finance-investing |
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
 | The Great Transition | Unsupervised Learning | business |
@@ -186,7 +193,6 @@
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
 | Lecture 7: Agentic Coding | Missing Semester | ai-llms |
-| Keep Using Your Local Claude Code Session from Any Device | Huge Unlock! | JeredBlu | ai-llms |
 | I Tried Every AI Coding Agent... Here's My 2026 Setup | Your Average Tech Bro | ai-llms |
 | I Found the Fastest Way to Get Great App UX | Sean Kochel | ai-llms |
 | I Built 3 SaaS Apps to $200K MRR: Here's My Exact Playbook | Starter Story | business |
@@ -225,7 +231,6 @@
 | Cathie Wood's Big Ideas 2026 Recap | ARK Invest | ai-llms |
 | Build your own marketing tools with Claude Code | Brian Casel | ai-llms |
 | Anthropic killed Tool calling | AI Jason | ai-llms |
-| Anthropic Just Dropped the Feature Everyone Asked For | Ray Amjad | ai-llms |
 | Agentic AI in Trading: The Evolution of Trading Bots with Irene Aldridge | Quantopian | ai-llms |
 | AI changes *Nothing* — Dax Raad, OpenCode | AI Engineer | ai-llms |
 | A Weak Dollar Is Coming… Smart Investors Are Doing THIS | Investing Simplified - Professor G | finance-investing |
@@ -330,18 +335,19 @@
 
 | Topic | Transcripts | Channels |
 |---|---|---|
-| ai-llms | 188 | 74 |
-| software-engineering | 56 | 21 |
-| business | 29 | 17 |
+| ai-llms | 189 | 75 |
+| software-engineering | 57 | 22 |
+| business | 32 | 17 |
 | finance-investing | 26 | 11 |
 | hardware-homelab | 7 | 6 |
 | faith | 7 | 4 |
-| **Total** | **313** |  |
+| **Total** | **318** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
+| 2026-11-10 | 14 |
 | 2026-11-07 | 4 |
 | 2026-11-03 | 1 |
 

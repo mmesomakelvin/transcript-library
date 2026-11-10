@@ -4,7 +4,7 @@ title: "Claude Code + NotebookLM + Obsidian = GOD MODE"
 channel: "Chase AI"
 topic: "ai-llms"
 published_date: "2026-03-05"
-ingested_date: "2026-09-23"
+ingested_date: "2026-11-10"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=kU3qYQ7ACMA"
 duration: 874

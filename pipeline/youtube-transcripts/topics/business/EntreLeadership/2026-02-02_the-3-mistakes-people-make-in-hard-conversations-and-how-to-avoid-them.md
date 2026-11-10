@@ -4,7 +4,7 @@ title: "The 3 Mistakes People Make in Hard Conversations (and How to Avoid Them)
 channel: "EntreLeadership"
 topic: "business"
 published_date: "2026-02-02"
-ingested_date: "2026-09-19"
+ingested_date: "2026-11-10"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=UBsV1vHu7rY"
 duration: 781

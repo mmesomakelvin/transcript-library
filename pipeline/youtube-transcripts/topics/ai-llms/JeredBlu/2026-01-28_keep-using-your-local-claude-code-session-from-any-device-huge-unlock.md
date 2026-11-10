@@ -4,7 +4,7 @@ title: "Keep Using Your Local Claude Code Session from Any Device | Huge Unlock!
 channel: "JeredBlu"
 topic: "ai-llms"
 published_date: "2026-01-28"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-10"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=5dTjU2BPPis"
 duration: 480
