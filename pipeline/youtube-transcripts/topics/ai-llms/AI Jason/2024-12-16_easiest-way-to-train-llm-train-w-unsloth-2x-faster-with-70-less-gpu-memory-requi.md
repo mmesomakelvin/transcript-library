@@ -8,7 +8,7 @@ ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=jFl5Fewrieo"
 duration: 1496
-word_count: 4795
+word_count: 4797
 ---
 So today
 we're going to talk about Large
@@ -293,7 +293,7 @@ times,
 you may have
 a lot of
 organizational
-data that you need to teach the model, such as your PDF documents, websites or videos, meeting recordings, etc.
+data that you need to teach the model, such as your PDF documents, websites, or videos, meeting recordings, etc.
 That's why
 I
 want to introduce you to AssemblyAI
@@ -538,7 +538,7 @@ use it later
 . So, this is the
 whole
 process.
-I can run this
+I can turn this on
 . If I
 use the default mini model
 , this might take about 15
@@ -999,7 +999,7 @@ is set too low,
 there will be no significant behavioral change in the model after a micro-change.
 If you're not sure,
 you
-can always start at 16. These are the main settings required to configure LoRA
+can always start at 16. These are the main settings required to set up LoRA
 fine-
 tuning
 adapters

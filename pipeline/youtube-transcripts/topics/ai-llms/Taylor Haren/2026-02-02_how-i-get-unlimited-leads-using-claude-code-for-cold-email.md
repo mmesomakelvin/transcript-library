@@ -4,7 +4,7 @@ title: "How I Get Unlimited Leads Using Claude Code (For Cold Email)"
 channel: "Taylor Haren"
 topic: "ai-llms"
 published_date: "2026-02-02"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Vo9VUnzYqpw"
 duration: 1047

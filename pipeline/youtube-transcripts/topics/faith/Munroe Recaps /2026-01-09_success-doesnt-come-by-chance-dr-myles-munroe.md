@@ -4,7 +4,7 @@ title: "SUCCESS DOESN'T COME BY CHANCE || DR. MYLES MUNROE"
 channel: "Munroe Recaps "
 topic: "faith"
 published_date: "2026-01-09"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=9NxMbmNL-kI"
 duration: 943

@@ -4,7 +4,7 @@ title: "Claude Cowork Just Changed How You Do Marketing"
 channel: "Grace Leung"
 topic: "ai-llms"
 published_date: "2026-02-06"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=l_Iy4ZCK1lY"
 duration: 1037

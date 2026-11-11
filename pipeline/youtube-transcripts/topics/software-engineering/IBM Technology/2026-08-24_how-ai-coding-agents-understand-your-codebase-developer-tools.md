@@ -4,7 +4,7 @@ title: "How AI Coding Agents Understand Your Codebase & Developer Tools"
 channel: "IBM Technology"
 topic: "software-engineering"
 published_date: "2026-08-24"
-ingested_date: "2026-11-10"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=zAe-sau06io"
 duration: 413

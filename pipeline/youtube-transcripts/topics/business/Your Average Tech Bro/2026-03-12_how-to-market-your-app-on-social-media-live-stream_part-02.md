@@ -4,7 +4,7 @@ title: "How To Market Your App On Social Media Live Stream"
 channel: "Your Average Tech Bro"
 topic: "business"
 published_date: "2026-03-12"
-ingested_date: "2026-11-10"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Tdh2IW1lwRo"
 duration: 3512

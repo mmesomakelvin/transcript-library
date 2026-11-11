@@ -4,581 +4,1123 @@ title: "Head of Claude Code: What happens after coding is solved | Boris Cherny"
 channel: "Lenny's Podcast"
 topic: "ai-llms"
 published_date: "2026-02-19"
-ingested_date: "2026-08-18"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=We7BZVKbCVw"
 duration: 5265
-word_count: 3995
+word_count: 3999
 chunk: 4
-total_chunks: 6
+total_chunks: 5
 parent_video_id: "We7BZVKbCVw"
 ---
-in the last 6 months is a little bit
-different and
-it's look at what the model is trying to
-do
-and make that a little bit easier.
-And so when we first started building
-Quad Code, I think a lot of the way that
-people approached designing things with
-LLMs is they kind of put the model in a
-box. And they were here's this
-application that I want to build. I want
-it to do. Model, you're going to do this
-one component of it. Here's the way that
-you're going to interact with these
-tools and APIs and whatever.
-And for Quad Code, we inverted that. We
-said the product is the model. We want
-to expose it. We want to put the minimal
-scaffolding around it, give it the
-minimal set of tools. So it can do the
-things. It can decide which tools to run
-it can decide in what order to run them
-in and so on.
-And I I think a lot of this was just
-based on kind of latent demand of what
-the model wanted to do. And so in
-research, we call this being on
-distribution.
-Uh you want to see like what the model
-is trying to do. In product terms,
-latent demand is just the same exact
-concept, but applied to the model.
-You talked about Quad Code. Something
-that I saw you talk about when you
-launched that initially is you your team
-built that in 10 days.
-That's insane. Uh I think that it came
-out I think it was like, you know, used
-by millions of people pretty quickly.
-Something like that being built in 10
-days.
-Uh anything there any stories there
-other than just it was just, you know,
-we used Quad Code to build it. That's
-it.
-Yeah, it it it It's funny. Uh
-Quad Code, like I said, when we released
-it, it was not immediately a hit. It
-became a hit over time and there was a
-few inflection points. So, one was, you
-know, like Opus 4.
-Uh it just really really inflected. And
-then in November, it inflected. And it
-just keeps inflecting. It The growth
-just keeps getting steeper and steeper
-and steeper every day.
-But, you know, for the first few months,
-it wasn't a hit. Uh people used it, but
-a lot of people couldn't figure out how
-to use it. They didn't know what it was
-for. The model still like wasn't very
-good.
-Quad Code, when we released it, it was
-just immediately a hit. Much more so
-than Quad Code it was early on.
-I think a lot of the credit, honestly,
-just goes to like Felix and and Sam and
-the and Jenny and the the team that
-built this. It's just an incredibly
-strong team.
-And again, the the place Quad Code came
-from is just this latent demand. Like,
-we saw people using Quad Code for these
-non-technical things.
-And we're trying to figure out what do
-we do. And so, for a few months, the
-team was exploring. They were trying all
-sorts of different options.
-And in the end, someone was just like,
-"Okay, what what if we just take Quad
-Code and put it in the desktop app?"
-And that's essentially the thing that
-worked.
-And so, over 10 days, they just
-completely used Quad Code to build it.
-Uh and you know, Quad Code is actually
-there there's this very sophisticated
-security system that's that's built in.
-And essentially, these guardrails to
-make sure that the model kind of does
-the right thing. It doesn't go off the
-rails.
-So, for example, we ship an entire
-virtual machine with it.
-And Quad Code just wrote all of this
-code. So, we just have to think about,
-all right, how do we make this a little
-bit safer, a little more self-guided for
-uh people that are not engineers. It was
-fully implemented with Claude code. Took
-about 10 days. We launched it early. You
-know, it was still pretty rough and it's
-still pretty rough around the edges.
-But this is kind of the way that we
-learn, um, both on the product side and
-on the safety side is
-we have to release things a little bit
-earlier than we think
-so that we can get the feedback, so that
-we can talk to users. We can understand
-what people want and then that will
-shape where the product goes in the
-future. Yeah, I think that point is so
-interesting and it's so unique. It
-There's always been this idea, release
-early, learn from users, get feedback,
-iterate. The fact that
-it's hard to even know what the AI is
-capable of and how people will try to
-use it is like is a unique reason to
-start releasing things early. That will
-help you as you
-exactly describe this idea of what is
-the latent demand in this thing that we
-didn't really know. Let's put it out
-there and see what people do with it.
-Yeah, and at Anthropic as a safety lab,
-the other dimension of that is safety.
-Cuz, um, you know, like when you think
-about model safety, there's a bunch of
-different ways to study it. Sort of the
-lowest level is alignment and
-mechanistic interpretability. So this is
-when we train the model, we want to make
-sure that it's safe.
-We
-at this point have like pretty
-sophisticated technology to understand
-what's happening in the neurons, to
-trace it. And so, for example, like if
-there's a neuron related to deception,
-we can start We're we're starting to get
-to the point where we can monitor it and
-understand that it's activating.
-Um, and so this is just This is
-alignment. This is mechanistic
-interpretability. It's like the lowest
-layer.
-The second layer is evals. And this is
-essentially a laboratory setting. The
-model is in a petri dish and you study
-it. And you put in a synthetic situation
-and just say, "Okay, like model, what do
-you do? And are you doing the right
-thing? Is it aligned? Is it safe?"
-And then the third layer is seeing how
-the model behaves in the wild.
-And as the model gets more
-sophisticated, this this becomes so
-important because it might look very
-good on these first two layers, but not
-great on the third one.
-We released Claude code really early
-because we wanted to study safety.
-And we actually used it within Anthropic
-for, I think, 4 or 5 months or something
-before we released it because we weren't
-really sure like this is the first agent
-that you know, the first big agent that
-I think folks had released at that
-point. Um it was definitely the first,
-uh, you know, coding agent that became
-broadly used. And so we weren't sure if
-it was safe. And so we actually had to
-study it internally for a long time
-before we felt good about that. And even
-since, you know, there's a lot that
-we've learned about alignment, there's a
-lot that we've learned about safety that
-we've been able to put back into the
-model, back into the product.
-And for Claude work it's pretty similar.
-Uh, the model's in this new setting,
-it's, you know, doing these tasks that
-are not engineering tasks. It's an agent
-that's acting on your behalf. It looks
-good on alignment, it looks good on
-evals. We tried it internally, it looks
-good. We tried it with a few customers,
-it looks good. Now we have to make sure
-it's safe in the real world. And so
-that's why we released a little early,
-that's why we call it a research
-preview. Um, but yeah, it's just it's
-constantly improving. Um, and this is
-really the only way to to make sure that
-over the long term the model is aligned
-and it's doing the right things.
-It's such a wild space that you work in
-where there's this insane competition
-and pace. At the same time, there's this
-fear that if you get some if that like,
-you know, the god can escape and cause
-damage. And just finding that balance
-must be so challenging. What I'm hearing
-is there's kind of these three layers
-and I know there's like this could be a
-whole podcast conversation is how you
-all think about
-the safety piece. But just what I'm
-hearing is there's these three layers
-you work with. Uh, there's kind of like
-observing the model thinking and
-operating. There's tests, evals that
-tell you this is doing bad things and
-then releasing it early. I haven't
-actually heard a ton about that first
-piece. That is so cool. So you guys can
-there's an observability tool that can
-let you peek inside the model's brain
-and see how it's thinking and where it's
-heading. Yeah, you should, uh, you
-should at some point have Chris Olah on
-the podcast because, uh, he he's just
-the industry expert on this. He he
-invented this field of, uh, we call it
-mechanistic interpretability. Uh, and
-the the idea is, uh,
-you know, like I I did this core like
-what is your brain? Like what are
-what is it? It's like a a bunch of
-neurons that are connected. And so what
-you can do is like in a human brain or
-an animal brain, you can study it at
-this kind of mechanistic level to
-understand what the neurons are doing.
-It turns out surprisingly a lot of this
-does translate to models also. So model
-neurons are not the same as animal
-neurons, but they behave similarly in a
-lot of ways.
-And so we've been able to learn just a
-ton about the way these neurons work,
-about, you know, this layer or this
-neuron maps to this concept.
-How particular concepts are encoded, how
-the model does planning, how it how it
-thinks ahead.
-You know, like
-a long time ago we weren't sure if the
-model was just predicting the next token
-or is doing something a little bit
-deeper. Now I think there's actually
-quite strong evidence that it is doing
-something a little bit deeper.
-And then the structures that allow it to
-do this are pretty sophisticated now.
-Where as the models get bigger, it's not
-just like a single neuron that
-corresponds to a concept. A single
-neuron might correspond to a dozen
-concepts. And if it's activated together
-with other neurons, this is called
-superposition.
-And together it represents this more
-sophisticated concept. And it is just
-something we're learning about all the
-time.
-You know, and for Anthropic as as we
-think about the way this space evolves,
-doing this in a way that is safe and
-good for the world is just this is the
-reason that we exist.
-And this is the reason that everyone is
-at Anthropic.
-Everyone that is here, this is the
-reason why they're here.
-So a lot of this work we actually open
-source. We publish it a lot.
-And you know, we publish very freely to
-talk about this. Just so we can inspire
-other labs that are working on similar
-things
-to do it in a way that's safe.
-And this is something that we've been
-doing for Claude Code also. We call this
-the race to the top internally.
-And so for Claude Code for example, we
-released an open source sandbox. And
-this is a sandbox they can run the the
-agent in. And it just makes sure that
-there's certain boundaries and it can't
-access like everything on your system.
-And we made that open source and it
-actually works with any agent, not just
-Claude Code. Because we wanted to make
-it really easy for others to do the same
-thing. Um, so this is just the same
-principle of race to the top. Um, we we
-want to make sure this thing goes well
-and this is just the this is the lever
-that we have.
-Incredible. Okay. I definitely want to
-spend more time on that. I I will follow
-up with this suggestion. Something else
-that I've been noticing in the in the
-field across engineers, product
-managers, others that work with agents
-is there's this kind of anxiety people
-feel when their agents aren't working.
-There's a sense that like oh man oh
-needs to has a question and answer or
-it's like blocked on something or it's
-or I just like I I'm like there's all
-this productivity I'm losing I can't I
-like I need to wake up and get it going
-again. Is that something you feel? Is
-that something your team feels? Do you
-feel like this is a a problem we need to
-track and think about?
-&gt;&gt; I always have a bunch of agents running.
-So like at the moment I have like five
-agents running. And at any moment like
-you know like I I wake up and I I start
-a bunch of agents. Like the first thing
-I did when I woke up was like oh man I I
-want everybody want to check this thing.
-So like I opened up my phone, Claude iOS
-app, code tab,
-uh you know like agent do do blah blah
-blah. Cuz I I wrote some code yesterday
-and I was like wait did did I do this
-right? I was like kind of double double
-guessing something and and it was
-correct. But now it's just like so easy
-to do this.
-So I don't know there is this little bit
-of anxiety maybe. I personally haven't
-really felt it just cuz I have agents
-running all the time. Um, and I'm also
-just like not locked into a terminal
-anymore. Maybe a third of my code now is
-in the terminal but also a third is uh
-using the desktop app and then a third
-is the iOS app which is just so
-surprising cuz I did not think that this
-would be the way that I code uh in even
-in 2026. I love that you just describe
-it as coding still which is just talking
-to the to Claude code to code for you
-essentially. And it's interesting that
-this is now like this is now coding.
-Coding now is describing what you want
-not writing actual code.
-I I I kind of wonder if uh the people
-that used to code using punch cards or
-whatever if you show them software what
-they would have said
-&gt;&gt; Isn't that crazy?
-I I remember reading something. This was
-a maybe like very early versions of like
-ACM
-uh
-like like magazine or something.
-Where people were saying, "No, it's not
-the same thing. Like this isn't this
-isn't really coding."
-Uh and then you know like they they
-called it programming. I think coding is
-kind of a new word.
-But I kind of think about those like in
-the back in the you know my family's
-from the Soviet Union. I would you know
-I I was born in Ukraine.
-Um and my grandpa was actually one of
-the first programmers in the Soviet
-Union.
-And he programmed using punch cards.
-And uh you know like he he told my mom
-uh growing up told these stories of like
-or she she told these stories of when
-she was growing up he would bring these
-punch cards home and there was just
-these like big stacks of punch cards.
-And for her she would like draw all over
-them with crayons and that was like her
-childhood memory. But for him that was
-like his experience of programming and
-he actually never saw the software
-transition.
-But at some point it did transition to
-software and I think there's probably
-this older generation of programmers
-that just didn't take software very
-seriously. And then they would have been
-like, "Well, you know, it's not really
-coding."
-But I I I think this is a field that
-just has always been changing in this
-way.
-Uh I don't think you know this, but I
-was born in Ukraine also.
-Oh, I don't know that. Yeah, which town?
-I'm from Odessa.
-Oh, me too.
-You what? [laughter] Yeah, that's crazy.
-Wow, incredible. Wait a moment. Uh maybe
-we're related in some small way.
-Uh what year did your did you leave and
-your family leave?
-Uh we came in '95. Okay, we left in '88.
-A little earlier. Um yeah. What a
-different life that would have been to
-not to not leave, huh?
-Yeah, I just I feel I feel so lucky
-every day that uh get get to grow up
-here.
-Yeah, my family anytime there's like a
-toaster or a meal they're just like to
-America.
-Yeah,
-it's like it okay, enough about that,
-but you get it, you know, once you start
-really thinking about what life could
-have been.
-Yeah, yeah, exactly. Yeah, we do the we
-do the same toast, but it's still vodka.
-Still vodka, absolutely.
-&gt;&gt; [laughter]
-&gt;&gt; Oh man. Okay, let me ask you a couple
-more things here.
-You shared some really cool tips for how
-to get the most out of AI, how to build
-on AI, how to build great products on
-AI. One tip you shared is give your team
-as many tokens as they want, just like
-let them experiment. You also shared
-just advice generally of just build
-towards the model where the model's
-going, not to where it is today. What
-other advice do you have for folks that
-are trying to build AI products?
-I'd probably share a few more things.
-So, one is don't try to box the model
-in.
-Um I I think a lot of people's instinct
-when they build on the model is they try
-to make it behave a very particular way.
-They're like, you know, this is a
-component of a bigger system. I I think
-some examples of this are people
-layering like very strict workflows on
-the model, for example. You know, to say
-like you must do step one, then step
-two, then step three, and you have this
-like very fancy orchestrator doing this.
-But actually almost always you get
-better results if you just give the
-model tools, you give it a goal, and you
-let it figure it out. I think a year ago
-you actually needed a lot of the
-scaffolding, but nowadays you don't
-really need it.
-So, you know, I don't know what to call
-this principle, but it's like, you know,
-like ask not what the model can do for
-you. Maybe maybe it's something like
-this. Just think about how do you give
-the model the tools to do things? Don't
-try to over curate it. Don't try to put
-it into a box.
-Don't try to give it a bunch of context
-up front. Give it a tool so that it can
-get the context it needs. You're just
-going to get better results.
-I think a second one is um
-maybe actually like a a more even more
-general version of this principle is
-just the bitter lesson.
-Uh and I actually for the Quadko team we
-have a you know, hopefully hopefully um
-listeners have have read this, but Rich
-Sutton had this blog post maybe 10 years
-ago called the bitter lesson.
-Uh and it's actually a really simple
-idea. His idea was that the more general
-model will always outperform the more
-specific model.
-And I think for him he was talking about
-like self-driving cars and other domains
-like this.
-But actually there's just so many
-corollaries to the bitter lesson.
-And for me the biggest one is just
-always bet on the more general model.
-And you know, over the long term, like
-don't don't try to use tiny models for
-stuff. Don't try to like fine-tune.
-Don't try to do any of this stuff.
-There's like some applications, you
-know, there's some reasons to do this,
-but almost always try to bet on the more
-general model if you can, if you have
-that flexibility.
-Um and so these workflows are
-essentially a way that uh
-you know, it's it's not it's not a
-general model. It's putting the
-scaffolding around it. And in general,
-what we see is maybe scaffolding can
-improve performance maybe 10 20%
-something like this.
-But often these gains just get wiped out
-with the next model.
-Uh so it's almost better to just wait
-for the next one.
-And I think maybe this is a final
-principle and something that Quad Code I
-think got right in hindsight. From the
-very beginning, we bet on building for
-the model 6 months from now.
-Not for the model of today.
-And
-for the very early versions of the
-product, I just wrote so little of my
-code cuz I I didn't trust it. Cuz you
-know, it was like Sonnet 3.5, then it
-was like 3.6 or
-forget 3 3.5 new whatever whatever
-whatever name we gave it.
-Um these models just weren't very good
-at coding yet. Um they were they were
-getting there, but it was still pretty
-early.
-So back then, the model did uh you you
-used to get for me. It automated some
-things, but it it really wasn't doing a
-huge amount of my coding.
-And so the bet with Quad Code was at
-some point the model gets good enough
-that it can just write a lot of the
-code. And this is the thing that we
-first started seeing with Opus 4 and
-Sonnet 4. And Opus 4 was our first kind
-of ASL 3 class model
-uh that we released back in May.
-And we just saw this inflection because
-everyone started to use Quad Code for
-the first time. And that was kind of
-when our growth really went exponential.
-And like I said, it's kind of it stayed
-there.
-So I think this is some This is advice
-that I actually give to to a lot of
-folks, especially people building
-startups. It's going to be uncomfortable
-cuz your product market fit won't be
-very good for the first 6 months.
-But if you build for the model 6 months
-out,
-when that model comes out, you're just
-going to hit the ground running, and the
-product is going to click and and start
-to work.
-And when you say build for the model 6
-months out, what is what is it that you
-think people can assume will happen? Is
-it just generally it will get better at
-things? Is it just like, okay, it's like
+strange, because I didn't think
+that I will write like this
+code. Even in 2026.
+I like that.
+you still call it that
+coding, although this,
+basically, simply
+communication with Claude,
+so that he codes for
+you. And it's interesting that this
+now—well, this is now
+coding. Coding
+now—this is a description of what
+what do you want, not
+writing itself
+code.
+I think if people
+, which once
+programmed on
+punched cards or
+something like that,
+showed the program
+ensuring that
+did they say?
+This is not coding.
+I remember reading something
+similar, perhaps, in
+very early releases
+ACM journal or something
+like this. Where are the people?
+said: "No, that's not at all
+other. This is not really
+coding". And, you know,
+they called it
+programming.
+I think coding is
+quite a new word.
+Mhm.
+But I often remember
+about this, because my family is from
+Soviet Union. I,
+you know, born in
+Ukraine. My grandfather
+was one of the first
+programmers in
+The Soviet Union. AND
+he programmed,
+using
+punch cards. He
+told my mother,
+when she was growing up—or
+she told how,
+when was she
+small, he
+brought these
+punch cards home, and
+there were just
+huge piles of these
+map. She
+painted them
+pencils, and it was hers
+a childhood memory. But
+for him it was his
+programming experience
+, and he actually
+never found
+transition to software
+software. But in
+a certain moment
+transition to software everything
+It happened, and I think
+the older generation
+programmers, probably
+did not perceive
+software
+seriously. And they
+could say, "Well,
+You know, that's not quite it.
+coding". But I
+I think this area
+always changing
+exactly like this.
+I don't think that's you.
+you know, but me too
+born in Ukraine.
+Oh, I didn't know that. Yes
+, what city are you from?
+I am from Odessa.
+Oh, me too. What-what?
+Yes, this is madness. Oho
+, incredible. Wait.
+a minute. Maybe we
+somehow related. IN
+What year are you and yours?
+Did the family leave?
+We arrived in 1995.
+Okay, we left in 88-
+uh, a little earlier.
+Yes.
+Whatever else it was
+life if we didn't
+Let's go, huh?
+Yes, I do every day.
+I feel like this.
+happy that I have
+opportunity here
+work.
+Yes, in my family,
+when we lift
+toast or shall we sit down
+table, everyone says: "For
+America. Yes, it's like
+, okay, enough about that,
+but you understand,
+when do you really start
+to think about what
+could have been life.
+Yes, yes, exactly. Aha
+, we also raise
+the same toast, but
+still vodka. All
+more vodka,
+definitely.
+Oh my God. Good,
+let me ask
+I want to ask you something else. You
+shared cool
+tips on how to get
+maximum from AI, as
+build on AI
+and create wonderful
+products. One of
+give advice to the team
+so many tokens,
+how much do they need,
+just let them
+experiment. You
+also advised
+to focus on
+future development
+model, not on it
+current status. What else
+Do you have any advice for
+those who try
+create AI-
+products?
+I could add something else.
+. So, first: no
+try to limit
+model. I think,
+the instinct of many
+people when working with
+model—make her
+to behave very
+specifically. They
+they think that this
+component of a larger
+systems. For example,
+some people impose a lot
+strict workers
+processes on the model.
+That is, they demand: "
+take step one,
+then two, then three,
+and for this
+use
+complex orchestrators
+. But in reality you
+almost always
+get the best
+results if
+just give the models
+tools, put
+goal and allow it
+figure it out yourself.
+I think a year ago these
+the scaffolding was
+needed, but
+today they are no longer
+mandatory. So, no
+I know what to call this one.
+principle, but it's like "no
+ask what the model can do
+to do for you."
+Maybe it's somehow like that.
+Just think about how
+provide models
+tools for
+completing tasks? Not
+try too hard
+control it. Not
+try to drive
+her in the frame. Not
+try to provide
+a lot of context
+in advance. Give it to her
+tool so that she
+could get
+necessary context
+independently. You just
+get the best
+results. I think
+the second is perhaps
+even more
+general version
+this principle,
+known as "bitter"
+lesson". Uh, actually,
+for the Quad Code team,
+I hope ours
+listeners read this,
+but Rich Sutton
+wrote a blog about
+10 years ago under
+titled "Bitter Lesson".
+This is actually very
+simple idea. Its
+the idea was that
+which is more general
+model always
+will surpass
+more specific. And I
+I think he had
+drones in mind
+cars and others
+similar areas. But
+actually exists like this
+many consequences
+this "bitter lesson"
+". And for me the main thing
+conclusion—always
+bet on more
+general model.
+You know, in
+long-term
+not in the future
+try
+use
+tiny models for
+everything. Not
+try to do
+fine tuning.
+Don't try.
+to do nothing
+something like that. Of course, there is
+some applications and
+reasons for this
+do. But almost
+always try
+choose more
+general model if
+you can, if you have
+such flexibility. Therefore,
+these workflows—this
+essentially a way that...
+you know, it's not
+general model. It
+creating a frame
+around her. In general
+we see that the frame
+can improve
+productivity,
+maybe 10-20%, something
+like this. But often these
+achievement is simple
+are leveled
+the next model.
+So sometimes it's better
+just wait for
+next. I think this is
+final principle and
+what Quad Code, how we
+now we see, we did
+right. From the very
+we started doing
+bet on development
+under the model that will be
+in 6 months, not
+for today. IN
+early versions
+I wrote a lot about the product
+there is not enough code because it is not
+trusted them. Because it is
+was Sonnet 3.5, then 3.6, or
+How do we do it?
+called, it doesn't matter.
+These models are not yet very
+were good at coding.
+They were approaching
+this, but it was still
+too early. So then
+model...she did
+something for me. She
+automated some
+things, but in reality
+did not perform
+a large volume of mine
+programming.
+The Quad Code bet was on
+that at a certain moment
+the model will become
+good enough,
+to write more
+part of the code. And this is it,
+what we first noticed
+with Opus 4 and Sonnet 3.5. Opus 3
+was our first
+ASL 3 class model, which
+we released in May
+. And we saw this one
+turning point,
+when everyone first
+started using
+Quad Code. And that's when
+our growth has been
+really
+exponential. AND,
+as I said, it
+approximately like this and
+left. Therefore I
+I think this is advice,
+which I give to many
+people, especially those
+who creates startups.
+It will be uncomfortable because
+your first 6 months
+market relevance
+will not be very high.
+But if you
+are oriented towards
+model in 6
+months, then when she
+you will get out immediately
+start acting, and
+the product will work.
+And when you say "
+to focus on
+model in 6
+months", what exactly, on
+what do you think, people
+can expect? Or
+it's just general
+assumption that she
+will become better at everything
+? Is it something like:
+"Okay, that's almost it."
+enough", and this is a sign
+that she,
+probably will be
+the best at this? Is there
+any advice on
+this?
+I think that's right.
+approach. Of course, in
+AI labs we
+we see specific
+aspects in which he
+gets better. So this is
+a little unfair,
+but we are trying
+to talk about it.
+One of the directions
+the improvement will be that
+that AI is getting better
+will use
+tools and
+computers. This is a bet,
+which I am ready to go.
+Another direction is
+will get better and better
+in operation for
+for a long time. There is
+many studies on
+this topic. If
+to trace
+trajectory or
+rely on my
+own experience, year
+so Sonnet 3.5 could
+work for 15-30 seconds,
+before you start
+to be wrong, and you
+had to constantly
+control it in
+difficult tasks.
+But today with Opus 4.6
+he can work 10,
+20 or 30 minutes without
+supervision, and I launch
+another request for
+another task, and, as
+I said, I always have
+works several
+processes. They also
+can work
+for hours or even
+for days in a row. I think
+there are examples where they
+worked hard
+weeks. Over time, this
+will become the norm when
+models will work
+during a very
+for a long time, and you
+no longer have to
+sit next to and
+constantly them
+control.
+So, we just
+discussed advice
+regarding the creation of AI-
+products. What advice?
+you will give to the one who
+just starting
+use Claude Code,
+or to someone who already
+uses, but
+Want to do it better?
+What professional
+you could give advice
+share?
+I will make a reservation:
+there is no single one
+the right way
+using Claude Code.
+I can share.
+advice, but honestly
+saying, it is a tool
+for developers. All
+developers are different. IN
+various developers
+preferences. They have
+different environments
+developments. So there is
+many ways
+use these
+tools. None
+one and only
+the right path. You
+you have to find yours
+own approach. On
+luckily, you can
+ask Claude Code himself.
+He is able to give
+recommendations. He
+can edit your
+settings. He
+knows about himself, so
+can help with this.
+A few tips that I
+I think it's enough.
+useful: firstly,
+simply
+use
+the most powerful model.
+Currently it is Opus 4.6. I have
+always on
+maximum mode
+efforts. It often happens
+so that people
+are trying
+use
+a cheaper model, such as
+Sonnet or something like that.
+But because of the smaller
+intellectuality,
+eventually,
+more is spent
+tokens for execution
+the same task. So
+not a fact that
+using less
+expensive model
+will it really work out
+cheaper. Often this
+cheaper and less
+expensive for
+number of tokens,
+if you
+use
+the most powerful model,
+because she performs
+work faster and with
+less
+corrections. Less
+tips, less
+support, etc. Therefore,
+The first piece of advice is simple.
+use
+the best model.
+Second tip—
+use mode
+planning. I am starting.
+almost all of their own
+task in mode
+planning, about 80%. AND
+planning mode
+actually very
+simple. Everything we
+we do—we add it to
+model request one
+sentence: "Please,
+Don't write yet.
+no code". That's all.
+There really isn't.
+nothing complicated. It
+just the simplest
+thing. For those who are in
+terminals—just
+press Shift-Tab twice
+to switch to mode
+planning. For
+users
+desktop
+the application is there
+small button IN
+There is also a small web
+button. It's coming soon.
+will also appear on
+mobile devices.
+We also just
+launched this for
+integration with Slack.
+So, the mode
+Planning is the second
+advice. Essentially,
+the model will simply be
+to exchange with you
+thoughts. When the plan
+You look good.
+allow models
+act. After that I
+automatically accept
+edits, because if the plan
+ready, he will do it
+all at once. From Opus
+4.6 he almost always
+does everything
+right from the start
+attempts. And, perhaps,
+The third tip is simple.
+try different ones
+interfaces. Me
+it seems when people
+think about Quad Code,
+they imagine
+terminal. But, of course,
+we support any
+which terminal? We
+we support Mac, Windows,
+any terminal,
+which one are you
+use everything
+works perfectly. But
+we really are
+we support a lot
+other formats.
+For example, we have
+apps for iOS and Android.
+We have a desktop
+addition. There is more
+integration with Slack. We
+we support
+the most diverse
+things. So I would just
+I advised to try them.
+And again, everyone
+engineer
+individual.
+Every developer
+unique. Simply
+find what
+is right for you, and
+use this.
+You don't have to.
+use
+terminal. This is the one
+the very Quad agent that
+works everywhere.
+Perfectly. Okay, more.
+a few questions on
+completion. What are you
+Thinking about Codex? How are you?
+How do you feel about this?
+product? What are you
+thinking about their
+direction of development? As
+regarding competition in
+this very rich
+in the field of coding agents?
+Yes, actually I am him.
+almost not
+used. But,
+I think I tried.
+him, when he just
+appeared. He was very
+similar to Quora, what was
+quite nice. I think
+, it's good that there is
+competition, because
+people should have
+choice, and hopefully,
+this forces us
+work even better.
+Honestly, our
+the team is focused
+on problem solving
+users. Therefore we
+we don't spend much
+time for analysis
+products
+competitors. We
+not really
+testing others
+products. Of course,
+worth being aware of
+that they exist.
+You need to know what they are.
+. But I just love
+communicate with
+users. Me
+like
+to improve
+product. I love
+to act on the basis of
+reviews. So the main thing
+—this is creation
+really high quality
+product.
+Probably the last one
+question. I
+talked to Ben
+Mann,
+co-founder
+Anthropic. The question I
+I want to ask you,
+concerns
+suggestions that I already
+partially voiced
+during our conversation
+. One of his questions
+to you: what is your plan
+after the onset of AGI? Than
+you plan
+engage in? What will it be like?
+your life after
+achieving AGI, whatever it is
+didn't mean?
+So, before
+join Anthropic,
+I lived in the countryside.
+part of Japan, and this
+was completely different
+lifestyle. I was,
+probably the only one
+engineer in the city. I
+was the only one
+English-speaking in that
+in the city. It was just
+completely different
+atmosphere. Sprat
+times a week I
+rode a bicycle on
+farmer's market. Well
+and, you know, you're driving by
+past the rice fields and
+something else. It was
+a completely different pace,
+antithesis
+San Francisco. What
+I really
+liked it
+the way in which we
+got acquainted with
+neighbors and built
+friendship, exchanging
+pickles. In the city where
+we lived, in fact
+everyone was making miso,
+everyone made pickles.
+So I'm even quite
+learned well
+to make miso. I did
+many parties, and that's it
+that I am still cooking. Miso
+—an interesting thing that
+teaches to think
+long-term
+at intervals. This is very
+differs from
+engineering. Because, you know,
+batch of white miso
+is preparing at least
+3 months. And ours
+red meat is 2, 3, 4
+years. You have to be very
+patient. You just
+you mix it up, and
+then you leave
+to insist You
+you have to be very, very
+patient. So I
+like this
+thinking like that
+long scales
+time. And so, I think,
+after the appearance of AGI or
+if I didn't work in
+Anthropic, I would probably
+was engaged in miso.
+I like this one.
+respond. Ben asked
+ask me what it is
+What is your story with
+miso, so I'm glad that
+you answered. Therefore,
+the future may
+consist only in the fact that
+to delve into
+miso. Become real
+master in
+cooking miso.
+Surprisingly. Boris, this is
+It was incredible.
+I feel that we are now
+like brothers from Ukraine.
+Before we
+let's move on to our
+exciting final
+parts, is there anything else,
+what would you like
+share? Do you want
+you have something to say
+listeners at the end?
+Maybe you want to
+Why emphasize something?
+Yes, I would like to
+to emphasize that for
+Anthropic from the very
+the beginning idea to start with
+encoding, then
+go to
+using
+tools, and then
+before use
+computer—that's it
+how we approach
+affairs. And this is the way,
+which, as we know,
+will develop
+models, or how we
+we want to build them. AND
+this is also a way,
+thanks to which we
+we can learn
+about safety, study
+it and improve it
+in the best way. Therefore
+, you know, everything that's happening now
+happening around
+, just like Claude Code, that
+this is getting huge
+multi-billion
+business. And you know,
+now all my friends
+use Claude Code and
+I'm constantly reminded of this.
+write. So, you know,
+that this thing has become
+so big, in
+in a sense it became
+completely
+surprise. Ago
+that it's not quite us
+knew that this would be it
+such a product. We are not
+knew that he
+will start with
+terminal or something
+something like that. But in
+in a sense it is
+not surprising at all, because it is
+was ours
+conviction as
+companies during
+for a long time.
+At the same time, it seems,
+that it's still very early
+. You know, most
+people in the world still do not
+use Claude Code.
+Most people in
+the world still does not
+use AI. So
+it seems like it's only 1%
+work, and there is still more to come
+so much.
+Yes, dude.
+Crazy to think
+about this, seeing the numbers,
+which appear. You,
+guys, just now
+attracted billions
+investments. Me
+it seems that only
+Claude Code brings 2
+billions of dollars
+income. Do you think
+about Anthropic, I think,
+the number you named,
+that's 15 billion in revenue
+. It's crazy to think,
+how early it is,
+looking at these numbers
+.
+Yes, yes, yes. It
+madness, and I have
+means that the way in which
+which Claude Code continues
+to grow, is, honestly
+simply put
+users. Yes
+many people with it
+use. They
+so fascinated by him.
+They fall in love with
+product, and then
+tell us about
+what doesn't work, and about
+what they want.
+So the only reason,
+why does he continue
+to improve, —
+this is what everyone knows
+use. All
+They talk about it. All
+constantly giving
+reviews, and this
+the most important. AND
+you know, for me it is
+the way I love
+to spend one's days—
+just chatting
+with users and
+making a product
+best for them.
+And making miso.
+And making miso. Well,
+miso does not require
+special efforts.
+Just need to
+wait.
+Yes, you just need
+wait. Well,
+Boris, this is where we are.
+reached our very
+exciting blitz-
+poll. I have
+I have five questions for you.
+Are you ready?
+They drove.
+First question: what
+two or three books you
+most often
+recommend to others
+people?
+I really like reading.
+Hmm, I would start with
+technical book. One
+of them—this is "
+Functional
+Scala programming»
+. This is the best
+technical book that I
+ever read. It
+It's quite strange, because you,
+you probably won't
+use Scala,
+and I don't know how much
+this will be important in
+future. But in
+functional
+programming and
+thinking types are
+a certain elegance, and
+this is how I write code and
+I can't stop.
+to think about
+programming. So,
+you know, you can
+take it as
+historical artifact.
+You can perceive
+this is like something that will help
+you go out on a new one
+level.
+I love this book.
+The book I mentioned earlier
+I didn't remember. My
+favorite
+Oh, great, my friend, this is
+um, "Accelerating"
+Charles Strauss. It,
+probably my favorite
+genre—scientific
+fantasy. Apparently,
+science fiction
+and artistic
+literature. «
+"Accelerating"—this
+incredible book,
+she is so dynamic.
+The pace is getting faster.
+and faster, and me
+it seems that she
+conveys the essence of the moment,
+in which we live,
+better than any
+another book. Simply
+because of its speed.
+It starts with
+of how everything flies, and
+we are starting
+to approach
+technological
+singularity. AND
+ends with something
+like
+collective
+consciousness of lobsters on
+orbit of Jupiter. And this
+is happening
+for several
+decades or
+about that. So
+the pace is simple
+unbelievable. I
+I really adore her.
+Maybe I can advise more.
+one book. Hmm, "
+"Wandering Earth." «
+"Wandering Earth" Liu
+Cisinya. This is the same one.
+the author who wrote "
+"The Three-Body Problem."
+I think many people
+knows him precisely because
+it. I have a "Task"
+"three bodies"
+I like it, but it
+short stories—
+even more. "Wandering"
+"Earth" is one of
+collections of stories, in
+him really
+amazing stories. To
+It's also interesting to read.
+Chinese fiction
+because she has absolutely
+a different perspective than
+western, and this
+displayed in
+author's style. This is very
+interesting to read, and
+written simply
+perfectly.
+It's interesting how scientific
+fantasy prepares us
+to thoughts about the future
+. She creates something on
+like models: "
+"Okay, I understand." "I
+I've read about this before.
+world".
+Yes, I think that's why.
+I joined.
+Anthropic. Because, as I already
+I said, I lived in this
+rural place. I
+thought about these
+long-term
+scale, because everything is there
+so slowly.
+At least, in
+compared to San-
+Francisco. And everyone
+the things you do
+you are doing,
+adjusted to
+seasons and food that
+requires many
+months. Exactly so
+are organized
+various social
+events. That's how you are.
+You plan your time. You
+you come to
+farmers market, and
+It's persimmon season, because
+around twenty
+persimmon sellers, and
+next week
+the season is ending,
+the season begins
+grapes, and you are
+you see. So, these are the ones
+long-term skills
+. And then I read
+a lot of science
+fiction. And simply
+being in that
+At that moment, I was thinking about
+these long-term
+skills. I know how it is.
+can develop, and
+I felt like I had to.
+to make a contribution,
+so that everything goes a little
+better. Actually, that's why I
+ended up in Anthropic. Ben
+Mann also played in
+This plays a significant role.
+I want to
+to dedicate a whole
+podcast talking about
+your time in Japan.
+Japan and travel
+Boris
+through Japan to Anthropic,
+but we will
+concise. I am fast.
+I recommend to you
+science fiction
+the book if you don't have it
+read. You read "
+"Flame over the abyss"?
+This is Vinge, right? Yes,
+she is wonderful.
+Yes. OK. She is very
+interesting from an AI perspective
+and AGI. Few people have it.
+read. So I personally
+read. Yes. I often
+I'm rereading this book.
+Yes, yes, yes. Me
+also like "
+"Depth in the sky",
+prequel to "The Flame"
+over the abyss". I think
+, they are quite
+this is a sequel, and it was
+better.
+Yes.
+Yes, yes, yes. I think
+Yes.
+Yes. It is very long and
+difficult for
+perception, but such
+beautiful. Good,
+we continue our blitz-
+poll. Do you have
+favorite recent
+movie or series,
+which you like very much
+Did you like it?
+Actually, I almost didn't
+am I watching TV?
+movies. I just have
+there is no time for this
+lately. Although
+I looked, and again
+I will remember the seasonal loop,
+but the series "Questions
+"Three Bodies" on Netflix
+I really liked it.
+I think this is wonderful.
+film adaptation
+book series.
+A common trait among
+leaders in the field of AI—
+lack of time for movies
+or series that I
+I completely understand. Is there
+some product that
+you recently
+discovered for themselves and
+which you like very much
+Do you like it?
+I'll advertise a little and
+I'll just say about Cohere,
+because this is really the one
+the only product that
+changed quite a bit
+my life because I
+I keep it constantly.
+launched. AND
+integration with Chrome,
+in particular, simply
+really wonderful. So
+he, for example,
+paid for me
+fine for violation
+traffic rules
+movement. He also
+canceled several of mine
+subscriptions. Simply
+It's amazing how much
+boring work he
+takes on. I even
+I don't know if this is possible.
+to name a product,

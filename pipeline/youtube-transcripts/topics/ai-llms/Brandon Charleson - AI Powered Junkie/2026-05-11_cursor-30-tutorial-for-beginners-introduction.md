@@ -4,7 +4,7 @@ title: "Cursor 3.0 Tutorial for Beginners (Introduction)"
 channel: "Brandon Charleson - AI Powered Junkie"
 topic: "ai-llms"
 published_date: "2026-05-11"
-ingested_date: "2026-11-07"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=PW8fo_SrsqU"
 duration: 1201

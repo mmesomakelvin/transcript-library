@@ -8,7 +8,7 @@ ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=ZRM_TfEZcIo"
 duration: 2372
-word_count: 6322
+word_count: 6321
 ---
 I spent 18 months turning my second
 brain into my living research memory
@@ -513,7 +513,7 @@ known as a wiki layer. So, the
 new algorithm looks like this. We have
 input sources and an output wiki,
 and the sources, as I said before, can
-be things like Obsidian, Notebook LM, Google
+be like Obsidian, Notebook LM, Google
 Drive or YouTube, Notion, even
 custom URLs, right? That
 's powerful too, because you use

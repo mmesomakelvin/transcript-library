@@ -8,7 +8,7 @@ ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=mQfTdNVCOB0"
 duration: 1686
-word_count: 4565
+word_count: 4567
 ---
 Hello everyone. Today
 we will try
@@ -150,7 +150,7 @@ this cycle, where it
 follows
 reasoning, action,
 observation, and
-repeating this
+repetition of this
 cycle, we call it the
 agent cycle. But
 before we start
@@ -574,8 +574,8 @@ choose the right
 tool and valid
 arguments, but
 the binding still
-has to answer
-the operational
+has to answer the
+operational
 question: where does it
 run, within what
 bounds, and how much do we
@@ -1053,8 +1053,8 @@ instruction to "don't
 forget to do this" into a
 named opportunity
 that can be triggered by
-a binding. Isn't that right? And that's
-really important.
+a binding. Isn't that right? And
+this is really important.
 That's why it was a
 key moment when
 the skills became
@@ -1246,7 +1246,7 @@ observability
 becomes the
 permission barrier you
 add after you
-discover a
+discover the
 missed edge
 case, which becomes a
 test. The repetitive
@@ -1298,8 +1298,8 @@ diagram. At some
 level, that's how
 Claude Code works, that's how Codex works,
 and that's how Gemini
-CLI works. And that's useful now
-because it all
+CLI works. And that's useful now,
+because all of this
 shouldn't seem like
 some random
 complicated thing that

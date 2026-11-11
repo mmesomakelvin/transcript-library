@@ -4,7 +4,7 @@ title: "Agentic AI in Trading: The Evolution of Trading Bots with Irene Aldridge
 channel: "Quantopian"
 topic: "ai-llms"
 published_date: "2026-02-20"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=g1GbmCr9MSc"
 duration: 2532

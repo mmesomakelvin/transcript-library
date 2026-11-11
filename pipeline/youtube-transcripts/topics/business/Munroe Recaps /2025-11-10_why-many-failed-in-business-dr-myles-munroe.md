@@ -4,7 +4,7 @@ title: "WHY MANY FAILED IN BUSINESS || DR. MYLES MUNROE"
 channel: "Munroe Recaps "
 topic: "business"
 published_date: "2025-11-10"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=ZV_e6BwvHeI"
 duration: 758

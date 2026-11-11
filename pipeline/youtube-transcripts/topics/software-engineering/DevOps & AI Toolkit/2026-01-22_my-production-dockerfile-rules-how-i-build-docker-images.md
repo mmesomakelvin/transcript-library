@@ -4,7 +4,7 @@ title: "My Production Dockerfile Rules: How I Build Docker Images"
 channel: "DevOps & AI Toolkit"
 topic: "software-engineering"
 published_date: "2026-01-22"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=ueTe-VQaD7c"
 duration: 1059

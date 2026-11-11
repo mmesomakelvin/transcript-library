@@ -4,7 +4,7 @@ title: "The AI Agent Economy Is Here"
 channel: "Y Combinator"
 topic: "ai-llms"
 published_date: "2026-02-21"
-ingested_date: "2026-05-31"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Q8wVMdwhlh4"
 duration: 1401

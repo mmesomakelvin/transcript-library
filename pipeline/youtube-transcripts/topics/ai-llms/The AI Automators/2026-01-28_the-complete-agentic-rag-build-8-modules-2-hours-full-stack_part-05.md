@@ -4,7 +4,7 @@ title: "The Complete Agentic RAG Build: 8 Modules, 2+ Hours, Full Stack"
 channel: "The AI Automators"
 topic: "ai-llms"
 published_date: "2026-01-28"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=xgPWCuqLoek"
 duration: 8050

@@ -4,7 +4,7 @@ title: "THIS is how to expose your apps to AI: WebMCP"
 channel: "Syntax"
 topic: "ai-llms"
 published_date: "2026-02-16"
-ingested_date: "2026-05-31"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=sOPhVSeimtI"
 duration: 1005

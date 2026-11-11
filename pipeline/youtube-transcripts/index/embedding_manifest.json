@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-11T05:01:43",
-  "total_files": 385,
-  "total_chunks": 169,
+  "generated": "2026-11-11T16:00:17",
+  "total_files": 441,
+  "total_chunks": 188,
   "files": [
     {
       "path": "topics/hardware-homelab/NetworkChuck/2026-01-31_claude-code-on-your-phone-in-10-minutes.md",
@@ -28,9 +28,25 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/hardware-homelab/Spencley Design Co./2026-05-21_15-garage-upgrades-everyone-needs.md",
+      "video_id": "K65VEWTD4dw",
+      "word_count": 7477,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/hardware-homelab/Eric Michaud/2026-05-05_build-an-obsidian-system-not-a-second-brain.md",
       "video_id": "OZ3ZNhrPbF4",
       "word_count": 1827,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/hardware-homelab/WunderTech/2026-03-12_5-security-upgrades-every-home-lab-should-have.md",
+      "video_id": "s53RoGddF6Y",
+      "word_count": 2185,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -47,6 +63,14 @@
       "path": "topics/hardware-homelab/Stephen Robles/2026-01-31_m4-mac-mini---the-perfect-home-server.md",
       "video_id": "uGyY2PFN8o0",
       "word_count": 3001,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/hardware-homelab/Scott Yu-Jan/2025-11-15_making-20-upgrades-for-my-desk-setup---dream-setups-2.md",
+      "video_id": "6er5oSPUGOI",
+      "word_count": 3229,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -102,7 +126,7 @@
     {
       "path": "topics/business/Alux.com/2025-03-28_how-does-private-equity-actually-work.md",
       "video_id": "3j85WQbvz0A",
-      "word_count": 2530,
+      "word_count": 2376,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -310,7 +334,7 @@
     {
       "path": "topics/business/Starter Story/2025-11-02_i-built-3-saas-apps-to-200k-mrr-heres-my-exact-playbook.md",
       "video_id": "67zh8_yiPh4",
-      "word_count": 2894,
+      "word_count": 2854,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -374,7 +398,7 @@
     {
       "path": "topics/business/Harvard Business Review/2026-02-09_how-mckinsey-plans-to-survive-ai-and-reinvent-consulting.md",
       "video_id": "hSpem_oGAf0",
-      "word_count": 5782,
+      "word_count": 5783,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -476,6 +500,46 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/a16z/2026-03-06_atlassian-ceo-on-the-saas-apocalypse-ai-agents-what-comes-next_part-01.md",
+      "video_id": "0lzo2tFBFy8",
+      "word_count": 3998,
+      "chunk": 1,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/a16z/2026-03-06_atlassian-ceo-on-the-saas-apocalypse-ai-agents-what-comes-next_part-03.md",
+      "video_id": "0lzo2tFBFy8",
+      "word_count": 3992,
+      "chunk": 3,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/a16z/2026-03-06_atlassian-ceo-on-the-saas-apocalypse-ai-agents-what-comes-next_part-04.md",
+      "video_id": "0lzo2tFBFy8",
+      "word_count": 104,
+      "chunk": 4,
+      "total_chunks": 4,
+      "embedding_ready": false
+    },
+    {
+      "path": "topics/ai-llms/a16z/2026-03-06_atlassian-ceo-on-the-saas-apocalypse-ai-agents-what-comes-next_part-02.md",
+      "video_id": "0lzo2tFBFy8",
+      "word_count": 3994,
+      "chunk": 2,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/I Am George/2026-02-02_claude-code-creator-reveals-anthropic-masterclass.md",
+      "video_id": "yANt4NysZw4",
+      "word_count": 1698,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Simon Scrapes/2026-02-28_every-claude-code-concept-explained-for-normal-people.md",
       "video_id": "ZlDnsf_DOzg",
       "word_count": 6152,
@@ -484,11 +548,27 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Simon Scrapes/2026-03-21_the-easiest-way-to-get-ahead-with-claude-code.md",
+      "video_id": "p37qo3oLai8",
+      "word_count": 2998,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/AI Andy/2026-03-18_claude-code-karpathys-autoresearch-god-mode.md",
+      "video_id": "vjJwgXsMfjM",
+      "word_count": 1830,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-01.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3997,
+      "word_count": 4000,
       "chunk": 1,
-      "total_chunks": 6,
+      "total_chunks": 5,
       "embedding_ready": true
     },
     {
@@ -502,39 +582,55 @@
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-04.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3995,
+      "word_count": 3999,
       "chunk": 4,
-      "total_chunks": 6,
+      "total_chunks": 5,
       "embedding_ready": true
     },
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-03.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3992,
+      "word_count": 4000,
       "chunk": 3,
-      "total_chunks": 6,
+      "total_chunks": 5,
       "embedding_ready": true
     },
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-02.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3996,
+      "word_count": 3998,
       "chunk": 2,
-      "total_chunks": 6,
+      "total_chunks": 5,
       "embedding_ready": true
     },
     {
       "path": "topics/ai-llms/Lenny's Podcast/2026-02-19_head-of-claude-code-what-happens-after-coding-is-solved-boris-cherny_part-05.md",
       "video_id": "We7BZVKbCVw",
-      "word_count": 3998,
+      "word_count": 1494,
       "chunk": 5,
-      "total_chunks": 6,
+      "total_chunks": 5,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/ZazenCodes/2026-06-05_build-an-ai-bookkeeper-with-pi-agent-harness.md",
+      "video_id": "Khfiy1lwGPs",
+      "word_count": 6327,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
       "path": "topics/ai-llms/George Ai/2026-02-02_claude-code-creator-reveals-anthropic-masterclass.md",
       "video_id": "yANt4NysZw4",
       "word_count": 1678,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Elie Steinbock/2026-05-11_flue-vs-sandcastle-vs-building-it-yourself.md",
+      "video_id": "9gcOfgh5T8s",
+      "word_count": 2552,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -588,6 +684,46 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Security Cryptography Whatever/2026-03-26_ai-finds-vulns-you-cant-with-nicholas-carlini_part-02.md",
+      "video_id": "_IDbFLu9Ug8",
+      "word_count": 3992,
+      "chunk": 2,
+      "total_chunks": 5,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Security Cryptography Whatever/2026-03-26_ai-finds-vulns-you-cant-with-nicholas-carlini_part-03.md",
+      "video_id": "_IDbFLu9Ug8",
+      "word_count": 3998,
+      "chunk": 3,
+      "total_chunks": 5,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Security Cryptography Whatever/2026-03-26_ai-finds-vulns-you-cant-with-nicholas-carlini_part-01.md",
+      "video_id": "_IDbFLu9Ug8",
+      "word_count": 3999,
+      "chunk": 1,
+      "total_chunks": 5,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Security Cryptography Whatever/2026-03-26_ai-finds-vulns-you-cant-with-nicholas-carlini_part-05.md",
+      "video_id": "_IDbFLu9Ug8",
+      "word_count": 1300,
+      "chunk": 5,
+      "total_chunks": 5,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Security Cryptography Whatever/2026-03-26_ai-finds-vulns-you-cant-with-nicholas-carlini_part-04.md",
+      "video_id": "_IDbFLu9Ug8",
+      "word_count": 3995,
+      "chunk": 4,
+      "total_chunks": 5,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Jaymin West/2026-03-09_context-windows-are-stupid.md",
       "video_id": "BmGC58Opifc",
       "word_count": 2773,
@@ -604,12 +740,28 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/How I AI/2026-03-11_how-figma-engineers-sync-designs-with-claude-code-and-codex_part-02.md",
+      "video_id": "I5X4_mYoiM8",
+      "word_count": 3996,
+      "chunk": 2,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/How I AI/2026-02-25_5-openclaw-agents-run-my-home-finances-and-code-jesse-genet_part-01.md",
       "video_id": "96Vl8s3EQhk",
       "word_count": 3997,
       "chunk": 1,
       "total_chunks": 3,
       "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/How I AI/2026-03-11_how-figma-engineers-sync-designs-with-claude-code-and-codex_part-03.md",
+      "video_id": "I5X4_mYoiM8",
+      "word_count": 199,
+      "chunk": 3,
+      "total_chunks": 3,
+      "embedding_ready": false
     },
     {
       "path": "topics/ai-llms/How I AI/2026-02-25_5-openclaw-agents-run-my-home-finances-and-code-jesse-genet_part-02.md",
@@ -664,6 +816,14 @@
       "video_id": "Yb9IyTOh0xg",
       "word_count": 3999,
       "chunk": 2,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/How I AI/2026-03-11_how-figma-engineers-sync-designs-with-claude-code-and-codex_part-01.md",
+      "video_id": "I5X4_mYoiM8",
+      "word_count": 3996,
+      "chunk": 1,
       "total_chunks": 3,
       "embedding_ready": true
     },
@@ -734,7 +894,7 @@
     {
       "path": "topics/ai-llms/AI LABS/2026-02-13_how-to-use-notebooklm---7-crazy-ways.md",
       "video_id": "eFCHwtufjJc",
-      "word_count": 2393,
+      "word_count": 2409,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -751,6 +911,14 @@
       "path": "topics/ai-llms/AI LABS/2026-02-09_no-more-delay-upgrade-your-claude-code-workflow.md",
       "video_id": "MSyWjPDrHJw",
       "word_count": 1922,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/AI LABS/2026-07-20_fleet-engineering-is-insane-the-next-evolution-of-vibe-coding.md",
+      "video_id": "qxjII6x2yPY",
+      "word_count": 2828,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -783,6 +951,14 @@
       "path": "topics/ai-llms/AI LABS/2026-02-09_your-ai-is-only-using-a-fraction-of-its-power.md",
       "video_id": "MSyWjPDrHJw",
       "word_count": 1922,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/AI LABS/2026-07-17_how-to-use-codex-to-build-insanely-beautiful-websites-using-gpt-56-sol.md",
+      "video_id": "pHstb0JGGhE",
+      "word_count": 5520,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -838,7 +1014,7 @@
     {
       "path": "topics/ai-llms/ARK Invest/2026-01-23_cathie-woods-big-ideas-2026-recap.md",
       "video_id": "VTKPbxhP8jE",
-      "word_count": 3613,
+      "word_count": 3456,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -900,6 +1076,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Firecrawl/2026-10-12_this-tiny-model-almost-beat-jev-after-one-fine-tune-with-firecrawl.md",
+      "video_id": "SHoFr4D9cjM",
+      "word_count": 1448,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/StarMorph AI/2026-02-22_10-cli-tools-im-using-alongside-claude-code-starmorph-ai.md",
       "video_id": "3NzCBIcIqD0",
       "word_count": 1791,
@@ -927,6 +1111,14 @@
       "path": "topics/ai-llms/Matt Pocock/2026-03-16_5-claude-code-skills-i-use-every-single-day.md",
       "video_id": "EJyuu6zlQCg",
       "word_count": 3799,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Matt Pocock/2026-07-16_mattpocockskills-a-complete-ai-coding-workflow-end-to-end.md",
+      "video_id": "M6mYodf0dJM",
+      "word_count": 3355,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1068,6 +1260,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Nate Herk | AI Automation/2026-03-03_the-new-nano-banana-2-claude-code-10k-websites.md",
+      "video_id": "q0TgUtj6vIs",
+      "word_count": 5364,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Marcus Vorwaller/2026-02-07_meet-sidecar-you-might-never-open-cursor-again.md",
       "video_id": "5QZxWmDl_tc",
       "word_count": 1741,
@@ -1092,9 +1292,17 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Brian Casel/2026-03-06_openclaw-vs-claude-for-running-an-agent-team.md",
+      "video_id": "E6lW2AXsT2Q",
+      "word_count": 2242,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/AI Jason/2024-12-16_easiest-way-to-train-llm-train-w-unsloth-2x-faster-with-70-less-gpu-memory-requi.md",
       "video_id": "jFl5Fewrieo",
-      "word_count": 4795,
+      "word_count": 4797,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1110,7 +1318,7 @@
     {
       "path": "topics/ai-llms/AI Jason/2026-02-22_anthropic-killed-tool-calling.md",
       "video_id": "3wglqgskzjQ",
-      "word_count": 2834,
+      "word_count": 2866,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1340,6 +1548,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Ray Amjad/2026-07-17_the-4-levels-of-agentic-coding-how-to-ship-like-boris-cherny.md",
+      "video_id": "XLA-sTSJ-Wc",
+      "word_count": 6772,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Ray Amjad/2026-02-21_claude-code-just-got-a-major-upgrade-heres-what-changed.md",
       "video_id": "F_frSYyhzOE",
       "word_count": 3924,
@@ -1350,7 +1566,7 @@
     {
       "path": "topics/ai-llms/Ray Amjad/2026-07-14_anthropic-just-dropped-a-new-kind-of-subagent.md",
       "video_id": "EVyhcfo_Zsw",
-      "word_count": 2052,
+      "word_count": 2051,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1380,6 +1596,22 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Ray Amjad/2026-03-21_anthropic-just-revealed-where-coding-is-heading.md",
+      "video_id": "pOsGxVKYd3s",
+      "word_count": 2713,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Every/2026-06-05_codex-runs-my-inbox-now.md",
+      "video_id": "2Yy8EJlZJFE",
+      "word_count": 1807,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/AI Engineer/2025-11-23_ai-changes-nothing-dax-raad-opencode.md",
       "video_id": "o3gmwzo-Mik",
       "word_count": 3562,
@@ -1388,9 +1620,17 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/AI Engineer/2026-07-15_recursive-model-improvement-lee-robinson-cursor-spacexai.md",
+      "video_id": "q4Tr-DknG2M",
+      "word_count": 4148,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/AI Engineer/2026-07-07_what-if-the-harness-mattered-more-than-the-model---aditya-bhargava-etsy.md",
       "video_id": "2e9ANoOEn28",
-      "word_count": 4594,
+      "word_count": 4366,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1398,7 +1638,7 @@
     {
       "path": "topics/ai-llms/AI Engineer/2026-06-26_turn-10994-notes-into-memory---paul-iusztin-decoding-ai-louis-francois-bouchard.md",
       "video_id": "ZRM_TfEZcIo",
-      "word_count": 6322,
+      "word_count": 6321,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1494,15 +1734,23 @@
     {
       "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-04.md",
       "video_id": "6pP8x8sXoaM",
-      "word_count": 1947,
+      "word_count": 783,
       "chunk": 4,
       "total_chunks": 4,
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/Unsupervised Learning/2026-07-02_why-we-need-some-ai-model-controls.md",
+      "video_id": "a5L-lFd8jSk",
+      "word_count": 5701,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-03.md",
       "video_id": "6pP8x8sXoaM",
-      "word_count": 3997,
+      "word_count": 3998,
       "chunk": 3,
       "total_chunks": 4,
       "embedding_ready": true
@@ -1510,7 +1758,7 @@
     {
       "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-02.md",
       "video_id": "6pP8x8sXoaM",
-      "word_count": 3994,
+      "word_count": 3999,
       "chunk": 2,
       "total_chunks": 4,
       "embedding_ready": true
@@ -1518,9 +1766,17 @@
     {
       "path": "topics/ai-llms/Unsupervised Learning/2026-02-28_the-great-transition_part-01.md",
       "video_id": "6pP8x8sXoaM",
-      "word_count": 3996,
+      "word_count": 3999,
       "chunk": 1,
       "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Steel Browser/2026-04-14_pi-agent-a-real-browser-this-is-what-happened.md",
+      "video_id": "c9292MtK8EA",
+      "word_count": 826,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
@@ -1734,7 +1990,7 @@
     {
       "path": "topics/ai-llms/IndyDevDan/2026-04-06_my-pi-agent-teams-claude-code-leak-signal-harness-engineering.md",
       "video_id": "RairMJflUSA",
-      "word_count": 6899,
+      "word_count": 6915,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1751,6 +2007,14 @@
       "path": "topics/ai-llms/IndyDevDan/2026-02-09_claude-code-multi-agent-orchestration-with-opus-46-tmux-and-agent-sandboxes.md",
       "video_id": "RpUTF_U4kiw",
       "word_count": 5413,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Daniel Agrici/2026-02-24_free-ai-blog-writer-claude-code-just-replaced-your-blog-writer.md",
+      "video_id": "AeLC4iutG8w",
+      "word_count": 2271,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1777,6 +2041,14 @@
       "word_count": 3971,
       "chunk": 2,
       "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Owain Lewis/2026-09-11_gpt-6-astra-tested-i-built-a-carousel-generator-from-scratch.md",
+      "video_id": "6YHPZ9IJotk",
+      "word_count": 2254,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     },
     {
@@ -1910,7 +2182,7 @@
     {
       "path": "topics/ai-llms/The Carbon Layer/2026-05-16_harness-engineering-masterclass-technical-deep-dive-on-how-to-build-agentic-syst.md",
       "video_id": "mQfTdNVCOB0",
-      "word_count": 4565,
+      "word_count": 4567,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -1974,7 +2246,7 @@
     {
       "path": "topics/ai-llms/Alejandro AO/2026-02-17_fine-tune-an-open-source-llm-with-claude-codecodex-hugging-face-model-trainer-sk.md",
       "video_id": "HGPTUc7tEq4",
-      "word_count": 4285,
+      "word_count": 3471,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2047,6 +2319,22 @@
       "path": "topics/ai-llms/Better Stack/2026-03-08_googles-new-cli-is-the-missing-piece-for-claude-code.md",
       "video_id": "EKG9kX86u0s",
       "word_count": 1792,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Better Stack/2026-03-12_the-end-of-env-files-as-we-know-them.md",
+      "video_id": "nxH-BrsCPTo",
+      "word_count": 1713,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/Better Stack/2026-05-14_developers-finally-got-an-open-source-voice-ai-platform-dograh.md",
+      "video_id": "xD9JEvfCH9k",
+      "word_count": 1213,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2172,6 +2460,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/ai-llms/VelvetShark/2026-03-06_why-your-openclaw-agent-forgets-everything-and-how-to-fix-it.md",
+      "video_id": "oN__gKJnPls",
+      "word_count": 4949,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/ai-llms/Eliot Prince/2026-02-13_how-to-transplant-your-chatgpt-brain-into-claude-ai-memory-transfer.md",
       "video_id": "WKpCrvwyXB8",
       "word_count": 2213,
@@ -2199,6 +2495,14 @@
       "path": "topics/ai-llms/Your Average Tech Bro/2026-01-28_i-tried-every-ai-coding-agent-heres-my-2026-setup.md",
       "video_id": "zgxorh9LhiE",
       "word_count": 5100,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/ai-llms/ZioSec/2026-01-30_how-to-set-up-openclaw-clawdbot-without-getting-hacked-isolation-least-privilege.md",
+      "video_id": "fooZAZsBmpg",
+      "word_count": 816,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2332,6 +2636,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/finance-investing/Paycheck To Portfolio/2026-07-15_borrowed-money-makes-money.md",
+      "video_id": "sQfDg0X-fJk",
+      "word_count": 3592,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/finance-investing/Paycheck To Portfolio/2026-03-21_market-crash-wealth-transfer.md",
       "video_id": "vz-2Rk0uvTg",
       "word_count": 2283,
@@ -2342,7 +2654,7 @@
     {
       "path": "topics/finance-investing/Paycheck To Portfolio/2026-02-07_what-a-market-pullback-actually-did-to-my-system-with-real-numbers.md",
       "video_id": "YJoLVaENI8U",
-      "word_count": 3418,
+      "word_count": 3422,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2383,6 +2695,22 @@
       "path": "topics/finance-investing/Paycheck To Portfolio/2026-07-04_i-dont-fear-margin-i-manage-it-like-a-business.md",
       "video_id": "1gQQ9NQwB9I",
       "word_count": 3998,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Paycheck To Portfolio/2026-04-22_i-turn-my-paycheck-into-cash-flow-heres-how.md",
+      "video_id": "DRRBwnkiMqc",
+      "word_count": 2226,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Paycheck To Portfolio/2026-05-27_how-i-turned-2500-into-a-growing-cash-flow-system.md",
+      "video_id": "gdHazWYjRlM",
+      "word_count": 3836,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2540,10 +2868,34 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/finance-investing/Nikhil Kamath/2026-05-04_howard-marks-ai-debt-vs-equity-the-next-40-years-of-investing-nikhil-kamath-wtf_part-04.md",
+      "video_id": "2HIJlD46Kig",
+      "word_count": 2412,
+      "chunk": 4,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/finance-investing/Nikhil Kamath/2026-05-04_howard-marks-ai-debt-vs-equity-the-next-40-years-of-investing-nikhil-kamath-peop_part-04.md",
       "video_id": "2HIJlD46Kig",
       "word_count": 2412,
       "chunk": 4,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Nikhil Kamath/2026-05-04_howard-marks-ai-debt-vs-equity-the-next-40-years-of-investing-nikhil-kamath-wtf_part-02.md",
+      "video_id": "2HIJlD46Kig",
+      "word_count": 3991,
+      "chunk": 2,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Nikhil Kamath/2026-05-04_howard-marks-ai-debt-vs-equity-the-next-40-years-of-investing-nikhil-kamath-wtf_part-01.md",
+      "video_id": "2HIJlD46Kig",
+      "word_count": 3997,
+      "chunk": 1,
       "total_chunks": 4,
       "embedding_ready": true
     },
@@ -2572,6 +2924,22 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/finance-investing/Nikhil Kamath/2026-05-04_howard-marks-ai-debt-vs-equity-the-next-40-years-of-investing-nikhil-kamath-wtf_part-03.md",
+      "video_id": "2HIJlD46Kig",
+      "word_count": 3996,
+      "chunk": 3,
+      "total_chunks": 4,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/Bob Loukas/2026-04-16_not-done-yet.md",
+      "video_id": "fk1dkrGUar4",
+      "word_count": 3662,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/software-engineering/Sam Crawford | Squarespace Expert/2026-02-15_the-psychology-of-premium-websites.md",
       "video_id": "f2mGqlLLqok",
       "word_count": 1333,
@@ -2580,9 +2948,25 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/software-engineering/I Code It/2026-06-30_frontend-system-design-essentials-data-heavy-frontend-apps.md",
+      "video_id": "nw-7ry_hhio",
+      "word_count": 2681,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/software-engineering/Rob the Maritimer/2026-01-31_youtube-analytics-explained-2026-beginners-guide-what-really-matters.md",
       "video_id": "2g6hbhclpKo",
       "word_count": 5426,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/RK's Code Craft/2026-07-10_mattpocockskills-the-complete-deep-dive-all-21-claude-code-skills-explained.md",
+      "video_id": "M3jYrNKQjEg",
+      "word_count": 3797,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2700,6 +3084,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/software-engineering/Claude/2026-06-29_how-spotify-runs-agents-across-20m-lines-of-code-with-niklas-gustavsson.md",
+      "video_id": "9DHZLw5653E",
+      "word_count": 4512,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/software-engineering/Spencley Design Co./2026-05-21_15-garage-upgrades-everyone-needs.md",
       "video_id": "K65VEWTD4dw",
       "word_count": 7477,
@@ -2750,7 +3142,7 @@
     {
       "path": "topics/software-engineering/Matt Pocock/2026-02-26_your-codebase-is-not-ready-for-ai-heres-how-to-fix-it.md",
       "video_id": "uC44zFz7JSM",
-      "word_count": 2013,
+      "word_count": 1854,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2812,9 +3204,41 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/software-engineering/AI Engineer/2026-07-17_the-great-loops-debate-dex-horthy-geoff-huntley-ian-livingstone-greg-pstrucha-in_part-03.md",
+      "video_id": "c35YoMdnI78",
+      "word_count": 2198,
+      "chunk": 3,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/AI Engineer/2026-07-17_the-great-loops-debate-dex-horthy-geoff-huntley-ian-livingstone-greg-pstrucha-in_part-02.md",
+      "video_id": "c35YoMdnI78",
+      "word_count": 3999,
+      "chunk": 2,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/AI Engineer/2026-07-17_the-great-loops-debate-dex-horthy-geoff-huntley-ian-livingstone-greg-pstrucha-in_part-01.md",
+      "video_id": "c35YoMdnI78",
+      "word_count": 3999,
+      "chunk": 1,
+      "total_chunks": 3,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/software-engineering/AI Engineer/2026-06-29_building-great-agent-skills-the-missing-manual.md",
       "video_id": "UNzCG3lw6O0",
       "word_count": 4098,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/The Next New Thing/2026-02-11_just-give-claude-these-skills.md",
+      "video_id": "YajqB9RDdzI",
+      "word_count": 6296,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -2860,6 +3284,14 @@
       "embedding_ready": true
     },
     {
+      "path": "topics/software-engineering/Ras Mic/2026-07-02_if-youre-building-with-ai-watch-this-system-design-overview.md",
+      "video_id": "4jy0T98dYoI",
+      "word_count": 5863,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
       "path": "topics/software-engineering/Better Stack/2026-02-08_this-sandbox-tool-makes-claude-code-unstoppable-code-on-incus.md",
       "video_id": "t78-JUnTK5Q",
       "word_count": 1812,
@@ -2879,6 +3311,14 @@
       "path": "topics/software-engineering/T\u00c2CHES TEACHES/2026-01-31_how-claude-code-changed-my-life-path.md",
       "video_id": "B1CQfL8d_lY",
       "word_count": 3523,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Sam Natale/2026-09-25_my-minimal-zsh-setup-is-ridiculously-good.md",
+      "video_id": "nzP_UcpaBZ0",
+      "word_count": 1830,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true
@@ -3081,6 +3521,14 @@
       "word_count": 806,
       "chunk": 24,
       "total_chunks": 24,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/software-engineering/Sam Crawford | Web Design Expert/2026-02-15_the-psychology-of-premium-websites.md",
+      "video_id": "f2mGqlLLqok",
+      "word_count": 1333,
+      "chunk": null,
+      "total_chunks": null,
       "embedding_ready": true
     }
   ]

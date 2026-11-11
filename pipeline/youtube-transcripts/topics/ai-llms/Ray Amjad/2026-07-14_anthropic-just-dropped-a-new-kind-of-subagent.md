@@ -8,7 +8,7 @@ ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=EVyhcfo_Zsw"
 duration: 646
-word_count: 2052
+word_count: 2051
 ---
 So, about a week
 ago, Anthropic added a
@@ -49,7 +49,7 @@ The performer is very
 simple. It's like "you're a
 programmer who
 gets rewarded for
-successful tests," and he's
+passing tests," and he's
 just trying to
 make the
 tests pass. You
@@ -71,7 +71,7 @@ If I run it on
 this
 impossible task
 , it will almost certainly
-try to cheat on
+try to cheat with
 the tests, and Watchdog will
 actually prevent it from
 doing so.
@@ -169,7 +169,7 @@ to define an
 observer for
 each subagent.
 So, if the executor
-is doing something, every
+does something, every
 tool call it
 makes
 will also be passed to the
@@ -189,7 +189,7 @@ for example. And I
 thought to myself, "
 Okay, why would Anthropic
 add something like this?
-Why are they experimenting with this
+Why would they experiment with this
 ?"
 Overall, Anthropic
 seems to be ahead of its

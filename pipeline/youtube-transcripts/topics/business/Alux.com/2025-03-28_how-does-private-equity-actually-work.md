@@ -4,386 +4,767 @@ title: "How Does Private Equity Actually Work"
 channel: "Alux.com"
 topic: "business"
 published_date: "2025-03-28"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=3j85WQbvz0A"
 duration: 955
-word_count: 2530
+word_count: 2376
 ---
-What do Legoland, The Hilton Hotel, and
-Ancestry.com have in common? Well,
-they're all owned by the same company,
-Blackstone, the biggest private equity
-firm in the world. Private equity is one
-of the most powerful forces in finance.
-Yet, most people don't fully understand
-how it works. You see, any kind of
-company needs money to grow fast. And
-there are two ways for them to get that
-money. First, they could sell shares to
-the public. That's you and me. Second,
-they could sell pieces of the company to
-private investors. That's private
-equity. And there's more to this. When a
-private equity firm buys a company,
-they've got no intention of holding on
-to it and pocketing the profits.
-Instead, they buy it with the intention
-to sell it as soon as it makes sense.
-So, what exactly is private equity?
-Where did it come from? And how are
-people getting so rich from it? Well,
-let's dive in. Welcome to Alux, the
-place where future billionaires come to
-get
-inspired. So, private equity is a way
-for big investors to buy companies, make
-them better, and sell them for a profit.
-And these firms work with four key
-steps. Step one is to raise money from
-outside investors and put it into a
-special fund. Step two is to use that
-fund to buy companies. And step three,
-to make the companies profitable. Once
-they own the company, they'll go in and
-restructure it so they can increase
-profits. So they might bring in new
-leadership, lay off workers, open up new
-locations, or make the marketing and
-branding better. Sometimes these changes
-lead to huge success stories. And
-sometimes they backfire. And then
-there's step four, sell them for a
-profit. After 5 or 10 years, the firm
-sells the company in one of three ways.
-Either through an IPO where it becomes
-publicly traded again, or they sell it
-to another company, or they sell to
-another private equity firm. If
-everything goes as planned, they sell it
-for much more than what they paid, and
-the firm and its investors make a
-massive profit. So, private equity has
-been shaping all industries for over a
-century now. But it didn't start off
-with this four-step strategy. In the
-early 1900s, business tycoons like JP
-Morgan, the Rockefellers, and the
-Vanderbilts were already making deals
-where they bought companies with
-investor money instead of just their
-own. But the big difference is that they
-didn't flip these companies for a
-profit. No, instead they bought multiple
-companies in the same industry, merged
-them to form massive corporations, and
-then used that to build their empire.
-Kind of like in Monopoly where you build
-your empire by first building up the
-same color pieces of land and after that
-you can build your houses and only when
-you have enough houses can you build
-that hotel. Well, back then the empire
-took a lot longer to build. All of this
-changed though after World War II. The
-economy was booming and hundreds of
-thousands of veterans were returning
-home. Investors saw this as a golden
-opportunity for the rise of new
-businesses. So, George Doy, a Harvard
-professor, created the American Research
-and Development Corporation or ARDC back
-in 1946, the first real venture capital
-firm. And his biggest bet was on a tiny
-company called Digital Equipment
-Corporation or DEEC. Now, ARDC invested
-just $70,000. And when DEC went public
-in 1968, that investment was worth
-$355
-million. Deoit proved that private
-investors could back innovative
-companies before they made it big. He
-set the stage for venture capital. By
-the 1980s, private equity had
-transformed yet again. This time, it
-went from betting on new ideas to taking
-on existing companies and making them
-profitable. Some deals paid off while
-others led to spectacular failures and
-bankruptcies. But one thing was clear.
-Private equity was now a major force in
-the financial world. As private equity
-became more mainstream in the 1990s and
-early 2000s, it wasn't just billionaires
-playing the game anymore. Pension funds,
-university endowments, even governments
-started pouring money into private
-equity firms. After the 2008 financial
-crisis, regulations got tighter. So
-instead of just slashing costs, they
-focused on improving operations,
-bringing in better management, and using
-technology to increase profits. By the
-2010s, private equity was stronger than
-ever. Today, firms like Blackstone,
-Carlilele, and Apollo manage trillions
-of dollars, and their influence extends
-into nearly every industry, including
-real estate, credit markets, and
-infrastructure. And this evolution of
-private equity also shows us the
-different strategies that modern firms
-now use. So, let's talk about these
-different types of private equity, shall
-we? So JP Morgan's 1901 acquisition of
-Carnegie Steel is considered the first
-major leveraged buyout or LBO, which is
-the most well-known type of private
-equity. So an LBO is when an investor or
-private equity firm buys a company using
-money pulled from other investors, which
-is exactly how JP Morgan raised capital
-back then. Now, modern LBOs work a
-little bit differently. The firms raise
-money from investors just like JP did,
-but they also borrow a lot of it and
-they use the target company's assets to
-leverage the debt. So, here's how that
-works. Imagine you work for an
-investment bank and somebody comes to
-you with a loan request. They tell you
-that they need to borrow a lot of money
-to buy a whole other company, make that
-company very profitable, and then sell
-it. and they tell you that instead of
-borrowing against their own assets, the
-loan will be backed up by the acquired
-company's assets and future earnings.
-This way, if the investment fails, you
-can recoup that loss from their assets.
-But even better, if it's successful, you
-can make a lot of money. It's high risk,
-which means you can charge high interest
-rates. The debt is secured against real
-assets, so you won't face a total loss.
-and the potential returns are massive.
-Now, these kinds of firms, the ones that
-specialize in LBOs, are experts at what
-they do. They have a history of
-successfully restructuring companies. In
-2007, when Blackstone Group acquired
-Hilton Hotels for $26 billion, one of
-the first things they did was appoint a
-new CEO. Then they moved the company
-away from ownership in real estate and
-focused instead on making it a brand
-management and franchising company. They
-injected $800 million into it to boost
-the company's financial health. This
-allowed them to get bigger loans and
-then they used that money to renovate,
-market, and expand their locations. When
-Hilton went public again in December
-2013, its stock closed at
-$21.50 a share. Over the next few years,
-Blackstone gradually sold its stake. By
-2018, they fully exited their
-investment, making around $14 billion in
-profit over 11 years. Now, that is a
-leveraged buyout success story. But not
-all deals pay off that well. You
-remember Toys R Us? Well, their story is
-probably the most popular botched buyout
-of our time. In 2005, multiple private
-equity firms joined forces and bought
-the company for about $6.6 billion.
-Because the deal was structured as a
-leveraged buyout, they financed the deal
-with Toys R Us assets and future
-earnings. All of that debt was placed on
-the toy sellers balance sheet, just like
-what was done with the Hilton. But these
-investors missed a few key things in the
-Hilton deal. Blackstone injected that
-$800 million into the company. There was
-no kind of cash injections for the Toys
-R Us deal. Instead, between 2005 and
-2017, the firms actually collected more
-than $470 million in fees and interest
-from the company. So, with the massive
-debt and extra fees and interest, the
-company didn't have the money to invest
-in improving its stores and upgrading to
-e-commerce. So, it fell behind the
-competition. 12 years after the
-acquisition, with no way to service its
-debt, the company filed for bankruptcy.
-More than 800 stores closed down and
-thousands of people lost their jobs.
-It's cases like this that have brought
-criticism and controversy to private
-equity firms. But it's not all like
-this. In fact, LBOS's are a very
-different strategy to the one George
-Doit used when he set that stage for
-venture capital. Now, we say set the
-stage because his most famous
-investment, the DEEC one we mentioned
-earlier, was actually a strategy known
-as growth equity. So, growth equity is
-like the more reliable, sensible cousin
-of venture capital. It's where firms
-invest in established fast growing
-businesses that need capital to expand.
-So these companies are already
-profitable, but they need funding to
-scale their operations, enter new
-markets, or develop new products. Unlike
-LBOs, these deals use little to no debt,
-and private equity firms usually buy a
-minority stake instead of taking full
-control. This is exactly how Tik Tok was
-able to get such a global reach. Two
-firms, General Atlantic and KKR,
-invested in Bite Dance, Tik Tok's parent
-company, which gave them the funds and
-resources to scale their operations
-quickly. Whereas venture capital is the
-high-risk, highreward side of investing.
-This is where the firm pours money into
-small, unproven startups and hopes
-they'll turn into billion-dollar
-companies. It's all about betting on new
-ideas and early stage companies before
-they've proven themselves. If the
-startup succeeds, the investors can make
-massive returns. If it fails, well, they
-can lose everything they invested. If
-you work for a startup or you're up to
-date in Silicon Valley news, then these
-are the firms that you'll know well.
-Think Sequoia, the firm that invested
-early in Airbnb, Google, and WhatsApp.
-or Andre and Horowits, the firm that
-invested in Skype, Facebook, and
-Twitter. Not all deals go that well,
-though. Seoia also invested $214 million
-in the cryptocurrency exchange FTX when
-the company collapsed in 2023. Seoia
-lost all of that. Venture capitalists
-also invested $700 million in Theronos,
-only to lose it all when the technology
-was found to be fake. Now, the last main
-strategy is one that generates all of
-the controversy, and we first saw it
-during that shift in private equity back
-in the 70s. It's called distressed
-investing. So, distressed investing is
-when firms buy struggling or bankrupt
-companies on a discount and then try to
-turn them around for profit. Sometimes
-this means fixing operations and making
-the company profitable again. Like when
-the firm Up Capita bought Game UK, they
-did a massive restructuring and within 2
-years increased the company's market
-value to more than 12 times what they
-paid for it. But other times they cut
-costs so aggressively and sold off so
-many assets that they left the company
-worse off than before. One of the first
-examples of this was in 1969 when a man
-named Victor Posner who owned DWG
-Corporation executed a hostile takeover
-of Sharon Steel. He got the company at a
-discount and started working on
-restructuring it to make it more
-profitable. In 1987, Sharon Steel filed
-for bankruptcy. Despite so many
-companies going bankrupt, in 2024 alone,
-110 companies backed by private equity
-ended up filing for bankruptcy. So
-despite that, private equity has turned
-investors into billionaires and built
-some of the biggest financial empires in
-history. But how exactly does it make
-people rich? How are these private
-equity firms making so much money? Well,
-it's all in the way the deals are
-structured. From just one deal, the firm
-is able to create multiple income
-streams. They're not liable to pay back
-the loan they've taken out, and they
-only contribute about 10% of their own
-money to the fund. Now, for the multiple
-income streams, they don't wait until
-the final sale to make money. They
-charge their investors management fees,
-usually 2% of the total assets that they
-manage, and performance fees, which is
-20% of profits. Even if a deal
-struggles, they still collect millions,
-even billions in fees just for managing
-the fund. Then their exit strategy
-pushes for maximum profit. They don't
-just sell the company to the highest
-bidder. They look for the deal that's
-going to make them the most money. That
-could mean going public, selling it to a
-competitor, or flipping it to another
-firm for more restructuring. And they
-make sure they time their exits for when
-valuations are highest. If they
-restructure the business, increase its
-profitability, and sell it for $20
-billion a few years later. They don't
-just double their money, they make 10
-times their original investment. Then
-there's the debt. The acquired company
-is the one that has to pay the loan and
-the interest on that loan is
-taxdeductible. So the business can keep
-more of its earnings. And since they
-only contributed a fraction of the
-purchase price in actual cash, their
-return on investment isn't just a 2x
-gain, it could be 5 or 10x. And that's
-how you end up with companies like
-Blackstone, KKR, and Apollo. private
-equity firms that manage trillions of
-dollars and own hotels, media companies,
-and tech companies. Basically, they own
-the world, and they're going to keep
-getting richer and more powerful. And
-you know, there's so much to unpack here
-that we've barely scratched the surface.
-So, we knew we had to take this further,
-which is why we're partnering with
-founder, entrepreneur, and speaker Aram
-Tagavi. Aram has started multiple
-successful businesses. And along the
-way, he realized just how much money he
-could make if he bought existing
-businesses. So, coming soon to the Alux
-app, Aram has put together an exclusive
-collection all about the private equity
-game. You'll learn how to get started
-buying businesses, even if you don't
-have capital, how to network and make
-deals with other people's money, how to
-negotiate, and so much more. The
-countdown is on. So to keep an eye out
-for Aram's collection, sign up to the
-Alux app today. Even better if you
-downloaded and scan this QR code on
-screen. You'll get 25% off the annual
-membership, and I'll be right there with
-you every step of the way. Okay, let's
-jump into the comments section together,
-shall we? What do you think is the
-future of private equity? Is this
-something you'd like to get involved
-with, or are you happy just to learn
-about it from a distance? Let's chat.
-We'll see you back here next time,
-Alexir. Until then, take care.
+What do Legoland, the
+Hilton Hotel, and
+ancestry.com have in common? Well, they are all
+owned by the same
+company, Blackstone, the
+world's largest
+private
+equity firm. Private
+equity is one of the
+most powerful forces in
+finance, yet
+most people don't
+fully understand how it
+works. You see,
+any company
+needs money to
+grow rapidly, and
+there are two ways to
+get it. First,
+they can sell
+shares to the public. That is,
+you and I. Second,
+they can sell
+shares of the company to
+private investors
+. This is private
+capital. And that's not
+all. When a
+private equity firm
+buys a company, it does
+n't intend to keep
+it and take the
+profits. Instead,
+they buy it with
+the intention of selling it as soon as
+it becomes
+profitable. So, what exactly is
+private
+equity? Where did it
+come from and how do people
+get so rich on it? Well,
+let's figure it out.
+Welcome to Alux
+, the place where future
+billionaires seek
+inspiration. So,
+private equity
+is a way for big
+investors to buy
+companies,
+improve them, and
+sell them for a
+profit. These firms
+work in four
+basic steps. The
+first step is to raise
+money from external
+investors and invest
+it in a special fund
+. Step two is
+to use this fund
+to buy companies.
+And the third step is
+to make companies
+profitable.
+After taking ownership of the company
+, they
+begin
+restructuring
+to increase
+profits. They can
+change management,
+lay off
+employees,
+open new branches,
+or improve
+marketing and branding.
+Sometimes these changes
+lead to
+huge success. And
+sometimes they have the
+opposite effect. And
+finally, step
+four—sell
+them at a profit. After
+5-10 years, the firm sells
+the company in one of
+three ways: through an
+IPO when it
+goes public again,
+selling to another
+company, or another
+private
+equity firm. If everything
+goes according to plan, they
+sell it for much
+more than they bought it for, and the
+firm and investors
+make a huge
+profit. Private
+equity has been shaping all
+industries for over
+a century, but it did
+n't start with
+this
+four-step strategy. By the
+early 1900s, business
+magnates like J.P.
+Morgan, the Rockefellers, and
+the Vanderbilts were already
+making deals,
+buying companies with
+investors' money,
+not just their own. But the
+big difference is
+that they didn't
+resell these
+companies for a
+quick profit.
+Now, instead,
+they were buying multiple
+companies in the same
+industry, merging
+them into huge
+corporations, and then
+using that
+to build their
+empire. It's similar to
+Monopoly, where you
+build your empire by
+first buying up
+plots of the same
+color. And after
+that, you can build
+houses, and only when there are
+enough of them, you
+can build a hotel.
+Well, it used to take much longer to
+build an empire
+. However, everything
+changed after
+World
+War II. The economy
+was growing rapidly, and
+hundreds of thousands of
+veterans
+were returning home.
+Investors saw
+this as a golden
+opportunity for the emergence of
+new businesses.
+So George Doriot, a
+Harvard professor, in
+1946 created the American
+Research and Development Corporation,
+or ARDC, the first
+true venture capital
+firm. And his
+biggest bet
+was a tiny
+company called
+Digital Equipment Corporation, or
+DEC. So, ARDC
+invested only
+$70,000, and when DEC
+went public in
+1968, that investment
+was worth
+$355 million.
+Doriot proved that
+private investors
+can support
+innovative companies
+even before they
+become successful.
+He paved the way
+for venture
+capital. By the
+1980s, private
+capital
+was transformed again.
+This time, we moved
+from betting on new
+ideas to working with
+existing companies
+and increasing their
+profitability. Some
+deals were successful,
+others led to
+high-profile failures and
+bankruptcies, but one thing
+was clear.
+Private equity
+has become a powerful force in the
+financial world.
+As private equity became more popular in the 1990s and
+early 2000s, it was
+n't just
+billionaires playing the game. Pension
+funds,
+university
+endowments, and even
+governments began
+investing in
+private
+equity firms. After the
+2008 financial crisis,
+regulation
+became stricter. So
+instead of simply
+cutting costs,
+they focused on
+improving
+operations,
+hiring better
+management, and
+using
+technology to
+grow profits.
+By the 2010s,
+private capital
+was stronger than
+ever. Today,
+firms like Blackstone,
+Carlyle, and Apollo manage
+trillions of dollars,
+and their influence
+extends to nearly
+every industry,
+including
+real estate,
+credit markets, and
+infrastructure. And this
+evolution of private
+equity also
+shows us the different
+strategies that
+modern firms
+are using
+today. So,
+let's talk
+about these different types of
+private equity,
+okay? Acquisition
+by J.P. Morgan's
+1901 Carnegie Steel acquisition
+is considered the first
+major
+leveraged buyout,
+or LBO, which is the
+most famous type of
+private equity.
+So, an LBO is when an
+investor or
+private equity firm
+buys a company with
+money raised from
+other investors,
+which is how J.P. Morgan
+raised capital in
+his time. But
+modern LBOs work
+a little differently. Firms
+raise money from
+investors, as
+J.P. did, but they
+also borrow heavily
+, using the
+target
+company's assets to
+secure the loan
+. So, here's how it
+works. Imagine you
+work at an
+investment bank
+and someone approaches
+you with a
+loan request. You are told that
+you need to borrow a
+large sum of money to
+buy another company,
+make it very
+profitable, and then
+sell it. And
+they explain to you that instead of
+pledging your own
+assets, the loan will be
+secured by the assets
+and future
+revenues of the company being
+purchased. This
+way, if
+the investment
+fails, you
+can recoup your
+losses with their
+assets. But, even
+better, if you succeed,
+you can make
+a lot of money. This is
+high risk, and therefore
+you can
+charge high
+interest rates.
+The debt is backed by
+real assets,
+so you won't go
+bankrupt, and the
+potential profits are
+huge. Therefore,
+such firms
+specializing in LBO
+are true
+experts in their
+field. They have
+successful experience in
+restructuring
+companies. In 2007,
+when the Blackstone Group
+acquired Hilton Hotels for
+$26 billion,
+one of their first
+moves was to
+appoint a new
+CEO. They then
+abandoned
+real estate ownership and
+focused on
+transforming the
+company into brand
+management and
+franchising. They
+invested $800 million
+to
+improve the
+company's financial condition. This
+allowed them to obtain
+larger loans, which
+they used to
+upgrade,
+market, and
+expand the network.
+When Hilton went
+public again in December
+2013, its shares
+closed at
+$21.50 a share
+. Over the
+next few
+years, Blackstone
+gradually sold
+its stake. By
+2018, they had fully
+exited the investment,
+having made about
+$14 billion in
+profits over 11 years.
+This is an example of a successful
+leveraged buyout, but
+not all deals
+end so
+well. Remember Toys "R
+" Us? Well, their story
+is perhaps the
+most famous
+failed ransom of
+our time. In 2005,
+several private
+equity
+firms joined
+forces and bought
+the company
+for approximately $6.6 billion
+. Because
+the deal was
+structured as a
+leveraged buyout,
+they financed it
+with
+Toys
+"R" Us' assets and future earnings. All of this debt
+was placed on the
+toy seller's balance sheet, just as
+was done with
+Hilton. But these investors
+missed several
+key points. In the
+case of Hilton,
+Blackstone
+invested that $800
+million in the company. There
+were no cash
+injections in the deal with Toys "R" Us. Instead, between
+2005 and 2017,
+the firms actually
+received over
+$470 million in
+commissions and
+interest from the
+company. So, due to the
+huge debt,
+additional fees, and
+interest, the company
+had no funds to
+improve its stores
+and transition to
+e-commerce.
+So, it began to
+lag behind its
+competitors. 12
+years after
+the acquisition,
+unable to service
+its debt, the company
+declared
+bankruptcy. More than 800
+stores closed
+and thousands of people
+lost their jobs. It is
+cases like these that
+cause criticism
+and controversy around
+private
+equity firms. But not everything is
+so clear-cut.
+In fact, LBO is a
+completely different
+strategy than the one
+used by Georges
+Doriot, creating
+the foundation for
+venture capital.
+We say “laying
+the groundwork” because
+his most famous
+investment, DEC, which we
+mentioned earlier,
+was actually a
+strategy known
+as growth equity.
+So,
+growth capital is the more
+reliable and
+prudent
+cousin of
+venture capital.
+These are investments by firms in
+rapidly growing steel companies that
+need
+capital to
+expand. Such
+companies are already
+profitable, but they
+need
+financing to
+scale
+operations, enter
+new markets, or
+develop new
+products.
+Unlike LBOs, these deals
+involve
+minimal or
+no debt, and
+private
+equity firms typically
+buy a minority
+stake rather than full
+control. This is how
+TikTok was able to achieve
+such global
+reach. Two firms,
+General Atlantic and KKR,
+invested in ByteDance, the
+parent company of
+TikTok, giving them the
+funds and resources to
+scale quickly.
+Meanwhile, venture
+capital is the
+high-risk,
+high-reward side of investing.
+Here, firms invest
+money in small,
+unproven
+startups,
+hoping they
+will become billion-dollar
+companies.
+The key here is to invest in
+new ideas and companies
+in the early stages,
+before they
+prove their
+success. If
+a startup is
+successful, investors
+can make
+huge profits.
+If it
+fails, they could
+lose everything they
+invested. If you
+work at a startup
+or follow
+Silicon
+Valley news, you
+know these companies well.
+Consider Sequoia—the firm
+that invested in
+early-stage companies like Airbnb,
+Google, and WhatsApp. Or Andreessen
+Horowitz, the firm that
+invested in Skype,
+Facebook, and Twitter. However, not
+all deals go
+so well. Sequoia also
+invested $214 million
+in
+cryptocurrency exchange
+FTX. When the company
+went bankrupt in
+2023, Sequoia lost it all
+. Venture
+capitalists also
+invested
+$700 million in
+Theranos, but lost
+everything when it was revealed
+that the technology was
+fake. Now the
+last major
+strategy is the one that
+causes the most
+controversy. And we
+first saw this
+during that shift
+in private
+equity in the 1970s.
+This is called "
+investing in
+distressed assets."
+So,
+distressed asset investing is
+when firms buy
+loss-making or
+bankrupt companies
+at a discount and then
+try to make
+them profitable.
+Sometimes this means
+fixing
+operations and
+returning the company
+to profitability. Like
+when OpCapita
+bought Game UK. They
+conducted a large-scale
+restructuring and
+within 2 years
+increased the
+company's market value by
+more than 12 times
+compared to the
+purchase price. But sometimes
+they
+cut costs
+and sold
+assets so aggressively that they left
+the company in worse
+shape than before.
+One of the first
+examples of this was in
+1969, when Victor
+Posner, owner of DWG
+Corporation, carried out a
+hostile takeover of
+Sharon Steel. He acquired
+the company at a discount and
+began working on
+restructuring it
+to make it
+more profitable. In 1987,
+Sharon Steel filed for
+bankruptcy. Despite the fact
+that
+many companies went bankrupt in 2024
+, 110 companies
+backed by
+private capital
+ultimately filed for
+bankruptcy. So,
+despite this, private
+equity has turned
+investors into
+billionaires and
+built some of the
+largest
+financial empires in
+history. But how exactly does
+this enrich people? How do
+these private
+equity firms make
+so much money? Well, it's all about
+how
+these
+deals are structured. A
+firm can
+create multiple
+sources of income from just one transaction. They are
+not obligated
+to repay the
+loan, and contribute
+only about 10% of
+their own funds to the fund
+. Now regarding
+income sources: they don't
+wait for the final
+sale to make money
+. They charge
+investors a
+management fee,
+typically 2% of
+total assets under
+management, and a
+performance fee, which
+is 20% of
+profits. Even if
+the deal goes poorly, they
+still earn
+millions, or even
+billions, in commissions
+just for managing the
+fund. Then their
+exit strategy
+is aimed at
+maximizing
+profits. They don't
+just sell
+the company to the
+highest bidder
+. They are looking for
+the deal that will make them
+the most money. This
+could mean going
+public, selling to a
+competitor, or
+reselling to another
+firm for further
+restructuring. And
+they make sure to
+choose the
+moment of
+highest
+valuation for exit. If they
+restructure
+the business, increase
+its profitability, and
+sell it for $20 a
+few years later, they don't
+just double
+their money, they
+get 10 times their
+initial
+investment. In addition
+, there is debt. The acquired
+company
+must repay the
+loan itself, and the interest on
+this loan is not
+taxable.
+This way, the business
+can keep
+more of its
+profits. And since
+they only contributed a
+portion of the purchase price with
+real money,
+their return on
+investment isn't
+just double,
+but could be 5 or 10
+times. That's how
+companies like Blackstone, KKR,
+and Apollo come into being. Private
+equity
+firms that manage
+trillions of dollars
+and own hotels,
+media, and
+technology
+giants. Essentially,
+they own the
+world and
+will continue to
+become richer and more
+powerful. You know, there's
+so much here
+that we've barely touched the
+surface. So we
+realized we had to
+go further, which is why
+we partnered with
+founder,
+entrepreneur, and
+speaker Aram
+Taghavi. Aram created
+several successful
+businesses and over time
+realized how much
+money could be
+made by buying
+ready-made companies. So
+soon,
+Aram
+will present an
+exclusive collection
+dedicated to the
+private
+equity game in the Alux app. You
+will learn how to start
+buying businesses
+even without
+capital, how to build
+connections and make
+deals with other people's money,
+how to negotiate, and
+much more. The countdown
+has begun, so to
+not miss the
+Aram collection,
+register in the
+Alux app
+today. Even better:
+if you download
+it and scan
+this QR code on your screen,
+you'll get 25
+% off your annual membership, and
+I'll be with you every
+step of the way. Well,
+let's move on to the
+comments section,
+okay? How do you
+see the future of
+private
+investment? Would
+you like to
+get involved in this,
+or are you just happy
+to learn
+about it from afar?
+Let's
+chat.
+See you here
+next time, Aluxer.
+In the meantime, take care of
+yourself.

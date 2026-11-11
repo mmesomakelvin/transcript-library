@@ -4,7 +4,7 @@ title: "Once I Understood This About Investing, My Life Changed."
 channel: "Chamath Palihapitiya"
 topic: "finance-investing"
 published_date: "2026-03-27"
-ingested_date: "2026-05-12"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=J2qKVjRR12w"
 duration: 914

@@ -4,7 +4,7 @@ title: "How to create JOBS for OpenClaw agents"
 channel: "Brian Casel"
 topic: "business"
 published_date: "2026-02-25"
-ingested_date: "2026-03-10"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=uUN1oy2PRHo"
 duration: 1240

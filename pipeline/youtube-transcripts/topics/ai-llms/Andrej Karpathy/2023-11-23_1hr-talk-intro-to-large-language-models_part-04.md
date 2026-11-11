@@ -4,7 +4,7 @@ title: "[1hr Talk] Intro to Large Language Models"
 channel: "Andrej Karpathy"
 topic: "ai-llms"
 published_date: "2023-11-23"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=zjkBMFhNj_g"
 duration: 3588

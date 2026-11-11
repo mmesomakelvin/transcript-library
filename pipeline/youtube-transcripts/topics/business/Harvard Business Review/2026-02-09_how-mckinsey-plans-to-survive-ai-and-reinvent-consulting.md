@@ -4,11 +4,11 @@ title: "How McKinsey Plans to Survive AI (and Reinvent Consulting)"
 channel: "Harvard Business Review"
 topic: "business"
 published_date: "2026-02-09"
-ingested_date: "2026-04-22"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=hSpem_oGAf0"
 duration: 1896
-word_count: 5782
+word_count: 5783
 ---
 This is just going to be that next
 evolution of there'll be a whole bunch
@@ -25,6 +25,7 @@ don't want to double my market cap," I
 think there'll always be a more
 complicated set of questions and
 opportunities out there.
+[music]
 So, I'm here with Bob Sternfelds, the
 global managing director of McKenzie.
 And Bob, thank you for being with us.

@@ -4,310 +4,221 @@ title: "The Great Transition"
 channel: "Unsupervised Learning"
 topic: "ai-llms"
 published_date: "2026-02-28"
-ingested_date: "2026-05-18"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=6pP8x8sXoaM"
 duration: 5003
-word_count: 1947
+word_count: 783
 chunk: 4
 total_chunks: 4
 parent_video_id: "6pP8x8sXoaM"
 ---
-system with my Trello system, like all
-the stuff that we're doing in my
-community. We think about ideal state
-from the very beginning.
-Ideal state, this concept is
-extraordinary. It's extraordinarily
-powerful, okay? I've been using it for a
-long time. Not this new version that I
-have now, but roughly, I've been using a
-system like this for probably 10 years.
-And there wasn't any AI. You don't need
-AI to sort of
-think about articulate this and start
-moving towards it. It's very powerful.
-Forget any tech, just note cards, index
-cards, a space pen, you're off and
-you're going to have massive benefits
-from doing this. Here's where the AI
-comes in. And this this is like the
-sickest, most powerful, most exciting
-thing in all of AI, across all AI ideas
-that
-I've ever heard about or come up with or
-whatever, okay? So, check this out. This
-is the universal game. When we meet
-aliens
-flying around the galaxy or whatever and
-we tell them this thing I'm about to
-tell you, they're going to be like,
-"Yeah,
-that's what everyone does.
-How do you think we got here? How do you
-think we have all these spaceships? How
-do you think we have all these planets?
-How do you think we have Dyson spheres
-around all these stars? Like, that's
-obvious that is the algorithm, right?
-So, this is what I call it. I call it
-the algorithm.
-The algorithm is
-we have ideal state.
-What is our current state?
-Okay? Step two, what is our current
-state? So, remember what I was talking
-about before about you have the graph of
-algorithms, you have asset management
-gets elevated to the top.
-This current state, it's the job of your
-AI and all the different agents and all
-the different systems it's not all AI
-this is deterministic code as well,
-right? What is the current snapshot of
-the org?
-What is the current state of our
-problems and our solutions and our
-products and our services? How happy are
-our people?
-How happy are our customers? What is the
-current churn number?
-What is the current products we're about
-to release? What are our competitors
-about to release? What are the market
-conditions? Snapshot.
-Okay? Snapshot.
-Snapshot ideal state.
-Ideal state is here. We're in Asia. We
-have 30% more employees, actually more
-likely 30% less employees, but separate
-topic. Um
-you know, we want to be in these
-markets. We need to have more services.
-We need to have more private lunch and
-learns uh in our local community. Wh-
-Whatever it is. All that's going to be
-hundreds of thousands of things or
-hundreds of things or millions of
-things, whatever it is.
-Our current state also has millions of
-things in it, right? Cuz it's going to
-go down to like eventually
-at some some level,
-here's the current open ports for all of
-our Kubernetes
-pods,
-right? All All of our AWS infrastructure
-current state.
-Current state over here, they're all
-locked down. Nothing publicly available.
-Strong authentication on them, etc.
-Now, here it is.
-Watch this.
-The role of AI
-is continuous migration.
-Continuous gap closing between current
-and ideal state.
-This works as an individual
-trying to lose 20 kilos,
-which I'm trying to do,
-an individual trying to lose 20 kilos,
-trying to uh increase their VO2 max,
-trying to find a wife, trying to
-get their art exhibited in the local
-gallery, and eventually at MoMA in San
-Francisco,
-trying to come up with uh new
-EDM tracks so they can go to EDC and
-actually play live on stage,
-trying to run a federation of planets.
-Okay, if we're talking about, you know,
-9,000 years in the future or whatever.
-Anything you're trying to do at any
-scale can be managed by ideal state and
-current state and the migration.
-This is extremely extremely powerful.
-I think we're about to apply this to
-almost everything. I think
-PRDs, engineering.
-So, I have this thing inside of uh the
-Pi platform. It's called the algorithm.
-I literally start
-the algorithm
-by decomposing the prompt that comes in
-and turning it into reverse engineered
-ideal state components. I break out the
-pieces. I look at the context from the
-user and I do deep analysis and we do
-research as well. This is if you have a
-lot of time. Do research and you figure
-out, okay, what do they actually mean by
-this? Okay, I might have sent in a
-single one sentence prompt, but I do all
-this research to break it into its
-pieces. What does he explicitly say he
-wants? What does he explicitly say he
-doesn't want?
-Okay, what does he maybe mean by that?
-What are some common gotchas for someone
-trying to build a system like this? All
-that gets decomposed, reverse engineered
-and I start creating ideal state
-criteria. These actually go into Cloud
-Code tasks, right? The task system from
-Cloud Code, which is extraordinary. I
-put them all in there, then they go into
-the PRD. And the PRD is what we work off
-of, but it's all working off of ideal
-state. So, engineering can be run this
-way. Companies can be run this way. You
-managing your
-life. You managing your entire family's
-happiness. Okay, my husband, you know,
-he needs to be more healthy. My kids,
-they need to have better education. They
-need more tutoring in this. Hey, I'm
-looking at the dashboard. Looks like
-they haven't had enough vegetables.
-Okay, I'm going to tell my AI we're
-going to order more vegetables. Hey, we
-haven't gone on a vacation together in a
-while. Hey, um I noticed we were looking
-at our phones a little bit too much at
-the dinner table last few days. My AI
-notified me about that. So, yeah, let's
-make sure we're all looking in each
-other's faces and talking about physical
-arts. Let's make sure we do a number of
-vacations during the year where there's
-no tech involved whatsoever. We're
-focusing on human things.
-And all of this, again,
-the AI is managing this stuff for you
-because you put it in your ideal state.
-Okay?
-So, if you're running an ice cream truck
-business, you're running a federation of
-planets, or you're just trying to like
-find a girlfriend or a boyfriend,
-all of this can be managed the same way.
-Same way as if you're trying to launch a
-new SaaS replacement app, or a new
-workout app,
-or whatever you're trying to do with AI,
-everything can be managed by thinking
-about it in this way. Now, there's a lot
-of steps in between,
-but those steps can be scaffolded. Those
-steps can be engineered. Those steps can
-be filled in. And the smarter the AI
-gets, the more it's going to be able to
-just know how to help you transition and
-build plans to help you transition. So,
-I I think this is potentially the
-biggest idea in AI.
-I don't think many people are talking
-about it yet, but I think this concept
-of ideal state is a is is about to be
-huge. And in fact, I think agentic
-platforms are about to start building it
-in to like everything they do. Wouldn't
-be surprised to see this Claude Code,
-Codex, Gemini
-start to
-move towards AGI generality by doing
-this reverse engineering of request into
-an ideal state that you then pursue. Cuz
-here's the trick.
-And and I got this from Andre Karpathy.
-You can't
-hill climb.
-You can't
-progress towards something if you don't
-have
-failures. If you don't have a thing to
-hill climb against. And this is why I
-reverse engineer everything into ideal
-state criteria, because they are also my
-verification criteria. So, what Karpathy
-said was previous software was you can
-make anything.
-The next generation of software will be
-you can verify anything. And I I think
-it's very powerful. So, my ideal state
-criteria in the algorithm within uh
-personal AI infrastructure, the open
-source project, it turns the ideal state
-into the verification criteria. And
-they're all discreet and they're all
-verifiable, yes or no. And that's what
-gets us to this verifiability thing that
-Andre was talking about. And that's what
-ultimately allows us to go from current
-state to ideal state. So, really excited
-about this. I know this was tons of
-content. And I just want you to think
-about it. It's a set of transitions.
-It's not just one transition. So, I
-consider all of this to be part of the
-great transition. Hopefully, it's a
-mental model. I know it includes lots of
-subset things, but I think all of it
-combined does produce a single mental
-model. So, hopefully, you can now see
-when all this news comes out, like new
-models, new products, new services, you
-know, um CoWork can now do this. Oh,
-it's it's it's going after the lawyers.
-It's going after whatever. What my goal
-is here is for you to be able to say,
-"Well, hold on, you know, based on this
-great transition model, that thing
-that's happening is not some something
-new. It's It's not going to produce
-anxiety, right? I'm trying to reduce
-your anxiety
-of thinking about all this change
-because I believe this great transition
-sort of model, with all the little sub
-models and transitions that I was
-talking about, it's kind of like a
-container. It's a container. It's a
-mental model container that can reduce
-your anxiety. If you understand this, in
-my opinion, if you understand this,
-then you just won't be surprised by
-things, right? And And I can be
-surprised. Like I I could have missed
-something, right? Obviously, I could be
-wrong about any one of these or more.
-But in general, I don't think I'm going
-to be surprised by this. I put the stuff
-into the book in 2016. It is coming
-true.
-I think it's natural progression for the
-stuff to be happening. Like, who knows
-how it's going to happen, when it's
-going to happen, which company is going
-to do it. You can't predict that stuff.
-It's impossible to predict. But, the
-direction
-I think is possible to to see where it's
-potentially going. And that
-gives you
-a container, a mental model to be like,
-"Mhm, okay.
-This all sort of makes sense inside of
-this framework. So, you're not spooked
-out by like all these new models coming
-out. Um new products coming out. It's
-like, "Oh, this person's going to lose
-their job. That person These industries
-are being disrupted." No, if you have
-this mental model, I think you're more
-likely to just be like, "Uh,
-yeah, that seems to be the way it's
-going. And uh you can buckle down and
-just move forward." So,
-hopefully this has been helpful. And uh
-we'll see you in the next one.
+running a Federation of
+Planets, or just
+trying to find
+yourself a boyfriend or
+girlfriend—it can all be
+organized
+the same way. Just like
+when you're launching a
+new SaaS app, or a
+fitness program, or
+anything else that
+you're trying to
+do with
+AI. Everything can be
+structured if you
+think about it that
+way. Of course, there
+are a lot of stages in between, but
+these steps can be
+organized. These
+steps can be
+design. These
+steps can
+be filled with meaning. And
+the smarter the
+AI ​​gets, the better it
+will know how to help
+you make
+the transition and make
+plans for that
+transition. So I
+think that's probably the
+most important idea in
+AI. I don't think
+many people talk about it
+, but
+the concept of the ideal
+state is about to become
+something big.
+In fact, I believe that
+agent platforms
+will start
+to implement this into
+everything they do. I would
+n't be surprised if Cloud
+Code, Codex, Gemini start to
+move towards
+general AI (AGI),
+reverse
+engineering queries
+into the ideal state
+that you then
+strive for, because that's the
+secret—and I
+heard this from Andriy
+Karpaty. You can't
+get to
+the top without trying. You
+can't move
+forward if you don't have
+failures, if you do
+n't have something to overcome.
+That's why I
+reverse
+engineer everything
+to the
+ideal state criteria,
+because they are
+also my
+verification criteria.
+Karpaty said, that in the
+previous
+generation of software, you could
+create anything
+. The next generation of
+software will allow you
+to verify anything,
+and I think that's very
+powerful. So my
+ideal
+state criteria in the algorithm, within the
+framework of the personal
+AI infrastructure of the
+open project,
+transforms the
+ideal state into
+verification criteria
+that are discrete and
+verifiable
+on a yes
+or no basis. That
+brings us to the
+same
+verifiability
+that Andriy was talking about, and that's what
+ultimately
+allows us to go
+from the current state
+to the ideal state. So I'm
+really excited about that.
+I know there's been a lot of
+information, and I
+just want you to
+think about it.
+It's a set of transitions.
+It's not just one
+transition. So I
+think of it all as
+part of a larger
+transition. I hope that
+this becomes your
+mental model. I
+know it has
+a lot of sub-points,
+but I think all of these things
+together create a
+single mental
+model. So
+hopefully now you
+can see it
+when
+all of these come together. news, right?
+New models, new
+products, new
+services, you know, um,
+co-work can do this now
+. Oh, this, this, this is
+aimed at
+lawyers, this is
+aimed at
+anyone. My point here is so that
+you can
+say, "Wait,
+you know, based on
+this big
+transition model, what's
+happening is
+not new." This, this
+shouldn't be
+alarming, right? I'm
+trying to reduce
+your anxiety about
+all of these changes, because I
+believe that this big
+transition model,
+along with all of the little
+sub-models and
+transitions that I've
+talked about... It's like a
+container. It's a
+mental container
+that can reduce
+your anxiety. If you
+understand that, I
+think if you
+understand that, then you
+just won't
+be surprised by certain
+things, right? And, and I could be
+wrong,
+like, I could have
+missed something, right?
+Of course, I could be
+wrong about any
+of these or
+even more. But
+overall, I don't think it would
+surprise me. I
+put these things in book
+back in 2016. It's becoming
+a reality. I think it's a
+natural
+progression
+. Who knows how it's
+going to happen, when it's
+going to happen, what
+company is going to do it.
+It's impossible to
+predict. It's
+impossible
+to predict. But
+the direction, I think, is
+where things are potentially
+going. And it gives
+you a container, a
+mental model, to
+say, "Okay, this all
+makes sense within this
+framework." So you're
+not scared of all these
+new models that
+are coming out. Um, new
+products that are coming out
+. It's like, "Oh, this
+person is going to lose their
+job." Man, these
+industries are changing.
+No, if you have that
+mental model, I
+think you're more likely
+to say, "Yeah, it looks like this is what it's going to be
+." And, um
+, you can pull yourself together
+and just
+move on. So
+I hope that was
+helpful, and, um,
+I'll see you in the
+next video.

@@ -4,7 +4,7 @@ title: "Why the 60-30-10 Rule is RUINING Your UI Designs"
 channel: "Kole Jain"
 topic: "ai-llms"
 published_date: "2026-01-08"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=66oOi9OLMCw"
 duration: 397

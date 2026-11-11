@@ -4,7 +4,7 @@ title: ""Ben Lost Everything" - Patreon Video"
 channel: "Benjamin"
 topic: "finance-investing"
 published_date: "2026-03-06"
-ingested_date: "2026-06-23"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=_wPSSUjpnPE"
 duration: 936

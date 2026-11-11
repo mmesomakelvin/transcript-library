@@ -4,7 +4,7 @@ title: "10 CLI Tools I'm using alongside Claude Code | Starmorph AI"
 channel: "StarMorph AI"
 topic: "ai-llms"
 published_date: "2026-02-22"
-ingested_date: "2026-05-31"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=3NzCBIcIqD0"
 duration: 591

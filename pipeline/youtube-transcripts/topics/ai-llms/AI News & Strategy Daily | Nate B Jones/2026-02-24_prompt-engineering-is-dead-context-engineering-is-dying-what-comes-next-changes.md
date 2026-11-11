@@ -4,7 +4,7 @@ title: "Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Nex
 channel: "AI News & Strategy Daily | Nate B Jones"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=QWzLPn164w0"
 duration: 1780

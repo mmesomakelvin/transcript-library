@@ -4,7 +4,7 @@ title: "Session 1 (of 42): Introduction to Investment Philosophies"
 channel: "Aswath Damodaran"
 topic: "finance-investing"
 published_date: "2026-03-24"
-ingested_date: "2026-10-10"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=5NuOTAVw6K4"
 duration: 1159

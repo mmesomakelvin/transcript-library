@@ -4,562 +4,957 @@ title: "Fine-Tune an Open Source LLM with Claude Code/Codex (Hugging Face Model 
 channel: "Alejandro AO"
 topic: "ai-llms"
 published_date: "2026-02-17"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=HGPTUc7tEq4"
 duration: 1349
-word_count: 4285
+word_count: 3471
 ---
-Good morning everyone. How's it going
-today? Today we're going to be taking a
-look at how to train a model for your
-custom agent and that is going to be
-very easy because we're going to have
-codeex or cloud code do the whole thing
-for us. Now, of course, fine-tuning a
-language model can be a difficult task
-and usually requires an expert, but not
-anymore because this agents codeex and
-clut code are here to help you not only
-make the difficult decisions for you,
-but also send the actual training jobs
-to HF jobs so that you don't have to do
-any of the heavy lifting yourself. So,
-in today's video, we're going to first
-of all select the base model that we're
-going to uh train. Then we're going to
-train it and then we're going to
-evaluate it to make sure that it
-actually um worked the fine-tuning and
-we're going to be using it in a very
-quick application to classify customer
-service tickets and summarize them. And
-we're going to do all of that for less
-than $1. So let's take a look at it.
-All right. So let's suppose you have an
-application and your application is a
-customer support uh ticketing service
-and your users are going to be able to
-send message to your application uh
-alongside some contact info. So all of
-this is going to be the input uh that's
-going to go into your API and this is
-going to be sent into a classifier and
-the classifier is going to assign a
-classification to the message of your
-user. So for example, if the user sent
-something like uh I would like to get a
-refund or I would like to get my money
-back, then the classifier would classify
-it as a refund. And the classifier is
-not just a simple classifier. uh
-otherwise you could use a much simpler
-model not a large language model but it
-will actually output a complete JSON
-with both the intent the confidence and
-also a short summary or a short reason
-why the classifier assigned that
-classification to a ticket. Okay. And
-after that once you have the whole thing
-you're going to be able to store the
-whole thing in your database. So that's
-what we're going to be doing. All right.
-Okay. So, the first thing that we're
-going to want to do is we're going to
-want to select a model that we're going
-to fine-tune for our particular use
-case. And in this case, I'm going to be
-using Gwen 30.6b.
-It is a very small model, but that is
-very convenient because that's going to
-also make it very affordable to
-fine-tune. And we're going to be
-fine-tuning it on this data set that I
-have right here. It is the Biteex
-customer support LLM chatbot training
-data set. And it is a huge data set with
-a lot of instructions right here which
-are essentially just the questions from
-the user or a customer. And then you
-have the category of the question. And
-you also have the intent that the
-customer had. So for example here if the
-customer said something like I need help
-cancelling purchase blah blah blah you
-will have right here that the intent is
-to cancel the order. And you also have
-the response from the LLM. Now, we're
-going to be using this specific data set
-to teach our very small language model
-right here to give us the intent for
-every single ticket that we're going to
-be sending to it. So that we're going to
-be able to run the entire model within
-our server and not have to actually
-employ a one trillion parameter model
-just to classify a very quick ticket.
-Okay, so that's what we're going to be
-doing. And in this case, I already have
-the data set loaded right here in
-hugging face. But in your case, you
-might be fine-tuning uh your model for
-your specific use case. You may have,
-for example, some feedback from your
-users in your chatbot where the user
-gave you a thumbs up whenever they liked
-the question, sorry, an answer and a
-thumbs down whenever they didn't like
-it. That is super valuable data that you
-can use to fine-tune your model further.
-and you will be able to use this method
-I'm going to show you to do exactly
-that. Now, if your data is in hogface,
-you also have access to the data studio
-right here, which allows you to of
-course explore the entire data set. You
-have a very nice SQL console right here
-to actually query it, but you also have
-very nicely this agent that allows you
-to basically chat with your database. So
-here it is powered by GPT OSS120B
-and uh here I for example I can ask it
-which are the unique values of the
-intent column in this data set and I can
-just send it over and it will query the
-database for me and give me the exact
-values right here. So that is what you
-can expect if you use the data studio
-from hugging face with your data set.
-And once you have selected your model
-and the data set that you're going to be
-using, it is time to actually start
-training. But before that, let me show
-you what the model actually looks like
-before fine-tuning so that you can
-actually see the difference.
-All right. So what we're going to be
-doing now is we're going to be testing
-the model before actually fine-tuning
-fine-tuning it. So, uh, the first thing
-that you're going to want to do, of
-course, is you're going to want to
-initialize your virtual environment
-using UV. Uh, in my case, I pretty much
-always use UV and going to be installing
-this dependencies right here. [snorts]
-Um, here, this very straightforward cell
-just basically just displays the
-hardware that you're currently using
-just to make sure that you're actually
-using the right one. And you're going to
-also authenticate with hugging face
-because we're going to be of course uh
-pulling the models that we're going to
-be using from hugging face. So you're
-going to want to have your HF token uh
-right here or if you're already
-authenticated using the HF CLI that is
-more than enough. Um after that here I
-have just copy pasted some uh very quick
-configuration and parameters for my
-model. So here I have the model that I
-am using. Here I have the model ID of
-the final model that I'm going to be uh
-fine-tuning. And here I have my data set
-name. And we have the text column and
-the label column. So the text column is
-of course the instruction that's going
-to be kind of the message for my
-customer. And here I have the label
-column, which is the target column. Um,
-and I'm going to be working with an evil
-size of 60 out of 4,000 pool. And my
-seed is of course the answer to
-everything.
-And actually what's going to happen is
-that we're going to be sending this
-little prompt that I have right here to
-codeex or to cloud code or whichever
-model you're using and it is going to do
-the entire fine-tuning job for you. It's
-it's crazy. It's so beautiful. So I'm
-going to say fine-tune Quen 3 um 0.6B
-into a customer support ticket router
-using by text and then the name of my
-data set. And then the task definition
-is going to be that the input column is
-the instruction. The target label column
-is the intent. I want to keep only the
-top 12 intents by frequency in the first
-5,000 train rows. And the format of the
-training sample in the chat style is the
-user. And then the assistant message
-right here is going to be the intent,
-the confidence, and the reason. And all
-of it in a JSON output. Now the training
-strategy is going to be SFT. the max
-sequence length 512. And in my case, I
-have already told it which hardware I
-wanted to use. But if you do not know
-which hardware you want to use, you can
-just ask it to suggest the best hardware
-for you and to calculate the cost that
-that is going to uh to give you. And of
-course, codeex or cloud code is going to
-calculate the cost for you for the
-entire fine-tuning job so that you know
-exactly how much it's going to cost you.
-And then you I have also told it to save
-it to this uh particular uh model ID.
-And after training we're going to also
-have it run evils and held out slice and
-report on the accuracy the value JSON
-rate the schema pass rate and the
-accuracy on schema. So that's what we're
-going to do. So how does the model look
-like? What does the model look like
-before this actual job? Let me show you.
-It sounds very funny cuz um I mean here
-I have just my helper functions. Feel
-free to check them out in the notebook.
-But here I have loaded the model using
-transformers. Transformers in case
-you're not familiar with it is a
-wonderful library that allows you to
-just run any model from hugging face in
-your machine. Crazy. The team here is
-also made out of geniuses. [snorts] Um
-and what's going to happen is that we're
-going to evaluate this model right here.
-We're going to be taking out a few rows
-from my evil pool, 60 rows as we I think
-that's what we said before. And we're
-going to be checking if the model
-actually outputs the correct uh label.
-And as you can see, it is of course
-since it has not been fine-tuned, it is
-terrible. So the accuracy is 0.2, the
-value JSON rate is 0.28, schema pass
-rate 0.28. It's it's just terrible
-terrible stats right here. So, of
-course, that makes sense because the
-model has not been fine-tuned. And let
-me show you now how to fine-tune it and
-then we will see how this actually
-changes by a lot after we have done the
-finetuning. So, uh let's go into codeex
-and set it up to actually uh have this
-work because you're going to have to do
-a couple of things before just sending
-the prompt.
-Okay. So, in order to actually use the
-hugging face model trainer skill, you're
-going to have to have a few things
-first. Uh, the first thing is that
-you're going to need to have a hugging
-face pro account. You're also going to
-have to have created a token in your
-hugging face account that has right
-access and that can also create jobs.
-Let me show you how that works. You're
-going to go right here and then you're
-going to go into access tokens. You're
-going to create a new token and you're
-going to give it right access to
-contents and then you're also going to
-give it access to start and manage jobs
-on your behalf. Okay? Because we're
-going to be training or fine-tuning our
-model using a job. Um [snorts] after
-that you're also of course going to need
-codeex or cloud code or any AI coding
-agent that you want. And also, you're
-going to be needing the HuggingFace MCP
-server because that is the one that
-we're going to be using to actually
-trigger the jobs. And in order to do
-that, all you're going to have to do is
-go right here to settings. You go down
-here to MCP.
-And here are the instructions on how to
-install it on any agent that you're
-currently using. In my case, I am using
-Codeex. So, I would just have to use to
-run this right here in my command line
-and then I would be ready to go. And of
-course after that you're also going to
-have to uh install the hugging face
-skill. And the easiest way to install
-skills in case you're not familiar with
-it is using skills.sh.
-So uh what we're going to do is we're
-going to open just a very quick terminal
-right here. And what we're going to do
-is we're going to go right here and
-we're going to do npx skills add. So npx
-skills add. And we're going to add this
-scale right here. So a good thing to do
-is just to copy the hugging face and
-skills. So the name of the user and the
-name of the repo. You hit enter and here
-you will see that it prompts you to
-select which skills you want. And in
-this case you just hit tab on hugging
-face model trainer. You hit enter. You
-select the agents that you want to
-install it for. So in my case I want it
-for cloud codeex and apparently also
-Gemini. I'm just going to leave it like
-that. And here you select whether you
-want it for the project or for global
-installation. So available for all of
-your uh codecs or cloud code sessions.
-Uh in my case I'm just going to stick to
-project. I'm actually not going to hit
-enter because I already have it
-installed. In case you're not familiar
-with how skills work and how skills
-work, I have another video right here
-where I explain exactly everything you
-need to know about skills. And once that
-is done, you're going to be able to have
-your uh scale right here. So if I do
-slashsklls,
-I'm going to be able to see hugging face
-model trainer right here, which is my
-skill right here. Hugging face model
-trainer. Okay. And but before you
-actually start using the skill, we also
-going to have to uh authenticate with
-hugging face. So you're going to have to
-install the hugging face CLI. And
-actually you can basically just Google
-HugenFace CLI. Go to the first resolver
-here. And here you will have the
-instructions of how to install it. And
-once you have it installed, you can go
-back right here to to the command line
-and you're going to do HF off. And if
-you have already authenticated, you can
-do list and it will you will show you
-exactly the tokens that it has available
-and the one that is active. So in my
-case, I want this one to be the active
-one because this is the one that is uh
-has the permissions to write uh my
-repositories and also to initialize
-jobs. And if you do not have that, all
-you're going to have to do is hf login
-and it is going to prompt you to
-initialize. And if you already have your
-token, you just have to do d- token and
-just paste your token right here. And
-that's going to initialize that session
-with the specific token that you have
-just created. Okay. And once that is
-done, you're going to be able to just
-run your agent and ask it to do what I
-told you. So let's open actually codeex
-and show you how to do that.
-All right. So as I told you before, I am
-going to be using codeex from openi in
-order to run this. But feel free to use
-any model that you want to use. Uh you
-can of course use cloud code, you can
-use gemini cli, you can use kimmy cli
-etc. In my case, I'm currently using
-Codex and I also like this nice little
-uh user interface. So, what I'm going to
-do, I'm just going to select the skill
-which hugface model trainer. Remember to
-have previously completed all the steps
-that I mentioned in the previous part of
-the video such as installing the skill,
-installing your MCP server and
-authenticating and also having a pro
-account on hugging face. And then just
-paste the prompt like this. And I'm just
-going to give it full access. I'm not
-going to be leaving it inside a sandbox
-just to make sure that everything's
-running correctly. And I'm just going to
-send it. And I will be back as soon as
-it is done.
-And there we go. It completely finished
-the job. It took a little bit over an
-hour. And just for the record, in this
-example, I sent a very detailed and very
-straightforward uh prompt right here.
-But you do not have to be that detailed,
-especially if you do not really know
-what you're doing. uh [snorts] just be
-sure to always ask it what the final
-cost is going to be before validating
-the submission of the job. Uh in this
-case since I declared and defined
-exactly what I wanted it was very
-straightforward so it just sent the job
-but this uh skill also allows codeex or
-cloud code to help you to define which
-training method you're going to be
-using. So in this case I already had
-defined that I needed to do SFT. But for
-example if your data set is preferences
-from your users. So for example
-questions uh answers that your users
-found more useful than others and you
-already have the data set. Uh Codex may
-have suggested to you to use DPO for
-example instead of SFT. And you do not
-need to be an expert in any of this. Uh
-Codex is here precisely to help you with
-those blind spots. Um, and I also
-decided uh beforehand which hardware I
-wanted to use. But you can also ask
-Codex which hardware it hardware it
-recommends that you use for training.
-And it is great for also estimating the
-final cost of the entire training job so
-that you can see how much it is going to
-cost before you actually submit the job
-to HuggingFace jobs. Okay. Um, so there
-you go. Uh now that the job is
-completely done, you can see right here
-that it was reasoning about the whole
-thing and that it uh figured out how to
-use the data set to actually uh have it
-fine-tune my model. And also actually uh
-well it was tuning it, it gave me the
-job monitor so that I could monitor it.
-But just by the way, it also gives you a
-very nice track to monitor the training
-as well. And uh there you go. That's the
-whole thing. Now, you also have an evil
-that was run right here because that
-what we requested, although we're going
-to be evaluating by hand as well in the
-notebook that I showed you before. But,
-uh, here you see that the accuracy is
-already way higher than what we had
-before. We had 100% valid JSON rate and
-100% schema pass rate. So, uh, this
-model seems to be much more useful than
-the one we had before. Uh let's actually
-try it out in the notebook.
-All right. And before we go to the next
-part of the video, I just wanted to make
-sure that you see this right here. So,
-as you can see, this is the entire cost
-of the full fun tuning job that we did
-just now. As you can see, it is less
-than $1. So, the total wall clock was
-about 55 minutes. So, the cost is about
-36 to 37 cents at 40 cents an hour,
-which is crazy. I now have a completely
-fine-tuned model that I can load into my
-own server that I can load to my own
-fast API application and now I can run
-it from there without having to make an
-API call to OpenAI or Enthropic anytime
-that I want to make a uh classification
-of my tickets. So this is crazy and all
-of it for just $1. Okay. Uh let's
-actually take a look at the results in
-our notebook.
-And there you go. As you can see right
-here, I have the evaluation after the
-model was fine-tuned. And as you can
-see, I am loading both the base model
-and my Laura. And right here, I am just
-running the exact same evaluation method
-that I declared before. And let's
-actually see the results. As you can
-see, still running on a pool of 60 rows.
-We have an accuracy of 85, which is a
-little bit lower than what my job at
-Hogenface uh gave me, but it's still
-ridiculously higher than what we had
-before. Uh valid JSON rate of uh 98% and
-schema pass rate of 88%, which is just
-crazy high compared to what we had
-before. Uh let me just show you the
-delta and the comparison. As you can
-see, before we had an accuracy of 20%,
-now we have it at 85%. the valley JSON
-rate was at 28% now it's at 98% etc. So
-here are some nice uh I candy so that
-you see what the results actually are of
-fine-tuning your model and as you can
-see I didn't even know how to perform um
-DPO or SFT or anything. It did the whole
-thing by itself because I basically just
-asked um Codeex to fine-tune it for me.
-And as you can see, I have a model that
-works much better than the base model.
-It is just much more powerful for my
-specific use case. And as you can see,
-we have that the score went from before,
-which was 20% right here in accuracy to
-over 80% and the valid JSON rate also
-increased. And here are the deltas. So
-we have a positive delta of 60% in
-accuracy, a positive delta of almost 70%
-in valid JSON rate, 60% in schema pass
-rate and accuracy in schema. So just
-just crazy good. And um there you go.
-And here I actually just added a very
-quick playground so that you can try it
-again and see how um how the model
-before and after uh behaves. So here I
-have a just a very quick demo ticket.
-Hi, I placed an order this morning but
-selected the wrong shoe size. Can you
-update the order to size 42 please
-before it ships? And of course the demo
-uh the expected intent is going to be
-change order. And we're going to run it
-first of all with the base model before
-the finetuning and afterwards with the
-actually fine-tuned model. And this is
-just to show you the actual prompt that
-is going to be sent. And as you can see,
-the result is very funny. So before the
-model was fine-tuned, it returned some
-just weird thinking loop. It was uh yes,
-I can do that. Please make sure to
-update the order to size 42. The
-customer is asking blah blah blah. And
-it just went into an infinite loop for
-some reason. Um and after the
-fine-tuning, this is my answer, which is
-just much much better. And of course,
-exactly what we expected. So before
-finetuning we have basically nothing and
-uh after fine-tuning we have that the
-intent was change order the schema is
-okay the confidence is 99%.
-And um there you go. So I hope that this
-was a nice video. I know that
-fine-tuning can seem a little daunting
-at first, but I hope that this skill is
-uh help will help you to get over that
-fear and to learn how to fine-tune your
-models uh by asking codeex or cloud code
-any questions you have and they will
-definitely help you solve them. And also
-super importantly, huge shout out to
-both Ben and Sean who are the creators
-of this skill. I am certain that it is
-going to help a lot of people get into
-fine-tuning and to actually start using
-open source models in their realworld
-applications. As you can see, we already
-have a completely fine-tuned model that
-you can just run with transformers,
-mount it into a fast API application and
-start running it in your own server. So
-there you go. Thank you very much for
-watching. It has been an absolute
-pleasure and let me know if you have any
-questions in the comments and I will see
-you next time.
+Good morning everyone.
+How are you doing
+today? Today we
+will look at how
+to train a model for
+your own
+agent, and it will be very
+simple because we will
+entrust
+all of this to CodeEx or
+Cloud Code. Of course,
+fine-tuning a
+language model can
+be a complex
+task that
+usually requires
+an expert, but not
+today. After all, these
+agents, CodeEx and Cloud Code,
+will not only help you
+make
+difficult decisions, but also
+send
+training tasks to HF so that
+you don't have to
+do all the hard
+work yourself.
+So, in
+today's video,
+we'll first choose a
+base model that
+we'll train.
+We will then train it,
+evaluate it to
+make sure
+the tweaking
+was successful, and
+use it in a
+quick app
+to classify and
+summarize
+support tickets. And
+we'll do all of this for
+less than $1.
+So let's
+take a look at this.
+Good. Let's say
+you have an application
+that works as a
+customer support service, and
+your users
+can send
+messages along
+with contact
+information. All of this
+will be input
+to your API, which will
+then go to a
+classifier that
+will assign a
+specific category to the user's message
+. For example,
+if a user writes:
+“I would like a
+refund” or “
+I want my
+money back”, the classifier
+will identify this as “
+refund”. And
+this is not just an
+ordinary
+classifier. Otherwise, a
+much
+simpler model could be used instead of a
+large language model.
+Our classifier
+will output a full JSON
+containing the intent,
+confidence level, and a
+short
+summary or reason
+why the ticket was
+assigned to this
+category. OK.
+After that, when you
+get all the
+result, you can
+save it in your
+database. Here's what we'll
+be doing.
+Good. OK. So, the
+first thing we
+need to do is
+choose a model that we
+will
+customize for
+our specific
+task. In this
+case, I will
+use the Qwen 0.6
+B. It is a very small
+model, but this is very
+convenient because it
+will be very accessible
+for further customization. And
+we're going to
+fine-tune it
+on this dataset
+that I have here. This is a
+dataset for
+training the
+Bite customer support chatbot. This is a
+huge
+data set with many
+instructions that
+are essentially questions from the
+user or
+client. Additionally, you
+have the category of
+the question and the intent
+that the customer had.
+For example, if
+a customer said something
+like, "I
+need help
+canceling a purchase
+blah blah blah," you
+'ll see that the intent is
+to cancel the order
+, as well as a response
+from LLM. Now we will
+use this
+specific
+dataset to train
+our small language
+model to determine
+the intent for each
+ticket we
+will send. This will
+allow us
+to run the entire model
+on our server and
+not use a
+model with a trillion
+parameters just to
+quickly
+classify a ticket.
+So, that's exactly what we're
+going to do. In
+this case, I
+already have a
+dataset loaded into Hugging Face.
+But in your case,
+you can
+customize your
+model for
+specific needs.
+For example, your
+chatbot could have
+user feedback
+: a thumbs up if
+you liked the answer, and a thumbs
+down if you didn't. This is
+extremely valuable
+data that can be
+used to
+further
+fine-tune
+the model. You can
+use this
+method that I will show you for
+exactly that. If
+your data is in Hugging Face, you
+also have access to
+Data Studio, which allows you
+to explore the entire
+dataset. There is a great
+SQL console for
+queries, as well as a
+convenient agent that
+you can interact with
+like a database. It
+runs on the
+OSS120B GPT, and I can
+ask, for example,
+what unique
+values ​​the
+"intent" column has in
+this dataset, and
+it will execute the query for
+me. Here's what you can
+expect when
+you use Data
+Studio by Hugging Face with
+your dataset.
+Once you have chosen
+the model and dataset you
+will
+use, it is
+time to start
+training. But before
+that, let me
+show you what the
+model looks like before the
+tweaking so
+you can see
+the difference. OK. So,
+now we're going to
+test the model
+before we actually
+start
+training it. So,
+the very first thing you
+need to do is
+initialize the
+virtual
+environment
+using UV. In my
+case, I almost
+always use
+UV and am going to
+install those
+dependencies right here.
+Here, this fairly simple
+cell simply
+displays the
+hardware you are
+currently using
+, to make sure
+you have chosen the correct one.
+You also need to
+authenticate with Hugging
+Face, as we
+will of course be
+downloading the models we
+are going to
+use
+from there. So, you
+need to have your HF
+token right here, or
+if you have already
+authenticated via the
+HF CLI, that is
+enough. After
+that, I just
+copied and pasted a
+very quick
+configuration and
+parameters for my
+model here. Here is the model
+I use.
+Here I have the ID of
+the final model that
+I'm going to train.
+And here is the name of my
+dataset.
+We also have a text column
+and a label column.
+The column of text is,
+of course, the instruction
+that will be the
+message for
+my client. And here
+I have a label column,
+which is the target
+column. I will
+work with a
+sample size for
+the evaluation of 60 out of 4000. And
+my seed is, of course,
+the answer to everything. What it's
+really going to do is
+this: we're
+going to send this
+short query that
+I have here to CodeX,
+Cloud Code, or whatever
+model you're
+using, and
+it's going to do all the
+pre-training work
+for you. This is simply
+incredible. This is so
+wonderful. So, I'll say:
+retrain Qwen 3 0.6 B as a
+customer support ticket router
+using the text
+and name of my
+dataset. Next, the
+task definition
+will be as follows: the input
+column is the
+instruction. The target
+column of labels is
+intents. I want to
+keep only the 12
+most frequent intents
+in the first 5000 rows of
+training data.
+Chat-style training sample format—
+user. And the
+assistant's message here will
+contain intent,
+confidence, and
+reason. And all this in
+JSON format. Now the
+learning strategy
+will be SFT. The maximum
+sequence length is 512. In
+my case, I have already
+specified what
+hardware I want
+to use. But
+if you don't know what
+equipment you want
+to use, you
+can simply
+ask the system
+to recommend the best
+option and
+calculate the cost
+that awaits you. And,
+of course, Codeex or Cloud Code
+will calculate
+the cost of the entire
+training procedure for you
+, so you know exactly
+how much it will
+cost.
+Additionally, I instructed
+the system to save the
+result under this
+specific
+model ID. After
+training, we will also
+run evaluation
+on the deferred
+sample and get a
+report on accuracy,
+proportion of correct JSON,
+percentage of
+schema passing, and accuracy by
+schema. So, this is what
+we're going to
+do. So what does
+this model look like?
+What does the model look like
+before this task?
+Let me show you.
+This sounds pretty
+funny, because I
+only have auxiliary
+functions here. You are
+free to read
+them in your notebook. But
+here I loaded the
+model using
+transformers. Transformers, if
+you're not familiar, is a
+great library
+that allows you
+to run any
+Hugging Face model on
+your computer.
+Incredible. The team
+here is also made up of
+geniuses. And now we
+will evaluate
+this model. We will
+take a few
+lines from our database
+for evaluation, 60
+lines, as we
+seem to have
+agreed earlier. And
+we will check if
+the model produces the
+correct label. And, as
+you can see, since she
+wasn't trained properly,
+the result is, of course,
+terrible. So,
+the accuracy is 0.2
+, the JSON fraction is 0.28, and the
+schema pass percentage is 0.28. These are just
+terrible, just
+terrible figures.
+Of course, this is quite
+logical, because the model
+was not fully trained.
+Let me now
+show you how to
+train her, and then we'll
+see how everything
+will change significantly
+after
+the training is complete. So,
+let's go to Codeex and
+get everything set up to
+work, as you'll
+need to complete
+a few steps before
+sending a request
+. OK. So, to
+use the
+Hugging Face model training skill, you will
+first need
+a few things. First,
+you need a
+professional
+Hugging Face account. You
+must also create a
+token in your
+Hugging Face account that
+has write permissions and
+allows you to create
+tasks. Let me
+show you how it
+works. You will go
+here and then go
+to the access tokens section
+. You will create a
+new token and grant
+it the right to write
+content, as well as the right
+to run and
+manage tasks
+on your behalf.
+Of course? Since
+we are going to
+train or
+fine-tune our
+model using a
+task. And after
+that, of course, you
+will need Codeex, Cloud
+Code, or any
+other AI agent for
+programming that
+you desire. You will also
+need the
+HuggingFace MCP server, as this is what
+we will
+use to
+run tasks. And
+to do that, you
+just need to
+go here, to the
+settings. You
+move down here
+to the MCP. Here are instructions
+on how to
+install it on
+whatever agent
+you are currently
+using. In
+my case, I
+use Codeex. So
+I just need to
+run this on the
+command line and I'll be good
+to
+go. And, of course,
+after that you will also
+need to
+install the Hugging
+Face skill. And the easiest
+way to install
+skills, if you're
+not familiar with it, is to
+use
+skills.sh. So what we're
+going to do is we're going to open up a
+quick terminal right
+here. And we'll go
+here, where we'll enter npx
+skills add. So, npx skills add.
+And we'll add this skill
+here. A good idea is to
+simply copy
+Hugging Face and the skills. That is, the
+username and the
+repository name. You
+press Enter, and here
+you will see a request
+to select the skills you need
+. In this
+case, you simply
+press Tab on "hugging
+face model trainer". You
+press Enter. You
+choose the agents you
+want to
+set this for. In my
+case I want for Cloud
+Codeex and probably also
+Gemini. I'll just leave
+everything as is. And here you
+choose whether
+you want to set this for
+the project or globally
+. That is, it is available for
+all your Codeex
+or Cloud Code sessions. In my
+case, I will focus on
+the project. I
+won't actually press Enter
+because I already have it
+installed.
+If you're not familiar with
+how
+skills work, I have another
+video here where I
+explain everything you
+need to know about
+skills. And once that's
+done, you
+can get
+your skill right here.
+So if I type in /skills
+, I can see the
+Hugging Face model trainer right
+here, which is my skill.
+Training Hugging
+Face models. OK. But
+before you can start
+using this
+skill, we also
+need to
+authenticate with Hugging
+Face. So you will
+have to
+install the CLI for Hugging
+Face. In fact, you
+can just search for
+Hugging Face CLI on Google.
+Follow the first
+link. Here you
+will find instructions on
+how to install it.
+Once you have it
+installed,
+go back to the
+command prompt and
+type hf auth. If you are
+already
+authenticated,
+you can type list and it will
+show all available
+tokens and the one that is
+active. In my
+case, I want
+this one to be active
+because it has
+write permissions to my
+repositories as well as
+initializing
+tasks. If you
+don't have one, all you
+need to do is
+hf login and it will
+prompt you
+to initialize a session
+. If you already have a
+token, just add
+--token and paste your
+token here. This
+initializes a session with the
+specific token
+you just
+created. OK.
+Once that's done
+, you can
+launch your
+agent and ask it to
+do what
+I said. So
+let's open the Codex
+and I'll show you how to
+do it. Good. As I
+said before, I will be
+using Codex
+from OpenAI to
+run this. But you are
+free to
+use
+any model you
+want. You can of course
+use Claude,
+Gemini CLI, Kimmy CLI, etc. In
+my case, I'm currently
+using Codex, and
+I also
+like this user-
+friendly interface.
+So what I'm going to do—I'm
+just going to select the
+Hugging Face model trainer skill. Don't
+forget to first
+complete all the steps
+I mentioned in the
+previous part of
+the video: installing
+the skill, installing the
+MCP server,
+authenticating, and
+having a Pro
+account on Hugging Face.
+Then just insert
+the query like this. I'll
+just give him
+full access. I won't
+sandbox it to
+make sure everything
+works correctly. And I'll
+just send it. I'll be
+back as soon as
+everything is ready. That's
+all. He
+has completely completed the work. It
+took a little over an
+hour. And just for
+the record: in this
+example, I sent a
+very detailed and very
+clear request right
+here. But you
+don't have to be
+that detailed,
+especially if you don't
+really understand what you're
+doing. Just be
+sure
+to ask what the
+final cost will be
+before
+confirming the
+job submission. In
+this case,
+since I clearly
+stated and defined what
+I needed, it
+was very easy,
+so I just
+sent the assignment,
+but this feature
+also allows Codex
+or Cloud Code to help
+you determine what
+learning method you
+will
+use.
+So, in this case,
+I have already determined that
+I need to
+do SFT. But,
+for example, if your
+dataset
+is based on
+your
+users' preferences. That is,
+for example, questions or
+answers that your
+users found
+more useful than others,
+and you already have a
+dataset. Codex could
+suggest you
+use,
+for example, a DPO instead of an
+SFT. And you don't need
+to be an expert in
+all of this. Codex is
+designed to
+help
+you with these blind
+spots. Additionally, I
+decided in advance
+what equipment I wanted to
+use. But
+you can also
+ask Codex what
+equipment he
+recommends for
+training. This is also
+great for
+estimating the final
+cost of the entire
+training assignment
+so you can see
+the price before
+submitting the assignment
+to HuggingFace. Good. So, here it is
+. Now that
+the task is fully
+completed, you can
+see here that
+the system has analyzed
+all of this and figured out how
+to use the
+dataset to further train
+my model. Additionally
+, while the setup was in progress
+,
+the system provided me with a
+task monitor so
+I could monitor the
+process. By the way,
+it also provides a
+great tracker for
+tracking the
+learning process itself. And
+so it is. That's all. Now
+you also have the
+evaluation result
+that was obtained
+here because we
+requested it, although we will
+also evaluate it
+manually in the notebook
+that I showed
+earlier. But here you
+see that the accuracy is
+already much higher than it
+was before. We
+received 100% valid
+JSON and 100%
+schema compliance. So this
+model seems
+much more useful
+than the one we had
+before. Let's
+try it in
+Notepad. OK. And
+before we
+move on to the
+next part of
+the video, I wanted to
+make sure you
+see this. So,
+as you can see, this is the full
+cost of the entire
+pre-training process
+that we just
+completed. As you can see,
+it's less than $1. The
+total
+running time was
+about 55 minutes.
+So the cost
+is about
+36-37 cents at a rate of
+40 cents per hour, which is
+just incredible.
+Now I have a
+fully trained
+model that I can
+upload to my
+own server,
+add to my
+Fast API app, and run
+from there, without having to make
+requests to the OpenAI or
+Anthropic APIs every time
+I need to
+classify tickets
+. It's incredible, and all for just
+$1.
+Good. Let's
+take a look at the
+results on our
+laptop. Here,
+please. As you can
+see here, I have the
+evaluation results
+after the model
+has been retrained. As
+you can see, I'm uploading
+both the base model and my
+LoRA. And here I run the
+same
+evaluation method that I announced
+earlier. Let's
+look at the
+results. As you can see
+, we are still working with a
+sample of 60 rows.
+We have an accuracy of 85%, which is
+slightly lower than what the
+Hugging Face task showed, but it is still
+significantly higher than it
+was before. The percentage of
+valid JSON is 98%, and
+the percentage of successful
+schemas is 88%, which is
+incredibly high
+compared to what we
+had before.
+Let me show
+you the difference and
+comparison. As you can see
+, we used to have
+an accuracy of 20%, and now
+it is 85%.
+The share of valid JSON
+was 28%, now it is 98%, and so
+on. Here's a nice
+visualization so you
+can see the actual
+results of the
+model training, and
+as you can see, I didn't even
+know how to do DPO
+, SFT or anything like that.
+Everything was done
+automatically because
+I simply asked Codeex
+to retrain the model for
+me. And as you can see,
+I have a model that
+works much
+better than the base one. It is
+much more powerful
+for my specific
+task. As you can see, the
+accuracy rate
+has increased from 20%
+previously to over 80%, and the
+percentage of valid
+JSON has also increased. And here are the changes in
+indicators. So we
+have a positive
+delta of 60% in accuracy, a
+positive delta of
+almost 70% in the fraction of
+valid JSON, 60% in the
+schema pass rate and
+schema accuracy.
+Simply, simply
+incredibly good. And,
+um, like this. And here I've
+actually added a very
+quick
+playground so you
+can try it
+again and see how the
+model behaves before
+and after. So, I
+have a very quick
+demo ticket here. Hi, I
+placed an order
+this morning but
+chose the wrong
+shoe size. Can
+you please upgrade
+the order to a size 42
+before it
+ships? And,
+of course, in the demo,
+the expected intent is
+to change the order.
+We're going to
+run this
+first with the base
+model before
+pre-training, and then with the pre-
+trained
+model. And this is just
+to show you the
+actual request that
+will be sent. And, as
+you can see, the result is
+very funny. So,
+before the model
+was fully trained, it
+exhibited some strange
+thought cycle. It
+was, "yes, I can
+do that." "Please
+make sure you
+upgrade your order
+to size 42." "
+The client asks this and
+that." And she just
+somehow got caught in an
+endless loop. Um
+, and after some further study—
+here's my answer,
+which is much, much
+better. And, of course, exactly what
+we expected.
+So, before the retraining
+we have virtually
+nothing, and after
+the retraining we have
+that the intention was to change
+the order, the scheme is in
+order,
+99% confidence. And, um, like this.
+I hope this was a
+good video. I know
+that retraining
+may
+seem a bit
+daunting at first, but I
+hope this
+skill will help you
+overcome that fear and
+learn how to retrain
+your models by asking
+Codeex or Cloud Code
+any questions, and they will
+definitely help you
+solve them. And also, and
+most
+importantly, huge
+respect to Ben and Sean,
+who are the creators of this
+skill. I'm sure
+this will help
+many people
+start working with
+pre-training and
+actually
+use
+open
+source models in their
+real-world applications
+. As you can see, we
+already have a fully
+trained model that
+you can simply
+run
+using transformers,
+connect to a
+fast API application, and
+start
+using on
+your own server. That's
+all. Thank you very much for
+watching. It was a
+real
+pleasure, let me
+know in the comments
+if you have any
+questions, and
+I'll see you
+next time.

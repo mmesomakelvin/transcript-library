@@ -4,285 +4,310 @@ title: "Your codebase is NOT ready for AI (here's how to fix it)"
 channel: "Matt Pocock"
 topic: "software-engineering"
 published_date: "2026-02-26"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=uC44zFz7JSM"
 duration: 530
-word_count: 2013
+word_count: 1854
 ---
-AI imposes super weird constraints on
-your codebase. And most code bases out
-there in the world, probably including
-yours, are not ready. Your codebase, way
-more than the prompt that you used, way
-more than your agents.mmd file, is the
-biggest influence on AI's output. And if
-it's designed wrong, it can cost you in
-a bunch of different ways. It can mean
-that the AI doesn't receive feedback
-fast enough. So, it doesn't know if what
-it changed actually did what it
-intended. It can find it super hard to
-make sense of things and find files and
-work out even how to test things. And
-finally, it can lead you into cognitive
-burnout as you try to hold together AI
-and your codebase and patch it all up
-and keep everything in your mind. And my
-thesis here is that software quality
-matters more than ever. In other words,
-how easy your codebase is to change
-makes a huge impact on how AI then goes
-and changes it. And the stuff that we've
-known about software best practices for
-20 years still holds more true than
-ever. And if you're interested in
-getting better at this stuff, then check
-out my newsletter, AI Hero. I teach you
-all about AI coding, but this is not for
-vibe coders. This is for real engineers
-solving real problems. And if that's
-you, and you're not sure how to handle
-these new tools, then you are going to
+AI imposes very
+strange restrictions on your codebase. And
+most of the codebases that
+exist, probably including yours
+, are not ready. Your codebase,
+much more than the prompt you used,
+much more than your agents.mmd file,
+is the biggest influence on
+AI results. And if it's poorly
+designed, it can cost you dearly in
+many different ways. It could
+mean that the AI ​​is not receiving
+feedback
+quickly enough. So, he doesn't know if what he
+changed actually did what it was
+intended to do. You may find it very
+difficult to understand things, find
+files, and even figure out how to test
+something. And finally, it can lead to
+cognitive exhaustion as you try to
+keep the AI ​​connected to your code,
+patching everything and trying to
+remember everything. And my thesis here is
+that software quality matters
+more than ever. In other words,
+how easy it is to change your
+codebase has a big impact on how
+the AI ​​proceeds to change it. And what
+we've known about
+software best practices for 20 years
+remains truer than ever. And
+if you're interested in improving in this area,
+then check out my newsletter,
+AI Hero. I'll teach you everything about
+AI programming, but this isn't
+for "vibe" programmers. This is
+for real engineers solving
+real problems. And if that's you, and you
+'re not sure how to handle these
+new tools, then you're going to
 love it. Now, let's imagine that this
-here is our codebase. Each one of these
-little squares represents a module. And
-this module might export some
-functionality. It might export a
-function, might export some variables,
-might export a component if it's like a,
-you know, a React or a front end thing.
+here is our codebase.
+Each of these small squares
+represents a module. And this module
+could export some functionality.
+You could export a function, some
+variables, or a component, if it's
+something like React or frontend.
 I want you to imagine that this is the
-image of your codebase that you hold in
-your head. Now you might inside here
-have some vague groupings of different
-functionality. For instance, here you
-might have let's say a thumbnail editor
-feature and all of these different
-modules contribute to that. Over here
-you might have a little video editor
-feature or something. Down here is all
-the code related to authentication. Up
-here is a bunch of CRUD forms for
-updating stuff maybe in a CMS. And over
-here are a couple of example features
-that I can't be bothered to think of
-examples for. Now, this map that I've
-created here of all of the located
-modules in this particular codebase,
-they're not actually reflected that much
-in the file system. They're all really
-jumbled up together. If I want to just
-grab, let's say, an export from this
-module and import it down into this
-module, I can. There's nothing stopping
-me. And so, what you might end up with
-is a bunch of kind of disperate
-relationships between stuff that doesn't
-actually relate to each other. Now, you
-as the developer understand the mental
-map between all of these modules, but
-what the AI sees when it first goes into
-your codebase is this. It doesn't see
-all of the natural groupings and all the
-natural relationships. What it sees is a
-bunch of disparate modules that can all
-import from each other. That's because
-AI when it jumps into your codebase, it
-has no memory. It has not experienced
-your codebase before. It's like the guy
-from Momento who just steps in and goes,
-"Okay, I'm here. Uh, what am I doing?"
-So, my first assertion here is that you
-need to make sure that the file system
-and the design of your codebase matches
-this internal map that you have of it.
-This is because if you describe
-something over in the video editor
-section and you use it via a prompt,
-then you want the AI to be able to find
-it easily. The AI won't go in knowing
-every single function, every single
-module and what they supposed to do and
-how they link to each other. And the
-best way I have found to do that is with
-deep modules. Now, deep modules comes
+image of your codebase that you have
+in your mind. Now, within this
+you could have some
+vague groupings of different functionalities.
+For example, here you could have a
+thumbnail editor function and
+all these different modules
+contribute to it. You could
+have a small video editor function here
+or something like that. Below is
+all the code related to
+authentication. Up here there are a
+bunch of CRUD forms for
+updating things, maybe in a CMS. And
+here are a couple of
+example functions that I haven't bothered
+to think of examples for. Now, this map I
+'ve created here of all the
+modules located in this
+particular codebase isn't
+really reflected that much in the
+file system. They're all really
+mixed up together. If I simply
+want to take, say, an export
+from this module and import it into this
+other module, I can do that.
+Nothing can stop me. And then, what
+you could end up having is a
+lot of disparate relationships between
+things that are not actually
+related to each other. Now, you
+as a developer understand the
+mental map of all these modules, but what
+the AI ​​sees when it first enters
+your codebase is this. It does not see
+all natural groupings or
+all natural relationships. What you
+see is a bunch of disparate modules
+that can all be imported into each other.
+That's because AI, when it enters your
+codebase, has no memory. He has not
+experienced your codebase before. He's
+like the guy from Memento who just
+walks in and says, "Okay, I'm here. Uh,
+what am I doing?" So my
+first assertion here is that you need to
+make sure that your
+file system and codebase layout
+match that internal map you
+have of it. This is because if
+you describe something in the
+video editor section and use it via a
+prompt, you'll want the AI ​​to be able to
+find it easily. AI will not
+come in knowing every function, every
+module, what they are supposed to
+do, and how they are linked together. And
+the best way I've found to
+do that is with deep modules.
+Now, the in-depth modules come
 from this book here, which is a
-philosophy of software design. And the
-idea is that in order to make your
-system easily navigable and easy to
-change and also easy to test is that you
-have a deep module so lots of
-implementation controlled by a simple
-interface. What that looks like in terms
-of our graph is instead of many many
-small modules you end up with these big
-chunks of modules with simple
-controllable interfaces and this means
-that any exports from these modules have
-to come from that interface. Now when I
-read that about deep modules, I
-immediately thought about putting AI in
-control of these modules because this is
-an opportunity to introduce a kind of
-seam into the codebase. I don't really
-care about what's happening inside here
-which is the implementation. I just care
-about what's happening in the interface
-because the interface which is you know
-the publicly accessible API of this
-module I can carefully control and I can
-apply my taste to and design and then
-the stuff inside here I can just
-delegate to an AI to control and I can
-write tests that completely lock down
-the module in terms of its behavior. So
-these are not just deep modules with
-simple interfaces, they're also graybox
-modules. In other words, I don't
-actually need to look inside these
-modules. I can if I want to, if I want
-to influence their outcome or if I need
-to apply some taste to the
-implementation or I need to improve
-their performance or something, but as
-long as the tests are good, then I don't
-really need to care about what happens
-inside. Now, this has three massive
-benefits. The first one is that I can
-make my codebase way more navigable.
-Let's for the sake of argument just call
-each of these services, right? The video
-editor service, the thumbnail service,
-whatever. If I document these each
-inside their own folder and I have the
-publicly accessible interface kind of
-like uh really obvious in a type
-section, then the AI when it's exploring
-my codebase, it can see all of these
-different services on the file system.
-It can read and understand the types
-that they export before it actually
-looks at the implementation. And then it
-can say, okay, I've seen the interface.
-I understand what this does. I don't
-need to look inside because I can just
-trust what it's returning. In other
-words, we've designed our codebase for
-progressive disclosure of complexity.
-The interface sits at the top and it
-just explains what the module does and
-then when we need to we can look inside
-the module and make changes to it or
-look at it to understand its behavior
-more deeply. The second one is that we
-reduce the cognitive burnout of managing
-this codebase. Now as a user I can just
-go right I need something from uh I
-don't know this madeup feature or let's
-say the authentication bit over here.
-Let's say what let's see what the public
-interface is. Let's just grab that and
-use it. And instead of needing to think
-about the inter relationships between
-all of these modules, I can just keep
-kind of like seven or eight lumps of
-stuff in my head and go, okay, the AI
-manages the stuff inside that. I only
-need to worry about designing the
-interfaces and how they fit together.
-Now, this of course is still a million
-miles away from vibe coding because you
-need to apply taste at the boundaries of
-these modules. You need to be really
-good at deciding, okay, what goes into
-that module, what goes into that module.
-And what you really want to avoid are
-lots of little shallow modules, which is
-kind of what we had up here, right? Each
-of these modules is just like, sure,
-it's kind of interrelated and grouped
-together, but really they're lots of
-tiny shallow modules which are testable
-in these tiny units which are really
-hard to keep all in your head. And so by
+philosophy of software design. And
+the idea is that to make your
+system easily navigable,
+easy to change, and also easy to
+test, you have a deep module, that is,
+a lot of implementation controlled
+by a simple interface. What that
+means in terms of our
+graph is that, instead of many
+small modules, you end up with
+large blocks of modules with
+simple, controllable interfaces, and
+this means that any
+export of these modules must
+come from that interface. When I read
+that about deep modules, I
+immediately thought of putting AI
+in charge of these modules, because it's
+an opportunity to introduce a
+kind of unification into the codebase. I do
+n't really care what's going on in here
+, which is the
+implementation. I only care about what
+happens in the interface, because the
+interface, which is, you know, the
+publicly accessible API of this module
+, I can carefully control and
+apply my own taste and design to. And then, what's in here
+, I can
+delegate to an AI to
+control, and I can write tests that
+completely block the module in
+terms of its behavior. So,
+these are not just deep modules
+with simple interfaces, but also
+grey box modules. In other
+words, I don't actually need to look
+inside these modules. I can do it
+if I want, if I wish to influence its
+outcome, if I need to give a
+personal touch to the implementation or improve
+its performance, but as long as the
+tests are good, I don't need to
+worry about what happens inside.
+Now, this has three
+huge benefits. The first is that I can make
+my code much easier to
+navigate. Let's say, for example, that
+we'll call each of these
+services, right?
+Video editing service,
+thumbnail service, whatever. If I document
+each one within its own folder and
+have the public access interface
+quite clear in a types section
+, then the AI, when exploring my
+code, can see all these
+distinct services in the
+file system. You can read and understand the
+types they export before looking at the
+implementation. And then you can say:
+okay, I've seen the interface. I understand what he's
+doing. I don't need to look inside
+because I can simply trust what it
+gives back. In other words, we have
+designed our codebase for
+a progressive revelation of
+complexity. The interface is located at the
+top and explains what the
+module does; When we need to, we can
+look inside, make changes, or
+analyze it to understand its
+behavior thoroughly. The second is
+that we reduce cognitive fatigue
+when managing this codebase. As a
+user, I can say: I need some of, I do
+n't know, this invented function or,
+let's say, the authentication part
+here. Let's see what the public interface is
+. Let's take it and use it. And
+instead of thinking about the
+interrelationships between all these
+modules, I can only keep about
+seven or eight blocks in my head and
+think: well, the AI ​​manages what's
+inside. I only need to worry
+about designing the interfaces and how they
+fit together. Of course, this
+is light years away from "vibe coding",
+because you have to apply judgment to the
+limits of these modules. You need to be
+very good at deciding what to include in
+each module. And what you really
+want to avoid are lots of
+small, shallow modules, which is pretty
+much what we had up here,
+right? Each of these modules is
+, of course, interrelated and
+grouped, but in reality they are many
+small and superficial modules that
+can be tested in these
+tiny units, making it very difficult to keep them
+all in your head. So, by
 simplifying the mental map of the
-codebase, we reduce cognitive burnout
-that comes from managing this codebase.
-And again, this is nothing new. This is
-a 20-year-old software practice. And the
-third one here, I mean, I'm really just
-repeating myself, but this is what we've
-been doing all along. This is how good
-code bases have supposed to have been
-designed. So, what works here for humans
-is also great for AI. We need to stop
-thinking about AI as like this
-superpowered developer as like, you
-know, it's going to reach AGI and
-understand that it's got some weird
-limitations. And the limitations that it
-has are that it's a new starter in your
-codebase. So you need to make your
-codebase friendly and ready for new
-starters because you're going to be
-spawning like 20 new starters every day
-or probably more just to look at your
-codebase and make changes. So that means
-the map of your codebase needs to be
-easily navigable and it needs to be
-enforced by using these modules. Now
-some languages make this easier than
-others. For instance, in Typescript and
-JavaScript, it's actually not that easy
-to make these services make these
-modules uh sort of boundaried in this
-way. I want to give a quick shout out to
-effect because uh I posted a video on
-effect a few months ago. I'm actually
-using effect way more than I did back
-then and it makes this kind of um sort
-of seeming modularizing of your codebase
-really simple. The final thing I want to
-say here is that you need to be thinking
-about these modules and how you're
-affecting them and how you're designing
-the interfaces in every coding session
-that you do. That means right from the
-early planning stage when you're writing
-your PRDs or when you're turning your
-PRDs into implementation issues, you
-need to be thinking about the modules
-that you're affecting and the interfaces
-and how you going to test them because
-tests and feedback loops are essential
-for an AI because of course they're
-essential for a new starter joining the
-codebase. If you want the new starter to
-contribute effectively, you need a well-
-tested codebase so they can see what
-their changes do as they ripple out. So
-that's my rant for today. your codebase
-is probably not ready for AI because
-you're not using enough deep modules and
-instead you've got a web of
-interconnected kind of shallow modules
-like this which are really hard to
-navigate and really hard to test and
-really hard to keep in your head. Now,
-if you dig this then of course you will
-dig my newsletter where we go more
-deeply into topics like this. Thanks for
-watching folks. What else do you think
-goes into making a great codebase for
-AI? I really love this metaphor for deep
-modules but I know it's not the only one
-going. There are plenty out there.
-Thanks for watching and I will see you
-very soon. So, when you're thinking
-about your codebase with AI, what are
-you thinking about? What kind of
-20-year-old books do you want to
+codebase, we reduce the
+cognitive exhaustion involved in managing this
+code. And again, this is nothing
+new. This is a
+software practice from 20 years ago. And the third one
+here, I mean, I'm really just
+repeating myself, but this is what we
+'ve been doing all this time.
+This is how
+good codebases are supposed to be designed.
+So, what works here for
+humans is also great for
+AI. We need to stop thinking of AI
+as this super-powerful developer
+that, you know, is going to reach AGI and
+understand that it has some
+strange limitations. And the limitation is that it's
+a new member in your
+codebase. So you need to make
+your codebase user-friendly and
+ready for new members
+, because you'll be creating like 20
+new ones every day, or probably more,
+just for them to look at your code and make
+changes. This means that
+your codebase map should be easy to
+navigate and should be strengthened by
+using these modules. Now, some
+languages ​​make this easier than
+others. For example, in TypeScript and
+JavaScript, it's not actually that
+easy to make these services and
+modules have these limits in this
+way. I want to make a
+quick mention of Effect, because I posted a
+video about Effect a few months ago. In
+fact, I'm using Effect a lot more
+than before, and it makes this kind of
+code modularization
+really easy. The last thing I
+want to say here is that you should think
+about these modules, how you affect them,
+and how you design the interfaces in every
+coding session you do.
+That means that, from the
+early planning stage, when
+you write your PRDs or when you turn
+your PRDs into implementation problems
+, you need to think about the modules you
+are affecting, the interfaces, and
+how you are going to test them, because
+testing and
+feedback loops are essential for
+an AI, because, of course, they are
+essential for a new member
+joining the code. If you want the
+new member to contribute
+effectively, you need a
+well-tested codebase so they can see what
+their changes do as they
+propagate. So that's my opinion
+for today. Your codebase is probably
+not AI-ready
+because you're not using enough
+deep modules; Instead, you have a network of
+interconnected,
+superficial modules like this, which are very
+difficult to navigate, test, and
+keep in mind. Now, if you
+like this, you'll definitely love my
+newsletter, where we
+delve much deeper into topics like
+this. Thanks for watching the video, friends.
+What else do you think is needed to
+create a large codebase for
+AI? I love this metaphor of
+deep modules, but I know it's not
+the only one that exists. There are many others out
+there. Thanks for watching the video and
+see you very soon. So, when
+you think about your AI codebase,
+what are you thinking about? What kind
+of books from 20 years ago do you want to
 recommend? Leave it in the comments.
-It's the easiest way to keep up with all
-of my stuff and the link is below.
+It's the easiest way to stay up to
+date with all my content, and the link
+is below.

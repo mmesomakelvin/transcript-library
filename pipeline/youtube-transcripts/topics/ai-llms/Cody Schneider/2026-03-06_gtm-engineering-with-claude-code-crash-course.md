@@ -4,7 +4,7 @@ title: "GTM Engineering with Claude Code Crash Course"
 channel: "Cody Schneider"
 topic: "ai-llms"
 published_date: "2026-03-06"
-ingested_date: "2026-11-10"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=paF4J941uqg"
 duration: 800

@@ -4,7 +4,7 @@ title: "If I rebuilt my Smart Home, I’d want THIS"
 channel: "Smart Home Solver"
 topic: "software-engineering"
 published_date: "2026-02-21"
-ingested_date: "2026-07-03"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Wkzg8sNkm8Y"
 duration: 1043

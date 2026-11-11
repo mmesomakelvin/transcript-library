@@ -4,7 +4,7 @@ title: "How I Live Out of My Brokerage Account (My FIRE Strategy)"
 channel: "Paycheck To Portfolio"
 topic: "finance-investing"
 published_date: "2026-05-06"
-ingested_date: "2026-09-05"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=zhyRrNKYVzs"
 duration: 775
