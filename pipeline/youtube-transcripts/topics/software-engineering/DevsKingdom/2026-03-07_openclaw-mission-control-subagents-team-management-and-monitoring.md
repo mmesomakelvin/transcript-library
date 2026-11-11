@@ -4,7 +4,7 @@ title: "OpenClaw Mission Control: SubAgents Team Management and Monitoring"
 channel: "DevsKingdom"
 topic: "software-engineering"
 published_date: "2026-03-07"
-ingested_date: "2026-10-27"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=PMkgPhcXYjQ"
 duration: 747

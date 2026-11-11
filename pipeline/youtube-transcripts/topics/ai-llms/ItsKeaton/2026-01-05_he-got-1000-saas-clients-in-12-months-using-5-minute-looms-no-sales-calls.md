@@ -4,7 +4,7 @@ title: "He got 1,000 SaaS Clients in 12 Months Using 5-Minute Looms (No Sales Ca
 channel: "ItsKeaton"
 topic: "ai-llms"
 published_date: "2026-01-05"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=RPd_3-CRyts"
 duration: 406

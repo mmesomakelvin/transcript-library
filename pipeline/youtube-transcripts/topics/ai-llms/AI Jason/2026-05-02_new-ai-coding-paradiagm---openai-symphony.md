@@ -4,7 +4,7 @@ title: "New AI coding paradiagm - OpenAI Symphony"
 channel: "AI Jason"
 topic: "ai-llms"
 published_date: "2026-05-02"
-ingested_date: "2026-06-09"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=M_AmPWmkpwA"
 duration: 754

@@ -4,7 +4,7 @@ title: "How I use Claude Code (Meta L7 Senior Staff Engineer Tips)"
 channel: "John Kim"
 topic: "software-engineering"
 published_date: "2026-02-07"
-ingested_date: "2026-09-24"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=mZzhfPle9QU"
 duration: 2772

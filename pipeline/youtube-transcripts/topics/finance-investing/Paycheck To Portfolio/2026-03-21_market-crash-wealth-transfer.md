@@ -4,7 +4,7 @@ title: "MARKET CRASH = WEALTH TRANSFER"
 channel: "Paycheck To Portfolio"
 topic: "finance-investing"
 published_date: "2026-03-21"
-ingested_date: "2026-08-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=vz-2Rk0uvTg"
 duration: 811

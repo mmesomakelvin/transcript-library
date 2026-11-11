@@ -4,7 +4,7 @@ title: "Even Anthropic Engineers Use This Claude Code Workflow"
 channel: "Ray Amjad"
 topic: "ai-llms"
 published_date: "2026-04-15"
-ingested_date: "2026-06-23"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=ASAaKhK1B5w"
 duration: 750

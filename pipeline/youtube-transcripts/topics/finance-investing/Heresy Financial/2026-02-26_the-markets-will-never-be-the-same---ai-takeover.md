@@ -4,7 +4,7 @@ title: "The Markets will Never Be the Same - AI Takeover"
 channel: "Heresy Financial"
 topic: "finance-investing"
 published_date: "2026-02-26"
-ingested_date: "2026-11-10"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=0vLeHFO7-HE"
 duration: 1326

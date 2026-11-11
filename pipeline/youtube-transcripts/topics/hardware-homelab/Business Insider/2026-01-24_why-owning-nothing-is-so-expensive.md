@@ -4,7 +4,7 @@ title: "Why Owning Nothing Is So Expensive"
 channel: "Business Insider"
 topic: "hardware-homelab"
 published_date: "2026-01-24"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=8AKn-zJMIwY"
 duration: 1508

@@ -4,7 +4,7 @@ title: "How I Use Claude Code For B2B Outreach (35% Reply Rate)"
 channel: "Oleg Melnikov"
 topic: "ai-llms"
 published_date: "2026-04-02"
-ingested_date: "2026-05-14"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=Jjz4YxtlwHQ"
 duration: 710

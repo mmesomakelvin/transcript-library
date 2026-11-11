@@ -4,11 +4,11 @@ title: "184. SMART Goals, Real Accountability - Millennial Dentist Podcast"
 channel: "3D Dentists"
 topic: "business"
 published_date: "2026-02-10"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=WVCIrJ0p6bs"
 duration: 1049
-word_count: 3495
+word_count: 3515
 ---
 Delegation of bandwidth means I empower
 other people to take on the role of not
@@ -20,13 +20,16 @@ But it can't be a team effort to be
 accountable to something. If if if two
 people are accountable, no one's
 accountable, right?
-Welcome back to the Millennial Dentist
+[music]
+&gt;&gt; [music]
+&gt;&gt; Welcome back to the Millennial Dentist
 Podcast, a podcast all about working
-smarter, not harder, pushing dentists to
-go beyond dental school dentistry and
-build the practice of your dreams. Here
-is your host, the Millennial Dentist
-himself, Dr. Sully Sullivan.
+smarter, not harder, pushing dentists
+[music] to go beyond dental school
+dentistry and build the practice of your
+dreams. Here is your host, the
+Millennial Dentist [music] himself, Dr.
+Sully Sullivan.
 &gt;&gt; Welcome back to Millennial's podcast.
 Uh, hope you're having a great day. I'm
 excited about this episode. What happens
@@ -163,23 +166,24 @@ It's not time bound. Like these goals
 need to be they need to follow the SMART
 acronym. Um, so first off, let's talk
 about how do you how do you keep goals
-top of mind? This to me is all about
-like delegation of bandwidth. Delegation
-of bandwidth. And what I mean by that is
-if I'm setting a goal, um, for example,
-we had a similar goal like if we hit
-this, we're going to take the whole team
-to Orlando. It was it was daily brought
-up, not by me. Daily brought up, not by
-me. So delegation of bandwidth means I
-empower other people to take on the role
-of not meeting the goal but being
-accountable to the goal. And this is re
-really important because it's a team
-effort to meet goals. It's a team effort
-to grow but it can't be a team effort to
-be accountable to something. If if if
-two people are accountable, no one's
+top of mind? [clears throat] This to me
+is all about like delegation of
+bandwidth. Delegation of bandwidth. And
+what I mean by that is if I'm setting a
+goal, um, for example, we had a similar
+goal like if we hit this, we're going to
+take the whole team to Orlando. It was
+it was daily brought up, not by me.
+Daily brought up, not by me. So
+delegation of bandwidth means I empower
+other people to take on the role of not
+meeting the goal but being accountable
+to the goal. And this is re really
+important because it's a team effort to
+meet goals. It's a team effort to grow
+but it can't be a team effort to be
+accountable to something. If if if two
+people are accountable, no one's
 accountable, right? And so every day we
 would have one person who was
 accountable to let us know where we were
@@ -391,23 +395,24 @@ through that acronym I think and that
 will help give those things. So I've
 been there. But we've fortunately we
 made the goal this year which was
-exciting. Honestly, I'm kind of
-surprised. What I thought we did so good
-this year was was we just we just kept
-it top of mind through delegation of
-accountability
-and then it literally was all that was
-discussed about in December. We had a a
-we knew daily where we were scheduled to
-on the production side and we were
-prioritizing blocks, prioritizing the
-patients we called. There was so much
-intentionality from top to bottom in the
-office as far as we are going to make
-this a priority to get to and when it
-becomes important to you, it becomes
-important to the team, then they can
-carry it out. And it's so easy to get
+exciting. Honestly, I'm kind
+[clears throat] of surprised. What I
+thought we did so good this year was was
+we just we just kept it top of mind
+through delegation of accountability
+[clears throat] and then it literally
+was all that was discussed about in
+December. We had a a we knew daily where
+we were scheduled to on the production
+side and we were prioritizing blocks,
+prioritizing the patients we called.
+There was so much intentionality from
+top to bottom in the office as far as we
+are going to make this a priority to get
+to and when it becomes important to you,
+it becomes important to the team, then
+they can carry it out. And it's
+[clears throat] so easy to get
 distracted by that. I mean, to give
 y'all some ideas, I was literally by
 like in the month one like like week one
@@ -465,8 +470,9 @@ from people that sent messages that
 wanted to get questions answered. And
 personally, I like doing that. Um I
 always think about what I want to talk
-about. So otherwise, y'all have a great
-week and work smart and harder.
+about. So otherwise, [music] y'all have
+a great week and work smart and harder.
 &gt;&gt; Thank you for listening to the
 Millennial Dentist. Visit us online at
 millennial dentist.com.
+&gt;&gt; [music]

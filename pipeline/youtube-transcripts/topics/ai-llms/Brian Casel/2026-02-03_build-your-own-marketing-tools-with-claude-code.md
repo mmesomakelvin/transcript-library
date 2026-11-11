@@ -4,7 +4,7 @@ title: "Build your own marketing tools with Claude Code"
 channel: "Brian Casel"
 topic: "ai-llms"
 published_date: "2026-02-03"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=9pIMaCbPc0Q"
 duration: 1204

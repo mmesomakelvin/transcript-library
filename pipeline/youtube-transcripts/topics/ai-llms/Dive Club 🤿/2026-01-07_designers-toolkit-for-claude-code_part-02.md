@@ -4,7 +4,7 @@ title: "Designer's toolkit for Claude Code"
 channel: "Dive Club 🤿"
 topic: "ai-llms"
 published_date: "2026-01-07"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=HcLz3ikw-n0"
 duration: 2883

@@ -4,7 +4,7 @@ title: "5 OpenClaw agents run my home, finances, and code | Jesse Genet"
 channel: "How I AI"
 topic: "ai-llms"
 published_date: "2026-02-25"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=96Vl8s3EQhk"
 duration: 2968

@@ -4,7 +4,7 @@ title: "Stop Prompting, Start Engineering: The "Context as Code" Shift"
 channel: "AI Native Dev"
 topic: "ai-llms"
 published_date: "2026-02-25"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=TlC7jq4ooSM"
 duration: 1775

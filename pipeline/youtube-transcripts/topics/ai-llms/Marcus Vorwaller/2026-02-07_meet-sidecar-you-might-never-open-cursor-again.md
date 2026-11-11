@@ -4,7 +4,7 @@ title: "Meet Sidecar: You might never open Cursor again"
 channel: "Marcus Vorwaller"
 topic: "ai-llms"
 published_date: "2026-02-07"
-ingested_date: "2026-05-31"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=5QZxWmDl_tc"
 duration: 598

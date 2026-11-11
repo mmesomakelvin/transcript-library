@@ -4,7 +4,7 @@ title: "How To Create Stunning AI Image Ads with AI (Claude Code + Nano Banana 2
 channel: "Mike Futia | SCALE AI"
 topic: "ai-llms"
 published_date: "2026-03-13"
-ingested_date: "2026-07-05"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=tFyKaGP64M4"
 duration: 1078

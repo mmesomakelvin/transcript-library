@@ -4,7 +4,7 @@ title: "7 Modern UI Layouts from 50 Top Software Companies (+ Free Figma File)"
 channel: "Kole Jain"
 topic: "software-engineering"
 published_date: "2025-02-11"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=VPeTgU7la34"
 duration: 448

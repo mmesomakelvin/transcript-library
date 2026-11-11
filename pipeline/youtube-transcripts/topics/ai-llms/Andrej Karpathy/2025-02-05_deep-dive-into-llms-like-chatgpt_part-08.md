@@ -4,7 +4,7 @@ title: "Deep Dive into LLMs like ChatGPT"
 channel: "Andrej Karpathy"
 topic: "ai-llms"
 published_date: "2025-02-05"
-ingested_date: "2026-03-02"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=7xTGNNLPyMI"
 duration: 12683

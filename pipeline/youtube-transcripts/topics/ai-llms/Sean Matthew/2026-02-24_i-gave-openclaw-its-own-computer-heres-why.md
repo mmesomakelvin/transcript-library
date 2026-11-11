@@ -4,7 +4,7 @@ title: "I Gave OpenClaw Its Own Computer (Here's Why)"
 channel: "Sean Matthew"
 topic: "ai-llms"
 published_date: "2026-02-24"
-ingested_date: "2026-07-12"
+ingested_date: "2026-11-11"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=QCf8BCT-Kzo"
 duration: 553
