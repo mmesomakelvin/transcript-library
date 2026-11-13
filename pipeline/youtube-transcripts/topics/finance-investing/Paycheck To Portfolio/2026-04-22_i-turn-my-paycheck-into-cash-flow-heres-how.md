@@ -4,7 +4,7 @@ title: "I Turn My Paycheck Into Cash Flow (Here’s How)"
 channel: "Paycheck To Portfolio"
 topic: "finance-investing"
 published_date: "2026-04-22"
-ingested_date: "2026-11-11"
+ingested_date: "2026-11-13"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=DRRBwnkiMqc"
 duration: 730

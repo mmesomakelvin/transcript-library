@@ -1,6 +1,6 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-11-13 11:57 UTC
+> Last sync: 2026-11-13 19:20 UTC
 
 ## This Run
 
@@ -12,6 +12,7 @@
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| I Turn My Paycheck Into Cash Flow (Here’s How) | Paycheck To Portfolio | finance-investing |
 | mattpocock/skills: A complete AI Coding workflow, end-to-end | Matt Pocock | ai-llms |
 | mattpocock/skills — The Complete Deep Dive: All 21 Claude Code Skills Explained | RK's Code Craft | software-engineering |
 | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | ai-llms |
@@ -133,7 +134,6 @@
 | If I rebuilt my Smart Home, I’d want THIS | Smart Home Solver | software-engineering |
 | I was building loops wrong... | AI Jason | software-engineering |
 | I didn't like OpenClaw so I built a better version | Chris Raroque | ai-llms |
-| I Turn My Paycheck Into Cash Flow (Here’s How) | Paycheck To Portfolio | finance-investing |
 | I Tested Claude's New Managed Agents... What You Need To Know | Nate Herk | AI Automation | ai-llms |
 | I Spent a Year Replacing My Subscriptions. Here’s How. | Dammit Jeff | hardware-homelab |
 | I Spent a Year Replacing My Subscriptions. Here’s How. | Dammit Jeff | hardware-homelab |
@@ -470,7 +470,8 @@
 
 | Date | New |
 |---|---|
-| 2026-11-11 | 259 |
+| 2026-11-13 | 1 |
+| 2026-11-11 | 258 |
 | 2026-11-10 | 3 |
 | 2026-11-07 | 3 |
 
