@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26T08:05:07",
-  "total_files": 441,
+  "generated": "2026-11-26T21:03:07",
+  "total_files": 442,
   "total_chunks": 188,
   "files": [
     {
@@ -143,6 +143,14 @@
       "path": "topics/finance-investing/Koh Kim | AI + Wealth/2026-09-06_the-robot-trade-nobody-is-thinking-about-3-floors-down.md",
       "video_id": "ICOMEGuAnBA",
       "word_count": 1399,
+      "chunk": null,
+      "total_chunks": null,
+      "embedding_ready": true
+    },
+    {
+      "path": "topics/finance-investing/ARK Invest/2026-06-05_booming-jobs-report-plummeting-market-whats-going-on-itk-with-cathie-wood.md",
+      "video_id": "Z2M8sxjxxgE",
+      "word_count": 7163,
       "chunk": null,
       "total_chunks": null,
       "embedding_ready": true

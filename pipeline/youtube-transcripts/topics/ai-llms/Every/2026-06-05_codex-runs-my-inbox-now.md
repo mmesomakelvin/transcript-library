@@ -4,7 +4,7 @@ title: "Codex Runs My Inbox Now"
 channel: "Every"
 topic: "ai-llms"
 published_date: "2026-06-05"
-ingested_date: "2026-11-11"
+ingested_date: "2026-11-26"
 source: "youtube"
 youtube_url: "https://youtube.com/watch?v=2Yy8EJlZJFE"
 duration: 433

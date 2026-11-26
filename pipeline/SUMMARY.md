@@ -1,17 +1,19 @@
 # Jarvis Activity Summary
 
-> Last sync: 2026-11-26 08:05 UTC
+> Last sync: 2026-11-26 21:03 UTC
 
 ## This Run
 
 | Metric | Value |
 |---|---|
-| New transcripts | 441 |
-| Total transcripts | 441 |
+| New transcripts | 442 |
+| Total transcripts | 442 |
 
 ### New Transcripts
 | Title | Channel | Topic |
 |---|---|---|
+| Codex Runs My Inbox Now | Every | ai-llms |
+| Booming Jobs Report, Plummeting Market: What's Going On? | ITK With Cathie Wood | ARK Invest | finance-investing |
 | I Turn My Paycheck Into Cash Flow (Here’s How) | Paycheck To Portfolio | finance-investing |
 | mattpocock/skills: A complete AI Coding workflow, end-to-end | Matt Pocock | ai-llms |
 | mattpocock/skills — The Complete Deep Dive: All 21 Claude Code Skills Explained | RK's Code Craft | software-engineering |
@@ -211,7 +213,6 @@
 | Cursor 3.0 Tutorial for Beginners (Introduction) | Brandon Charleson - AI Powered Junkie | ai-llms |
 | Context Windows are Stupid | Jaymin West | ai-llms |
 | Context Is Eating Software Development | AI Native Dev | ai-llms |
-| Codex Runs My Inbox Now | Every | ai-llms |
 | Clawdbot to Moltbot to OpenClaw: The 72 Hours That Broke Everything (The Full Breakdown) | AI News & Strategy Daily | Nate B Jones | ai-llms |
 | Claude Cowork Just Changed How You Do Marketing | Grace Leung | ai-llms |
 | Claude Code's HIDDEN Agent Swarm (Better Than Kimi K2.5?) | Better Stack | ai-llms |
@@ -461,14 +462,14 @@
 | ai-llms | 253 | 96 |
 | software-engineering | 74 | 32 |
 | business | 47 | 20 |
-| finance-investing | 42 | 17 |
+| finance-investing | 43 | 18 |
 | hardware-homelab | 15 | 12 |
 | faith | 10 | 5 |
-| **Total** | **441** |  |
+| **Total** | **442** |  |
 
 ## Recent Activity (Last 7 Days)
 
 | Date | New |
 |---|---|
-| (none) | 0 |
+| 2026-11-26 | 2 |
 
